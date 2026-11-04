@@ -1,0 +1,46 @@
+{
+  "version": "0.52.0",
+  "method": "Compare a 16-stop smoothstep color ramp with the equivalent nested color.mix/scalar.ramp chain, using the same named editable colors and input. Count compiled nodes, uniform components, serialized graph bytes and actual generated GLSL bytes. Compare CPU colors at endpoints, knots and interval interiors, before and after a color edit. Input is a parameter, so these receipt derivatives are zero; varying-stop/full-differential equivalence is separately tested. No CPU or GPU timing claim.",
+  "comparisons": {
+    "linear-rgb": {
+      "compact": {
+        "authoredNodes": 19,
+        "liveNodes": 19,
+        "uniformScalars": 65,
+        "serializedJSONBytes": 3744,
+        "generatedGLSLBytes": 6455
+      },
+      "expanded": {
+        "authoredNodes": 48,
+        "liveNodes": 48,
+        "uniformScalars": 79,
+        "serializedJSONBytes": 6690,
+        "generatedGLSLBytes": 5932
+      },
+      "comparisons": 126,
+      "maxAbsoluteValueError": 0,
+      "maxAbsoluteDerivativeError": 0,
+      "valueEditsPreserveProgram": true
+    },
+    "oklab": {
+      "compact": {
+        "authoredNodes": 19,
+        "liveNodes": 19,
+        "uniformScalars": 65,
+        "serializedJSONBytes": 3739,
+        "generatedGLSLBytes": 7574
+      },
+      "expanded": {
+        "authoredNodes": 48,
+        "liveNodes": 48,
+        "uniformScalars": 79,
+        "serializedJSONBytes": 7050,
+        "generatedGLSLBytes": 7051
+      },
+      "comparisons": 126,
+      "maxAbsoluteValueError": 0,
+      "maxAbsoluteDerivativeError": 0,
+      "valueEditsPreserveProgram": true
+    }
+  }
+}

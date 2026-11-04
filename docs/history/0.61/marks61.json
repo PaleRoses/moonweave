@@ -1,0 +1,98 @@
+{
+  "schema": "moonweave/marks-benchmark/1",
+  "recordedAt": "2026-11-04T06:37:46.045Z",
+  "node": "v24.22.1",
+  "program": {
+    "marks": 21,
+    "brushes": 2,
+    "zones": 1,
+    "expandedDabs": 189,
+    "serializedBytes": 81154,
+    "sha256": "927e289494a3aec66fc80d15dced999023131e28897b0c0d2e0a3c1de68a633f",
+    "sourceSHA256": {
+      "src/paint/marks.mts": "198f0a2c03b1ad0b09e963e1bdef5b5a8586d5b17334437c47645679df58b905",
+      "src/paint/mark-raster.mts": "d92006db19c1eae7e072daa66760fed865ea2b07f64168b62af28e99eeb8bc8d",
+      "src/paint/mark-apply.mts": "97f6a3dd617cfe912112bfb986ba9ea13df9636b71aa379581388f1aa73b3c7c",
+      "src/core/image-filter.mts": "6d5ba956fbe55d5bdb5ffec9e39a91d0ae5a0869dfe3b332940a6eafe3ce5bfa",
+      "src/core/resources.mts": "43607892f6af13f78b8f6555943ef0326823b1500743e95273c4e0f7296e821d",
+      "src/color/management.mts": "8189ed8750240b78e7e535b70c7e1c190bd9024f98e5c5851ecdb0df21833895",
+      "src/core/color.mts": "588c37140374d21bda48b4dbf6873aa23b7e257118636a3194f858eb72dfaedf",
+      "src/core/algebra.mts": "874628ff7827485361acd690ac3faa529d76d307e23b248bfb9787bf74989e26",
+      "src/core/graph.mts": "d08a8a2c1747330a5279618ac75e9f3dcd386478a9145624256adf369c22b04f",
+      "src/core/ownership.mts": "4c0b52bb7e1c9468176789a9f03819c7a8f3b5b063703bf709886f55bbee0820",
+      "package.json": "40a0b667dbac81e6f6821eef4ce0263ee252affbe14c3cd71cf9e0feedf4eedf",
+      "lab/mark-examples.mts": "97aa5cdc4a76a1243a4125cf480e82e315f61a184d4662f745e0525d2088b6d6",
+      "tools/benchmark-marks.mjs": "2d6e1ce5da6811dc13c0c70065f1a9b638c9bf591a7d9d6e171e078fc0254457"
+    }
+  },
+  "bake": {
+    "width": 128,
+    "height": 128,
+    "bounds": [
+      -1.3,
+      -1.6,
+      1.3,
+      1.6
+    ],
+    "samples": 2,
+    "stats": {
+      "dabs": 189,
+      "tiles": 64,
+      "tileReferences": 482,
+      "dabTests": 493568,
+      "samples": 65536
+    },
+    "naiveCandidateTests": 12386304,
+    "candidateFraction": 0.0398478835978836,
+    "interpretation": "Unindexed sample×dab count versus actual tile candidate tests; this is not a measured timing speedup."
+  },
+  "graph": {
+    "version": 2,
+    "nodes": 19,
+    "resources": 5,
+    "components": 212992
+  },
+  "checks": {
+    "programRoundtrip": true,
+    "repeatBakeBitExact": true,
+    "orderedPigment": true,
+    "coverageWithinUnitRange": true,
+    "largestAssociationError": 0
+  },
+  "timings": {
+    "compile": {
+      "unit": "milliseconds",
+      "runs": 7,
+      "warmups": 2,
+      "samples": [
+        0.5731130000000348,
+        0.2385389999999461,
+        0.20797400000003563,
+        0.20832399999994777,
+        0.3328910000000178,
+        0.15204900000003363,
+        0.16086199999995188
+      ],
+      "minimum": 0.15204900000003363,
+      "median": 0.20832399999994777,
+      "maximum": 0.5731130000000348
+    },
+    "bake": {
+      "unit": "milliseconds",
+      "runs": 7,
+      "warmups": 2,
+      "samples": [
+        251.9391300000002,
+        302.31625099999997,
+        227.41803000000004,
+        297.3300519999998,
+        231.82879400000002,
+        221.25113200000033,
+        226.66084100000035
+      ],
+      "minimum": 221.25113200000033,
+      "median": 231.82879400000002,
+      "maximum": 302.31625099999997
+    }
+  }
+}

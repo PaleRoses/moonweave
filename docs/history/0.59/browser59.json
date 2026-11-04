@@ -1,0 +1,35 @@
+{
+  "version": "0.59.0",
+  "surface": "http://terminal.local:4173/",
+  "edition": "059",
+  "gallery": {
+    "loaded": "Cobalt & gilt",
+    "authoredNodes": 45,
+    "liveNodes": 45,
+    "reusedNodes": 8
+  },
+  "inspection": {
+    "fixture": "docs/evidence/sharing58/shared-height.json",
+    "authoredNodes": 9,
+    "liveNodes": 7,
+    "reusedNodes": 1,
+    "selected": "n4",
+    "sources": [
+      "leftHeight",
+      "rightHeight"
+    ],
+    "consumers": [
+      "n5.a",
+      "n5.b"
+    ]
+  },
+  "undo": {
+    "actions": 2,
+    "originalGraphJSONRestoredExactly": true
+  },
+  "screenshot": "evidence/ownership59/graph.jpg",
+  "limitations": [
+    "Cloud preview browser could not obtain WebGL2; no live-browser render claim.",
+    "Download transport and clipboard delivery were not exercised in this pass."
+  ]
+}

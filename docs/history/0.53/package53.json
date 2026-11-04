@@ -1,0 +1,13 @@
+{
+  "version": "0.53.0",
+  "files": 27,
+  "installedTarball": "/workspace/sites/moonweave/dist/downloads/moonweave-surfaces-0.53.0.tgz",
+  "sourceFreeDeclarations": true,
+  "coreWithoutPeers": true,
+  "sharedModuleIdentity": true,
+  "threeAdapter": true,
+  "strictNodeNext": true,
+  "copiedHostPackages": 8,
+  "tarballSHA256": "cc157f0a9df973b7c0648f3129f2efc8b607c4da67f63daddfaa5e7e86b57294",
+  "tarballBytes": 77637
+}

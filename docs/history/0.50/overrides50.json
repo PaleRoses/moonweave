@@ -1,0 +1,181 @@
+{
+  "schema": 1,
+  "fixture": "Three adjacent finish overrides, with a fully shadowed ramp/product field.",
+  "graph": {
+    "bytes": 1877,
+    "sha256": "bc0a8a571ddf88f80480c813af8df830b6483aa59eec2a58056fca663d0aa222",
+    "document": {
+      "version": 1,
+      "nodes": [
+        {
+          "id": "n0",
+          "kind": "facets",
+          "scale": 0.16,
+          "stretch": [
+            1,
+            1,
+            1
+          ],
+          "rotation": 347,
+          "seed": 29031
+        },
+        {
+          "id": "n1",
+          "kind": "paint",
+          "field": "n0",
+          "style": {
+            "palette": {
+              "base": "#617c89",
+              "shadow": "#26394d",
+              "light": "#b6c4b7"
+            },
+            "contrast": 0.58,
+            "wash": 0.48,
+            "marks": 0.48,
+            "quiet": 0.72,
+            "relief": 0.18,
+            "roughness": 0.82,
+            "roughnessVariation": 0.13,
+            "metalness": 0,
+            "clearcoat": 0.04,
+            "opacity": 1
+          }
+        },
+        {
+          "id": "n2",
+          "kind": "axis",
+          "axis": "x"
+        },
+        {
+          "id": "shadow-ramp",
+          "kind": "ramp",
+          "input": "n2",
+          "low": 0,
+          "high": 1
+        },
+        {
+          "id": "shadow",
+          "kind": "parameter",
+          "value": 0.2
+        },
+        {
+          "id": "n3",
+          "kind": "multiply",
+          "a": "shadow-ramp",
+          "b": "shadow"
+        },
+        {
+          "id": "metal",
+          "kind": "parameter",
+          "value": 0.5
+        },
+        {
+          "id": "inner",
+          "kind": "channels",
+          "input": "n1",
+          "values": {
+            "roughness": "n3",
+            "metalness": "metal",
+            "opacity": "shadow"
+          }
+        },
+        {
+          "id": "rough",
+          "kind": "parameter",
+          "value": 0.5
+        },
+        {
+          "id": "n4",
+          "kind": "constant",
+          "value": 0.3
+        },
+        {
+          "id": "n5",
+          "kind": "channels",
+          "input": "inner",
+          "values": {
+            "roughness": "rough",
+            "clearcoat": "n4"
+          }
+        },
+        {
+          "id": "alpha",
+          "kind": "parameter",
+          "value": 1
+        },
+        {
+          "id": "n6",
+          "kind": "channels",
+          "input": "n5",
+          "values": {
+            "opacity": "alpha"
+          }
+        }
+      ],
+      "output": "n6"
+    }
+  },
+  "engine": {
+    "name": "three",
+    "revision": "187"
+  },
+  "before": {
+    "version": "0.49.0",
+    "sourceDirectory": "validation/baseline49",
+    "liveNodes": 13,
+    "editableBindings": 7,
+    "cost": {
+      "paintSamples": 1,
+      "textureReads": 4,
+      "uniformScalars": 35
+    },
+    "nestedEqualsFlat": false,
+    "hiddenEditUniformWrites": 2,
+    "programKey": {
+      "bytes": 667,
+      "sha256": "9e4f5ac9fc678716f3a1624a130c3fe7df13353a388d1e5aedadd8970aecdfd8"
+    },
+    "graphEvaluationGLSL": {
+      "bytes": 1105,
+      "sha256": "fb906d7c4a4f64810a0780756667dd4ca94ffc8911a2e5f4ac9eb42f6df14e92"
+    },
+    "vertexShader": {
+      "bytes": 1339,
+      "sha256": "3a10b7d950929aeba42974565c5d0b5e041586d96404e35210d4770420c5fa0e"
+    },
+    "fragmentShader": {
+      "bytes": 11715,
+      "sha256": "fcb261ded403860aea5b9b0d617ca149dc1a481afdac5028f7821b25b3595b14"
+    }
+  },
+  "after": {
+    "version": "0.50.0",
+    "sourceDirectory": ".",
+    "liveNodes": 7,
+    "editableBindings": 5,
+    "cost": {
+      "paintSamples": 1,
+      "textureReads": 4,
+      "uniformScalars": 32
+    },
+    "nestedEqualsFlat": true,
+    "hiddenEditUniformWrites": 0,
+    "programKey": {
+      "bytes": 366,
+      "sha256": "d966ced602793f450a187270bffa1317d1b1cf1d08b43392a92f779ce92eb2c3"
+    },
+    "graphEvaluationGLSL": {
+      "bytes": 759,
+      "sha256": "04a15d1286b32d290e5acb66d3bbaef08acff7d89024f394da011ff2405e8973"
+    },
+    "vertexShader": {
+      "bytes": 1339,
+      "sha256": "3a10b7d950929aeba42974565c5d0b5e041586d96404e35210d4770420c5fa0e"
+    },
+    "fragmentShader": {
+      "bytes": 11302,
+      "sha256": "4c871475309f57144a76d806d7eb79692222b88a36edf18a0c8ed9baaf2aea7e"
+    }
+  },
+  "scope": "Structural plan, emitted GLSL and JavaScript uniform writes. No GPU compilation, rendering or timing measured."
+}

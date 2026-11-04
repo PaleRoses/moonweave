@@ -1,0 +1,55 @@
+{
+  "version": "0.56.0",
+  "checks": [
+    {
+      "check": "Packed study has one 128\u00d764 RGB resource, six channel readers, two frames and a 132-read ceiling",
+      "pass": true
+    },
+    {
+      "check": "Normal paste applies trilinear policy and reduces the read ceiling to 20",
+      "pass": true
+    },
+    {
+      "check": "Invalid filter is rejected precisely and accepted composition remains unchanged",
+      "pass": true
+    },
+    {
+      "check": "Undo restores anisotropic reader policy and 132-read ceiling",
+      "pass": true
+    },
+    {
+      "check": "Original saved eight-node Directional finish composition restored exactly",
+      "pass": true
+    },
+    {
+      "check": "Browser diagnostic reports context unavailable and zero rendered frames",
+      "pass": true
+    },
+    {
+      "check": "Guide displays both 512\u00d7512 native inscription specimen images",
+      "pass": true
+    }
+  ],
+  "guideImages": [
+    {
+      "complete": true,
+      "height": 512,
+      "src": "./docs/evidence/inscription56.png",
+      "width": 512
+    },
+    {
+      "complete": true,
+      "height": 512,
+      "src": "./docs/evidence/inscription-shell56.png",
+      "width": 512
+    }
+  ],
+  "graphics": {
+    "status": "unavailable",
+    "phase": "context",
+    "webgl2API": true,
+    "renders": 0,
+    "creationReason": "GL_VENDOR = Disabled; GL_RENDERER = Disabled; BindToCurrentSequence failed"
+  },
+  "interactionNotes": "The large textarea operation timed out through one browser automation path. Normal paste/apply succeeded; graph validation, reader policy changes and undo were checked through the actual UI. Preview was restarted after a clean build replaced its served directory."
+}

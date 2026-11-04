@@ -1,0 +1,30 @@
+{
+  "version": "0.58.0",
+  "surface": "http://terminal.local:4173/",
+  "checks": {
+    "executionGraphVisible": true,
+    "sourceExampleApplied": true,
+    "authoredNodes": 9,
+    "liveNodes": 7,
+    "reusedNodes": 1,
+    "selectedSharedMultiply": {
+      "sources": [
+        "leftHeight",
+        "rightHeight"
+      ],
+      "consumers": [
+        "n5.a",
+        "n5.b"
+      ]
+    },
+    "gainEditedFrom": 0.7,
+    "gainEditedTo": 0.82,
+    "sharedStructureRetained": true,
+    "undoRestoredOriginalSurfaceExactly": true
+  },
+  "screenshot": "evidence/sharing58/graph.jpg",
+  "limitations": [
+    "The cloud browser cannot obtain WebGL2. The graph inspector and editor were verified; live browser rendering was unavailable.",
+    "No browser file-download transport claim is made in this pass. Installed archives and serialization are checked separately."
+  ]
+}

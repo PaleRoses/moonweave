@@ -1,0 +1,398 @@
+{
+  "baseline": "0.49.0",
+  "current": "0.50.0",
+  "specimens": {
+    "sphere": {
+      "images": 22,
+      "pixels": 5767168,
+      "allPixelsIdentical": true,
+      "comparisons": [
+        {
+          "file": "carapace-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "5ef0ee0df6af2dab9f89dba30ae206d77ed4b72636616ac66568e854daa26685",
+          "currentSHA256": "5ef0ee0df6af2dab9f89dba30ae206d77ed4b72636616ac66568e854daa26685"
+        },
+        {
+          "file": "carapace-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "c76aa488e2237e5c20ac53a8ed408df4e5668012cd9eb7063e5fb45b7546421b",
+          "currentSHA256": "c76aa488e2237e5c20ac53a8ed408df4e5668012cd9eb7063e5fb45b7546421b"
+        },
+        {
+          "file": "channels-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "4c86c208ebfbead0169fe52f1556772b1f98ba74cdda94f35bae47e0090a82d6",
+          "currentSHA256": "4c86c208ebfbead0169fe52f1556772b1f98ba74cdda94f35bae47e0090a82d6"
+        },
+        {
+          "file": "channels-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "fee902097c15155fa49d94cf170af1d20eb92ef180cea26e64abeda6d08af437",
+          "currentSHA256": "fee902097c15155fa49d94cf170af1d20eb92ef180cea26e64abeda6d08af437"
+        },
+        {
+          "file": "finish-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "95af357023d2c66d1658ea487a54f72b33eaae60cc466618f9fe6aa3047f4085",
+          "currentSHA256": "95af357023d2c66d1658ea487a54f72b33eaae60cc466618f9fe6aa3047f4085"
+        },
+        {
+          "file": "finish-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "fc99b34f616a5357a336471bca62ebc92afa5fb539e5dc1fa1e8954bf85eda34",
+          "currentSHA256": "fc99b34f616a5357a336471bca62ebc92afa5fb539e5dc1fa1e8954bf85eda34"
+        },
+        {
+          "file": "frame-reference-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "8eeb3179cbf05c0512e59cd80199777b05adfaca8cadccfd30f6a604b6e99592",
+          "currentSHA256": "8eeb3179cbf05c0512e59cd80199777b05adfaca8cadccfd30f6a604b6e99592"
+        },
+        {
+          "file": "frame-reference-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "cc1b8045ec986508a3c1f3768c146cda6e747a7b83ab6df89b2f95364fdc253f",
+          "currentSHA256": "cc1b8045ec986508a3c1f3768c146cda6e747a7b83ab6df89b2f95364fdc253f"
+        },
+        {
+          "file": "framed-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "8eeb3179cbf05c0512e59cd80199777b05adfaca8cadccfd30f6a604b6e99592",
+          "currentSHA256": "8eeb3179cbf05c0512e59cd80199777b05adfaca8cadccfd30f6a604b6e99592"
+        },
+        {
+          "file": "framed-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "cc1b8045ec986508a3c1f3768c146cda6e747a7b83ab6df89b2f95364fdc253f",
+          "currentSHA256": "cc1b8045ec986508a3c1f3768c146cda6e747a7b83ab6df89b2f95364fdc253f"
+        },
+        {
+          "file": "independent-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "473f616f994c8980e65f245a18b9404e1b8588ea9c0ea35a1b707244225f5c8e",
+          "currentSHA256": "473f616f994c8980e65f245a18b9404e1b8588ea9c0ea35a1b707244225f5c8e"
+        },
+        {
+          "file": "independent-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "e7f1aa21b8ef0b74a2a933cdfac05394d2a70ef88a234d41caa419df9e0caa05",
+          "currentSHA256": "e7f1aa21b8ef0b74a2a933cdfac05394d2a70ef88a234d41caa419df9e0caa05"
+        },
+        {
+          "file": "membrane-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "d2eea644f60c6818e9055430df27086d27b882022109afee06f85c7a607074db",
+          "currentSHA256": "d2eea644f60c6818e9055430df27086d27b882022109afee06f85c7a607074db"
+        },
+        {
+          "file": "membrane-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "705dd7b2ae9ffb4da4e695e028affbeda5537000ee088a87bbff671948ae900f",
+          "currentSHA256": "705dd7b2ae9ffb4da4e695e028affbeda5537000ee088a87bbff671948ae900f"
+        },
+        {
+          "file": "moonstone-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "61bef7a8000ba0c75eb022dacaafb867fa7203ae8785bc3107e3f802dbd48aaa",
+          "currentSHA256": "61bef7a8000ba0c75eb022dacaafb867fa7203ae8785bc3107e3f802dbd48aaa"
+        },
+        {
+          "file": "moonstone-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "6648409dc7b7d06f3bede423aac376c392ffefdd02375311256527d3c5f4b22e",
+          "currentSHA256": "6648409dc7b7d06f3bede423aac376c392ffefdd02375311256527d3c5f4b22e"
+        },
+        {
+          "file": "patched-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "99b3fb25b26c1337acdbb2cfd369a08c1d23d06bf131175da0ef1085005d1cf4",
+          "currentSHA256": "99b3fb25b26c1337acdbb2cfd369a08c1d23d06bf131175da0ef1085005d1cf4"
+        },
+        {
+          "file": "patched-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "ead3c743330ee527df81bdd855c3ce4ed36e09a00a7cddf8ca437ad9de7965f3",
+          "currentSHA256": "ead3c743330ee527df81bdd855c3ce4ed36e09a00a7cddf8ca437ad9de7965f3"
+        },
+        {
+          "file": "reference-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "99b3fb25b26c1337acdbb2cfd369a08c1d23d06bf131175da0ef1085005d1cf4",
+          "currentSHA256": "99b3fb25b26c1337acdbb2cfd369a08c1d23d06bf131175da0ef1085005d1cf4"
+        },
+        {
+          "file": "reference-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "ead3c743330ee527df81bdd855c3ce4ed36e09a00a7cddf8ca437ad9de7965f3",
+          "currentSHA256": "ead3c743330ee527df81bdd855c3ce4ed36e09a00a7cddf8ca437ad9de7965f3"
+        },
+        {
+          "file": "shared-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "fbc345bb15d8f65f26689e6833501e96afb15ec6c885b28fd6d9a17de70c3063",
+          "currentSHA256": "fbc345bb15d8f65f26689e6833501e96afb15ec6c885b28fd6d9a17de70c3063"
+        },
+        {
+          "file": "shared-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "5c8ff4df54be20a023f474377513309691b77aebed8d6874f4ccc693e993c0af",
+          "currentSHA256": "5c8ff4df54be20a023f474377513309691b77aebed8d6874f4ccc693e993c0af"
+        }
+      ],
+      "currentRenderCases": 26,
+      "newChannelComparisons": {
+        "near": {
+          "pixelIdentical": true,
+          "nestedSHA256": "a8e517eee3c45f0706acdba128c1570c97d9e79dd4d4298253302f6b9baa1237",
+          "flatSHA256": "a8e517eee3c45f0706acdba128c1570c97d9e79dd4d4298253302f6b9baa1237"
+        },
+        "far": {
+          "pixelIdentical": true,
+          "nestedSHA256": "861d0097d1ba128f1a1cf6d3b407260133e50549df3f25ed0e307f1bc9e54566",
+          "flatSHA256": "861d0097d1ba128f1a1cf6d3b407260133e50549df3f25ed0e307f1bc9e54566"
+        }
+      }
+    },
+    "shell": {
+      "images": 22,
+      "pixels": 5767168,
+      "allPixelsIdentical": true,
+      "comparisons": [
+        {
+          "file": "carapace-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "c40a26e5f81429526075e0a6296f2732b5953c59c8d5fb560344ed27cc4a57e6",
+          "currentSHA256": "c40a26e5f81429526075e0a6296f2732b5953c59c8d5fb560344ed27cc4a57e6"
+        },
+        {
+          "file": "carapace-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "a1e8b7070d6056ccc27d623dc0e5079056cd59c51522046e682139e801304609",
+          "currentSHA256": "a1e8b7070d6056ccc27d623dc0e5079056cd59c51522046e682139e801304609"
+        },
+        {
+          "file": "channels-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "98339772588a2f3409c5776b0adb769a062ad01ef9dd3e676707936a6864e77a",
+          "currentSHA256": "98339772588a2f3409c5776b0adb769a062ad01ef9dd3e676707936a6864e77a"
+        },
+        {
+          "file": "channels-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "c5b424dc06042186993714129722741bce3a68d2466c947bc81c02e25566b165",
+          "currentSHA256": "c5b424dc06042186993714129722741bce3a68d2466c947bc81c02e25566b165"
+        },
+        {
+          "file": "finish-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "f8db015e7df7bb81311c6be8d82c805d3ee1f39976e8d88507c7300444aff21c",
+          "currentSHA256": "f8db015e7df7bb81311c6be8d82c805d3ee1f39976e8d88507c7300444aff21c"
+        },
+        {
+          "file": "finish-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "e04473a8309293b0ba83f6c7158d71d19c927e0ee535722ff17b63daa9c49b5c",
+          "currentSHA256": "e04473a8309293b0ba83f6c7158d71d19c927e0ee535722ff17b63daa9c49b5c"
+        },
+        {
+          "file": "frame-reference-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "e3a9d0f859b417b2cf68a203a7bd9c42fc73f6203e8afcdd82b3e2e653520b6a",
+          "currentSHA256": "e3a9d0f859b417b2cf68a203a7bd9c42fc73f6203e8afcdd82b3e2e653520b6a"
+        },
+        {
+          "file": "frame-reference-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "5cdd538c3999eb91ca8006ddf19de7be2f4d3d84bf5737651d1b2bb8fb2c30b3",
+          "currentSHA256": "5cdd538c3999eb91ca8006ddf19de7be2f4d3d84bf5737651d1b2bb8fb2c30b3"
+        },
+        {
+          "file": "framed-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "e3a9d0f859b417b2cf68a203a7bd9c42fc73f6203e8afcdd82b3e2e653520b6a",
+          "currentSHA256": "e3a9d0f859b417b2cf68a203a7bd9c42fc73f6203e8afcdd82b3e2e653520b6a"
+        },
+        {
+          "file": "framed-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "5cdd538c3999eb91ca8006ddf19de7be2f4d3d84bf5737651d1b2bb8fb2c30b3",
+          "currentSHA256": "5cdd538c3999eb91ca8006ddf19de7be2f4d3d84bf5737651d1b2bb8fb2c30b3"
+        },
+        {
+          "file": "independent-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "6b794916075a8d3a19528084173cd2cb04e1995217c14f85acbf721e5f4f4ae1",
+          "currentSHA256": "6b794916075a8d3a19528084173cd2cb04e1995217c14f85acbf721e5f4f4ae1"
+        },
+        {
+          "file": "independent-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "3ffda5f8f216989d923b1643d6e1015fd3348f6a5b65427c5479887eaaee170d",
+          "currentSHA256": "3ffda5f8f216989d923b1643d6e1015fd3348f6a5b65427c5479887eaaee170d"
+        },
+        {
+          "file": "membrane-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "d8fb73a946308e46115f8cabe473364e3fadd119e724b657c0b090f3d25afde0",
+          "currentSHA256": "d8fb73a946308e46115f8cabe473364e3fadd119e724b657c0b090f3d25afde0"
+        },
+        {
+          "file": "membrane-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "17f294126b76f8942d8ff04105c9d82723269f73d72f07902439ac8acf44a63a",
+          "currentSHA256": "17f294126b76f8942d8ff04105c9d82723269f73d72f07902439ac8acf44a63a"
+        },
+        {
+          "file": "moonstone-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "553d6f044bd3758b45dc2748137668127a4f583f354e38457a3c0bfc71bde6a2",
+          "currentSHA256": "553d6f044bd3758b45dc2748137668127a4f583f354e38457a3c0bfc71bde6a2"
+        },
+        {
+          "file": "moonstone-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "36a67b7629a477594b5491158e3cd106238c54d3056402867c0b2c531c252358",
+          "currentSHA256": "36a67b7629a477594b5491158e3cd106238c54d3056402867c0b2c531c252358"
+        },
+        {
+          "file": "patched-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "2bc17cbb8dd9e225e255bef39c2713f778c9d89e6b8aadfc27bff76cbb4104b6",
+          "currentSHA256": "2bc17cbb8dd9e225e255bef39c2713f778c9d89e6b8aadfc27bff76cbb4104b6"
+        },
+        {
+          "file": "patched-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "e1a1478959bd8a552d66b361c53341f5e686ca6682c91ac40b5fed48ccbd5d93",
+          "currentSHA256": "e1a1478959bd8a552d66b361c53341f5e686ca6682c91ac40b5fed48ccbd5d93"
+        },
+        {
+          "file": "reference-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "2bc17cbb8dd9e225e255bef39c2713f778c9d89e6b8aadfc27bff76cbb4104b6",
+          "currentSHA256": "2bc17cbb8dd9e225e255bef39c2713f778c9d89e6b8aadfc27bff76cbb4104b6"
+        },
+        {
+          "file": "reference-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "e1a1478959bd8a552d66b361c53341f5e686ca6682c91ac40b5fed48ccbd5d93",
+          "currentSHA256": "e1a1478959bd8a552d66b361c53341f5e686ca6682c91ac40b5fed48ccbd5d93"
+        },
+        {
+          "file": "shared-far.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "ef1ccd827a7cafb9d45f817a519cced033f1fea81e6c1a9754d389a8f27d6141",
+          "currentSHA256": "ef1ccd827a7cafb9d45f817a519cced033f1fea81e6c1a9754d389a8f27d6141"
+        },
+        {
+          "file": "shared-near.png",
+          "pixels": 262144,
+          "changedPixels": 0,
+          "maxChannelDifference": 0,
+          "baselineSHA256": "92769a2e88860512ec1c57c23ccaeb9999007a74d69a9251e3fafefdd26e2edd",
+          "currentSHA256": "92769a2e88860512ec1c57c23ccaeb9999007a74d69a9251e3fafefdd26e2edd"
+        }
+      ],
+      "currentRenderCases": 26,
+      "newChannelComparisons": {
+        "near": {
+          "pixelIdentical": true,
+          "nestedSHA256": "862f2256a01561aebf12a63a8f81e602acde4e1af2171d8ed1541a39e027f0b3",
+          "flatSHA256": "862f2256a01561aebf12a63a8f81e602acde4e1af2171d8ed1541a39e027f0b3"
+        },
+        "far": {
+          "pixelIdentical": true,
+          "nestedSHA256": "67bb41c8d96d6ec6e8745caf06f3d34f302d616aeebab2c865470ca28b9cb809",
+          "flatSHA256": "67bb41c8d96d6ec6e8745caf06f3d34f302d616aeebab2c865470ca28b9cb809"
+        }
+      }
+    }
+  }
+}

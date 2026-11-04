@@ -1,0 +1,76 @@
+{
+  "version": "0.53.0",
+  "method": "Direct managed-preview UI interactions, DOM-backed source inspections, and screenshot evidence. No live WebGL frame was rendered.",
+  "previewURL": "http://terminal.local:4173/",
+  "atelierJavaScriptSHA256": "e6bbf8a2b3976568992951fe4ca7d1b9ee6e99022b5f101da158ea814750c63d",
+  "checks": [
+    {
+      "check": "Signed amplitude and zero edits; two undos restore original",
+      "passed": true
+    },
+    {
+      "check": "Replace height expression prunes orphan amplitude; shared grain retained; undo restores",
+      "passed": true
+    },
+    {
+      "check": "Remove height keeps shared color and finish; undo restores",
+      "passed": true
+    },
+    {
+      "check": "Add new height grain creates a second application and independent noise",
+      "passed": true
+    },
+    {
+      "check": "Add existing field as another height application shares one noise",
+      "passed": true
+    },
+    {
+      "check": "Undo both height additions restores exact original graph",
+      "passed": true
+    },
+    {
+      "check": "Finish field connection and inheritance preserve height/color; undo restores",
+      "passed": true
+    },
+    {
+      "check": "Create editable opacity override",
+      "passed": true
+    },
+    {
+      "check": "Weathered shell combines original painted field with procedural pigment, finish and height",
+      "passed": true
+    },
+    {
+      "check": "Weathered composition survives reload",
+      "passed": true
+    },
+    {
+      "check": "Original eight-node composition restored after verification",
+      "passed": true
+    }
+  ],
+  "graphics": {
+    "moonweave": "0.53.0",
+    "three": "187",
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "webgl2API": true,
+    "profile": "standard",
+    "creationMessage": "Could not create a WebGL context, VENDOR = 0xffff, DEVICE = 0xffff, GL_VENDOR = Disabled, GL_RENDERER = Disabled, Sandboxed = yes, Optimus = no, AMD switchable = no, Reset notification strategy = 0x0000, ErrorMessage = BindToCurrentSequence failed: .",
+    "status": "unavailable",
+    "phase": "context",
+    "error": {
+      "name": "Error",
+      "message": "The browser did not provide a WebGL2 context."
+    },
+    "context": null,
+    "preview": {
+      "width": 934,
+      "height": 656,
+      "pixelRatio": null,
+      "renders": 0
+    }
+  },
+  "screenshot": "evidence/atelier53.jpg",
+  "restoredGraphNodes": 8,
+  "productionBrowserVerified": false
+}

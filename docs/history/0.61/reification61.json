@@ -1,0 +1,116 @@
+{
+  "version": "0.61.0",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "method": {
+    "rounds": 7,
+    "iterationsPerRound": 200,
+    "warmupPerCase": 100,
+    "explicitGC": true,
+    "timing": "Alternating baseline/current batches. Each extraction starts from an already-validated fresh graph; import, JSON parsing and explicit GC are outside timing. One-root control uses the same 81-node graph.",
+    "counts": "Separate subprocesses instrument the internal fold read in memory; counts exclude imports and fixture creation. No timed implementation is instrumented.",
+    "scope": "Synchronous CPU graph-to-expression extraction only; no sampling, rendering, GPU, DOM or storage timing. Fingerprints cover the three affected ownership/traversal modules."
+  },
+  "fixture": {
+    "authoredNodes": 81,
+    "overlappingRoots": 41,
+    "graphSHA256": "5bd1b148ad3662ae82b7b497bc66943cfe4f652bebb179b5ff9e0931c9c5af6e"
+  },
+  "benchmarkSHA256": "22c203d3874e717ea41173b6d3c3f5daf0c4d2fbc71bc0259097d081ee23dd6a",
+  "baseline": {
+    "version": "0.60.0",
+    "sourceSHA256": {
+      "src/core/graph.mts": "cd157e0661e1a0b385b316c11d31b0b933a9f71decdb9bdc7a5d88e20d2cc89a",
+      "src/core/algebra.mts": "2b8716e0127fc407bd7282ea45943495345b5bfc77dd294ccafb363164610ac6",
+      "src/core/ownership.mts": "c7f99434dfd95a29b749ad36c3e080fdd4f4936b1ddd9954042a837b25c6ded3"
+    },
+    "workCounts": {
+      "overlapping41": {
+        "sourceNodeVisits": 1681,
+        "ownedExpressions": 81
+      },
+      "singleRoot81": {
+        "sourceNodeVisits": 81,
+        "ownedExpressions": 81
+      }
+    }
+  },
+  "current": {
+    "version": "0.61.0",
+    "sourceSHA256": {
+      "src/core/graph.mts": "d08a8a2c1747330a5279618ac75e9f3dcd386478a9145624256adf369c22b04f",
+      "src/core/algebra.mts": "874628ff7827485361acd690ac3faa529d76d307e23b248bfb9787bf74989e26",
+      "src/core/ownership.mts": "4c0b52bb7e1c9468176789a9f03819c7a8f3b5b063703bf709886f55bbee0820"
+    },
+    "workCounts": {
+      "overlapping41": {
+        "sourceNodeVisits": 81,
+        "ownedExpressions": 81
+      },
+      "singleRoot81": {
+        "sourceNodeVisits": 81,
+        "ownedExpressions": 81
+      }
+    }
+  },
+  "results": {
+    "overlapping41": {
+      "outputs": 41,
+      "exactCanonicalRoots": 41,
+      "baselineMicroseconds": 435.74666000000093,
+      "currentMicroseconds": 106.48945500000025,
+      "speedup": 4.0919230922911565,
+      "samplesMicroseconds": {
+        "baseline": [
+          486.79643,
+          430.2257500000002,
+          395.55518500000005,
+          484.0393299999994,
+          492.19295999999986,
+          435.74666000000093,
+          416.68785999999955
+        ],
+        "current": [
+          128.43565000000012,
+          106.48945500000025,
+          101.44811500000003,
+          100.70609500000046,
+          113.15554500000074,
+          110.6035499999996,
+          105.4605049999998
+        ]
+      }
+    },
+    "singleRoot81": {
+      "outputs": 1,
+      "exactCanonicalRoots": 41,
+      "baselineMicroseconds": 95.19544499999938,
+      "currentMicroseconds": 105.89135499999884,
+      "speedup": 0.8989916598951863,
+      "samplesMicroseconds": {
+        "baseline": [
+          99.68826499999977,
+          96.78633999999987,
+          91.64970999999923,
+          92.13213500000165,
+          98.35104999999885,
+          92.28245999999899,
+          95.19544499999938
+        ],
+        "current": [
+          112.42529500000046,
+          94.86129500000061,
+          105.29735999999957,
+          109.34165000000121,
+          103.35188000000016,
+          105.89135499999884,
+          108.80068999999821
+        ]
+      }
+    }
+  }
+}

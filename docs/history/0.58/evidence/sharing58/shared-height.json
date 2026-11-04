@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "ink",
+      "kind": "color",
+      "value": [
+        0.15,
+        0.38,
+        0.55
+      ]
+    },
+    {
+      "id": "base",
+      "kind": "material",
+      "color": "ink"
+    },
+    {
+      "id": "leftAxis",
+      "kind": "axis",
+      "axis": "y"
+    },
+    {
+      "id": "gain",
+      "kind": "parameter",
+      "value": 0.7
+    },
+    {
+      "id": "leftHeight",
+      "kind": "multiply",
+      "a": "leftAxis",
+      "b": "gain"
+    },
+    {
+      "id": "rightAxis",
+      "kind": "axis",
+      "axis": "y"
+    },
+    {
+      "id": "rightHeight",
+      "kind": "multiply",
+      "a": "rightAxis",
+      "b": "gain"
+    },
+    {
+      "id": "heightSum",
+      "kind": "add",
+      "a": "leftHeight",
+      "b": "rightHeight"
+    },
+    {
+      "id": "finish",
+      "kind": "channels",
+      "input": "base",
+      "values": {
+        "roughness": "heightSum"
+      }
+    }
+  ],
+  "output": "finish"
+}

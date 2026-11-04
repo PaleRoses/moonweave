@@ -1,0 +1,189 @@
+{
+  "version": "0.54.0",
+  "baselineVersion": "0.53.0",
+  "method": "Independent baseline/current core and shader imports; exact prior graph/program/GLSL comparisons. Static representation and emitted-work counts, with no CPU/GPU speed claim.",
+  "legacy": {
+    "belly": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "tips": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "patina": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "finish": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "stone": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "lichen": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "spectrum": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "prismatic": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "porcelain": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "weathered": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    }
+  },
+  "literalIdentity": {
+    "sameProgram": true,
+    "sameShader": true,
+    "authoredNodes": 6,
+    "liveNodes": 2,
+    "graphJSONBytes": 674,
+    "generatedGLSLBytes": 2291,
+    "paintSamples": 0,
+    "proceduralSamples": 0,
+    "textureReads": 0,
+    "uniformScalars": 3
+  },
+  "liveAdjustment": {
+    "sameProgramAcrossEdit": true,
+    "sameStructureAcrossEdit": true,
+    "authoredNodes": 6,
+    "liveNodes": 6,
+    "graphJSONBytes": 699,
+    "generatedGLSLBytes": 4106,
+    "paintSamples": 0,
+    "proceduralSamples": 0,
+    "textureReads": 0,
+    "uniformScalars": 6
+  },
+  "chisel": {
+    "scalarNodes": 17,
+    "withColorMaterial": {
+      "authoredNodes": 21,
+      "liveNodes": 21,
+      "graphJSONBytes": 2040,
+      "generatedGLSLBytes": 3450,
+      "paintSamples": 0,
+      "proceduralSamples": 0,
+      "textureReads": 0,
+      "uniformScalars": 18
+    }
+  },
+  "studies": {
+    "ivory": {
+      "authoredNodes": 105,
+      "liveNodes": 105,
+      "graphJSONBytes": 13035,
+      "generatedGLSLBytes": 14751,
+      "paintSamples": 1,
+      "proceduralSamples": 0,
+      "textureReads": 4,
+      "uniformScalars": 188
+    },
+    "brass": {
+      "authoredNodes": 105,
+      "liveNodes": 105,
+      "graphJSONBytes": 13165,
+      "generatedGLSLBytes": 14742,
+      "paintSamples": 1,
+      "proceduralSamples": 0,
+      "textureReads": 4,
+      "uniformScalars": 188
+    }
+  },
+  "sourceSHA256": {
+    "baseline": {
+      "lab/composition.mts": "23022b01004a45f37b5c7bb6a8d508171a9d68a372fdbf63447c5d90af2ec5b1",
+      "lab/surface-examples.mts": "4fb4f1defd4faff4656341ef0401624deb9d24f720eb4d7311752990d13c3ea7",
+      "src/core.mjs": "e7e0db2d760fe0e7f87ed91d6493efec10d18569128bc7f6f2fddec32c60b576",
+      "src/core/algebra.mts": "1e90567aa0ccd73f4f1feda31bd822dda4f3c6399ba5983e3f6fc831b2b81e83",
+      "src/core/color-sample.mts": "3dca31ed04348d5f04fa4d52df98d09a6b3cca8c269b5379356c8365a03288d2",
+      "src/core/color.mjs": "0588db42cf62cd73bbf113322ac9c7a792965b0ff37e4b40fb63f4689c6012d9",
+      "src/core/compile.mjs": "c24e7dc1d52882dcf042656ca2b24d95d9d6dc0057bddf56d4808045e651566d",
+      "src/core/evaluate.mjs": "8a46d703f0d8755a4a06fe778e7957b5d44bc588beca76606b70749e0ae493ba",
+      "src/core/field-evaluate.mts": "7860ee8d0439a9ae6f315b0e942e7d126679d6637e9ce8e3bf5c87e027220515",
+      "src/core/graph.mjs": "b3f1c11fe458ea6a0f13e3b3c994a091f32d051915180c75ebab123b7ec5161e",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "c72e3f2ebad72d5f8f45f74462a68e8ae31ccd74e20e3b2579789277298223ef",
+      "src/three/color.mjs": "8869ae5585ca4ad6ac073adb870ee88fabf5fd1db766d2e37f5258b362dae83f",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "c1fa86d227df5884309684b7fafb604398d88a8dd8aa07c78e1a08915c62609e",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "dc2ec4057131bfb67d967eba64d1ae288271be160e8534b2b9c71778733b814c",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "b317cf4f99557336f210ed3e91722dd9a168e536ee2b4c290a06f63d46f267e4"
+    },
+    "current": {
+      "lab/composition.mts": "abfe33150c31db2088979c8c4350dd8417c9dde6eeca8eb98d80e8b2faa235c2",
+      "lab/painterly-examples.mts": "b0da5d6253ae9615d5a3846b96d8831f20b770efe2d30c9726fc844e04e91449",
+      "lab/surface-examples.mts": "4fb4f1defd4faff4656341ef0401624deb9d24f720eb4d7311752990d13c3ea7",
+      "src/core.mjs": "2f708dbea7fe6741c0266fa8d8f2a490bc37d0dff6fff4af2da6d68b1a270c0c",
+      "src/core/algebra.mts": "cbf33c9f1510d13793383125a96a8def9fc56b2f8a491e7ae4487e8332f3c34e",
+      "src/core/color-sample.mts": "0fa09e707916a055367cabfd7f586ea4dd9b38b4adf2399f7d69ddfa861a6f74",
+      "src/core/color.mjs": "b2c64fdcd9119ffb94531887fe167ca1a33bd46eff272b9b2c038b0553787c8d",
+      "src/core/compile.mjs": "09f5070b17a48b35806140f9fb9053d3d1956570372741681d2ce2774ef8bea2",
+      "src/core/evaluate.mjs": "8a46d703f0d8755a4a06fe778e7957b5d44bc588beca76606b70749e0ae493ba",
+      "src/core/field-evaluate.mts": "6ca09775f8c327f2a76760323ac7ae36a3a82be89e1d6a83431c556021385a70",
+      "src/core/graph.mjs": "151411a0e3beb5c793c9350986f4f672baaf5e0a82850286a13dd207df6d81ce",
+      "src/core/masks.mjs": "e2c6be8e281448cfbd5942ff0dc4073d9b3d4f14d13ebeee92f635a4284bb8e9",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "c72e3f2ebad72d5f8f45f74462a68e8ae31ccd74e20e3b2579789277298223ef",
+      "src/three/color.mjs": "e6bfa71ed909df11d1d26ed55dd2aaa55e38cd4e562e0e00e62e8241ff850870",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "c1fa86d227df5884309684b7fafb604398d88a8dd8aa07c78e1a08915c62609e",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "2bd77fe79c785e8461c87a3c67c0d07279ebc641789f5f7786e20dfecfb6df1b",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "b317cf4f99557336f210ed3e91722dd9a168e536ee2b4c290a06f63d46f267e4",
+      "tools/measure-pigments.mjs": "15ac0ced1f0e09b0749ab9105a770ac36b74fd90157676f70e61c76f30c42297"
+    }
+  }
+}

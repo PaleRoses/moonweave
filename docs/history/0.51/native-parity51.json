@@ -1,0 +1,321 @@
+{
+  "baselineVersion": "0.50.0",
+  "candidateVersion": "0.51.0",
+  "images": 52,
+  "pixels": 13631488,
+  "allPixelIdentical": true,
+  "comparisons": [
+    {
+      "specimen": "sphere",
+      "file": "carapace-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "carapace-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "channel-flat-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "channel-flat-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "channel-nested-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "channel-nested-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "channels-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "channels-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "finish-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "finish-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "frame-reference-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "frame-reference-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "framed-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "framed-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "independent-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "independent-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "membrane-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "membrane-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "moonstone-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "moonstone-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "patched-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "patched-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "reference-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "reference-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "shared-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "sphere",
+      "file": "shared-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "carapace-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "carapace-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "channel-flat-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "channel-flat-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "channel-nested-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "channel-nested-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "channels-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "channels-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "finish-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "finish-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "frame-reference-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "frame-reference-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "framed-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "framed-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "independent-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "independent-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "membrane-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "membrane-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "moonstone-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "moonstone-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "patched-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "patched-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "reference-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "reference-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "shared-far.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    },
+    {
+      "specimen": "shell",
+      "file": "shared-near.png",
+      "pixelIdentical": true,
+      "pixels": 262144
+    }
+  ]
+}

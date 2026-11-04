@@ -1,0 +1,491 @@
+{
+  "version": "0.56.0",
+  "baselineVersion": "0.55.0",
+  "legacyExamples": 14,
+  "legacy": {
+    "belly": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "tips": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "patina": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "finish": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "stone": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "lichen": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "spectrum": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "prismatic": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "porcelain": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "weathered": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "ivory": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "brass": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "zones": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    },
+    "pigments": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true
+    }
+  },
+  "studies": {
+    "zones": {
+      "authoredNodes": 45,
+      "liveNodes": 45,
+      "graphJSONBytes": 26954,
+      "generatedGLSLBytes": 12912,
+      "programKeyBytes": 2300,
+      "uniqueResourceObjects": 1,
+      "imageSamplerBindings": 1,
+      "scalarReaders": 2,
+      "colorReaders": 0,
+      "authoredFloat32PayloadBytes": 4096,
+      "rgba32fPyramidBytes": 21840,
+      "resources": [
+        {
+          "width": 32,
+          "height": 32,
+          "channels": 1,
+          "authoredComponents": 1024,
+          "authoredFloat32PayloadBytes": 4096,
+          "mipDimensions": [
+            [
+              32,
+              32
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "mipFloat32PayloadBytes": 5460,
+          "rgba32fBaseLevelBytes": 16384,
+          "rgba32fPyramidBytes": 21840
+        }
+      ],
+      "cost": {
+        "paintSamples": 1,
+        "proceduralSamples": 0,
+        "textureReads": 12,
+        "uniformScalars": 96
+      },
+      "graphSHA256": "5eec87a02adc313a314c4b2ad0e20f59c5393316bd2830c62d17f779553e3f3c",
+      "generatedGLSLSHA256": "a72548de1bcd2864c8c889df32d92b12cd323b4ed68808575da0884976e321ad"
+    },
+    "pigments": {
+      "authoredNodes": 48,
+      "liveNodes": 46,
+      "graphJSONBytes": 33362,
+      "generatedGLSLBytes": 13319,
+      "programKeyBytes": 2386,
+      "uniqueResourceObjects": 2,
+      "imageSamplerBindings": 2,
+      "scalarReaders": 2,
+      "colorReaders": 1,
+      "authoredFloat32PayloadBytes": 4864,
+      "rgba32fPyramidBytes": 23872,
+      "resources": [
+        {
+          "width": 32,
+          "height": 32,
+          "channels": 1,
+          "authoredComponents": 1024,
+          "authoredFloat32PayloadBytes": 4096,
+          "mipDimensions": [
+            [
+              32,
+              32
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "mipFloat32PayloadBytes": 5460,
+          "rgba32fBaseLevelBytes": 16384,
+          "rgba32fPyramidBytes": 21840
+        },
+        {
+          "width": 64,
+          "height": 1,
+          "channels": 3,
+          "authoredComponents": 192,
+          "authoredFloat32PayloadBytes": 768,
+          "mipDimensions": [
+            [
+              64,
+              1
+            ],
+            [
+              32,
+              1
+            ],
+            [
+              16,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "mipFloat32PayloadBytes": 1524,
+          "rgba32fBaseLevelBytes": 1024,
+          "rgba32fPyramidBytes": 2032
+        }
+      ],
+      "cost": {
+        "paintSamples": 1,
+        "proceduralSamples": 0,
+        "textureReads": 16,
+        "uniformScalars": 119
+      },
+      "graphSHA256": "3627ce1efdbb2b830ae7f7162a6cade5ff60212a4267c1828d6874b106a92881",
+      "generatedGLSLSHA256": "04ae6c97e1700f59c76bd3aebfc452caee1c1538c1fe7711fb72a49404c5b5c6"
+    },
+    "inscription": {
+      "authoredNodes": 37,
+      "liveNodes": 37,
+      "graphJSONBytes": 537665,
+      "generatedGLSLBytes": 14453,
+      "programKeyBytes": 2144,
+      "uniqueResourceObjects": 1,
+      "imageSamplerBindings": 1,
+      "scalarReaders": 6,
+      "colorReaders": 0,
+      "authoredFloat32PayloadBytes": 98304,
+      "rgba32fPyramidBytes": 174768,
+      "resources": [
+        {
+          "width": 128,
+          "height": 64,
+          "channels": 3,
+          "authoredComponents": 24576,
+          "authoredFloat32PayloadBytes": 98304,
+          "mipDimensions": [
+            [
+              128,
+              64
+            ],
+            [
+              64,
+              32
+            ],
+            [
+              32,
+              16
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              8,
+              4
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "mipFloat32PayloadBytes": 131076,
+          "rgba32fBaseLevelBytes": 131072,
+          "rgba32fPyramidBytes": 174768
+        }
+      ],
+      "cost": {
+        "paintSamples": 1,
+        "proceduralSamples": 0,
+        "textureReads": 132,
+        "uniformScalars": 89
+      },
+      "graphSHA256": "ebd50c7228124c95cc552c890a57614fd69ad785f2962ef6b8bfd22524d312ee",
+      "generatedGLSLSHA256": "957e4166ac3032b22f8e40c0cf6e27859d50e8a266f5fc56718d660a1b3f08de"
+    }
+  },
+  "accounting": "Static work ceilings and float32 payload/upload counts, not render timings, driver allocation or JavaScript heap size. All images upload a shared pyramid. Graph JSON contains only authored level zero.",
+  "reference": {
+    "function": "f(u,v)=0.5+0.25*sin(2π*32*u)+0.2*sin(2π*8*v)",
+    "image": {
+      "width": 128,
+      "height": 128,
+      "channels": 1
+    },
+    "gridSize": 64,
+    "origin": [
+      0.0073,
+      0.0137
+    ],
+    "formula": "A sinusoid in coordinate i is attenuated by sinc(frequency*dx[i])*sinc(frequency*dy[i]) over a centered screen-pixel parallelogram; sinc(x)=sin(πx)/(πx).",
+    "method": "Exact continuous generating-function box average, compared with the actual float32 image sampler at 4096 positions per footprint. Error includes tabulation, reconstruction and filter approximations. These cases are not a universal quality bound or a native GPU performance measurement."
+  },
+  "comparisons": {
+    "isotropic": {
+      "label": "4 × 4 texel footprint",
+      "footprint": {
+        "dx": [
+          0.03125,
+          0
+        ],
+        "dy": [
+          0,
+          0.03125
+        ]
+      },
+      "samples": 4096,
+      "metrics": {
+        "linear": {
+          "rmsError": 0.1771866042090676,
+          "maxAbsoluteError": 0.19004784960816123,
+          "plan": {
+            "lod": 0,
+            "taps": 1,
+            "step": [
+              0,
+              0
+            ]
+          }
+        },
+        "trilinear": {
+          "rmsError": 0.007833594857182997,
+          "maxAbsoluteError": 0.010883401202462784,
+          "plan": {
+            "lod": 2,
+            "taps": 1,
+            "step": [
+              0,
+              0
+            ]
+          }
+        },
+        "anisotropic": {
+          "rmsError": 0.007833594857182997,
+          "maxAbsoluteError": 0.010883401202462784,
+          "plan": {
+            "lod": 2,
+            "taps": 1,
+            "step": [
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "oblique": {
+      "label": "Oblique 16 × 0.5 texel footprint",
+      "footprint": {
+        "dx": [
+          0.125,
+          0.002
+        ],
+        "dy": [
+          0.001,
+          0.00390625
+        ]
+      },
+      "samples": 4096,
+      "metrics": {
+        "linear": {
+          "rmsError": 0.1451409988263753,
+          "maxAbsoluteError": 0.18021399016000594,
+          "plan": {
+            "lod": 0,
+            "taps": 1,
+            "step": [
+              0,
+              0
+            ]
+          }
+        },
+        "trilinear": {
+          "rmsError": 0.14113483927784132,
+          "maxAbsoluteError": 0.1995943211994347,
+          "plan": {
+            "lod": 4.000236780605619,
+            "taps": 1,
+            "step": [
+              0,
+              0
+            ]
+          }
+        },
+        "anisotropic": {
+          "rmsError": 0.009987804052351841,
+          "maxAbsoluteError": 0.018387043596157615,
+          "plan": {
+            "lod": 1.0002367806056194,
+            "taps": 8,
+            "step": [
+              0.015625497991464836,
+              0.0002541441550096827
+            ]
+          }
+        }
+      }
+    }
+  },
+  "sourceSHA256": {
+    "lab/application-examples.mts": "79c6115cd1042f27954931d40350a2e14684d0efb41979bd448012025abfde73",
+    "lab/composition.mts": "8b57d49213c3c83d66b529dc20ade1426c224d8aa8ea60fc446a62d7d93559d7",
+    "package-lock.json": "753b57cafad4a5d39aeeb3b43c48b236bdd7ca0d33e097af6a9e0c80e4e48788",
+    "package.json": "aaa4a677c3df77947299bfd5e0a89a6d226d081d8c0eeff3e49753c350968467",
+    "src/color/pigment.d.mts": "56cae04a3adf255f1d2f8c4b97aa5c943c91a8bfb697d3be4186e9e83ea5d8bf",
+    "src/color/pigment.mjs": "6bc13716a7251369ce79c314f611982a4c8059b7e7b1db1f2ef9d66f155c8570",
+    "src/color/spectral-data.mjs": "6463d3bffe988e4d848a750413c1efc41df73072f1845b53381ada2ae7b7e819",
+    "src/core.d.mts": "f7a881d4b1b26ed880486ca60bc3f5f2a09523ca443fcf76ea448cb6cbe73870",
+    "src/core.mjs": "61a9248349ce59d313e264d1cb42df473abf267bd5ad9293494003d9faf16612",
+    "src/core/algebra.mts": "dd24804b5e5f404d553902d3915b64a0bd31447b1599c880e10b6b4ec3f65298",
+    "src/core/color-sample.mts": "0fa09e707916a055367cabfd7f586ea4dd9b38b4adf2399f7d69ddfa861a6f74",
+    "src/core/color.mjs": "b2c64fdcd9119ffb94531887fe167ca1a33bd46eff272b9b2c038b0553787c8d",
+    "src/core/compile.mjs": "43d70f0b10603673897c8eca2ea2fdac6670ab0e1b0cb657f9d0d914f03ea10f",
+    "src/core/coverage.mjs": "0644a573593d4bd78648ff0218cf19b232f01c4ec63e13f9cc250473d2385c02",
+    "src/core/evaluate.mjs": "8a46d703f0d8755a4a06fe778e7957b5d44bc588beca76606b70749e0ae493ba",
+    "src/core/field-evaluate.mts": "093ee923d54c46f2708d414ccf20d4bdb6f3e8d8c978122bf5bd81eccfffb523",
+    "src/core/graph.mjs": "d566678b0644f5664eba2d26870a28065f83fa8161d69cdc9155a372c4077daa",
+    "src/core/image-filter.d.mts": "fd41698c0b6eb6c26f5bb295c4e1ac100c9b9bd74a576fb49ab8875824b087e1",
+    "src/core/image-filter.mjs": "917474648ee723cb3283537eb4206a452e205ad6627469ccc376e310ed1e689f",
+    "src/core/masks.mjs": "e2c6be8e281448cfbd5942ff0dc4073d9b3d4f14d13ebeee92f635a4284bb8e9",
+    "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+    "src/core/recipe.d.mts": "a821cff91814712abb518627e50fb0e96a77765ff93272c3ec95eacc7c691fd7",
+    "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+    "src/core/resources.d.mts": "202aa69cb62d2fe190c94e9169c6b9375430825724a96443d985c3b905c469c0",
+    "src/core/resources.mjs": "1a842822dfb1212ddf9e1ec8d63e849920f54e08fcdfd0fecacff0ecbcfbfe1f",
+    "src/core/zones.mjs": "4b73fc97a1383979802cff2748d317e7281b708b3e6c9fe137cc5c96a522ace3",
+    "src/index.d.mts": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+    "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+    "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+    "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+    "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+    "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+    "src/three.d.mts": "e9e39c285aba75fe054f5067ec5b2457a85372a05fc5ba604f498199ec12b634",
+    "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+    "src/three/adapter.mjs": "1cdcff0be21527b3cbebc9aebfd2a220f04086b6d34aca95caf1fc14123fdc5c",
+    "src/three/color.mjs": "e6bfa71ed909df11d1d26ed55dd2aaa55e38cd4e562e0e00e62e8241ff850870",
+    "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+    "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+    "src/three/fields.mjs": "2c77ab13cd3790e3696eae552abd12b3f99b48fdffff25a9c78de077d8be341f",
+    "src/three/images.mjs": "d82bb3d9d981e09a918939094dea4a1b269b58dece408b6ce9ac4f447b43b869",
+    "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+    "src/three/shader.mjs": "36bbecaca3d37d6739636fafd7435fbbd27ba5bfbd0ac90856443f20191d91c5",
+    "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+    "src/three/uniforms.mjs": "e53bb209bd23f74c26260a21080aeec165a451adbbda624538c1e9f4b7c53554",
+    "tests/filter-applications.test.mjs": "62543d825f33fad0c01f08685904d799ae1f7a5eea220e5453382cfebb9c57ad",
+    "tests/filter-grammar.test.mjs": "0250e144b75b8f41c6f1dda22cdc3e25e75cd7b4eef82a51e872c913eebca4e1",
+    "tests/image-filter-gpu.test.mjs": "d928fe5f9022921ad74ad327aaa2cdf529c41ad0d2f98f12aa100ca4462a913a",
+    "tests/image-filter.test.mjs": "0b5e939a57b160b55e85e0122ad8a958f76fbf10f9bba387aeee86e26218ab5f",
+    "tools/measure-filtering.mjs": "fc2474b810b19aa7d0b5906ac1df6c739494dce0c2546db1c9ef7a839a595bbf"
+  }
+}

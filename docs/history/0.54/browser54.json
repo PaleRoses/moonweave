@@ -1,0 +1,74 @@
+{
+  "version": "0.54.0",
+  "checks": [
+    {
+      "check": "connected hue edit",
+      "passed": true
+    },
+    {
+      "check": "hue edit undo",
+      "passed": true
+    },
+    {
+      "check": "new neutral adjustment wraps all three connected palette relatives",
+      "passed": true
+    },
+    {
+      "check": "undo restores original study",
+      "passed": true
+    },
+    {
+      "check": "redo restores connected adjustment exactly",
+      "passed": true
+    },
+    {
+      "check": "connect adjustment to shared scalar field",
+      "passed": true
+    },
+    {
+      "check": "remove adjustment restores prior graph and prunes its orphan parameters",
+      "passed": true
+    },
+    {
+      "check": "field construction is collapsed with 28 available controls",
+      "passed": true
+    },
+    {
+      "check": "palette controls remain visible while ramp construction is hidden",
+      "passed": true
+    },
+    {
+      "check": "expanded construction exposes ramp editing",
+      "passed": true
+    },
+    {
+      "check": "second study loads its complete 105-node graph",
+      "passed": true
+    },
+    {
+      "check": "original user surface restored exactly",
+      "passed": true
+    }
+  ],
+  "graphics": {
+    "moonweave": "0.54.0",
+    "three": "187",
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "webgl2API": true,
+    "profile": "standard",
+    "creationMessage": "Could not create a WebGL context, VENDOR = 0xffff, DEVICE = 0xffff, GL_VENDOR = Disabled, GL_RENDERER = Disabled, Sandboxed = yes, Optimus = no, AMD switchable = no, Reset notification strategy = 0x0000, ErrorMessage = BindToCurrentSequence failed: .",
+    "status": "unavailable",
+    "phase": "context",
+    "error": {
+      "name": "Error",
+      "message": "The browser did not provide a WebGL2 context."
+    },
+    "context": null,
+    "preview": {
+      "width": 934,
+      "height": 656,
+      "pixelRatio": null,
+      "renders": 0
+    }
+  }
+}

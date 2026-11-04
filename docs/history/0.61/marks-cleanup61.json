@@ -1,0 +1,210 @@
+{
+  "schema": "moonweave/mark-cleanup-benchmark/1",
+  "recordedAt": "2026-11-04T06:36:46.251Z",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "method": {
+    "runs": 7,
+    "warmupOperations": 4,
+    "explicitGC": true,
+    "order": "Alternating baseline/current batches, with the same input and iteration counts per pair.",
+    "scope": "CPU authoring only. Owned normalization proves removal of repeated validation; raw normalization still copies and validates every input sample. Zone bakes reuse compiled programs. No GPU or frame-rate claim."
+  },
+  "benchmarkSHA256": "92c3ebe6df12d895ef3fc550fe940bf7448e8f93a175504124fd9082158d7e82",
+  "baseline": {
+    "version": "0.60.0",
+    "sourceSHA256": {
+      "src/paint/marks.mts": "07cded31e04462dd9c88d72389e44e729b29b34dcfc7de39648c02453141be7e",
+      "src/paint/mark-raster.mts": "dab977000023d5f87a3a3cfdc779a40023f947c1f4626a41a303a79060da939d",
+      "src/paint/mark-apply.mts": "1ed048dc31387c5773dba61178ccc3b253022670239e83db8329af0ff1f2b9d1",
+      "src/core/algebra.mts": "2b8716e0127fc407bd7282ea45943495345b5bfc77dd294ccafb363164610ac6",
+      "src/core/resources.mts": "43607892f6af13f78b8f6555943ef0326823b1500743e95273c4e0f7296e821d",
+      "src/core/ownership.mts": "c7f99434dfd95a29b749ad36c3e080fdd4f4936b1ddd9954042a837b25c6ded3",
+      "src/core/image-filter.mts": "6d5ba956fbe55d5bdb5ffec9e39a91d0ae5a0869dfe3b332940a6eafe3ce5bfa",
+      "src/core/graph.mts": "cd157e0661e1a0b385b316c11d31b0b933a9f71decdb9bdc7a5d88e20d2cc89a",
+      "src/core/color.mts": "588c37140374d21bda48b4dbf6873aa23b7e257118636a3194f858eb72dfaedf",
+      "package.json": "6b6ce18714cb55d837b2e2354e69d2e7d04c5a7c5dd41a2a80e73826b1768bdf"
+    }
+  },
+  "current": {
+    "version": "0.61.0",
+    "sourceSHA256": {
+      "src/paint/marks.mts": "198f0a2c03b1ad0b09e963e1bdef5b5a8586d5b17334437c47645679df58b905",
+      "src/paint/mark-raster.mts": "d92006db19c1eae7e072daa66760fed865ea2b07f64168b62af28e99eeb8bc8d",
+      "src/paint/mark-apply.mts": "97f6a3dd617cfe912112bfb986ba9ea13df9636b71aa379581388f1aa73b3c7c",
+      "src/core/algebra.mts": "874628ff7827485361acd690ac3faa529d76d307e23b248bfb9787bf74989e26",
+      "src/core/resources.mts": "43607892f6af13f78b8f6555943ef0326823b1500743e95273c4e0f7296e821d",
+      "src/core/ownership.mts": "4c0b52bb7e1c9468176789a9f03819c7a8f3b5b063703bf709886f55bbee0820",
+      "src/core/image-filter.mts": "6d5ba956fbe55d5bdb5ffec9e39a91d0ae5a0869dfe3b332940a6eafe3ce5bfa",
+      "src/core/graph.mts": "d08a8a2c1747330a5279618ac75e9f3dcd386478a9145624256adf369c22b04f",
+      "src/core/color.mts": "588c37140374d21bda48b4dbf6873aa23b7e257118636a3194f858eb72dfaedf",
+      "package.json": "40a0b667dbac81e6f6821eef4ce0263ee252affbe14c3cd71cf9e0feedf4eedf"
+    }
+  },
+  "normalization": {
+    "maskComponents": 262144,
+    "canonicalProgramSHA256": "7acaccddb77ed250d16bd233a370acbbf5d8dca9b800e0f1a152b5cb97ce5615",
+    "raw": {
+      "iterations": 12,
+      "unit": "microseconds",
+      "baselineMedian": 18963.935166666677,
+      "currentMedian": 18915.39858333336,
+      "samples": {
+        "baseline": [
+          20975.254999999994,
+          18963.935166666677,
+          19032.70708333332,
+          18676.8215,
+          18105.29733333332,
+          20290.317749999984,
+          18800.069166666693
+        ],
+        "current": [
+          19542.65674999999,
+          23130.595583333332,
+          17963.74658333332,
+          19019.489583333325,
+          17618.10466666668,
+          17722.007,
+          18915.39858333336
+        ]
+      }
+    },
+    "owned": {
+      "iterations": 100,
+      "unit": "microseconds",
+      "baselineMedian": 2997.1792800000003,
+      "currentMedian": 0.13941000000158965,
+      "samples": {
+        "baseline": [
+          2852.840320000005,
+          2897.4027000000024,
+          2915.8404700000024,
+          2997.1792800000003,
+          3097.0508699999937,
+          3087.324470000003,
+          3167.5428599999937
+        ],
+        "current": [
+          0.2871400000003632,
+          0.10895999999775086,
+          0.3054599999995844,
+          0.1279900000008638,
+          0.13941000000158965,
+          0.428539999993518,
+          0.13891000000512577
+        ]
+      }
+    },
+    "compileOwned": {
+      "iterations": 40,
+      "unit": "microseconds",
+      "baselineMedian": 3201.2558249999984,
+      "currentMedian": 4.443700000001627,
+      "samples": {
+        "baseline": [
+          3282.918900000004,
+          3278.607899999997,
+          3201.2558249999984,
+          3064.4223499999953,
+          3128.5407000000077,
+          3162.561175000019,
+          3304.2970250000058
+        ],
+        "current": [
+          6.411149999985355,
+          4.443700000001627,
+          4.343549999998686,
+          3.913149999993948,
+          4.6760500000118554,
+          4.371074999994562,
+          5.452199999990626
+        ]
+      }
+    }
+  },
+  "inactiveMark": {
+    "allBakedFieldsByteIdentical": true,
+    "fieldsSHA256": "7a6bff1fd64e15e8f9c460318003ba379ea01421fbab7f8a9ac14b886d3a8856",
+    "baseline": {
+      "nodes": 24,
+      "images": 5,
+      "bump": true,
+      "channels": [
+        "roughness",
+        "metalness",
+        "clearcoat",
+        "opacity"
+      ],
+      "hasHeight": true
+    },
+    "current": {
+      "nodes": 11,
+      "images": 2,
+      "bump": false,
+      "channels": [],
+      "hasHeight": false
+    }
+  },
+  "unusedZones": {
+    "declaredZones": 1000,
+    "activeZoneReferences": 0,
+    "allBakedFieldsByteIdentical": true,
+    "fieldsSHA256": "613bd54de567cb75091c0f49ca9163c419f6c8a206d16d4e5b5d848833738373",
+    "withUnused": {
+      "iterations": 6,
+      "unit": "microseconds",
+      "baselineMedian": 25392.128666666697,
+      "currentMedian": 11623.103166666928,
+      "samples": {
+        "baseline": [
+          34459.35250000002,
+          25392.128666666697,
+          25578.65299999988,
+          25536.85416666667,
+          22331.75933333344,
+          24675.344166666644,
+          22557.243833333512
+        ],
+        "current": [
+          30025.16200000006,
+          12390.839500000007,
+          9858.832666666482,
+          13162.525166666455,
+          8882.186666666712,
+          11623.103166666928,
+          8888.037000000017
+        ]
+      }
+    },
+    "controlWithoutUnused": {
+      "iterations": 6,
+      "unit": "microseconds",
+      "baselineMedian": 12228.072166666607,
+      "currentMedian": 11602.395500000057,
+      "samples": {
+        "baseline": [
+          13288.388166666664,
+          12286.145166666756,
+          20537.160333333304,
+          9824.723000000025,
+          10577.132500000213,
+          12228.072166666607,
+          9032.05133333328
+        ],
+        "current": [
+          12672.705833333262,
+          9876.829666666708,
+          12611.541333333358,
+          11602.395500000057,
+          13108.681333333456,
+          10156.049500000032,
+          9162.639499999992
+        ]
+      }
+    }
+  }
+}

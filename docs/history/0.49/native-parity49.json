@@ -1,0 +1,28 @@
+{
+  "baseline": "0.48.0",
+  "current": "0.49.0",
+  "specimens": {
+    "sphere": {
+      "matchingCases": 20,
+      "comparedPixels": 5242880,
+      "differingPixels": 0,
+      "maximumChannelDifference": 0,
+      "newCaseFiles": [
+        "finish-far.png",
+        "finish-near.png"
+      ],
+      "sourceFingerprintsMatch": true
+    },
+    "shell": {
+      "matchingCases": 20,
+      "comparedPixels": 5242880,
+      "differingPixels": 0,
+      "maximumChannelDifference": 0,
+      "newCaseFiles": [
+        "finish-far.png",
+        "finish-near.png"
+      ],
+      "sourceFingerprintsMatch": true
+    }
+  }
+}

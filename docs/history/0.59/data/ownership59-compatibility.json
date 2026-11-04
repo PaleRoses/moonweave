@@ -1,0 +1,1363 @@
+{
+  "version": "0.59.0",
+  "baselineVersion": "0.58.0",
+  "scope": "Exact graph and compiler representation comparisons plus actual installed legacy/current Three adapter bindings and assembled shader strings in local/attribute coordinates. GL calls only capture source; this is not shader compilation, GPU rendering, a pixel comparison, or a performance measurement.",
+  "comparisons": {
+    "galleryExamples": 15,
+    "compiledFields": [
+      "output",
+      "nodes",
+      "ranges",
+      "opacityRange",
+      "bindings",
+      "cost",
+      "diagnostics",
+      "sourceNodes",
+      "programKey",
+      "structure"
+    ],
+    "generatedFields": [
+      "declarations",
+      "evaluate"
+    ],
+    "engines": [
+      "140",
+      "187"
+    ],
+    "coordinates": [
+      "local",
+      "attribute"
+    ],
+    "assembledProgramPairs": 60,
+    "assembledPrograms": 120,
+    "adapterUniformPairs": 60,
+    "allEqual": true
+  },
+  "sourceFingerprintSHA256": {
+    "baseline": "25cecdfbb5283110389165ec27d8b386eed069b5a0bdd378e9b15582f4aa58a8",
+    "current": "801146cc2a0be1036808425e722b4778a0ace852192fb8a0f359fbb380b5f492"
+  },
+  "sources": {
+    "baseline": {
+      "lab/application-examples.mts": "79c6115cd1042f27954931d40350a2e14684d0efb41979bd448012025abfde73",
+      "lab/color-authoring.mts": "bdbee90c94f9bbdc72ac61f8473dec67b3d2889e7fda5c79f3800eff371ed613",
+      "lab/components/ColorAdjustmentControl.tsx": "6582b5e03e8ccb550638cc1fc6db30791786ac7ef3c3de3aeee1b6102c2942d5",
+      "lab/components/ColorControls.tsx": "0c1daf1df8604e379e2b3d3be1ee7a91adcebca6d0e77b38f17cc283d775dd14",
+      "lab/components/ComposePanel.tsx": "b678a845b362445dc7240ebe05da9c59ae170134ab8ecff6564dee0eb548572e",
+      "lab/components/Controls.tsx": "1a3d15e2073536a240bb6748029d177c30dd7eaf03fe01dc048dea36032badf1",
+      "lab/components/ExecutionGraph.tsx": "e130ec5224a138e371258a69816963332905e1e6e646e69c8813723c402ddeaa",
+      "lab/components/ExpressionControl.tsx": "bb1799387d86d0c0e95f85d06bc16a3b00a1de32f387edb6e6405d873a7dbfa0",
+      "lab/components/FieldApplications.tsx": "da07268683b924cdfe9dcc23ab926a2b9bd9f9833c35a43f71e4e79dc537caec",
+      "lab/components/PaintPanel.tsx": "9b0054ac5a067a2a4341c27b916a7df06adc258eaa4fd67e4685e00ed13f27b3",
+      "lab/components/SourcePanel.tsx": "b0ffcf460a30ea3561960847781f9a4120186e11427bc1f162c466008bc596e6",
+      "lab/components/StagePreview.tsx": "508e307fdb6ed61d3182d346089850dce9aa010c2e45c85c513345d7151a322d",
+      "lab/composition.mts": "9cdd57b56c1084c93f869881f5ca7753db680bdc3323194212296fae143fe3ee",
+      "lab/editor-io.mts": "87a768501da611c225faed9c23a02c3c0a25e655b673ced3601d0d92273c741e",
+      "lab/editor.ts": "0c8186505a2a386bd6e2408fb8c621abf8afc6e22527d86a085bbcdf5385c90e",
+      "lab/frame-batch.mts": "9cadcb695186c245205c2010af17c485af6a87863a47b41f217d37032f3cb8ba",
+      "lab/graph-layout.mts": "f2b147678dc16e7ef92a7b5054bc62833c2cab4fa76cd427773569bf139e4aea",
+      "lab/graphics-session.ts": "db3c3b34fb4f84901518b791eab54b19ae85d2e8ffb926bfa615232f76a56fc6",
+      "lab/history.mts": "2772ddde2547f93a0df177cee49afb782b467ee135bd5b9c225ef3f3f83f98ae",
+      "lab/index.tsx": "d8cf9df4473956bb03273aafd066a99d27c27005fd556f8470a08246cb465b98",
+      "lab/painterly-examples.mts": "b0da5d6253ae9615d5a3846b96d8831f20b770efe2d30c9726fc844e04e91449",
+      "lab/session.mts": "b93a5262d80f860fbe1b854dfe205b47024586138d5f83ab2f9715ca23f558d4",
+      "lab/specimens.mjs": "3894873e4a47c52d0269a885de51b3c10ed94b86e4f76b3342debf1a41777c25",
+      "lab/stage.ts": "62b8a6b6305fd505afc8b08f095e1dbdee2be1ef8b59e9e32df6dfa50f4502e1",
+      "lab/surface-authoring.mts": "511efa40f8b444a104b15b5d2644c011ff31768e9e8e680ceec5cb849c0e3f51",
+      "lab/surface-examples.mts": "4fb4f1defd4faff4656341ef0401624deb9d24f720eb4d7311752990d13c3ea7",
+      "src/color/pigment.mjs": "4ad8fd9e0cf20218dc5ed0fce4db26a32b3abe58b7c8099ecfd6bb4a347e994f",
+      "src/color/spectral-data.mjs": "6463d3bffe988e4d848a750413c1efc41df73072f1845b53381ada2ae7b7e819",
+      "src/core.mjs": "94fe07ba3311ff191c503f8c1a4fc017ef4ccd8648220d82a02dea0d95af077f",
+      "src/core/algebra.mts": "f1d5363ff5f9f6077de9f1ae04fca971944811eb270c3f0b0d68a55bfa926fb0",
+      "src/core/color-sample.mts": "5600169f8c79831e383d80861a648bf8b21708ed642034558557af32f42e9b40",
+      "src/core/color.mts": "d62ea0f0c5558859fddf0df6a28a43c01c734d70f17c74a64f11753cb4e04a9b",
+      "src/core/compile.mts": "554537081dfa93e1aa649f2f1c6fff39f4f71a605a1473e1f5470910647c57f6",
+      "src/core/coverage.mjs": "7edcdf004b38cf047e8081243682873a17e8b9ecc5bd467755c9f3402049da14",
+      "src/core/effects.mts": "75bc242610738433883ec4235e308b22197d498d6e4021ecc0e99d6c5190d751",
+      "src/core/evaluate.mts": "59363fa086b3102e81a0ff580f9e4d424b71b03e0e08faa4ffdec2d304c5fd2e",
+      "src/core/field-evaluate.mts": "bf9f865c2cc40fbaba0210a7ef1de07f7da53359468cf0bd3644bd4717b969d7",
+      "src/core/graph.mts": "b76fae4a153b20bc3a69f6a28b48d0d6e1190c966fb6db24f9a32434ca6c447c",
+      "src/core/image-filter.mjs": "917474648ee723cb3283537eb4206a452e205ad6627469ccc376e310ed1e689f",
+      "src/core/inspect.mts": "a6818e830829b6426e242bb8c37b784c48910fe3964e1c08aae9e80b11fc469a",
+      "src/core/intern.mts": "21117817eba4d2b4539eb542ff04d6dd0ee1955b73bc902c78c71edd604a64d2",
+      "src/core/masks.mjs": "80d374010901462d7f6fa0700199ba376a9799c4022ea2dc804d15bd87cd1024",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/optimize.mts": "801248283a1160e3048d639151f157d1a0dbc96e51dba6c1d498cc3b54bcc8ee",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/core/resources.mjs": "1a842822dfb1212ddf9e1ec8d63e849920f54e08fcdfd0fecacff0ecbcfbfe1f",
+      "src/core/zones.mjs": "0bdc6ee605832882babc3816fac0ed814b1d14b49a6b3eba8d53aed5a79d1a2a",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/optimize.mjs": "9804886ed8dc8259d3ab8f7fc2e049155faeb410272183b2c8f2db13fc4267e1",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "1cdcff0be21527b3cbebc9aebfd2a220f04086b6d34aca95caf1fc14123fdc5c",
+      "src/three/color.mjs": "a0ae02c1e77667ada48dc07643a068ba3132467e6bd228036a456cefdebbe5f7",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "fb32394b602c6ce10cebc4700f09ed9bc73af83512042a855cacb07a699e2eea",
+      "src/three/images.mjs": "d82bb3d9d981e09a918939094dea4a1b269b58dece408b6ce9ac4f447b43b869",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "36bbecaca3d37d6739636fafd7435fbbd27ba5bfbd0ac90856443f20191d91c5",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "d3bb8316807c5edce83f318d5caf1d66785ad98a77b5d2bd041be706adb3c6cd"
+    },
+    "current": {
+      "lab/application-examples.mts": "79c6115cd1042f27954931d40350a2e14684d0efb41979bd448012025abfde73",
+      "lab/color-authoring.mts": "bdbee90c94f9bbdc72ac61f8473dec67b3d2889e7fda5c79f3800eff371ed613",
+      "lab/components/ColorAdjustmentControl.tsx": "6582b5e03e8ccb550638cc1fc6db30791786ac7ef3c3de3aeee1b6102c2942d5",
+      "lab/components/ColorControls.tsx": "0c1daf1df8604e379e2b3d3be1ee7a91adcebca6d0e77b38f17cc283d775dd14",
+      "lab/components/ComposePanel.tsx": "ebde71a7bddceb2890d0d4d955eb85d0c8654d03662d6050b038a114456a6a3d",
+      "lab/components/Controls.tsx": "1a3d15e2073536a240bb6748029d177c30dd7eaf03fe01dc048dea36032badf1",
+      "lab/components/ExecutionGraph.tsx": "e130ec5224a138e371258a69816963332905e1e6e646e69c8813723c402ddeaa",
+      "lab/components/ExpressionControl.tsx": "bb1799387d86d0c0e95f85d06bc16a3b00a1de32f387edb6e6405d873a7dbfa0",
+      "lab/components/FieldApplications.tsx": "da07268683b924cdfe9dcc23ab926a2b9bd9f9833c35a43f71e4e79dc537caec",
+      "lab/components/PaintPanel.tsx": "9b0054ac5a067a2a4341c27b916a7df06adc258eaa4fd67e4685e00ed13f27b3",
+      "lab/components/SourcePanel.tsx": "b0ffcf460a30ea3561960847781f9a4120186e11427bc1f162c466008bc596e6",
+      "lab/components/StagePreview.tsx": "508e307fdb6ed61d3182d346089850dce9aa010c2e45c85c513345d7151a322d",
+      "lab/composition.mts": "cea691296a1dc980624496a5719dea0a0833a0ee88277eefe5343c4d55ffd152",
+      "lab/editor-io.mts": "87a768501da611c225faed9c23a02c3c0a25e655b673ced3601d0d92273c741e",
+      "lab/editor.ts": "eb46cb52b476737f919b01077a7f1e0fd678132d6b3f51e2d9840e2fc91b012d",
+      "lab/examples.mts": "47f4eca1f7d39cbd5bd5c82d1fd808ccef830a3b7a9eb043857dba26eed90a7b",
+      "lab/frame-batch.mts": "9cadcb695186c245205c2010af17c485af6a87863a47b41f217d37032f3cb8ba",
+      "lab/graph-layout.mts": "f2b147678dc16e7ef92a7b5054bc62833c2cab4fa76cd427773569bf139e4aea",
+      "lab/graphics-session.ts": "db3c3b34fb4f84901518b791eab54b19ae85d2e8ffb926bfa615232f76a56fc6",
+      "lab/history.mts": "2772ddde2547f93a0df177cee49afb782b467ee135bd5b9c225ef3f3f83f98ae",
+      "lab/index.tsx": "d8cf9df4473956bb03273aafd066a99d27c27005fd556f8470a08246cb465b98",
+      "lab/painterly-examples.mts": "b0da5d6253ae9615d5a3846b96d8831f20b770efe2d30c9726fc844e04e91449",
+      "lab/session.mts": "b93a5262d80f860fbe1b854dfe205b47024586138d5f83ab2f9715ca23f558d4",
+      "lab/specimens.mjs": "3894873e4a47c52d0269a885de51b3c10ed94b86e4f76b3342debf1a41777c25",
+      "lab/stage.ts": "62b8a6b6305fd505afc8b08f095e1dbdee2be1ef8b59e9e32df6dfa50f4502e1",
+      "lab/surface-authoring.mts": "511efa40f8b444a104b15b5d2644c011ff31768e9e8e680ceec5cb849c0e3f51",
+      "lab/surface-examples.mts": "4fb4f1defd4faff4656341ef0401624deb9d24f720eb4d7311752990d13c3ea7",
+      "src/color/pigment.mjs": "4ad8fd9e0cf20218dc5ed0fce4db26a32b3abe58b7c8099ecfd6bb4a347e994f",
+      "src/color/spectral-data.mjs": "6463d3bffe988e4d848a750413c1efc41df73072f1845b53381ada2ae7b7e819",
+      "src/core.mjs": "94fe07ba3311ff191c503f8c1a4fc017ef4ccd8648220d82a02dea0d95af077f",
+      "src/core/algebra.mts": "f1d5363ff5f9f6077de9f1ae04fca971944811eb270c3f0b0d68a55bfa926fb0",
+      "src/core/analyze.mts": "66e54ef7109058068df474d87f8c5f8fd532f866e3dfddbd3fb9b82d93b50c54",
+      "src/core/color-sample.mts": "5600169f8c79831e383d80861a648bf8b21708ed642034558557af32f42e9b40",
+      "src/core/color.mts": "d62ea0f0c5558859fddf0df6a28a43c01c734d70f17c74a64f11753cb4e04a9b",
+      "src/core/compile.mts": "78a3f1023cba87001aeb1c929590a75fa4a41c2f02e5a86825959471a1202b39",
+      "src/core/coverage.mjs": "ad9e1c2bcda317ea16bc9249fbf5f307b0845d1d7650a8ee08f52aef414693b9",
+      "src/core/effects.mts": "75bc242610738433883ec4235e308b22197d498d6e4021ecc0e99d6c5190d751",
+      "src/core/evaluate.mts": "59363fa086b3102e81a0ff580f9e4d424b71b03e0e08faa4ffdec2d304c5fd2e",
+      "src/core/field-evaluate.mts": "bf9f865c2cc40fbaba0210a7ef1de07f7da53359468cf0bd3644bd4717b969d7",
+      "src/core/graph.mts": "c88d8fcd49bc909ca6c7d9784efe4780249d30774bf9cb0dc90bfd37d1e67a49",
+      "src/core/image-filter.mjs": "917474648ee723cb3283537eb4206a452e205ad6627469ccc376e310ed1e689f",
+      "src/core/inspect.mts": "a6818e830829b6426e242bb8c37b784c48910fe3964e1c08aae9e80b11fc469a",
+      "src/core/intern.mts": "21117817eba4d2b4539eb542ff04d6dd0ee1955b73bc902c78c71edd604a64d2",
+      "src/core/masks.mjs": "93662e8980ab6e95606c1e7c0b3374ae43bbeffc52527321d4e19c204b637899",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/optimize.mts": "801248283a1160e3048d639151f157d1a0dbc96e51dba6c1d498cc3b54bcc8ee",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/core/resources.mjs": "1a842822dfb1212ddf9e1ec8d63e849920f54e08fcdfd0fecacff0ecbcfbfe1f",
+      "src/core/zones.mjs": "0bdc6ee605832882babc3816fac0ed814b1d14b49a6b3eba8d53aed5a79d1a2a",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/optimize.mjs": "9804886ed8dc8259d3ab8f7fc2e049155faeb410272183b2c8f2db13fc4267e1",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "2495842aa36a28dfc2e6e4c6d9f3f5aa22740aab040ce5a5ba022f0435d555fc",
+      "src/three/color.mjs": "a0ae02c1e77667ada48dc07643a068ba3132467e6bd228036a456cefdebbe5f7",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "fb32394b602c6ce10cebc4700f09ed9bc73af83512042a855cacb07a699e2eea",
+      "src/three/images.mjs": "d82bb3d9d981e09a918939094dea4a1b269b58dece408b6ce9ac4f447b43b869",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "36bbecaca3d37d6739636fafd7435fbbd27ba5bfbd0ac90856443f20191d91c5",
+      "src/three/textures.mjs": "07a46fdb58ba0ebd9e2e9955a525c782870a9bd238d23c59fc78ee65c6c08f1b",
+      "src/three/uniforms.mjs": "d3bb8316807c5edce83f318d5caf1d66785ad98a77b5d2bd041be706adb3c6cd"
+    }
+  },
+  "gallery": {
+    "belly": {
+      "label": "Pale underside",
+      "authoredNodes": 9,
+      "liveNodes": 9,
+      "graphSHA256": "bb42fd95b77ec1e533275f6ae72dc941eccbab44bc7b9bdd34de083255f81778",
+      "equal": true,
+      "hashes": {
+        "output": "0378b9aa52d5d1453633250b47cec337115c82c0b3693f9ded99145edd317de8",
+        "nodes": "19b150fa394a6f0b119f098d77781ff692e7aa057095e86664f25288cae46722",
+        "ranges": "4062c0e135f63b034c8292caad44b9d878f7628407d7040c25b5e54386f13f50",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "a1e645fe2342b83d8774f112d0b42ef6b89940f2044c16394395bb0b2ec89f1f",
+        "cost": "6e6dcadfb30c2fe30836e732f2736ffe4a220e6bf9b7ea817ca3dc63923b4cbc",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "cda0f7637531e2e0ccd364d968d3bd3b161e16cc3f579a121ca42d6af6202ec1",
+        "programKey": "b91fbf9b4a82e3906011a47ca948aadcc570c870ea538d688d9b763989dd415a",
+        "structure": "b2a3cb1f9c39899340ac5a79fe0969cb7b19495b4ad46d215c2ef7b6f08edf32",
+        "generated-declarations": "b15e1173506f8cbdf7bf2c8d0110be81bc910bdd99371e70f09e85252f544e79",
+        "generated-evaluate": "2394c2467630aa6e56769f55c91b81413a14b1adb351ea45c01e5314180af83a"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 61566,
+          "uniforms": 22,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "0b1db59a2e25d56e976ffbd443c233fac405cb82c73db6390f3a046fd0401bbf",
+            "programKey": "69da3a7f506ef96513c408d1f86d8569fc40705124d9d51f8963c41d37a536ba",
+            "uniforms": "5a8ae73833f825e0ff3f36a7eb1c4da0f195ee387e6a8e5e0e63949c624df6ab"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 61566,
+          "uniforms": 22,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "0b1db59a2e25d56e976ffbd443c233fac405cb82c73db6390f3a046fd0401bbf",
+            "programKey": "2c7c7bbe455d6bae88a8d7a45c2b79142cbc66b22823b4d60c9dd1b859abfe5f",
+            "uniforms": "5a8ae73833f825e0ff3f36a7eb1c4da0f195ee387e6a8e5e0e63949c624df6ab"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 91798,
+          "uniforms": 22,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "ba1dae12f9eb914e0257564ecf63efb5dcc889e944493eb0d05418cca60a1d98",
+            "programKey": "69da3a7f506ef96513c408d1f86d8569fc40705124d9d51f8963c41d37a536ba",
+            "uniforms": "891f306ae98e46fb51a5ef09ebdb41ecbf5cd76aa8c1f6d7257a2833eb9bda47"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 91798,
+          "uniforms": 22,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "ba1dae12f9eb914e0257564ecf63efb5dcc889e944493eb0d05418cca60a1d98",
+            "programKey": "2c7c7bbe455d6bae88a8d7a45c2b79142cbc66b22823b4d60c9dd1b859abfe5f",
+            "uniforms": "891f306ae98e46fb51a5ef09ebdb41ecbf5cd76aa8c1f6d7257a2833eb9bda47"
+          }
+        }
+      ]
+    },
+    "tips": {
+      "label": "Darkened tips",
+      "authoredNodes": 9,
+      "liveNodes": 9,
+      "graphSHA256": "01845fbc48247e1ed167873c6935b6e47936b6db57d6cc1391148043ae88eeda",
+      "equal": true,
+      "hashes": {
+        "output": "0378b9aa52d5d1453633250b47cec337115c82c0b3693f9ded99145edd317de8",
+        "nodes": "e38bd676c31fb98bd29c785379c86e2b9c5eaf6fb34c2f90ddc2a0dd0582003e",
+        "ranges": "0ccc0f7e74fc3c358ced119cd1f7e853a7467b6d1479ffecf56da06939e8a0ed",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "ffbd7f01d2fe15f04b8c5ba8054e574700b36cffea08d7cba1e5542c9d9285d9",
+        "cost": "6cf99200ac07c300ab4593dfd4cf28e31072f3d7ef1ce0fc50ce5eacfa8f13ae",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "bddaf0e6a3f4dbc6fc5f7bdfcebe7cc1d1250e0a67744e6ab2d8eabd195ca2ee",
+        "programKey": "6e79b406460ffcd087338a2f7e281e8d1a66ceb66715c9c5a2c02cd6b7fef8cb",
+        "structure": "6d6eb0d19b96de3b5d3c6ac820f91fe3d914cef659153c916f3f2198bca6c025",
+        "generated-declarations": "a6d8491d068a594f227d9407d7300a9887fcdb6a0cbc42f0e04a2cad49465789",
+        "generated-evaluate": "b5c261b4d6004efee9d5b80cd4db42d8e767dfaef001ed2f2c01ac181b794dce"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 61771,
+          "uniforms": 25,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "e393f11e4b636f190fc47dfcb42709b68bcbad06bf6f708b8d59abd0db3f39d9",
+            "programKey": "5759526e330a7a30687904632e03885119a7300b1fc13f4f6e2b1916d37f360b",
+            "uniforms": "ea7159f15a7ba616f1fb55e72b8fe3c0f7e721d57207fa048725c4331b143294"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 61771,
+          "uniforms": 25,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "e393f11e4b636f190fc47dfcb42709b68bcbad06bf6f708b8d59abd0db3f39d9",
+            "programKey": "f6770b9034922041acaecf42ffd9055d81ae47136a9cd85894473fe51e1431a7",
+            "uniforms": "ea7159f15a7ba616f1fb55e72b8fe3c0f7e721d57207fa048725c4331b143294"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 92003,
+          "uniforms": 25,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "cd56f1d9da03f9d94da251663ef885e824dfbd1d0bdecd736275576bd887ed9e",
+            "programKey": "5759526e330a7a30687904632e03885119a7300b1fc13f4f6e2b1916d37f360b",
+            "uniforms": "b195f9a50c02868fc88244f4c6cd4122394a91e1bb1fa35aad1ed71c03c13831"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 92003,
+          "uniforms": 25,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "cd56f1d9da03f9d94da251663ef885e824dfbd1d0bdecd736275576bd887ed9e",
+            "programKey": "f6770b9034922041acaecf42ffd9055d81ae47136a9cd85894473fe51e1431a7",
+            "uniforms": "b195f9a50c02868fc88244f4c6cd4122394a91e1bb1fa35aad1ed71c03c13831"
+          }
+        }
+      ]
+    },
+    "patina": {
+      "label": "Two pigments",
+      "authoredNodes": 5,
+      "liveNodes": 5,
+      "graphSHA256": "79a967b6c2954b83822fe3a4af2cfe9d238bc9632bc07ae4011343643565ca59",
+      "equal": true,
+      "hashes": {
+        "output": "dc1bb6655fb38bdb032e37541cd3a9854c0224b25ea05a78177346b13135df3c",
+        "nodes": "482710037590893f1f79d9795b507ffa256506de4fbc5f8c756cd25478751122",
+        "ranges": "3b3af68bf5577d2f181454690c8c0bdf4e2c601506c3441f26e5e4015ae34e46",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "b392f6b0d7e2703e6441adf6985819acc5b29029e336191f271967da79333cda",
+        "cost": "7b7b911112a2985bc02fe3739ff3af2daf104f711976ab5b4e3b46ce52a4bb23",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "04dd7e069357864adae9ef8751eaa9cb27b7f2034aba50028660296e5f74531a",
+        "programKey": "3ddfb0411bf927ac709119f1d56a673a2e1a5bcea763e59d7a90f6472ad46b7e",
+        "structure": "6a27acad74628dcffa2a95a80ff4f1d4b64d1c4c769e1640b87261cc404eda5c",
+        "generated-declarations": "3c580ba3fe66b77d503eb559ceadee42457af42a7655668ac68da1f520ffedd7",
+        "generated-evaluate": "a82f713c36984fe2569063fd617f97908b65169939caf113a584df01f39bafab"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 61303,
+          "uniforms": 20,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "07dddb58ea9d95859556691358f7132eb9b341715a0140f94bcb63cd782ab1f3",
+            "programKey": "7271933822bfdddd82f4d291664946138c769982a575838490d185ce37ec6c91",
+            "uniforms": "764c9eee7d54838e5f6a49fcbbe93ccb00fe50b7199a0a9e4bee0c3fb07541f0"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 61303,
+          "uniforms": 20,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "07dddb58ea9d95859556691358f7132eb9b341715a0140f94bcb63cd782ab1f3",
+            "programKey": "1bc5584155846ef5b1d95d164dd743f25294f6c131d60872fcfd702fcad9d6e1",
+            "uniforms": "764c9eee7d54838e5f6a49fcbbe93ccb00fe50b7199a0a9e4bee0c3fb07541f0"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 91535,
+          "uniforms": 20,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "bee57d6f1b8f0c22348a61ef23244b482e62072a750a18d473e43270a5dac766",
+            "programKey": "7271933822bfdddd82f4d291664946138c769982a575838490d185ce37ec6c91",
+            "uniforms": "fb219ce2feccf5d6ef0e4b5db9e4bcea5b638152757cce1aa7c45ce32d1cab9f"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 91535,
+          "uniforms": 20,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "bee57d6f1b8f0c22348a61ef23244b482e62072a750a18d473e43270a5dac766",
+            "programKey": "1bc5584155846ef5b1d95d164dd743f25294f6c131d60872fcfd702fcad9d6e1",
+            "uniforms": "fb219ce2feccf5d6ef0e4b5db9e4bcea5b638152757cce1aa7c45ce32d1cab9f"
+          }
+        }
+      ]
+    },
+    "finish": {
+      "label": "Directional finish",
+      "authoredNodes": 8,
+      "liveNodes": 8,
+      "graphSHA256": "ae1185e48f15746fd094424cdc4786251016d2f1d4497529bb267e9527e4e125",
+      "equal": true,
+      "hashes": {
+        "output": "7a61b0573a9a80a21a330a98af2b602cb93a458fff3c7042c59304e8118a32ae",
+        "nodes": "d25fb0e5bae5cab055d1447ad9fa5bba2fd79b9cb02615b3f72173cfff6af101",
+        "ranges": "2ce1b064dfd64be2cfff4feb8590c9650d56d47148ac67fc48bf2ef410497e9e",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "3abbbe6d6a7556b8cba30d7a623620db8b3dc6a89c5a0ec525c945083c0e63b3",
+        "cost": "6f1d3ccedf7a08cb70d8bafd9e4b7599d616287b9da07521934dbe6ec8d92077",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "771ccfeee62b720d8f5bca6e2ed4368d78f3ba8cb92796e2fd7a88e726147924",
+        "programKey": "af9a2dc97413023b6ae6f8371abd2fd247d1c12561c34b5d5b143a5f8ffba21a",
+        "structure": "9263248effade8a9f7d9e7e9692be2f03d4705fc74097278728ea5aa61a18b90",
+        "generated-declarations": "576d9afe5cf72844350a5f9c9cadf085a15cc8ba958ba1bc32c0208f1f01a267",
+        "generated-evaluate": "4cb9b1c2260c7cf17953650df89eca923be737bb4ea80126211dad8a4b2f5433"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 61340,
+          "uniforms": 17,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "246dc2be3820944e51259dc79c3eefcf966e0f25c35f2f44638d627cd2288b78",
+            "programKey": "c6196bcd769bce6edc4c3d1759bb00ed92729b5410d66da4e3163cabb9bae1e6",
+            "uniforms": "866c1d770b76632984d1358caf3a9ad8349da583122ceca7b830f6bb391afbbb"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 61340,
+          "uniforms": 17,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "246dc2be3820944e51259dc79c3eefcf966e0f25c35f2f44638d627cd2288b78",
+            "programKey": "5f402b1929a1fff664747c90cf75034745b73a79b6b84860e771dfe3692c5fec",
+            "uniforms": "866c1d770b76632984d1358caf3a9ad8349da583122ceca7b830f6bb391afbbb"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 91572,
+          "uniforms": 17,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "7ab1c6ac0722dd640aed206bcdbfb282aaf4aabb2e139de9b8d6c358e3a86e52",
+            "programKey": "c6196bcd769bce6edc4c3d1759bb00ed92729b5410d66da4e3163cabb9bae1e6",
+            "uniforms": "9f6f65c60f7cb0f5a4bba2b28c730b985ee1e7f0d44d48400c602bf3cff3b066"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 91572,
+          "uniforms": 17,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "7ab1c6ac0722dd640aed206bcdbfb282aaf4aabb2e139de9b8d6c358e3a86e52",
+            "programKey": "5f402b1929a1fff664747c90cf75034745b73a79b6b84860e771dfe3692c5fec",
+            "uniforms": "9f6f65c60f7cb0f5a4bba2b28c730b985ee1e7f0d44d48400c602bf3cff3b066"
+          }
+        }
+      ]
+    },
+    "stone": {
+      "label": "Procedural stone",
+      "authoredNodes": 12,
+      "liveNodes": 12,
+      "graphSHA256": "abdaa6259d9a19838ac9252564415e3345787e0005e3a590b374c089e640a69b",
+      "equal": true,
+      "hashes": {
+        "output": "a91175b027342f7b80da4b42cb65ab27c3e1c1889aa81b0fa1d22bf6a10e92c9",
+        "nodes": "cf575f3d38c7ac6421c5cec1ae34cb71e6b13349a185c2aa0efccd5c548c7c5e",
+        "ranges": "94ebf9df690c14c2a2900e82739c093f2977a10fba2c1f0634122d197375e41f",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "c377607f926e166368a21470e6b601be718ed51328d09547079678e2123611c5",
+        "cost": "8a339225212b3eb89fff6fed63c34e1695cdf07d243e8581171230f8404e835f",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "8b3c19be4b838cf511c85c6fd48e2e65319766177efed16e7210036a5d477b3f",
+        "programKey": "58aacdce8b5457c14c476d07daf39fc5a29397f057ca17d4bdd0ff7d3e39331a",
+        "structure": "e2288f2e2c2449931c144005ffdc4da9e2377592f11028a202dd14eebb99bc24",
+        "generated-declarations": "002766603e0d85698529fdeb3e5423b4e6deed0b78af83eb9ad8666314da4cc5",
+        "generated-evaluate": "4ec08d3c2668e8faea0fa3ee27e6d8bd54f314aa9960317e8814353da5198bd4"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 59074,
+          "uniforms": 8,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "f2e1645c353e2173c00aec70727e16291a4d433e61493d3db53e59ef8e25bcb8",
+            "programKey": "18a29323cb2b747bf3e020e80f684a9019418cec78c53fae19453c00eb99ed46",
+            "uniforms": "326571432e89ed9bbdfab74bb19aeb4e31abef88dd3bbcf85fca0bc1c8032ff1"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 59074,
+          "uniforms": 8,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "f2e1645c353e2173c00aec70727e16291a4d433e61493d3db53e59ef8e25bcb8",
+            "programKey": "30c607e5ec556fcead3cd30a23aa8077f103da1f4279746295b8c7f3f24917c4",
+            "uniforms": "326571432e89ed9bbdfab74bb19aeb4e31abef88dd3bbcf85fca0bc1c8032ff1"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 89306,
+          "uniforms": 8,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "9dfe4fb7520c9387dbf8777284090f6862417ea10c454ac71c3ac81cacc3e680",
+            "programKey": "18a29323cb2b747bf3e020e80f684a9019418cec78c53fae19453c00eb99ed46",
+            "uniforms": "326571432e89ed9bbdfab74bb19aeb4e31abef88dd3bbcf85fca0bc1c8032ff1"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 89306,
+          "uniforms": 8,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "9dfe4fb7520c9387dbf8777284090f6862417ea10c454ac71c3ac81cacc3e680",
+            "programKey": "30c607e5ec556fcead3cd30a23aa8077f103da1f4279746295b8c7f3f24917c4",
+            "uniforms": "326571432e89ed9bbdfab74bb19aeb4e31abef88dd3bbcf85fca0bc1c8032ff1"
+          }
+        }
+      ]
+    },
+    "lichen": {
+      "label": "Lichen on shell",
+      "authoredNodes": 12,
+      "liveNodes": 12,
+      "graphSHA256": "f67b607b1a2d09b7598ac4e3e87b3100b5ff28c78206dd3ad9a38f5a08e001e2",
+      "equal": true,
+      "hashes": {
+        "output": "a91175b027342f7b80da4b42cb65ab27c3e1c1889aa81b0fa1d22bf6a10e92c9",
+        "nodes": "4e49f01d57b46e5a966513568362d8806ae8c41bee7ea74ba4641ba5d6b431d7",
+        "ranges": "12abafeaa6da894b4f99efafd9418d7676067425d11caf30a219fe44e38e6ba5",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "8a3719fbc6fbb963c7bed268938078b1dcf1f34f61bbac594eef563619ef7898",
+        "cost": "6782ca3a7c5b3143ce7c969b93c3ac7745951a6d2ba117cb585fec23f5f4e6c7",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "eedca6e4f6288c71211e8a8990df44cc44e5cc8c05fee894eb24211c63f2245d",
+        "programKey": "47f602c101cfb8286d2c306b28bd663146b6ce1fd576bdd683ba6665486ab824",
+        "structure": "9e2950db4d8d75bcec1d385fb3b825de2d00a59151ebdabd7fe4d385a4571f44",
+        "generated-declarations": "316bf8a43512c15e746f64aeb8832723843215b179cc5d60eb024a8b5d3763e6",
+        "generated-evaluate": "e8656d2be8210b3a3f3417d83e6e6756a125217cb560f65007eaa150848a5780"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 63120,
+          "uniforms": 20,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "fdd7a127efecbad924364adafaffd62c55cd1cd53933f1ddb088f0faa82f08fe",
+            "programKey": "dc54f3cb89d75305393536122cf5ef1035f446aa4847fc3f4942a51c3140359b",
+            "uniforms": "aec21ea1ef7c32590b2755bb869d3b4ca6e21d4cb0a113f3714656d6635b4a92"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 63120,
+          "uniforms": 20,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "fdd7a127efecbad924364adafaffd62c55cd1cd53933f1ddb088f0faa82f08fe",
+            "programKey": "505d0112838c9ffcd44eaa3ed163470e0f82972da411045da19c56a49a7bdd37",
+            "uniforms": "aec21ea1ef7c32590b2755bb869d3b4ca6e21d4cb0a113f3714656d6635b4a92"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 93352,
+          "uniforms": 20,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "fa012d33922ef1ca5dd390c3c2e6166aa1cf8190cf8d15ee006ff8d6371d0fe3",
+            "programKey": "dc54f3cb89d75305393536122cf5ef1035f446aa4847fc3f4942a51c3140359b",
+            "uniforms": "524eddbf914517662086492037d73034a522e4f261c626f58bd7f65008989426"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 93352,
+          "uniforms": 20,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "fa012d33922ef1ca5dd390c3c2e6166aa1cf8190cf8d15ee006ff8d6371d0fe3",
+            "programKey": "505d0112838c9ffcd44eaa3ed163470e0f82972da411045da19c56a49a7bdd37",
+            "uniforms": "524eddbf914517662086492037d73034a522e4f261c626f58bd7f65008989426"
+          }
+        }
+      ]
+    },
+    "spectrum": {
+      "label": "Color bands",
+      "authoredNodes": 10,
+      "liveNodes": 10,
+      "graphSHA256": "4ca93d77da14bdfdec1f8fb3db4ad32ab9db43846c8f403b626824feebfeeb90",
+      "equal": true,
+      "hashes": {
+        "output": "a9168212f0384abe9e259a3ab17f1b396cbc1bb3ad58c7d899583644afa3cc37",
+        "nodes": "76e654b87f1a13e2590ba05d0f5ab633bd73ec21d5c0059111d3c0fcf5d63ff9",
+        "ranges": "7462213a071271964a0c2274f1bae377f8067a6558259a8bd062e83e7e94d930",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "51dda7874aa6d495ec0bb5b720aaf6dfed7cceb8ce17e06c6d032ca9f76c1022",
+        "cost": "7feb8731082c4824c85bab2b9b400db059f6fca974d3395db632f3e7ac615cd3",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "e2f31efc46dabf3cf6ac6fc0a09bcf1164da9c9a747f527ec4cdec37386f2757",
+        "programKey": "c198d017b8f26b2e07cbc493363e93cb6630b8a24b00a469737a04040516260f",
+        "structure": "70324e0e4a1fc22543e8e85a4219d5161d708ac7f2c43a0937a93e7f8b4a7ae3",
+        "generated-declarations": "e7f554dff147256b2dfc8023fb18d927ef03e440b14d9ed39b6e3c0b26754407",
+        "generated-evaluate": "cb65ba1f5f5a5f43ae395e0345c7945658aa46e1ae668dd22fb9cbd1d4288646"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 59236,
+          "uniforms": 10,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "951ad7b94ecb9938c5f16d7c32dd224afeba39e6367d7c76f4f62d94d94289be",
+            "programKey": "6c2b9ed95be4c4962e54cbc7798d2777454c8bf69f00d06f96d90fef15fb4af7",
+            "uniforms": "06a3f482b369c0a748753772b5a0fbfd093b44e6d08cc373bbab82853a4a4358"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 59236,
+          "uniforms": 10,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "951ad7b94ecb9938c5f16d7c32dd224afeba39e6367d7c76f4f62d94d94289be",
+            "programKey": "3d7be35b53e9bfc90b83ddc6e485329f38385d48c5e849170992749be0339dc6",
+            "uniforms": "06a3f482b369c0a748753772b5a0fbfd093b44e6d08cc373bbab82853a4a4358"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 89468,
+          "uniforms": 10,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "bd4940b7a5567459175d104a175291db0df69d25448b2d84a04ab085593cbc9d",
+            "programKey": "6c2b9ed95be4c4962e54cbc7798d2777454c8bf69f00d06f96d90fef15fb4af7",
+            "uniforms": "06a3f482b369c0a748753772b5a0fbfd093b44e6d08cc373bbab82853a4a4358"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 89468,
+          "uniforms": 10,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "bd4940b7a5567459175d104a175291db0df69d25448b2d84a04ab085593cbc9d",
+            "programKey": "3d7be35b53e9bfc90b83ddc6e485329f38385d48c5e849170992749be0339dc6",
+            "uniforms": "06a3f482b369c0a748753772b5a0fbfd093b44e6d08cc373bbab82853a4a4358"
+          }
+        }
+      ]
+    },
+    "prismatic": {
+      "label": "Prismatic shell",
+      "authoredNodes": 22,
+      "liveNodes": 21,
+      "graphSHA256": "642b82ec5213cb0a12d4522f90e32cfad68fd85a4306ee5c3bf51f62d92b0168",
+      "equal": true,
+      "hashes": {
+        "output": "e13dff3b21a5dc3b62b0a5c3a6d3082ea77efa243f1efec9b7c012eb8194bd0c",
+        "nodes": "a1df549f143788b56f5535ffbdf2ae596166967d396d82e64f975144686ae0d7",
+        "ranges": "da51414d97cfd2d32254d73cdfcb31f9f1938b46c38a308745184d156bbbba5d",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "3d58f12712af1e9a022d53649e3b70dfcda2c376c5287c31daf4d835e656752c",
+        "cost": "a1fd6dd0ab14ba7ea842193738cab3d168daa4691470f48af2b575090223d0a3",
+        "diagnostics": "6bfa0059a9a3b6f3472ddb39da64d50104166e1b6896dc73fce4b4a5cf690382",
+        "sourceNodes": "c7df4715fb2bf458da31dc05002fd77c7ec00d230c3e9903220443c5ccd9768e",
+        "programKey": "608a1bdb07c1b6ea7745c07b4380b224e1d7af1eb8d6605ceba0559b7977f17c",
+        "structure": "6d82ac7c84610b746a45dd46c1f7b2f0ee036b0750472056c4706b9fb2101c7c",
+        "generated-declarations": "aed18e836e8b67f613d8bae08acc3813fed514dadb1f929ba03422bc5bed7811",
+        "generated-evaluate": "1da8140623605c316302325674dbe9059b2259caf36e6a383a1ac2489ae08b74"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 65131,
+          "uniforms": 24,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "4cd66912b1d2a5eda1dc829fee563c52fc9d38c1a26895740e2119e525fb1c03",
+            "programKey": "75970b09ee88fc1912c18fc1bd97d62a4bfebae375d16025e091ea99d41a092b",
+            "uniforms": "9afafdf0456aa33093693cadc5a08d0718a6d6d47937e53bc3ef93d12822993b"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 65131,
+          "uniforms": 24,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "4cd66912b1d2a5eda1dc829fee563c52fc9d38c1a26895740e2119e525fb1c03",
+            "programKey": "a7ebbf8ed1d644b36b6cf59d452153bcebd5b99eda3880033b5416bccc005a51",
+            "uniforms": "9afafdf0456aa33093693cadc5a08d0718a6d6d47937e53bc3ef93d12822993b"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 95363,
+          "uniforms": 24,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "accf672008bcb0f74f35cd52156109fa2ece63c35af287be2714fd28576f68b7",
+            "programKey": "75970b09ee88fc1912c18fc1bd97d62a4bfebae375d16025e091ea99d41a092b",
+            "uniforms": "7cf92148ea6c3b4d0589e286f99a742db6768292450b0daf2e81654afc1594bb"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 95363,
+          "uniforms": 24,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "accf672008bcb0f74f35cd52156109fa2ece63c35af287be2714fd28576f68b7",
+            "programKey": "a7ebbf8ed1d644b36b6cf59d452153bcebd5b99eda3880033b5416bccc005a51",
+            "uniforms": "7cf92148ea6c3b4d0589e286f99a742db6768292450b0daf2e81654afc1594bb"
+          }
+        }
+      ]
+    },
+    "porcelain": {
+      "label": "Carved porcelain",
+      "authoredNodes": 17,
+      "liveNodes": 17,
+      "graphSHA256": "b1af39988fdc401ad274f84389eceb28a4752df43d2a4c0065a0234c2d38121d",
+      "equal": true,
+      "hashes": {
+        "output": "5cb86d4a7a3a72524f5234bf9d3fad7c958485f739710f8ff022c2e4ccc36d70",
+        "nodes": "6502123e38750935c02548d0eef021065bc49484b3aa0abb3f6469ad6cc01b86",
+        "ranges": "a21282e4af736177c5aee5abe164f5192ad7735028372db4bd9a143ac0eb4d3e",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "54074bf44bc796c396349d04d020552f494c30f56aba11fe4af2c6c38d76e969",
+        "cost": "57f1cbc8266c970a8f7c367337112df34daca2c40efa0a3d7bfef3cc4eeaab42",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "a3e48edc95fa30fcd73b935d8ef6b8924b10e63f0b0c575ebed6ab801b457a86",
+        "programKey": "9aacb3b0f2a8895c1bcb783ba4f944a1c9adeb5ca48ed3bd8e34326c5871a924",
+        "structure": "83f4b837941a4a1731f6a00438b4efa307d90eab40aca46f0a576c70477d626b",
+        "generated-declarations": "0547fdef196b37948638144085ef2c680de0184f7ade8fcf6ee0a7b982cb414e",
+        "generated-evaluate": "03341342f4b5b13963335a2542e35bad70d7298d3c9ca7832531c137778ff244"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 62050,
+          "uniforms": 15,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "a81a69f62959bb06f63abd3e3b8653c18f025ade9c6399a3a76fcec9bac661dd",
+            "programKey": "85ee70217efa7359d9e64953859e8163e7899382dd528869b9e837df258c40ea",
+            "uniforms": "abaedd3d3f155093891bde246f2c690ded07a681bc34eadb156a097267538747"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 62050,
+          "uniforms": 15,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "a81a69f62959bb06f63abd3e3b8653c18f025ade9c6399a3a76fcec9bac661dd",
+            "programKey": "504c5460cec06fff15f840999a32b3a3d49fa9103f5c4f0791914ebb7d1475d8",
+            "uniforms": "abaedd3d3f155093891bde246f2c690ded07a681bc34eadb156a097267538747"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 92282,
+          "uniforms": 15,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "2c1ee598592593a50bf6823cdb4d26651be49c72524778236cd53ce3392b365e",
+            "programKey": "85ee70217efa7359d9e64953859e8163e7899382dd528869b9e837df258c40ea",
+            "uniforms": "abaedd3d3f155093891bde246f2c690ded07a681bc34eadb156a097267538747"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 92282,
+          "uniforms": 15,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "2c1ee598592593a50bf6823cdb4d26651be49c72524778236cd53ce3392b365e",
+            "programKey": "504c5460cec06fff15f840999a32b3a3d49fa9103f5c4f0791914ebb7d1475d8",
+            "uniforms": "abaedd3d3f155093891bde246f2c690ded07a681bc34eadb156a097267538747"
+          }
+        }
+      ]
+    },
+    "weathered": {
+      "label": "Weathered shell",
+      "authoredNodes": 18,
+      "liveNodes": 18,
+      "graphSHA256": "ca9bb41eb01f2c5eb3c17788dbe31de52e8d8a6745b73fe325aa698405c39182",
+      "equal": true,
+      "hashes": {
+        "output": "5210b5d7c21aa9a8acd2ebe2563c66a668aeca5fca4773fffb2b4d6488395a77",
+        "nodes": "a099b3b492bc3be4a90b3ff0832244838a3b03e49dc9593e464ffa6154503098",
+        "ranges": "1477d5ca76f9d0900d4c7f6e943d3c94ec59efd27be6178be257412e4fbf059a",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "466c46064dbcb80aa890470e3c5ebd8b08773655e510210f1b16dd326370d595",
+        "cost": "e767050d9ec804c08ed0e4faa0d75dd5aedf706aadbdc1e29aa81814e9615565",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "5c7cbe75dd0813eeed916dd2da64f6fbc4e2ef2a8c6b2f3925a5bbf867d0e8f1",
+        "programKey": "5dcd357b3a5d0389268bb3bc1b6cbac99a5e99d9631f5d7c6e80f056513e4183",
+        "structure": "a798d2e1eb5d6d0e7fa481230269e5835306032b24460566ca4b57f014941ed1",
+        "generated-declarations": "b40d02e6f4c4cbfcb857f4067bfb69cfcdd4f404cb42583f8c703a57e8d11848",
+        "generated-evaluate": "cf5ca28b6b5a3d1135016d73190b4917fd725a9054bec6abe4c2b8681b529a62"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 66050,
+          "uniforms": 27,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "24b08a78ed5ddbb653bf2f7d80993dcf9909188b0fc45ac7e0ca2a811b879b78",
+            "programKey": "4710773925d5c8725e2a0d75856240c36ea5731da65a763f95f1e857a2bf1fd6",
+            "uniforms": "164f32567d681a9883c020c41f53a07e227d2cc2d577337177e2b51956717c04"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 66050,
+          "uniforms": 27,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "24b08a78ed5ddbb653bf2f7d80993dcf9909188b0fc45ac7e0ca2a811b879b78",
+            "programKey": "678de3edeb64382dd7b608fefda9b54f52baffebc4c464108310bb2d5e5721b7",
+            "uniforms": "164f32567d681a9883c020c41f53a07e227d2cc2d577337177e2b51956717c04"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 96282,
+          "uniforms": 27,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "5822202bf746c62197fa0e36a301a8b3a0c0c734ab5d7ed791794515c86370aa",
+            "programKey": "4710773925d5c8725e2a0d75856240c36ea5731da65a763f95f1e857a2bf1fd6",
+            "uniforms": "df8c32b5a6ebeebab4013c2a12f72a53f4c66d7cd226b3a2a3ea1adcab09dcd1"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 96282,
+          "uniforms": 27,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "5822202bf746c62197fa0e36a301a8b3a0c0c734ab5d7ed791794515c86370aa",
+            "programKey": "678de3edeb64382dd7b608fefda9b54f52baffebc4c464108310bb2d5e5721b7",
+            "uniforms": "df8c32b5a6ebeebab4013c2a12f72a53f4c66d7cd226b3a2a3ea1adcab09dcd1"
+          }
+        }
+      ]
+    },
+    "ivory": {
+      "label": "Ink & ivory",
+      "authoredNodes": 105,
+      "liveNodes": 105,
+      "graphSHA256": "257e9fd543b7047be70f5a58e0f5d905ac6ae67496fd47631cd09e7bc13d0819",
+      "equal": true,
+      "hashes": {
+        "output": "5d13a8cc28eed65d19f4b1d912abf7be4cadfd606bbf2d0731ff74add4841516",
+        "nodes": "308081d6168e06413ea14d967e2b520a7dfceef917213b6889a58e92016e62a4",
+        "ranges": "ab0266360fe64cf94f72183dbcd04f329d994094345f5810dead442328e0d955",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "c5c966fc3a27a370318f48feb7c8ffd4a5c04e1c45ebd00b189cd7222dad723b",
+        "cost": "035eaf2ee3438511c5a1c033a7640341f48b1c08e71c70794ae7bbad62f43ab0",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "278caa32cda6d3c032afe6b10b3dac21a800f9b9f5f30efdaf1fbb981b39d19a",
+        "programKey": "e6691116981264cfc5896cc49b24fc797a33d259dcee5ff59b71d23457cb5733",
+        "structure": "e6c871b585ac2fe5b857fe33f5f192524b985b1bafe547e3d45ca44144f58c35",
+        "generated-declarations": "58f4e6ac86541bd27b9387569ddc29aab4a27c62beaf0882d67d4dc76e5b5aa0",
+        "generated-evaluate": "b494877268e8560068e87703004c76b1e8590cd28a76fbee5a8dc13492b76a35"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 69322,
+          "uniforms": 60,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "6ec671e072c73923a0300b0dacdc335a5c0ec97bd5fcf1cf71f70ab28c47cef8",
+            "programKey": "81611fe4915431e37bfb6a04e5ef648167e790d2816fc38b5b0bbd21758bf5ba",
+            "uniforms": "45301cb347092936388fbbc2e99a62618b6d42ae6202dd28455c48b5d673f529"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 69322,
+          "uniforms": 60,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "6ec671e072c73923a0300b0dacdc335a5c0ec97bd5fcf1cf71f70ab28c47cef8",
+            "programKey": "9bb3358da30e8f4af0b0662d3faa45ce5dc1ec9fc4f15737d41ff46c2ae0a4b6",
+            "uniforms": "45301cb347092936388fbbc2e99a62618b6d42ae6202dd28455c48b5d673f529"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 99554,
+          "uniforms": 60,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "12260a2503dd8fbcc74d637e1a4cf753eb121af53202d0ecd448b8f6780b214f",
+            "programKey": "81611fe4915431e37bfb6a04e5ef648167e790d2816fc38b5b0bbd21758bf5ba",
+            "uniforms": "419e6262946987531c156399ca4e221257f75cdfef142ffd7d691a6516e452cf"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 99554,
+          "uniforms": 60,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "12260a2503dd8fbcc74d637e1a4cf753eb121af53202d0ecd448b8f6780b214f",
+            "programKey": "9bb3358da30e8f4af0b0662d3faa45ce5dc1ec9fc4f15737d41ff46c2ae0a4b6",
+            "uniforms": "419e6262946987531c156399ca4e221257f75cdfef142ffd7d691a6516e452cf"
+          }
+        }
+      ]
+    },
+    "brass": {
+      "label": "Patinated brass",
+      "authoredNodes": 105,
+      "liveNodes": 105,
+      "graphSHA256": "cc79d83a63c058c8f60aec97bb1ef82879931fe60fa1f0e3ee308cfbf6a1a7df",
+      "equal": true,
+      "hashes": {
+        "output": "5d13a8cc28eed65d19f4b1d912abf7be4cadfd606bbf2d0731ff74add4841516",
+        "nodes": "89bbf197645b5082aa91f5265693c6f85e3601dc52e0be252db0e926a4654c5f",
+        "ranges": "213b34fb54ce94db98e4ce0876a76c62174e2921f63ce2cbe81542a0c64906be",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "671b4d4d165086b9dc5a409ce0e4191bd7efc72c13647c3e4b59c2ffe23b77ee",
+        "cost": "035eaf2ee3438511c5a1c033a7640341f48b1c08e71c70794ae7bbad62f43ab0",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "86af4af338c19852699bb7530b7982fbf601d5dc773442bf859c950c91fc6d2b",
+        "programKey": "9d670c0eceeea472c5ecc55346a4c4de3542d017e14d9b9499e688617c16370b",
+        "structure": "6d4c8c867dd0fadc4fa47aa4211d3bd9fcb2f3b181fc350234d692cc73a9246d",
+        "generated-declarations": "77caf6a6f4722055825bdc50b805662933aca971e0e8c67670ce7b85d685526b",
+        "generated-evaluate": "06edfa9b77a658a31a4e7b43761e2dfe2ab414981e4b80b83c154e894fdb5d07"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 69313,
+          "uniforms": 60,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "4a0c6aba46f7add5120b9bfb12b6205ce6226fb13c3e9dada0a63c8383f8f0f3",
+            "programKey": "fecd8c7cafb2be5609dbeb381598ab1e40ffa3f15498186013ffb5d8bd0f7d19",
+            "uniforms": "592e9e0087086f50c935a61b71831959cff499c8bb6d9579d9637c2a54bf05ce"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 69313,
+          "uniforms": 60,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "4a0c6aba46f7add5120b9bfb12b6205ce6226fb13c3e9dada0a63c8383f8f0f3",
+            "programKey": "2a8ff5a45aa4d63a603cdc6a4a77637b07ae12e825f8f3e262bfea94ded85d49",
+            "uniforms": "592e9e0087086f50c935a61b71831959cff499c8bb6d9579d9637c2a54bf05ce"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 99545,
+          "uniforms": 60,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "ab177ea559d095fbac7a82dcad95e790ba991d7297917e84847c0433495b2d25",
+            "programKey": "fecd8c7cafb2be5609dbeb381598ab1e40ffa3f15498186013ffb5d8bd0f7d19",
+            "uniforms": "91c551ca3b1cb98250ce2ffbca3b1599790c9159b42be8529e1fd6c7670c6485"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 99545,
+          "uniforms": 60,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "ab177ea559d095fbac7a82dcad95e790ba991d7297917e84847c0433495b2d25",
+            "programKey": "2a8ff5a45aa4d63a603cdc6a4a77637b07ae12e825f8f3e262bfea94ded85d49",
+            "uniforms": "91c551ca3b1cb98250ce2ffbca3b1599790c9159b42be8529e1fd6c7670c6485"
+          }
+        }
+      ]
+    },
+    "zones": {
+      "label": "Cobalt & gilt",
+      "authoredNodes": 45,
+      "liveNodes": 45,
+      "graphSHA256": "5eec87a02adc313a314c4b2ad0e20f59c5393316bd2830c62d17f779553e3f3c",
+      "equal": true,
+      "hashes": {
+        "output": "0ce35e43932edbb2ba2820415cfb8d16b4dd0151e779031bccf9f78bd9904613",
+        "nodes": "e0066583d4c37c7c73107e45fbf1e9a14349c0997effeef78706c3c8abd90ca1",
+        "ranges": "e002e582e34db9ca59eb56cbf80e1f5f2c6200df9e5f7bcf887d86ea19d3aed5",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "3101edcc7c032d1379de5482f277799dcd08f8e7c7f47ea158a8acaea6fe7cda",
+        "cost": "a27fecb5b83135ef0b06cceb621e251ddb637e0ea51b62cc1fabf98d603cacd7",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "da17ac34463fddb730ebb15c65f44aa54394f016b814412ec493db1568be67f8",
+        "programKey": "f8e63cf1436d3b303eefae75a02c970f206557f42cbec39195b0eef70c06cbea",
+        "structure": "1a7e98c2327ea9b779df40d0117bc5b606ff8a8cda2684d791eb6582fb84fbf8",
+        "generated-declarations": "9734373e9dcc21c400404e08e6d53de3600ee5c1661ebd6c118bc32f2b26a606",
+        "generated-evaluate": "49e2543b049af9d361fabc126a8c5565b520752d549aec9e87463b0606b625b0"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 67483,
+          "uniforms": 27,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "361439d6c612eeb19ddc7d6335899da0889bb8d4981f361c818e3fcf0f68c8b8",
+            "programKey": "5279cc109584213975c855ba58283ece7072c9e830ae4ea5fa1854e3d35d628c",
+            "uniforms": "c6f95d5492cd9cb5037631a24d087c2e45e7d2523ada41f04a92b7144bd66134"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 67483,
+          "uniforms": 27,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "361439d6c612eeb19ddc7d6335899da0889bb8d4981f361c818e3fcf0f68c8b8",
+            "programKey": "52812d895bcc58d969b8becc6ec705d1619f2d5f1e27620a3856cbecb5d559ef",
+            "uniforms": "c6f95d5492cd9cb5037631a24d087c2e45e7d2523ada41f04a92b7144bd66134"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 97715,
+          "uniforms": 27,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "f94a7a1d418f77e03ab4261da87956e1f114394580ad87946af63bad7c41c1d1",
+            "programKey": "5279cc109584213975c855ba58283ece7072c9e830ae4ea5fa1854e3d35d628c",
+            "uniforms": "02ed4691ef20f6f93e0f49ce64e6c55dfd23156277ebab4b54be2602c2bdf131"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 97715,
+          "uniforms": 27,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "f94a7a1d418f77e03ab4261da87956e1f114394580ad87946af63bad7c41c1d1",
+            "programKey": "52812d895bcc58d969b8becc6ec705d1619f2d5f1e27620a3856cbecb5d559ef",
+            "uniforms": "02ed4691ef20f6f93e0f49ce64e6c55dfd23156277ebab4b54be2602c2bdf131"
+          }
+        }
+      ]
+    },
+    "pigments": {
+      "label": "Spectral patina",
+      "authoredNodes": 48,
+      "liveNodes": 46,
+      "graphSHA256": "3627ce1efdbb2b830ae7f7162a6cade5ff60212a4267c1828d6874b106a92881",
+      "equal": true,
+      "hashes": {
+        "output": "a9d51e729406fbe93f849288fa5d7e0cc9029c2fec2da0ec319a6f521e716cc4",
+        "nodes": "499e61d8bfb315cf15b0f8ae79915767ab1c7cd3c53316317af8aa064b8aa308",
+        "ranges": "197c05481f962eda1777322b3c1b05afc8a392b051e18864e737d470245cd8e3",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "4f82ad19e1f51a61fe56c0e4f363907a8a827c4a883823bb05f7e87398ed058c",
+        "cost": "25cd4400313fcb9b5e2d1d49e66440801a8b3807c44692a2564600679e009dda",
+        "diagnostics": "cf33a447ef9f525b3635b5c7068fd9fca6a2b4e3ccd0e38820121dc8194d5995",
+        "sourceNodes": "ac45e3ee20fea22b08165c510f55f6b3997186371dc0bbbb22cf12d499552369",
+        "programKey": "f4fc7733bf824b75a7ca18fb6084b02922dfa00a5f57f813c66a36a4c5febbbf",
+        "structure": "da22f10d65507e4b681f8d919cf231c43ea2cc89a58c2471f140f50bee9160e2",
+        "generated-declarations": "3422d7464885d053fefefd00f2e5e2fa8f2045a635ebe4c0103fecd3fec8a2e5",
+        "generated-evaluate": "6ca8dcbde530644a36a8afe0007c50c6c5474ddbf60a7a3475e1c41e44d5f130"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 67890,
+          "uniforms": 29,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "37cd304c7480104a214fab04bcaf8857536cf450f5447da1d3e222049abe842f",
+            "programKey": "47758b7e6aba69f2adf424a4c47d70d3e697a389a6a68150d727af09d0c330f8",
+            "uniforms": "9c7cc0f461905aaf2b68b37b9c468273013cf8cd8e9a88fc04616b0e01c4634f"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 67890,
+          "uniforms": 29,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "37cd304c7480104a214fab04bcaf8857536cf450f5447da1d3e222049abe842f",
+            "programKey": "a4d42ca62c38d92b70ebe7d18a10eee98f001b75049bc0c62ab2900f3eff20a0",
+            "uniforms": "9c7cc0f461905aaf2b68b37b9c468273013cf8cd8e9a88fc04616b0e01c4634f"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 98122,
+          "uniforms": 29,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "0b647213ad18681593754dcdaad1aca129db945d159afd745abd3775719e724a",
+            "programKey": "47758b7e6aba69f2adf424a4c47d70d3e697a389a6a68150d727af09d0c330f8",
+            "uniforms": "8cc10911b69c731fe3fc541217c488e8da8bb5bfeef4ef49873b74ac83eb2f8b"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 98122,
+          "uniforms": 29,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "0b647213ad18681593754dcdaad1aca129db945d159afd745abd3775719e724a",
+            "programKey": "a4d42ca62c38d92b70ebe7d18a10eee98f001b75049bc0c62ab2900f3eff20a0",
+            "uniforms": "8cc10911b69c731fe3fc541217c488e8da8bb5bfeef4ef49873b74ac83eb2f8b"
+          }
+        }
+      ]
+    },
+    "inscription": {
+      "label": "Inscribed glaze",
+      "authoredNodes": 37,
+      "liveNodes": 37,
+      "graphSHA256": "ebd50c7228124c95cc552c890a57614fd69ad785f2962ef6b8bfd22524d312ee",
+      "equal": true,
+      "hashes": {
+        "output": "188900b54fdf44d765347170a4d27137bbb673133a8ab445a490a797c203319d",
+        "nodes": "f0a12f870a15a6a76679fbf10a15218f3bf76aa5e97c056cd8e6da2532826fb7",
+        "ranges": "4951a60429480159af12b48b351a53a59dd3976e13beec505d18ad79bef58fcd",
+        "opacityRange": "e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+        "bindings": "f7cba1848c9e0a50983e387da6e9c9a42c0ffc14c99266b81c5177a82a552d05",
+        "cost": "734439242089b975a896b873805fe4f44b63ef836702f2eadfc61841f950ea84",
+        "diagnostics": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sourceNodes": "6886fdd4eec02ad7f18f4c991d31b8826edcdf5beddfbe8abd9ef7b53a62f98e",
+        "programKey": "5c354b9b9ca1ae079c4c043c80f33f44edaab2e938fd91530f0875eed5d1d56c",
+        "structure": "ce62b833308e93396ec8bbd065b80b3ddcddf0939d6b7e638f6f33a34f2b1c9d",
+        "generated-declarations": "24f246be09509b0f4b7a3a73e9327829215ba14ea6db058bfbf1517db25cb85a",
+        "generated-evaluate": "f4a52aecfe6c77aa1f756882e48f6c180bad63fe175fde44c68d12ddaaf2522a"
+      },
+      "programs": [
+        {
+          "engine": "140",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 12896,
+          "fragmentBytes": 69024,
+          "uniforms": 23,
+          "hashes": {
+            "vertex": "5afbf6031645073a407e4ea5f04ce5383019cd24689afe96b3c7925e9690b854",
+            "fragment": "1736f108ba1936d6d2be9879e51c38a1725d89475451d221327c7d7f20833fb0",
+            "programKey": "b21110f80b11060b88fcff6f720549aa49eb795bceb2821d7ec7d815ba266daa",
+            "uniforms": "4be1c0ab5333f94c1e941a67ea9c1903e4a44fbb7943d3a5bfee1d9eb95bdb16"
+          }
+        },
+        {
+          "engine": "140",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 12984,
+          "fragmentBytes": 69024,
+          "uniforms": 23,
+          "hashes": {
+            "vertex": "1f8153a40d7c21cb8d9961b79c74d9ec556dc475167519513d2b571e7a1441c2",
+            "fragment": "1736f108ba1936d6d2be9879e51c38a1725d89475451d221327c7d7f20833fb0",
+            "programKey": "7fa5569c7c41432c6cbe9e981cf01c087a56b6ee2da00fc2a4baf2c506de159d",
+            "uniforms": "4be1c0ab5333f94c1e941a67ea9c1903e4a44fbb7943d3a5bfee1d9eb95bdb16"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "local",
+          "equal": true,
+          "vertexBytes": 19894,
+          "fragmentBytes": 99256,
+          "uniforms": 23,
+          "hashes": {
+            "vertex": "d0d0cce6340248fc331640094896ebf122d54aab7478cd6f162ab5f484141273",
+            "fragment": "bd5b104e70f9bc7b3bc4388bfdde601b062cff09b56f886cc7e1e6364ffdcfd7",
+            "programKey": "b21110f80b11060b88fcff6f720549aa49eb795bceb2821d7ec7d815ba266daa",
+            "uniforms": "0f2b481c72a946cbe54e0e8117b4e34231ac9c27f1ec48a154986adcba357c64"
+          }
+        },
+        {
+          "engine": "187",
+          "coordinates": "attribute",
+          "equal": true,
+          "vertexBytes": 19982,
+          "fragmentBytes": 99256,
+          "uniforms": 23,
+          "hashes": {
+            "vertex": "a9bd02d237fd0fb2da2873bdca60dc9795669c7e4dd0450eea2ca96cd4ee8c40",
+            "fragment": "bd5b104e70f9bc7b3bc4388bfdde601b062cff09b56f886cc7e1e6364ffdcfd7",
+            "programKey": "7fa5569c7c41432c6cbe9e981cf01c087a56b6ee2da00fc2a4baf2c506de159d",
+            "uniforms": "0f2b481c72a946cbe54e0e8117b4e34231ac9c27f1ec48a154986adcba357c64"
+          }
+        }
+      ]
+    }
+  }
+}

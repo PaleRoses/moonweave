@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1015"><title>Moonweave {{EDITION}} · Surface integration</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1015;--panel:#111b23;--ink:#d9e2df;--quiet:#9aafb4;--line:#293d46;--accent:#b8d6c4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,sans-serif}header,main,footer{max-width:1040px;margin:auto;padding:28px 32px}header{display:flex;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.13em}a{color:var(--accent);text-underline-offset:4px}h1,h2{font-family:Georgia,serif;font-weight:400;line-height:1.15}h1{font-size:clamp(42px,6vw,74px);letter-spacing:-.035em;max-width:780px;margin:18px 0 24px}h2{font-size:34px;margin:0 0 20px}h3{font-size:17px}p{max-width:800px}.eyebrow{color:var(--quiet);letter-spacing:.18em;font-size:11px;text-transform:uppercase}.lead{color:var(--quiet);font-size:19px;max-width:780px}section{padding:38px 0;border-top:1px solid var(--line)}.hero{padding:28px 0 48px;border:0}.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.links a{padding:10px 16px;border:1px solid var(--line);text-decoration:none}.links a:hover,.links a:focus{border-color:var(--accent)}pre{background:var(--panel);border:1px solid var(--line);padding:24px;overflow:auto;font:13px/1.65 ui-monospace,monospace;border-radius:4px}code{font: .9em ui-monospace,monospace;color:#d4ded2}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--quiet);font-weight:500}.table-wrap{overflow-x:auto}.callout{border-left:2px solid #849c8c;padding:1px 24px;margin:24px 0;background:#101a20}.columns{display:grid;grid-template-columns:1fr 1fr;gap:32px}.muted{color:var(--quiet)}footer{font-size:12px;color:var(--quiet);border-top:1px solid var(--line);padding-bottom:50px}:focus-visible{outline:2px solid var(--accent);outline-offset:5px}@media(max-width:650px){header,main,footer{padding-left:20px;padding-right:20px}header{letter-spacing:.05em}.columns{grid-template-columns:1fr}pre{padding:16px;font-size:12px}h2{font-size:29px}}
+</style>
+</head>
+<body>
+<header><a href="./">← MOONWEAVE ATELIER</a><span>{{EDITION}} / INTEGRATION</span></header>
+<main>
+<section class="hero"><p class="eyebrow">A surface is a composition</p><h1>Small functions.<br>Shared pigment.<br>One creature.</h1><p class="lead">Build materials from fields, colors, masks and paints. Keep the surface as immutable data. Let the renderer own the resources.</p><div class="links"><a href="./downloads/moonweave-surfaces-{{VERSION}}.zip" download>Portable package ↓</a><a href="./downloads/moonweave-surfaces-{{VERSION}}.tgz" download>npm package ↓</a><a href="./downloads/moonweave-{{VERSION}}-source.zip" download>Complete source ↓</a></div></section>
+<section id="marks"><p class="eyebrow">{{EDITION}} / One color graph · authored marks</p><h2>Describe the gesture.<br>Carry the paint.</h2><p>Pressure strokes, chisel dabs, bristled tips and finite zones compose as a portable program. The painted carapace expands 21 authored marks into 189 dabs at authoring time, then applies five filtered resources through a 22-node surface graph.</p><div class="columns"><figure style="margin:0"><img src="./docs/evidence/marks60-sphere.png" width="512" height="512" style="width:100%;height:auto" alt="Native render of the painted carapace program on a sphere: teal bristle strokes and ivory-gold marks on dark blue facets"><figcaption>One mark program · sphere specimen</figcaption></figure><figure style="margin:0"><img src="./docs/evidence/marks60-shell.png" width="512" height="512" style="width:100%;height:auto" alt="The same baked carapace program applied across faceted shell plates"><figcaption>The same graph · shell specimen</figcaption></figure></div><p class="muted">Reference renders from the actual generated Three shaders through native GLES3. The live editor evaluates its current graph when WebGL2 is available.</p><pre><code>const compiled = compileMarkProgram(program);
+const paint = compiled.bake({
+  width: 128, height: 128, bounds: [-1, -1, 1, 1],
+});
+const graph = materialGraph(applyMarkBake(
+  surface.paint('carapace'), paint,
+));</code></pre><p>Pigment and coverage are integrated together. Roughness, metalness, clearcoat and opacity have independent coverage; omitted channels preserve the base. Covered height feeds the surface differential directly. The runtime has no dab loop.</p><p>Every paint palette now uses the same Color expressions as gradients and procedural fields. Tagged sRGB, Display P3, Oklab and OKLCH values convert to one extended linear working representation. Display gamut mapping is an explicit boundary.</p><div class="links"><a href="./docs/MARKS.md">Mark program guide ↗</a><a href="./docs/COLOR.md">Managed color guide ↗</a><a href="./examples/marks.program.json" download>Authored mark program ↓</a><a href="./examples/marks.json" download>Baked surface graph ↓</a><a href="./docs/VERIFICATION.md">Release verification ↗</a></div></section>
+<section id="applications"><p class="eyebrow">LLM-authored applications</p><h2>Generate a mark.<br>Give it a place.</h2><p>Procedural programs create the brush image, spectral palette and named zones. The same coverage drives pigment, finish and the derivative of deposited height. Each resource travels inside the graph.</p><div class="columns"><figure style="margin:0"><img src="./docs/evidence/zones-shell55.png" width="512" height="512" style="width:100%;height:auto" alt="Native Moonweave render: cobalt and gold zones on ivory faceted plates"><figcaption>Cobalt &amp; gilt · one generated brush resource</figcaption></figure><figure style="margin:0"><img src="./docs/evidence/pigments-shell55.png" width="512" height="512" style="width:100%;height:auto" alt="Native Moonweave render: green spectral patina and exposed brass on faceted plates"><figcaption>Spectral patina · brush plus a 64-texel pigment table</figcaption></figure></div><p class="muted">Reference renders from the actual Three physical shaders through native GLES3. These are fixed examples; they do not update with editor changes.</p><pre><code>const ochre = pigment.srgb('#dcc878');
+const blue = pigment.srgb('#315e79');
+const palette = image.generate({width: 64, height: 1, channels: 3},
+  (_u, _v, x) =&gt; pigment.toLinear(pigment.mix(ochre, blue, x / 63)));
+
+const painted = applyZones(surface.paint('carapace'), [
+  zone('patina', region, {
+    color: color.image(palette),
+    channels: {roughness: .74, metalness: .03},
+    height: .003,
+  }),
+]);</code></pre><p>Pigment coating preserves existing finish and relief. Height follows <code>D(mask × height) = mask × D(height) + height × D(mask)</code>, including the boundary term. These two original studies retain base-level bilinear reconstruction; spectral calculations happen during authoring.</p><div class="links"><a href="./docs/APPLICATIONS.md">Executable application guide ↗</a><a href="./examples/zones.json" download>Cobalt &amp; gilt graph ↓</a><a href="./examples/pigments.json" download>Spectral patina graph ↓</a></div></section>
+<section id="filtering"><p class="eyebrow">One resource · independent placements</p><h2>Keep the painted decision.<br>Change its scale.</h2><p>Inscribed glaze packs coverage, covered deposition and covered polish into three numeric channels of one 128 × 64 image. Two transformed readers place that same resource across ivory facets. The application is generated by code and travels as a complete graph.</p><div class="columns"><figure style="margin:0"><img src="./docs/evidence/inscription56.png" width="512" height="512" style="width:100%;height:auto" alt="Native Moonweave render: filtered cobalt and copper inscriptions on an ivory sphere"><figcaption>Inscribed glaze · one packed atlas, two placements</figcaption></figure><figure style="margin:0"><img src="./docs/evidence/inscription-shell56.png" width="512" height="512" style="width:100%;height:auto" alt="Native Moonweave render: the same packed inscription graph applied to faceted shell plates"><figcaption>The same graph · bound to a shell specimen</figcaption></figure></div><p class="muted">Fixed reference renders from the generated Three shaders through native GLES3. The live specimen, when available, evaluates the current graph.</p><pre><code>const sampling = {
+  domain: placement, address: 'zero', filter: 'anisotropic',
+};
+const coverage = scalar.image(controls, {...sampling, channel: 'r'});
+const deposited = scalar.image(controls, {...sampling, channel: 'g'});
+const polished = scalar.image(controls, {...sampling, channel: 'b'});
+
+const inked = surface.coat(base, color.srgb('#214c67'), coverage);
+const finished = surface.channels(inked, {
+  roughness: scalar.add(.68, scalar.multiply(-.28, polished)),
+});
+const result = surface.bump(finished, scalar.multiply(.0016, deposited));</code></pre><p>The deposition channel already contains coverage × height. Filtering their product retains correlation that would be lost by multiplying separate averages: <code>F(a × b) ≠ F(a) × F(b)</code>. The filtered deposition goes directly into bump.</p><div class="table-wrap"><table><thead><tr><th>Policy</th><th>Reconstruction</th><th>Read ceiling</th></tr></thead><tbody><tr><td>linear</td><td>Base-level bilinear; the original default</td><td>4</td></tr><tr><td>trilinear</td><td>Blend adjacent mip levels selected by the pixel footprint</td><td>8</td></tr><tr><td>anisotropic</td><td>Up to eight taps along the footprint's principal major axis</td><td>64</td></tr></tbody></table></div><p>R, G and B share one reconstruction when image, placement, address and filter match. The shader derives its footprint before addressing. CPU callers supply <code>footprint: {dx, dy}</code> separately from their derivative directions; omitting it asks for a point query. Partials hold footprint and filter configuration fixed.</p><p>Zero addressing keeps finite marks finite. Coarse levels continue widening and attenuating after the stored 1 × 1 mip, so a very small mark fades instead of spreading a constant mean. The eight-tap approximation has a defined cost ceiling; it is not an exact pixel integral. The original facet atlas keeps its own filtering policy.</p><div class="links"><a href="./examples/inscription.json" download>Inscribed glaze graph ↓</a><a href="./docs/APPLICATIONS.md#pack-correlated-decisions-before-filtering">Packed application guide ↗</a><a href="./docs/FILTERING.md">Filtering contract and evidence ↗</a></div></section>
+<section id="optimization"><p class="eyebrow">Compose first · simplify with evidence</p><h2>Keep the paint.<br>Remove work that disappears.</h2><p>A final creature finish can override an image-driven finish hidden behind pigment and relief. The offline optimizer uses 24 typed surface-effect equations in egglog, checks all six material components independently, then accepts a result only when the compiled graph gets cheaper.</p><div class="columns"><figure style="margin:0"><img src="./docs/evidence/optimization57/before.png" width="512" height="512" style="width:100%;height:auto" alt="Native render of the authored blue surface before equality saturation"><figcaption>Authored application · 20 live nodes · 68 texture-read ceiling</figcaption></figure><figure style="margin:0"><img src="./docs/evidence/optimization57/after.png" width="512" height="512" style="width:100%;height:auto" alt="Byte-identical native render after removing the overridden anisotropic finish"><figcaption>Accepted execution · 12 live nodes · 4 texture-read ceiling</figcaption></figure></div><p class="muted">Actual generated shaders, rendered through native GLES3. The paired pixels match exactly. Read ceilings describe static compiled work; they are not frame-rate measurements.</p><p>Shared image work remains when pigment, height or another branch still needs it. Named inputs and editable resource data keep their original identities. The runtime package includes the pure verification API; the complete source includes the pinned offline engine bridge and graph simulation tools.</p><pre><code>import {createOptimizationJob, applyOptimization}
+  from '@moonweave/surfaces/optimize';
+
+const job = createOptimizationJob(authoredGraph);
+// Run job through the offline egglog bridge.
+const result = applyOptimization(authoredGraph, candidate);
+const handle = system.createMaterial(result.graph);</code></pre><div class="links"><a href="./docs/OPTIMIZATION.md">Equations, setup and evidence ↗</a><a href="./docs/evidence/optimization57/independent-before.json" download>Authored graph ↓</a><a href="./docs/evidence/optimization57/independent-after.json" download>Optimized graph ↓</a><a href="./docs/data/optimization57.json">Measurement receipt ↗</a></div></section>
+
+<section id="sharing"><p class="eyebrow">Typed structure · shared execution</p><h2>A little graph.<br>Every connection accounted for.</h2><p>Public API owners, graph construction, compiler, CPU preparation, color management, marks and renderer resource ownership are strict TypeScript. Public declarations are generated from those implementations. A source document keeps its named controls; compilation creates a smaller live DAG. Repeated pure scalar expressions also share their prepared CPU work.</p><p>Open <strong>Inspect graph</strong> in the atelier to see the live connections. Select a node to reveal its authored names, input ports and consumers. Two equal-valued controls remain independent; only eligible structure shares.</p><pre><code>import {inspectGraph} from '@moonweave/surfaces/core';
+
+const execution = inspectGraph(graph);
+execution.nodes[execution.output];
+execution.edges; // source slot, target slot, input port
+execution.eliminated; // retained source IDs without live work</code></pre><p>Inspection reuses the compiled topology across value edits. Equality saturation remains an optional offline authoring step; routine rendering and sampling use the prepared graph.</p><div class="links"><a href="./index.html#graph-panel">Explore the live graph ↗</a><a href="./docs/SHARING.md">TypeScript and sharing contract ↗</a><a href="./docs/ARCHITECTURE.md#cache-ownership">Ownership and cache lifetimes ↗</a><a href="./docs/evidence/sharing58/shared-height.json" download>Shared height example ↓</a><a href="./docs/data/sharing58-fields.json">CPU measurement receipt ↗</a></div></section>
+
+<section id="start"><p class="eyebrow">01 / Compose</p><h2>A skin with an ivory underside</h2><p>Two paints share one sampled field. A facing mask places the second paint over the lower surface. The complete expression still uses four texture reads per fragment.</p>
+<pre><code>import {facets, surface, scalar, named, splitRecipe, materialGraph}
+  from '@moonweave/surfaces/core';
+import {createTexturingSystem, bindSurfaceCoordinates}
+  from '@moonweave/surfaces/three';
+
+const field = named('bodyField', facets(splitRecipe('carapace').mapping));
+const skin = named('bodyPaint', surface.paint(field, 'carapace'));
+const ivory = surface.paint(field, 'horn');
+const underside = named('transition', scalar.ramp(
+  scalar.facing([0, -1, 0]), -.25, .65,
+));
+const strength = named('strength', scalar.parameter(.9));
+
+const graph = materialGraph(surface.mix(
+  skin, ivory,
+  scalar.multiply(underside, strength),
+));
+
+const system = createTexturingSystem(THREE);
+const handle = system.createMaterial(graph, {
+  coordinates: 'attribute',
+});
+bindSurfaceCoordinates(THREE, mesh.geometry);
+mesh.material = handle.material;
+
+handle.patch({strength: {value: .5}});
+// Reuses the compiled structure and updates the changed uniform.</code></pre>
+<p class="muted">The host supplies Three, its mesh, lights and animation. The package contains no bundled renderer. Install the downloaded TGZ with <code>npm install ./moonweave-surfaces-{{VERSION}}.tgz</code>. TypeScript users also install <code>@types/three</code> matching their engine revision. When copying ESM files directly, keep the shared <code>chunks/</code> directory beside the entry modules.</p></section>
+<section><p class="eyebrow">02 / Separate the owners</p><h2>Six types in the graph</h2><div class="table-wrap"><table><thead><tr><th>Value</th><th>What it does</th><th>Operators</th></tr></thead><tbody><tr><td>Image</td><td>Shared immutable numeric texels.</td><td>Data import and procedural tabulation</td></tr><tr><td>Scalar</td><td>Describes a spatial value or mask.</td><td>Parameter, axis, facing, noise, ramp, arithmetic, complement, image channel</td></tr><tr><td>Domain</td><td>Maps the material frame, normals and footprint.</td><td>Affine transform and composition</td></tr><tr><td>Facet sample</td><td>Samples the paired painted atlas.</td><td>Scale, stretch, direction, seed, domain</td></tr><tr><td>Color</td><td>A spatial field of extended linear RGB color.</td><td>Linear, sRGB, Oklab or OKLCH authoring; mixing, ramps, related pigments</td></tr><tr><td>Surface</td><td>Combines color, relief and finish.</td><td>Color material, paint, mix, pigment coating, associated deposition, channel overrides, relief scaling, height detail</td></tr></tbody></table></div><p>Sharing a <code>facets</code> expression shares actual sampling. Changing a palette does not create a new field. Supplying a separate field allows the second paint to have an independent scale and direction.</p><div class="callout"><p><code>surface.mix(a, b, mask)</code> interpolates linear color, material parameters and authored slopes. It is a parameter blend. Physical coating layers require a separate light-transport model.</p></div></section>
+<section id="procedural"><p class="eyebrow">Color and procedural fields</p><h2>A material without a painted atlas</h2><p>A noise field can drive both color and finish. Reusing the same expression shares one procedural evaluation. The <strong>Procedural stone</strong> example has no paint or facet nodes:</p>
+<pre><code>import {color, domain, materialGraph, named, patchGraph, scalar, surface}
+  from '@moonweave/surfaces/core';
+
+const frame = named('stoneSpace', domain.transform([
+  3.2, 0, 0, 0,  0, 3.2, 0, 0,
+  0, 0, 3.2, 0,  0, 0, 0, 1,
+]));
+const grain = named('stoneGrain', scalar.noise({
+  seed: 37, domain: frame,
+}));
+const shade = named('stoneShadow', color.srgb('#484653'));
+const light = named('stoneLight', color.srgb('#c5bbc4'));
+const pigment = color.mix(shade, light, scalar.ramp(grain, .28, .72));
+const stone = surface.channels(surface.material(pigment), {
+  roughness: scalar.add(.32, scalar.multiply(.42, grain)),
+});
+const graph = materialGraph(stone);
+
+// Colors are stored and mixed in linear RGB.
+const next = patchGraph(graph, {
+  stoneGrain: {seed: 84},
+  stoneShadow: {value: color.srgb('#538fb3').value},
+});</code></pre>
+<p><code>color.linear([r,g,b])</code> accepts extended linear RGB coordinates. Out-of-gamut intermediates remain available to later operations; material inputs project the result to reflectance. <code>color.srgb('#rrggbb')</code> decodes an sRGB color once, when authored. <code>color.mix</code> blends those linear colors using a clamped scalar mask. <code>surface.material(color)</code> provides a neutral finish; <code>surface.channels</code> connects scalar fields to roughness, metalness, clearcoat or opacity.</p>
+<p>Open <strong>Procedural stone</strong> in Compose to edit its colors, variation, tone boundary and finish. Expand <strong>stoneSpace</strong> to change the coordinate scale or offset. In <strong>Lichen on shell</strong>, one noise field controls green pigment and where it covers the original carapace paint. Its mask is a custom expression: choosing Position or Surface direction replaces that mask while preserving the field still used by the color.</p>
+<div class="callout"><p>Noise is point sampled. Its analytic derivatives describe local change; they do not automatically filter fine detail. High frequencies can alias and need a separate filtering strategy. The GPU noise implementation requires WebGL2 / GLSL ES 3.</p></div>
+<p>A graph with no live facet samples performs no atlas reads and does not allocate the paint textures. Its procedural evaluation still has arithmetic cost. The graph inspector reports facet samples, procedural evaluations and texture reads separately.</p>
+<div class="links"><a href="./examples/stone.json" download>Procedural stone ↓</a><a href="./examples/lichen.json" download>Lichen on shell ↓</a><a href="./docs/GRAMMAR.md">Typed grammar and composition rules ↗</a></div></section>
+<section id="surface-detail"><p class="eyebrow">Fields applied to a surface</p><h2>Give a field depth</h2><p><strong>Carved porcelain</strong> uses one procedural field for pigment, polished finish and engraved detail, without a painted atlas. <strong>Weathered shell</strong> applies the same construction to the original carapace facets. The field remains one shared expression:</p>
+<pre><code>const grain = scalar.noise({seed: 73});
+const carving = scalar.ramp(grain, .4, .68);
+const depth = named('depth', scalar.parameter(-.035));
+const porcelain = surface.bump(
+  surface.channels(surface.material(color.mix(
+    color.srgb('#eee5cf'), color.srgb('#40596d'), carving,
+  )), {
+    roughness: scalar.add(.28, scalar.multiply(.28, carving)),
+  }),
+  scalar.multiply(depth, carving),
+);</code></pre>
+<p>In Compose, <strong>Height detail</strong> lists each application. <strong>+ Add height detail</strong> creates a grain field and an adjustable signed amplitude, or applies the field selected in <strong>New detail field</strong>. Negative amplitudes engrave; positive amplitudes raise the shading. Each application can use another <strong>Height expression</strong> or be removed. Undo restores the previous graph.</p>
+<p>Open <strong>Connect finish fields</strong> to connect that field to roughness, metalness, clearcoat or opacity. Choose <strong>New adjustable value</strong> for an independent control, or <strong>Inherit surface</strong> to remove an override. Values still used by another part of the composition stay connected.</p>
+<div class="callout"><p>Compose a mask with the height before applying it: <code>bump(surface, multiply(mask, height))</code> includes the changing mask's contribution to the slope. <code>relief(surface, mask)</code> scales an existing slope instead. Height detail changes shading; the mesh, silhouette and geometric shadows keep their original shape.</p></div>
+<p>The renderer computes height differentials only along the paths that need them. A spatially constant height adds no detail and compiles away. An editable amplitude currently at zero keeps its program, so a slider can cross zero without rebuilding the shader.</p>
+<div class="links"><a href="./examples/porcelain.json" download>Carved porcelain ↓</a><a href="./examples/weathered.json" download>Weathered shell ↓</a></div></section>
+<section id="color-fields"><p class="eyebrow">Color fields and painted pigments</p><h2>One palette, many surfaces</h2><p><strong>Color bands</strong> makes a multi-stop palette along the specimen. Change its color space between Linear RGB and Oklab, move stops, or choose smooth transitions and steps. Each stop can use a solid color or another color field. <strong>Prismatic shell</strong> sends a shared procedural palette into the body, depth and light pigments of the original carapace.</p><pre><code>const palette = color.ramp(variation, [
+  [.1, color.srgb('#253b52')],
+  [.5, color.srgb('#649b9b')],
+  [.9, color.srgb('#d7ddc8')],
+], {space: 'oklab', interpolation: 'smoothstep'});
+const shell = surface.paint('carapace', {
+  palette: {base: palette},
+});</code></pre><p>In Paint, open <strong>Connect color fields</strong> to choose the expression for each pigment. Every pigment has a color connection, including solid colors. In Compose, edit the field and every connection follows. Make a pigment independent to give it its own editable literal. Add a stop takes the current midpoint color; varying colors remain expressions. Applying a paint preset restores that preset's pigment colors, and Undo restores the previous connections. Palette and value controls come first; open <strong>Field construction</strong> for masks, transitions, grain and coordinates.</p><p>Oklab changes the path between colors. It does not simulate physical pigment mixing. Extended color values remain intact in the graph; the material's RGB projection can clip colors outside its gamut.</p><div class="links"><a href="./examples/spectrum.json" download>Color bands ↓</a><a href="./examples/prismatic.json" download>Prismatic shell ↓</a></div></section>
+<section id="painterly"><p class="eyebrow">Related colors · Deliberate marks</p><h2>A palette with relationships</h2><p><strong>Ink &amp; ivory</strong> groups dark blue-gray planes over a quiet ground, with sparse warm accents. <strong>Patinated brass</strong> places broad verdigris deposits and an exposed scrape. Each study derives related pigments from one source color. Marks change color while the painted relief and finish keep their own controls.</p>
+<div class="columns"><figure style="margin:0"><img src="./docs/evidence/ivory54.png" alt="Ink and ivory painted sphere with a broad dark plane and sparse amber accents" style="width:100%;height:auto"><figcaption class="muted">Ink &amp; ivory · native shader render</figcaption></figure><figure style="margin:0"><img src="./docs/evidence/brass54.png" alt="Brass painted sphere with broad green patina and a narrow pale scrape" style="width:100%;height:auto"><figcaption class="muted">Patinated brass · native shader render</figcaption></figure></div>
+<pre><code>const pigment = named('pigment', color.oklch([.62, .08, 220]));
+const shadow = color.adjust(pigment, {
+  lightness: -.18, chroma: .65, hue: 12,
+});
+const accent = color.adjust(pigment, {
+  hue: named('accentHue', scalar.parameter(155)),
+});
+const coverage = mask.chisel({feather: [.15, .55, .2]});
+const shell = surface.paint('carapace', {palette: {
+  base: color.mix(pigment, accent, coverage, {space: 'oklab'}),
+  shadow,
+}});</code></pre>
+<p><strong>Lightness</strong> is an offset, <strong>chroma</strong> a multiplier, and <strong>hue</strong> a rotation in degrees. Each may be a shared or spatial scalar field. In Compose, use <strong>Add color adjustment</strong> on an exposed color, then edit its source and relationships. Undo restores the previous connections. Palette and value controls come first; open <strong>Field construction</strong> for masks, transitions, grain and coordinates.</p>
+<p>The chisel is a finite coverage stamp in local <code>[-1,1]³</code>. Its domain places and stretches it; feather is measured in those local units. It uses existing scalar operations. Coverage changes roughness or height only when you connect it there. Smooth edges are point sampled and still need filtering when details become smaller than a pixel.</p>
+<div class="links"><a href="./examples/ivory.json" download>Ink &amp; ivory ↓</a><a href="./examples/brass.json" download>Patinated brass ↓</a><a href="./docs/COLOR-STUDY.md">Color and painterly systems study ↗</a></div></section>
+<section id="standalone-fields"><p class="eyebrow">Reusable field programs</p><h2>A field can stand on its own</h2><p>Store, edit and sample a scalar, color or coordinate field directly. The same graph format also carries facet and surface expressions. CPU sampling covers the first three types; surface rendering belongs to the adapter.</p>
+<pre><code>import {scalar, surface, named, materialGraph, expressionGraph, graphExpression,
+  instantiate, createFieldSampler, serializeGraph, parseExpressionGraph, patchGraph}
+  from '@moonweave/surfaces/core';
+
+const field = expressionGraph(named('grain', scalar.noise({seed: 17})));
+const sample = createFieldSampler(field);
+const atPoint = sample({
+  position: [.2, .4, .7],
+  dx: [.01, 0, 0], dy: [0, .01, 0],
+});
+// atPoint contains value, dx and dy.
+
+const restored = parseExpressionGraph(serializeGraph(field));
+const changed = patchGraph(restored, {grain: {seed: 29}});
+const sampleChanged = createFieldSampler(changed);
+
+// Bring the stored field back into another surface composition.
+const imported = graphExpression(restored);
+if (imported.kind !== 'noise') throw new TypeError('Expected the saved noise field.');
+const reused = instantiate(imported, {prefix: 'shell'});
+const shell = materialGraph(surface.bump(surface.paint('carapace'),
+  scalar.multiply(.025, reused)));
+</code></pre>
+<p>Preparing a sampler resolves the graph once. Each call receives its own sample context. <code>materialGraph</code> and <code>parseGraph</code> continue to require a surface for the renderer and atelier. <code>foldGraph</code> interprets any root with your own typed algebra.</p><p><code>graphExpression</code> preserves the selected root's reachable sharing and names. Its result can be placed or instantiated like any authored expression. Unused document definitions stay in the original graph and are omitted from the returned expression.</p></section>
+<section><p class="eyebrow">03 / Edit deliberately</p><h2>Constants specialize. Parameters stay editable.</h2><div class="columns"><div><h3>A fixed fact</h3><pre><code>scalar.constant(0)
+surface.mix(a, b, 0)</code></pre><p>A literal zero can eliminate the second branch and its sampled fields. Changing the literal may create a different program.</p></div><div><h3>A live control</h3><pre><code>scalar.parameter(0)
+scalar.parameter(1)</code></pre><p>Both values use the same program structure. The compiler retains the branch so a control can move through zero without rebuilding the shader.</p></div></div><p>Whole graphs are immutable. Use <code>handle.patch(changes)</code> for values, or pure <code>patchGraph(graph, changes)</code> followed by <code>handle.setGraph(next)</code>. Unchanged nodes, compiled structure and uniform containers retain their identity. Use <code>named(id, expression)</code> to expose a stable ID on any expression. Reuse that returned value to share a node; independent expressions need distinct names. Each patch targets those authored IDs:</p><pre><code>handle.patch({
+  strength: {value: .6},
+  transition: {low: -.4, high: .7},
+  bodyField: {scale: .22},
+  bodyPaint: {style: {roughness: .7}},
+});
+
+// When the scene no longer uses these materials:
+system.dispose();</code></pre><p>A name survives JSON and value edits without changing the shader. It does not turn a constant into a parameter. References, literal constants and node kinds are structural edits. Build a new graph for those. The atelier follows the same distinction: paints and blends remain separately selectable, and changing a control preserves the existing composition.</p></section>
+<section><p class="eyebrow">Composition law</p><h2>Later finish values take precedence.</h2><p>A finish override is a map from channel names to scalar expressions. Its composition has a simple law:</p><pre><code>channels(channels(surface, A), B)
+= channels(surface, { ...A, ...B })</code></pre><p>The compiler combines adjacent overrides and removes scalar work that has become completely hidden. The editable document retains that work, and an inner surface used elsewhere remains intact. Empty overrides are identities. This law does not rearrange scalar arithmetic.</p><p>The same precision applies to masks. Changing a recognized Position region to Surface direction preserves its strength and ramp bounds. Reversing the entire mask keeps <code>1 − amount × region</code> distinct from <code>amount × (1 − region)</code>. Shared masks retain their other users.</p></section>
+<section><p class="eyebrow">04 / Follow the creature</p><h2>Join parts in one rest frame</h2><p>For a multipart creature, store each part's positions and normals in a common frame before deformation. The texture follows the stored rest coordinates.</p><pre><code>creature.updateWorldMatrix(true, true);
+const inverseRoot = creature.matrixWorld.clone().invert();
+
+creature.traverse(object =&gt; {
+  if (!object.isMesh) return;
+  const toRoot = inverseRoot.clone().multiply(object.matrixWorld);
+  bindSurfaceCoordinates(THREE, object.geometry, {matrix: toRoot});
+  object.material = handle.material;
+});</code></pre><p>Use separate geometry objects when shared geometry instances need different rest frames. Domain transforms use the inverse transpose for normals and the linear transform for position differentials. Scalar evaluation exposes analytic first differentials for inspection and testing.</p><h3>Place a whole composition together</h3><p><code>inDomain(expression, frame)</code> carries the paint fields and their masks into another coordinate frame together. Shared fields remain shared, and existing transforms keep their order.</p><pre><code>import {domain, inDomain, materialGraph}
+  from '@moonweave/surfaces/core';
+
+const frame = domain.transform([
+  1.4, 0, 0, 0,
+  0, 0.8, 0, 0,
+  0, 0, 1, 0,
+  0.2, -0.1, 0, 1,
+]);
+const placed = materialGraph(inDomain(surfaceExpression, frame));</code></pre></section>
+<section id="instances"><p class="eyebrow">Reusable compositions</p><h2>Local controls. Shared inputs.</h2><p>A reusable composition can be an ordinary JavaScript function. When reusing a named expression template, <code>instantiate</code> copies its local values and gives their authored IDs a deterministic prefix. Explicit shared inputs and their descendants retain identity. Shared inputs must be immutable expressions made by the constructors or named helpers. Construct a shared value once before placing it in the template.</p>
+<pre><code>import {instantiate, inDomain} from '@moonweave/surfaces/core';
+
+const left = instantiate(inDomain(template, leftFrame), {
+  prefix: 'left', shared: [globalDepth],
+});
+const right = instantiate(inDomain(template, rightFrame), {
+  prefix: 'right', shared: [globalDepth],
+});</code></pre>
+<p>Here <code>template</code> is an authored composition, <code>leftFrame</code> and <code>rightFrame</code> place it, and <code>globalDepth</code> is a parameter already used by that template. A local <code>grain</code> becomes <code>left_grain</code> or <code>right_grain</code>. Editing the shared depth affects both; editing a local grain affects its own instance. Reusing a prefix still creates a naming conflict when independent instances are combined, and validation reports it.</p><p>Instancing controls ownership. <code>inDomain</code> controls coordinates. Sharing an input does not pin its position against a later domain transform.</p></section>
+<section><p class="eyebrow">05 / Keep the surface</p><h2>Keep the composition editable</h2><pre><code>import {serializeGraph, parseGraph, compileGraph}
+  from '@moonweave/surfaces/core';
+
+const json = serializeGraph(handle.graph);
+const restored = parseGraph(json);
+const {cost, diagnostics} = compileGraph(restored);
+handle.setGraph(restored);</code></pre><p>The JSON document has a version, typed nodes and explicit references. Unknown properties, invalid connections, cycles and unsupported values fail before rendering. The atelier also imports revision 43 recipes and converts them to the graph format.</p><h3>Explore, undo, return</h3><p>Undo and Redo operate on completed edits. A slider gesture is one step, and choosing a preset is another. Returning a gesture to its starting values creates no edit and preserves Redo. Use <strong>⌘/Ctrl+Z</strong> and <strong>⌘/Ctrl+Shift+Z</strong> outside text fields; text fields keep their normal editing shortcuts.</p><p>The atelier saves the surface, its Reset baseline, selected paint/blend, editor tab and unfinished JSON draft in this browser. Reloading restores that work with a fresh undo history. Use <strong>Export graph</strong> to carry the surface to another browser or project. The save indicator reports when local storage is unavailable.</p><p>Imported graphs keep their own structure. Colors, multi-stop palettes, interpolation space, noise variation, coordinate transforms, parameters, constants, smooth ramps and facing directions appear under <strong>Surface controls</strong> in Compose. Values used by a blend mask appear with that mask. Shared values retain all their references; each independent value remains its own control. <strong>Directional finish</strong> shows a single paint with a directional roughness ramp and named relief and metalness controls.</p><p>Try these complete examples in the source editor:</p><div class="links"><a href="./examples/belly.json" download>Pale underside ↓</a><a href="./examples/tips.json" download>Darkened tips ↓</a><a href="./examples/patina.json" download>Two pigments ↓</a><a href="./examples/finish.json" download>Directional finish ↓</a><a href="./examples/stone.json" download>Procedural stone ↓</a><a href="./examples/lichen.json" download>Lichen on shell ↓</a><a href="./examples/porcelain.json" download>Carved porcelain ↓</a><a href="./examples/weathered.json" download>Weathered shell ↓</a></div></section>
+<section id="graphics"><p class="eyebrow">06 / Restore the preview</p><h2>Find the graphics failure.</h2><p>The atelier needs WebGL2 for its live specimen. Its composition editor runs independently. A reference image is labeled explicitly and does not change when you edit the surface.</p><div class="table-wrap"><table><thead><tr><th>Graphics details says</th><th>Meaning</th><th>Next action</th></tr></thead><tbody><tr><td>unavailable · context</td><td>The browser did not provide a WebGL2 context.</td><td>Read the creation message. Compare a regular browser tab; inspect the browser's graphics status.</td></tr><tr><td>failed · renderer / prepare / render</td><td>A context existed but initialization or drawing failed.</td><td>Retry. Try reduced load. Copy the report so the exception can be diagnosed.</td></tr><tr><td>failed · shader</td><td>A shader failed to compile or link.</td><td>Copy the report, including shader logs. This needs a material or driver investigation.</td></tr><tr><td>lost</td><td>A previously available context was interrupted.</td><td>The app pauses and preserves the composition. It restarts its graphics when the browser restores the context.</td></tr></tbody></table></div><h3>Compare one variable at a time</h3><p>Start with <strong>Retry preview</strong>, which keeps your work. If graphics remain unavailable, open Moonweave in a regular browser tab. In Chrome, inspect <code>chrome://gpu</code> and Settings → System → graphics acceleration; restart after changing that setting. In Firefox, inspect <code>about:support</code> → Graphics and Settings → Performance. In Safari, update through the supported OS update path and isolate extension or site-specific issues. Export your graph before restarting or changing browsers.</p><p><strong>Try reduced load</strong> caps the pixel ratio at 1 and disables shadows and generated environment lighting. It can reduce rendering pressure after a context is available. It cannot enable blocked WebGL2. Use <strong>Use full lighting</strong> in Graphics details to return to the normal preview.</p><p>The report is generated locally and contains browser, graphics state, settings and error details. It does not include your surface graph or send anything automatically. <strong>Copy graphics report</strong> gives you the evidence needed for the next diagnosis.</p><div class="links"><a href="./docs/GRAPHICS.md">Full diagnosis and backend options ↗</a><a href="https://threejs.org/docs/pages/WebGLRenderer.html" target="_blank" rel="noopener">Three renderer requirements ↗</a></div></section>
+<section><p class="eyebrow">07 / Know the boundary</p><h2>A precise foundation</h2><p>The supplied renderer adapter uses Three's <code>WebGLRenderer</code>. The pure core is independent of it. A WebGPU, MaterialX, texture-baking or offline renderer would need its own backend.</p><p>The 512² atlas pair occupies about 2.67 MiB with mipmaps when a graph needs it. Pure color and procedural graphs allocate no atlas. A material graph may use up to eight facet samples and sixteen paint styles. Embedded images use float32 mip data with explicit linear, trilinear or bounded anisotropic reconstruction; up to six resources can accompany the atlas pair. Filtered read counts are ceilings, and the displayed costs describe graph work rather than hardware frame rate.</p><p>Six graph types and twenty-six operations share one typed signature for value and reference rules. <code>foldGraph</code> exposes a memoized interpretation of that graph for another backend or analysis. The atelier itself uses Solid and TypeScript, with Effect scopes for graphics and browser resources; none is required by the reusable surface package.</p><p>Authored relief is shading, not displaced geometry. Surface mixes are not physical layered optics. CPU evaluation checks scalar fields, colors and domains, including procedural noise and image fields. It does not reproduce lighting or atlas sampling. The complete contracts, research and verification are included with the source.</p><div class="links"><a href="./docs/GRAMMAR.md">Typed grammar ↗</a><a href="./docs/TEXTURING.md">Full API contract ↗</a><a href="./docs/ARCHITECTURE.md">Architecture and comparisons ↗</a><a href="./docs/RESEARCH.md">Research decisions ↗</a><a href="./docs/COLOR-STUDY.md">Painterly systems study ↗</a><a href="./docs/VERIFICATION.md">Verification ↗</a><a href="./docs/PACKAGING.md">Package workflow ↗</a></div></section>
+</main><footer>MOONWEAVE {{EDITION}} / THE PROCEDURAL BESTIARY <span> · </span> <a href="./">Return to the surface atelier</a></footer>
+</body></html>

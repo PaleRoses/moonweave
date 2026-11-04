@@ -1,0 +1,506 @@
+{
+  "release": "0.52.0",
+  "baselineRelease": "0.51.0",
+  "baselineCommit": "2e0017c3017c2773ff25cb2d3706d49a3bd3250e",
+  "metric": "Exact RGBA pixel equality for every prior native specimen render; separate PNG byte check.",
+  "totalImages": 60,
+  "totalPixels": 15728640,
+  "allPixelIdentical": true,
+  "allByteIdentical": true,
+  "specimens": [
+    {
+      "specimen": "sphere",
+      "baseline": "validation/native51-sphere",
+      "candidate": "validation/native52-sphere",
+      "images": [
+        {
+          "file": "carapace-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "carapace-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channel-flat-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channel-flat-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channel-nested-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channel-nested-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channels-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channels-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "finish-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "finish-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "frame-reference-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "frame-reference-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "framed-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "framed-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "independent-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "independent-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "lichen-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "lichen-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "membrane-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "membrane-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "moonstone-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "moonstone-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "patched-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "patched-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "reference-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "reference-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "shared-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "shared-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "stone-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "stone-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "specimen": "shell",
+      "baseline": "validation/native51-shell",
+      "candidate": "validation/native52-shell",
+      "images": [
+        {
+          "file": "carapace-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "carapace-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channel-flat-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channel-flat-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channel-nested-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channel-nested-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channels-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "channels-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "finish-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "finish-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "frame-reference-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "frame-reference-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "framed-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "framed-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "independent-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "independent-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "lichen-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "lichen-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "membrane-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "membrane-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "moonstone-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "moonstone-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "patched-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "patched-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "reference-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "reference-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "shared-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "shared-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "stone-far.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        },
+        {
+          "file": "stone-near.png",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "byteIdentical": true,
+          "changedPixels": 0,
+          "maxChannelDelta": 0
+        }
+      ]
+    }
+  ]
+}

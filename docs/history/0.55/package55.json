@@ -1,0 +1,14 @@
+{
+  "version": "0.55.0",
+  "runtimeFiles": 36,
+  "runtimeTarball": "moonweave-surfaces-0.55.0.tgz",
+  "runtimeTarballSHA256": "2aa5701fcbfa84691602776b664818cf3a61febc4cb41de5991ccc553f694c25",
+  "portableZipMatchesNpmPayload": true,
+  "sourceArchive": "moonweave-0.55.0-source.zip",
+  "sourceFiles": 224,
+  "sourceRebuild": {
+    "method": "Extract complete source ZIP into an isolated directory, use the pinned installed dependency tree, run tools/build.mjs, compare every dist output including all three archives byte-for-byte.",
+    "expectedOutputs": 111,
+    "allOutputsByteIdentical": true
+  }
+}

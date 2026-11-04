@@ -1,0 +1,357 @@
+{
+  "version": "0.55.0",
+  "baselineVersion": "0.54.0",
+  "method": "Independent baseline/current graph, compiler and shader imports; exact legacy comparisons. Static emitted-work and numeric payload counts, not render timings or JavaScript heap measurements.",
+  "resourceAccounting": "Float32 payload counts the authored channels. RGBA32F base-level bytes count the adapter upload expansion and exclude driver overhead. Shared existing paint atlases are not included in these image payload totals. Four texture reads are emitted per image point reconstruction; no mipmapping or anisotropic filtering.",
+  "legacyExamples": 12,
+  "legacy": {
+    "belly": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 9,
+      "liveNodes": 9,
+      "graphJSONBytes": 1909,
+      "generatedGLSLBytes": 6995
+    },
+    "tips": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 9,
+      "liveNodes": 9,
+      "graphJSONBytes": 1945,
+      "generatedGLSLBytes": 7200
+    },
+    "patina": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 5,
+      "liveNodes": 5,
+      "graphJSONBytes": 1432,
+      "generatedGLSLBytes": 6732
+    },
+    "finish": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 8,
+      "liveNodes": 8,
+      "graphJSONBytes": 1469,
+      "generatedGLSLBytes": 6769
+    },
+    "stone": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 12,
+      "liveNodes": 12,
+      "graphJSONBytes": 1681,
+      "generatedGLSLBytes": 4503
+    },
+    "lichen": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 12,
+      "liveNodes": 12,
+      "graphJSONBytes": 2197,
+      "generatedGLSLBytes": 8549
+    },
+    "spectrum": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 10,
+      "liveNodes": 10,
+      "graphJSONBytes": 1769,
+      "generatedGLSLBytes": 4665
+    },
+    "prismatic": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 22,
+      "liveNodes": 21,
+      "graphJSONBytes": 3716,
+      "generatedGLSLBytes": 10560
+    },
+    "porcelain": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 17,
+      "liveNodes": 17,
+      "graphJSONBytes": 2641,
+      "generatedGLSLBytes": 7479
+    },
+    "weathered": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 18,
+      "liveNodes": 18,
+      "graphJSONBytes": 3201,
+      "generatedGLSLBytes": 11479
+    },
+    "ivory": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 105,
+      "liveNodes": 105,
+      "graphJSONBytes": 13035,
+      "generatedGLSLBytes": 14751
+    },
+    "brass": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "authoredNodes": 105,
+      "liveNodes": 105,
+      "graphJSONBytes": 13165,
+      "generatedGLSLBytes": 14742
+    }
+  },
+  "studies": {
+    "zones": {
+      "authoredNodes": 45,
+      "liveNodes": 45,
+      "graphJSONBytes": 26954,
+      "generatedGLSLBytes": 12912,
+      "programKeyBytes": 2300,
+      "authoredImageNodes": 1,
+      "liveImageNodes": 1,
+      "uniqueResourceObjects": 1,
+      "scalarImageSamples": 2,
+      "colorImageSamples": 0,
+      "imageSamplerBindings": 1,
+      "imageFloat32PayloadBytes": 4096,
+      "imageRgba32fBaseLevelBytes": 16384,
+      "graphSHA256": "5eec87a02adc313a314c4b2ad0e20f59c5393316bd2830c62d17f779553e3f3c",
+      "generatedGLSLSHA256": "a72548de1bcd2864c8c889df32d92b12cd323b4ed68808575da0884976e321ad",
+      "resources": [
+        {
+          "sourceIds": [
+            "enamelBrush"
+          ],
+          "width": 32,
+          "height": 32,
+          "channels": 1,
+          "components": 1024,
+          "float32PayloadBytes": 4096,
+          "rgba32fBaseLevelBytes": 16384
+        }
+      ],
+      "paintSamples": 1,
+      "proceduralSamples": 0,
+      "textureReads": 12,
+      "uniformScalars": 96
+    },
+    "pigments": {
+      "authoredNodes": 48,
+      "liveNodes": 46,
+      "graphJSONBytes": 33362,
+      "generatedGLSLBytes": 13319,
+      "programKeyBytes": 2386,
+      "authoredImageNodes": 2,
+      "liveImageNodes": 2,
+      "uniqueResourceObjects": 2,
+      "scalarImageSamples": 2,
+      "colorImageSamples": 1,
+      "imageSamplerBindings": 2,
+      "imageFloat32PayloadBytes": 4864,
+      "imageRgba32fBaseLevelBytes": 17408,
+      "graphSHA256": "3627ce1efdbb2b830ae7f7162a6cade5ff60212a4267c1828d6874b106a92881",
+      "generatedGLSLSHA256": "04ae6c97e1700f59c76bd3aebfc452caee1c1538c1fe7711fb72a49404c5b5c6",
+      "resources": [
+        {
+          "sourceIds": [
+            "patinaBrush"
+          ],
+          "width": 32,
+          "height": 32,
+          "channels": 1,
+          "components": 1024,
+          "float32PayloadBytes": 4096,
+          "rgba32fBaseLevelBytes": 16384
+        },
+        {
+          "sourceIds": [
+            "patinaPigmentTable"
+          ],
+          "width": 64,
+          "height": 1,
+          "channels": 3,
+          "components": 192,
+          "float32PayloadBytes": 768,
+          "rgba32fBaseLevelBytes": 1024
+        }
+      ],
+      "paintSamples": 1,
+      "proceduralSamples": 0,
+      "textureReads": 16,
+      "uniformScalars": 119
+    }
+  },
+  "spectralPalette": {
+    "width": 64,
+    "endpointSwatches": {
+      "yellow": "#dcc878",
+      "blue": "#315e79"
+    },
+    "endpointMixturePositions": [
+      0,
+      1
+    ],
+    "sampledPositions": 1025,
+    "correspondence": "texel i stores t=i/63; mixture t uses u=(63*t+0.5)/64, v=0.5. An arbitrary image coordinate u corresponds to direct t=clamp((64*u-0.5)/63,0,1).",
+    "method": "CPU bilinear sampling of the actual float32 resource versus direct 38-band pigment evaluation; Oklab uses the existing shared conversion. Results are observed errors on an inclusive uniform grid, not a global bound or native GPU parity measurement.",
+    "maxTexelQuantizationError": 2.9468533280230247e-8,
+    "maxLinearRgbComponentError": 0.0003075149793603238,
+    "maxErrorByChannel": [
+      0.0003075149793603238,
+      0.0000810698693700651,
+      0.000012172727571480024
+    ],
+    "rmsLinearRgbComponentError": 0.000057447853948610684,
+    "maxOklabDistance": 0.00009107650415052876,
+    "oklabDistanceScale": "Euclidean Oklab distance with lightness in [0,1], not a percentage",
+    "worstRgb": {
+      "t": 0.0400390625,
+      "u": 0.0472259521484375,
+      "channel": "r",
+      "expected": [
+        0.7083119470694528,
+        0.5768227426995999,
+        0.18799661597348255
+      ],
+      "actual": [
+        0.7080044320900925,
+        0.5767872003489174,
+        0.1880041724507464
+      ]
+    },
+    "worstOklab": {
+      "t": 0.76953125,
+      "u": 0.76531982421875,
+      "expected": [
+        0.5072342973795353,
+        -0.04573930208742916,
+        -0.035304218380866226
+      ],
+      "actual": [
+        0.5073149002898324,
+        -0.04574881889254495,
+        -0.03526289610018973
+      ]
+    }
+  },
+  "upstreamPigment": {
+    "cases": 70,
+    "components": 210,
+    "maxLinearRgbComponentError": 4.174015733743319e-14,
+    "provenance": {
+      "source": "https://github.com/rvanwijnen/spectral.js/blob/3.0.0/spectral.js",
+      "retrieved": "2026-11-04",
+      "reference": "Unmodified source semantics; GitHub text whitespace reconstructed for execution.",
+      "referenceSha256": "dd275f14eb1b34cd83da593e81f080abdd0ebc51b22fd9675cd8279057c354c2",
+      "tableSha256": "4f41a6ac8be523056785f78ff9edf5302244a4610abc5b8a6ad9196cc838171e"
+    }
+  },
+  "sourceSHA256": {
+    "baseline": {
+      "lab/composition.mts": "abfe33150c31db2088979c8c4350dd8417c9dde6eeca8eb98d80e8b2faa235c2",
+      "lab/painterly-examples.mts": "b0da5d6253ae9615d5a3846b96d8831f20b770efe2d30c9726fc844e04e91449",
+      "lab/surface-examples.mts": "4fb4f1defd4faff4656341ef0401624deb9d24f720eb4d7311752990d13c3ea7",
+      "package-lock.json": "d029358ed169df228e8666019d1809752483a31253454241ca3b003907a0050f",
+      "package.json": "c559017a67596149871253cb76ae1739314daa1b73620cfc509da6af7aeebb7f",
+      "src/core.mjs": "2f708dbea7fe6741c0266fa8d8f2a490bc37d0dff6fff4af2da6d68b1a270c0c",
+      "src/core/algebra.mts": "cbf33c9f1510d13793383125a96a8def9fc56b2f8a491e7ae4487e8332f3c34e",
+      "src/core/color-sample.mts": "0fa09e707916a055367cabfd7f586ea4dd9b38b4adf2399f7d69ddfa861a6f74",
+      "src/core/color.mjs": "b2c64fdcd9119ffb94531887fe167ca1a33bd46eff272b9b2c038b0553787c8d",
+      "src/core/compile.mjs": "09f5070b17a48b35806140f9fb9053d3d1956570372741681d2ce2774ef8bea2",
+      "src/core/evaluate.mjs": "8a46d703f0d8755a4a06fe778e7957b5d44bc588beca76606b70749e0ae493ba",
+      "src/core/field-evaluate.mts": "6ca09775f8c327f2a76760323ac7ae36a3a82be89e1d6a83431c556021385a70",
+      "src/core/graph.mjs": "151411a0e3beb5c793c9350986f4f672baaf5e0a82850286a13dd207df6d81ce",
+      "src/core/masks.mjs": "e2c6be8e281448cfbd5942ff0dc4073d9b3d4f14d13ebeee92f635a4284bb8e9",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "c72e3f2ebad72d5f8f45f74462a68e8ae31ccd74e20e3b2579789277298223ef",
+      "src/three/color.mjs": "e6bfa71ed909df11d1d26ed55dd2aaa55e38cd4e562e0e00e62e8241ff850870",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "c1fa86d227df5884309684b7fafb604398d88a8dd8aa07c78e1a08915c62609e",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "2bd77fe79c785e8461c87a3c67c0d07279ebc641789f5f7786e20dfecfb6df1b",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "b317cf4f99557336f210ed3e91722dd9a168e536ee2b4c290a06f63d46f267e4"
+    },
+    "current": {
+      "lab/application-examples.mts": "402fb30d15aed773b5c980a647de30de2b8450cb0804945a036e52b7782ff35a",
+      "lab/composition.mts": "9f6f421e5b5d44df4f7635a73dfc8060f4152161220d1d485bbe9590b03011af",
+      "lab/painterly-examples.mts": "b0da5d6253ae9615d5a3846b96d8831f20b770efe2d30c9726fc844e04e91449",
+      "lab/surface-examples.mts": "4fb4f1defd4faff4656341ef0401624deb9d24f720eb4d7311752990d13c3ea7",
+      "package-lock.json": "240223a56931f502d3527abe55b245ff23b2f5ab2d8129136bdf6891d918f355",
+      "package.json": "161ab2d74cc3d2f4540a141486a4a8b6b9eb3896a0434e61f86666b888356bef",
+      "src/color/SPECTRAL-LICENSE.txt": "dba83a2bc7d87ed399985d938438d1fbe93283075d007416975f8274fd088dec",
+      "src/color/pigment.mjs": "6bc13716a7251369ce79c314f611982a4c8059b7e7b1db1f2ef9d66f155c8570",
+      "src/color/spectral-data.mjs": "6463d3bffe988e4d848a750413c1efc41df73072f1845b53381ada2ae7b7e819",
+      "src/core.mjs": "61a9248349ce59d313e264d1cb42df473abf267bd5ad9293494003d9faf16612",
+      "src/core/algebra.mts": "080d9a3d435d395e795842e2eadbefb552ca141a81c3f820a48772b6871265c5",
+      "src/core/color-sample.mts": "0fa09e707916a055367cabfd7f586ea4dd9b38b4adf2399f7d69ddfa861a6f74",
+      "src/core/color.mjs": "b2c64fdcd9119ffb94531887fe167ca1a33bd46eff272b9b2c038b0553787c8d",
+      "src/core/compile.mjs": "f88a838c659b8e81801897d8c222fc147b51ebfb7d51144bd6610bd856a27e9d",
+      "src/core/coverage.mjs": "0644a573593d4bd78648ff0218cf19b232f01c4ec63e13f9cc250473d2385c02",
+      "src/core/evaluate.mjs": "8a46d703f0d8755a4a06fe778e7957b5d44bc588beca76606b70749e0ae493ba",
+      "src/core/field-evaluate.mts": "79683692a9b77bf356dd7477cdcc2623900ddcfa847c630263aae3e3a201184b",
+      "src/core/graph.mjs": "88e4dc76b5c143dae059344d09e4b234fbbecb6feccd1b1d7a397dcfc486bd51",
+      "src/core/masks.mjs": "e2c6be8e281448cfbd5942ff0dc4073d9b3d4f14d13ebeee92f635a4284bb8e9",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/core/resources.mjs": "a69a316a906551cc2bdcf3a7657b915c77c7e51c2ef86b7229a2ffcb323fef0a",
+      "src/core/zones.mjs": "4b73fc97a1383979802cff2748d317e7281b708b3e6c9fe137cc5c96a522ace3",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "1cdcff0be21527b3cbebc9aebfd2a220f04086b6d34aca95caf1fc14123fdc5c",
+      "src/three/color.mjs": "e6bfa71ed909df11d1d26ed55dd2aaa55e38cd4e562e0e00e62e8241ff850870",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "aa7a2b46e1004db1575693131e9e1e6d19e9adb418ab6598966793bf3a687769",
+      "src/three/images.mjs": "4b1f38489f3a50af020f45384358af7599475520079493d40180dbe7f25ddb54",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "36bbecaca3d37d6739636fafd7435fbbd27ba5bfbd0ac90856443f20191d91c5",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "e53bb209bd23f74c26260a21080aeec165a451adbbda624538c1e9f4b7c53554",
+      "tests/fixtures/spectral-3.json": "505d29c1fece8a79d36801ec35383359d2868c77e1e495ca09f196bfdee3f28c",
+      "tests/image-graph.test.mjs": "32a6ef2079de797c29938e157eba57c4e3519248b82f4faf3165e514d3d8961a",
+      "tests/pigment.test.mjs": "89d0f2b299a53a46f1c0aef1488f2a0f5d150764b6a69eec50a95ea5e2773442",
+      "tests/resources.test.mjs": "7e6eb21c2ad17ff002df91a525abee032d21b275092a7fb14251cb66b5791cc1",
+      "tests/zones.test.mjs": "011eefb1e4ad234807678d13d06764fe47bd2c2b66aaa3e75559a1fc8a863517",
+      "tools/measure-applications.mjs": "8ecbfd53c57d4d4caa37b3677e1978e260a5f24ebeb93db31da18e90ff065099"
+    }
+  }
+}

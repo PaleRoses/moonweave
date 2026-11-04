@@ -1,0 +1,41 @@
+{
+  "environment": {
+    "node": "v24.22.1",
+    "three": "187",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "scope": "CPU wall time in this process; excludes GPU upload, driver compilation, rendering and browser animation.",
+  "method": "Five runs after warm-up; graph compilation and edits perform 200 operations per run. Compilation parses a fresh document each time; edits use the value-patch API.",
+  "atlasGenerationMedianMs": 129.80406099999993,
+  "graphCompilationMedianMs": 0.12819557499999973,
+  "graphUpdateMedianMs": 0.015941065000000663,
+  "materialTextureProgramAndUniformIdentityStable": true,
+  "atlasBytes": 2796200,
+  "atlasSHA256": {
+    "top": "3a38f0003bb1f6f7d9e3544984c743660620e152eb60d9cf6c1bee415ef74bee",
+    "wall": "2efad1139805ed156611cfb0c44b06e9d9c28091457a4eacb39358800ad8ea99"
+  },
+  "costs": {
+    "onePaint": {
+      "paintSamples": 1,
+      "textureReads": 4,
+      "uniformScalars": 29
+    },
+    "sharedTwoPaints": {
+      "paintSamples": 1,
+      "textureReads": 4,
+      "uniformScalars": 54
+    },
+    "independentTwoPaints": {
+      "paintSamples": 2,
+      "textureReads": 8,
+      "uniformScalars": 58
+    },
+    "eliminatedSecondPaint": {
+      "paintSamples": 1,
+      "textureReads": 4,
+      "uniformScalars": 29
+    }
+  }
+}

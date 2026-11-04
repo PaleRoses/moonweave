@@ -1,0 +1,67 @@
+{
+  "version": "0.52.0",
+  "date": "2026-11-03",
+  "environment": {
+    "browser": "Chrome 155, Linux cloud browser",
+    "url": "http://terminal.local:4173/",
+    "buildJavascriptSHA256": "0a6edb092a9d6f024b5c158a2acf6bc7696bcfe970d595aacdf953ff849c35a8"
+  },
+  "checks": [
+    {
+      "name": "Color bands example",
+      "result": "Four-stop Oklab color ramp, grouped inline stop controls, no duplicated standalone ramp-only color panels."
+    },
+    {
+      "name": "Ramp value and program controls",
+      "result": "Stop position .35 to .42, Oklab to linear RGB, and smoothstep to constant all serialize to the graph."
+    },
+    {
+      "name": "Add, remove, undo",
+      "result": "Adds an independent stop at .21 in the widest splittable interval; constant interpolation retains the left color. Removal prunes only the orphan stop color; Undo restores it."
+    },
+    {
+      "name": "Extended coordinates",
+      "result": "An authored stop color component of -.08 is retained by the graph."
+    },
+    {
+      "name": "Invalid knot order",
+      "result": "Crossing a later knot is rejected atomically; accepted positions remain unchanged and a specific increasing-float32-gap notice is shown."
+    },
+    {
+      "name": "Typed paint palette",
+      "result": "Prismatic shell connects base, shadow and light to Color fields. Disconnecting base preserves the shared ramp used by the other roles."
+    },
+    {
+      "name": "Preset replacement and undo",
+      "result": "Horn preset removes palette overrides and newly orphaned color/procedural work; two live nodes remain. Undo restores Prismatic shell."
+    },
+    {
+      "name": "Expose a style color",
+      "result": "Make body a reusable color creates a Color node with the exact decoded linear RGB style value and connects it to the paint."
+    },
+    {
+      "name": "Preview without WebGL",
+      "result": "Visible CPU-sampled color strip updates for Oklab, linear RGB, smoothstep and stepped interpolation; caption explicitly states rest-origin sampling and display preview."
+    },
+    {
+      "name": "Original composition restored",
+      "result": "After browser checks, source JSON equals the original saved eight-node composition with output n2."
+    }
+  ],
+  "graphics": {
+    "status": "unavailable",
+    "phase": "context",
+    "webgl2API": true,
+    "vendor": "Disabled",
+    "renderer": "Disabled",
+    "creationMessage": "Could not create a WebGL context; BindToCurrentSequence failed.",
+    "liveFrames": 0,
+    "referenceImage": "Explicitly labelled static and does not update with edits.",
+    "interpretation": "This browser cannot create the WebGL2 context. Editor verification is separate from native GLES shader/render verification."
+  },
+  "evidence": {
+    "screenshot": "docs/evidence/atelier52.jpg",
+    "sha256": "1bf0c5261ef678e823a1533d706230a017da515d0fd18ac275d6ec7860d253b9"
+  },
+  "productionBrowserVerified": false
+}

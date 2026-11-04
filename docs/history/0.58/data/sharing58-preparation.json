@@ -1,0 +1,440 @@
+{
+  "version": "0.58.0",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "method": {
+    "runs": 7,
+    "preparationIterations": 100,
+    "samplingIterations": 4000,
+    "warmupOperations": 100,
+    "order": "Alternating baseline/current batches.",
+    "explicitGC": true
+  },
+  "scope": "CPU only. Preparation includes JSON parsing, graph ownership/validation and closure preparation. Sampling invokes an already prepared public sampler with varying contexts. Excludes GPU, browser, shader compilation and rendering.",
+  "baseline": {
+    "version": "0.58.0",
+    "sourceSHA256": {
+      "src/color/pigment.mjs": "4ad8fd9e0cf20218dc5ed0fce4db26a32b3abe58b7c8099ecfd6bb4a347e994f",
+      "src/color/spectral-data.mjs": "6463d3bffe988e4d848a750413c1efc41df73072f1845b53381ada2ae7b7e819",
+      "src/core.mjs": "94fe07ba3311ff191c503f8c1a4fc017ef4ccd8648220d82a02dea0d95af077f",
+      "src/core/algebra.mts": "f1d5363ff5f9f6077de9f1ae04fca971944811eb270c3f0b0d68a55bfa926fb0",
+      "src/core/color-sample.mts": "5600169f8c79831e383d80861a648bf8b21708ed642034558557af32f42e9b40",
+      "src/core/color.mts": "d62ea0f0c5558859fddf0df6a28a43c01c734d70f17c74a64f11753cb4e04a9b",
+      "src/core/compile.mts": "554537081dfa93e1aa649f2f1c6fff39f4f71a605a1473e1f5470910647c57f6",
+      "src/core/coverage.mjs": "7edcdf004b38cf047e8081243682873a17e8b9ecc5bd467755c9f3402049da14",
+      "src/core/effects.mts": "75bc242610738433883ec4235e308b22197d498d6e4021ecc0e99d6c5190d751",
+      "src/core/evaluate.mts": "399cc062c120ce8c475ba8e0ed799b0ed9be891c5b1af736b5b63ac38959c406",
+      "src/core/field-evaluate.mts": "bf9f865c2cc40fbaba0210a7ef1de07f7da53359468cf0bd3644bd4717b969d7",
+      "src/core/graph.mts": "b76fae4a153b20bc3a69f6a28b48d0d6e1190c966fb6db24f9a32434ca6c447c",
+      "src/core/image-filter.mjs": "917474648ee723cb3283537eb4206a452e205ad6627469ccc376e310ed1e689f",
+      "src/core/inspect.mts": "a6818e830829b6426e242bb8c37b784c48910fe3964e1c08aae9e80b11fc469a",
+      "src/core/intern.mts": "fb565a14efacbb3d4e4f9a73ec0f9db921834c0e937f18f261a1cbedae7869b7",
+      "src/core/masks.mjs": "80d374010901462d7f6fa0700199ba376a9799c4022ea2dc804d15bd87cd1024",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/optimize.mts": "801248283a1160e3048d639151f157d1a0dbc96e51dba6c1d498cc3b54bcc8ee",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/core/resources.mjs": "1a842822dfb1212ddf9e1ec8d63e849920f54e08fcdfd0fecacff0ecbcfbfe1f",
+      "src/core/zones.mjs": "0bdc6ee605832882babc3816fac0ed814b1d14b49a6b3eba8d53aed5a79d1a2a",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/optimize.mjs": "9804886ed8dc8259d3ab8f7fc2e049155faeb410272183b2c8f2db13fc4267e1",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "1cdcff0be21527b3cbebc9aebfd2a220f04086b6d34aca95caf1fc14123fdc5c",
+      "src/three/color.mjs": "a0ae02c1e77667ada48dc07643a068ba3132467e6bd228036a456cefdebbe5f7",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "fb32394b602c6ce10cebc4700f09ed9bc73af83512042a855cacb07a699e2eea",
+      "src/three/images.mjs": "d82bb3d9d981e09a918939094dea4a1b269b58dece408b6ce9ac4f447b43b869",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "36bbecaca3d37d6739636fafd7435fbbd27ba5bfbd0ac90856443f20191d91c5",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "d3bb8316807c5edce83f318d5caf1d66785ad98a77b5d2bd041be706adb3c6cd"
+    }
+  },
+  "current": {
+    "version": "0.58.0",
+    "sourceSHA256": {
+      "src/color/pigment.mjs": "4ad8fd9e0cf20218dc5ed0fce4db26a32b3abe58b7c8099ecfd6bb4a347e994f",
+      "src/color/spectral-data.mjs": "6463d3bffe988e4d848a750413c1efc41df73072f1845b53381ada2ae7b7e819",
+      "src/core.mjs": "94fe07ba3311ff191c503f8c1a4fc017ef4ccd8648220d82a02dea0d95af077f",
+      "src/core/algebra.mts": "f1d5363ff5f9f6077de9f1ae04fca971944811eb270c3f0b0d68a55bfa926fb0",
+      "src/core/color-sample.mts": "5600169f8c79831e383d80861a648bf8b21708ed642034558557af32f42e9b40",
+      "src/core/color.mts": "d62ea0f0c5558859fddf0df6a28a43c01c734d70f17c74a64f11753cb4e04a9b",
+      "src/core/compile.mts": "554537081dfa93e1aa649f2f1c6fff39f4f71a605a1473e1f5470910647c57f6",
+      "src/core/coverage.mjs": "7edcdf004b38cf047e8081243682873a17e8b9ecc5bd467755c9f3402049da14",
+      "src/core/effects.mts": "75bc242610738433883ec4235e308b22197d498d6e4021ecc0e99d6c5190d751",
+      "src/core/evaluate.mts": "59363fa086b3102e81a0ff580f9e4d424b71b03e0e08faa4ffdec2d304c5fd2e",
+      "src/core/field-evaluate.mts": "bf9f865c2cc40fbaba0210a7ef1de07f7da53359468cf0bd3644bd4717b969d7",
+      "src/core/graph.mts": "b76fae4a153b20bc3a69f6a28b48d0d6e1190c966fb6db24f9a32434ca6c447c",
+      "src/core/image-filter.mjs": "917474648ee723cb3283537eb4206a452e205ad6627469ccc376e310ed1e689f",
+      "src/core/inspect.mts": "a6818e830829b6426e242bb8c37b784c48910fe3964e1c08aae9e80b11fc469a",
+      "src/core/intern.mts": "21117817eba4d2b4539eb542ff04d6dd0ee1955b73bc902c78c71edd604a64d2",
+      "src/core/masks.mjs": "80d374010901462d7f6fa0700199ba376a9799c4022ea2dc804d15bd87cd1024",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/optimize.mts": "801248283a1160e3048d639151f157d1a0dbc96e51dba6c1d498cc3b54bcc8ee",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/core/resources.mjs": "1a842822dfb1212ddf9e1ec8d63e849920f54e08fcdfd0fecacff0ecbcfbfe1f",
+      "src/core/zones.mjs": "0bdc6ee605832882babc3816fac0ed814b1d14b49a6b3eba8d53aed5a79d1a2a",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/optimize.mjs": "9804886ed8dc8259d3ab8f7fc2e049155faeb410272183b2c8f2db13fc4267e1",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "1cdcff0be21527b3cbebc9aebfd2a220f04086b6d34aca95caf1fc14123fdc5c",
+      "src/three/color.mjs": "a0ae02c1e77667ada48dc07643a068ba3132467e6bd228036a456cefdebbe5f7",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "fb32394b602c6ce10cebc4700f09ed9bc73af83512042a855cacb07a699e2eea",
+      "src/three/images.mjs": "d82bb3d9d981e09a918939094dea4a1b269b58dece408b6ce9ac4f447b43b869",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "36bbecaca3d37d6739636fafd7435fbbd27ba5bfbd0ac90856443f20191d91c5",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "d3bb8316807c5edce83f318d5caf1d66785ad98a77b5d2bd041be706adb3c6cd"
+    }
+  },
+  "cases": {
+    "duplicatePair": {
+      "description": "Two separately authored x * gain branches with one shared editable gain.",
+      "graphSHA256": "e0a202ba2051ccff36d52dad35020da15a8f07e93f5213540cb61348116937ef",
+      "baseline": {
+        "sourceNodes": 6,
+        "preparedNodes": 4,
+        "sharedNodes": 2,
+        "firstSampleMemoEntries": 3
+      },
+      "current": {
+        "sourceNodes": 6,
+        "preparedNodes": 4,
+        "sharedNodes": 2,
+        "firstSampleMemoEntries": 3
+      },
+      "exactSampleContexts": 45,
+      "importAndPrepare": {
+        "baselineMicroseconds": 32.05289999999991,
+        "currentMicroseconds": 28.805849999999964,
+        "speedup": 1.1127218950317366,
+        "samplesMicroseconds": {
+          "baseline": [
+            34.35928000000018,
+            27.843050000000176,
+            26.723909999999478,
+            32.805400000000304,
+            31.75506999999982,
+            32.05289999999991,
+            45.37620000000005
+          ],
+          "current": [
+            28.414980000000014,
+            30.12197999999984,
+            25.543079999999918,
+            28.805849999999964,
+            34.22878999999966,
+            24.455090000000155,
+            39.886169999999765
+          ]
+        }
+      },
+      "samplePrepared": {
+        "baselineMicroseconds": 4.747957999999997,
+        "currentMicroseconds": 4.667329999999993,
+        "speedup": 1.017274973057402,
+        "samplesMicroseconds": {
+          "baseline": [
+            5.562582500000005,
+            4.747957999999997,
+            5.085599250000001,
+            5.001636749999989,
+            4.489209249999987,
+            4.148510750000014,
+            3.6990979999999922
+          ],
+          "current": [
+            4.950311499999998,
+            4.667329999999993,
+            5.26154975,
+            4.29703275,
+            4.406104999999997,
+            4.070038000000011,
+            6.592899999999986
+          ]
+        }
+      }
+    },
+    "duplicateScalarTree16": {
+      "description": "Sixteen independently authored copies of one scalar branch in a balanced sum.",
+      "graphSHA256": "e07324b40368f9a7faa6827bf461e824b558187c62ef03f004e580bb8eaeba17",
+      "baseline": {
+        "sourceNodes": 113,
+        "preparedNodes": 12,
+        "sharedNodes": 101,
+        "firstSampleMemoEntries": 10
+      },
+      "current": {
+        "sourceNodes": 113,
+        "preparedNodes": 12,
+        "sharedNodes": 101,
+        "firstSampleMemoEntries": 10
+      },
+      "exactSampleContexts": 45,
+      "importAndPrepare": {
+        "baselineMicroseconds": 375.3163699999993,
+        "currentMicroseconds": 341.86162000000195,
+        "speedup": 1.0978605027379125,
+        "samplesMicroseconds": {
+          "baseline": [
+            448.5193299999992,
+            375.3163699999993,
+            364.52016999999955,
+            475.5137200000013,
+            387.27473999999796,
+            333.97761000000173,
+            354.61331999999857
+          ],
+          "current": [
+            406.1745600000006,
+            367.2647800000005,
+            372.3180499999989,
+            320.1618500000018,
+            341.86162000000195,
+            318.67209999999886,
+            275.4223400000001
+          ]
+        }
+      },
+      "samplePrepared": {
+        "baselineMicroseconds": 4.493233499999974,
+        "currentMicroseconds": 4.5292972499999555,
+        "speedup": 0.9920376720693299,
+        "samplesMicroseconds": {
+          "baseline": [
+            4.799121500000012,
+            4.656275249999964,
+            4.565789499999993,
+            4.469237749999992,
+            4.493233499999974,
+            4.452009250000002,
+            4.29104799999999
+          ],
+          "current": [
+            4.903523000000006,
+            4.760626250000031,
+            4.616009749999989,
+            4.324951249999969,
+            4.505374249999988,
+            4.5292972499999555,
+            4.504595749999964
+          ]
+        }
+      }
+    },
+    "independentParameters32": {
+      "description": "A balanced sum of 32 distinct editable parameters; no eligible duplicate structure.",
+      "graphSHA256": "1f08c593f796be8a6dc025f1747bebe8e5593b75c27f313bc4927c30d8420e42",
+      "baseline": {
+        "sourceNodes": 63,
+        "preparedNodes": 63,
+        "sharedNodes": 0,
+        "firstSampleMemoEntries": 31
+      },
+      "current": {
+        "sourceNodes": 63,
+        "preparedNodes": 63,
+        "sharedNodes": 0,
+        "firstSampleMemoEntries": 31
+      },
+      "exactSampleContexts": 45,
+      "importAndPrepare": {
+        "baselineMicroseconds": 161.80860000000166,
+        "currentMicroseconds": 168.869880000002,
+        "speedup": 0.9581850830947457,
+        "samplesMicroseconds": {
+          "baseline": [
+            161.80860000000166,
+            151.84488999999985,
+            153.14993999999842,
+            258.5454699999991,
+            456.5663900000004,
+            154.01994999999943,
+            171.60347000000226
+          ],
+          "current": [
+            152.21713999999793,
+            241.6929200000004,
+            185.2457000000004,
+            164.83302999999978,
+            335.01066000000037,
+            138.3557799999994,
+            168.869880000002
+          ]
+        }
+      },
+      "samplePrepared": {
+        "baselineMicroseconds": 5.654980499999965,
+        "currentMicroseconds": 5.725483749999967,
+        "speedup": 0.9876860623349072,
+        "samplesMicroseconds": {
+          "baseline": [
+            7.221040750000043,
+            5.607123999999999,
+            5.6153589999998985,
+            5.669101999999953,
+            5.620994750000023,
+            5.654980499999965,
+            5.688293000000044
+          ],
+          "current": [
+            5.707742250000024,
+            5.807406499999956,
+            5.720027999999957,
+            5.77252175000001,
+            5.725483749999967,
+            5.747716749999995,
+            5.614372249999974
+          ]
+        }
+      }
+    },
+    "filteredImageReaders16": {
+      "description": "Sixteen scalar image projections/products; the preexisting image reconstruction cache already shares filtering.",
+      "graphSHA256": "56b527af2273d8aecfe73863fea4b2aaa601dbc86803ccb6c559fd6ec902c902",
+      "baseline": {
+        "sourceNodes": 50,
+        "preparedNodes": 9,
+        "sharedNodes": 41,
+        "firstSampleMemoEntries": 8
+      },
+      "current": {
+        "sourceNodes": 50,
+        "preparedNodes": 9,
+        "sharedNodes": 41,
+        "firstSampleMemoEntries": 8
+      },
+      "exactSampleContexts": 45,
+      "importAndPrepare": {
+        "baselineMicroseconds": 204.5395899999994,
+        "currentMicroseconds": 203.0437499999971,
+        "speedup": 1.0073670822175138,
+        "samplesMicroseconds": {
+          "baseline": [
+            203.97343999999975,
+            225.02236000000266,
+            205.83042000000205,
+            275.3871900000013,
+            204.5395899999994,
+            190.47121999999945,
+            191.424549999997
+          ],
+          "current": [
+            241.85077000000092,
+            218.53966000000128,
+            203.0437499999971,
+            267.64008000000103,
+            197.5885799999969,
+            193.3497299999999,
+            189.43476999999803
+          ]
+        }
+      },
+      "samplePrepared": {
+        "baselineMicroseconds": 10.23455350000006,
+        "currentMicroseconds": 9.974966999999994,
+        "speedup": 1.0260237953669487,
+        "samplesMicroseconds": {
+          "baseline": [
+            10.765883999999915,
+            10.826517500000024,
+            10.23455350000006,
+            9.857146000000057,
+            9.292575250000027,
+            10.387537500000008,
+            8.533899249999992
+          ],
+          "current": [
+            10.930300250000073,
+            10.152347999999963,
+            10.950843500000019,
+            9.847866749999978,
+            8.456856249999985,
+            9.974966999999994,
+            8.822095750000017
+          ]
+        }
+      }
+    },
+    "identitySensitiveColor": {
+      "description": "Two equal color adjustments mixed in Oklab; color identities and conversion stay separate, scalar constants share.",
+      "graphSHA256": "ad8f444fc243676ea64f3e497eb8ddd5363799e8c27fc932ab84aae11c6f5ac1",
+      "baseline": {
+        "sourceNodes": 11,
+        "preparedNodes": 8,
+        "sharedNodes": 3,
+        "firstSampleMemoEntries": 3
+      },
+      "current": {
+        "sourceNodes": 11,
+        "preparedNodes": 8,
+        "sharedNodes": 3,
+        "firstSampleMemoEntries": 3
+      },
+      "exactSampleContexts": 45,
+      "importAndPrepare": {
+        "baselineMicroseconds": 35.74391999999989,
+        "currentMicroseconds": 37.44556999999986,
+        "speedup": 0.9545567072420055,
+        "samplesMicroseconds": {
+          "baseline": [
+            38.15614000000096,
+            33.6801400000013,
+            35.74391999999989,
+            37.05717999999706,
+            33.16487000000052,
+            36.56434999999874,
+            35.16215000000102
+          ],
+          "current": [
+            34.49975999999879,
+            38.58017000000018,
+            33.211639999999534,
+            37.44556999999986,
+            36.1934999999994,
+            58.053930000000946,
+            50.655249999999796
+          ]
+        }
+      },
+      "samplePrepared": {
+        "baselineMicroseconds": 11.641808250000052,
+        "currentMicroseconds": 11.13693474999991,
+        "speedup": 1.0453332547360168,
+        "samplesMicroseconds": {
+          "baseline": [
+            13.167039749999958,
+            11.466342749999967,
+            12.316781250000076,
+            11.979175749999968,
+            11.641808250000052,
+            11.174731249999923,
+            10.811677500000087
+          ],
+          "current": [
+            13.491488000000006,
+            10.867994500000007,
+            12.135438749999937,
+            11.028745250000044,
+            10.800097499999993,
+            11.34687400000007,
+            11.13693474999991
+          ]
+        }
+      }
+    }
+  }
+}

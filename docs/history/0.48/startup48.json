@@ -1,0 +1,37 @@
+{
+  "environment": {
+    "node": "v24.22.1",
+    "three": "187",
+    "platform": "linux",
+    "architecture": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "method": "7 measured default-shell CPU constructions after2warmups, explicit GC before each sample. Timer covers createSpecimen only; excludes imports, disposal, DOM, WebGL context creation, upload, shaders and rendering. Observed in this container, not a browser/FPS benchmark.",
+  "baseline": {
+    "version": "0.47.0",
+    "file": "lab/specimens.mjs",
+    "sourceSHA256": "df3ec4b45332611080c836ea5599685f1d0ba5309b5334b69dd094151414e35a",
+    "meshes": 3,
+    "triangles": 36864,
+    "vertices": 18150,
+    "retainedAttributeAndIndexBytes": 1092384,
+    "medianCpuMs": 220.92283500000008,
+    "samplesCpuMs": [
+      214.1231110000001,
+      220.4911320000001,
+      220.5679229999996,
+      220.92283500000008,
+      225.64293999999995,
+      226.61717199999998,
+      278.1522140000002
+    ]
+  },
+  "current": {
+    "version": "0.48.0",
+    "blockedContext": {
+      "geometryConstructions": 0,
+      "materialFactoryCalls": 0
+    },
+    "verification": "tests/stage-startup.test.mjs: actual stage with DOM/renderer boundary doubles, real Three geometry constructors and real Effect scopes; 2tests pass. Successful retry builds latest selection; repeated renderer retries reuse existing scene geometry."
+  }
+}

@@ -1,0 +1,506 @@
+{
+  "schema": "moonweave/mark-zones-benchmark/1",
+  "recordedAt": "2026-11-04T07:37:50.957Z",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "method": {
+    "runs": 7,
+    "warmups": 1,
+    "explicitGC": true,
+    "order": "Alternating baseline/current batches; each bake reuses the already-compiled program.",
+    "scope": "CPU painting with identical authored programs and exact comparison of all five output resources. No GPU or universal speedup claim.",
+    "supportFamily": "One finite zone per 16×16 tile. Samples = 256N; baseline candidate tests = 256N²; clipped candidate tests = 256N.",
+    "resetFamily": "Broad zones and local brushes retain identical candidate sets, isolating sample-reset behavior from zone-support culling."
+  },
+  "benchmarkSHA256": "020271ad1a08ac7b25644a28a62c9077d90c175c020d3061b948943cc4ea61a9",
+  "baseline": {
+    "version": "0.61.0",
+    "sourceSHA256": {
+      "src/paint/marks.mts": "198f0a2c03b1ad0b09e963e1bdef5b5a8586d5b17334437c47645679df58b905",
+      "src/paint/mark-raster.mts": "d92006db19c1eae7e072daa66760fed865ea2b07f64168b62af28e99eeb8bc8d",
+      "src/core/resources.mts": "43607892f6af13f78b8f6555943ef0326823b1500743e95273c4e0f7296e821d",
+      "src/core/ownership.mts": "4c0b52bb7e1c9468176789a9f03819c7a8f3b5b063703bf709886f55bbee0820",
+      "src/core/image-filter.mts": "6d5ba956fbe55d5bdb5ffec9e39a91d0ae5a0869dfe3b332940a6eafe3ce5bfa",
+      "src/core/algebra.mts": "874628ff7827485361acd690ac3faa529d76d307e23b248bfb9787bf74989e26",
+      "package.json": "40a0b667dbac81e6f6821eef4ce0263ee252affbe14c3cd71cf9e0feedf4eedf"
+    }
+  },
+  "current": {
+    "version": "0.62.0",
+    "sourceSHA256": {
+      "src/paint/marks.mts": "198f0a2c03b1ad0b09e963e1bdef5b5a8586d5b17334437c47645679df58b905",
+      "src/paint/mark-raster.mts": "4d01a8a5c271ca9440923a24eb11d9e878d8abaee7a687f919f12b94a7037c26",
+      "src/core/resources.mts": "5b568103da23c68060c5172cf16e4bf3664c3d25569ddecf9a8b1f84ad4c509a",
+      "src/core/ownership.mts": "4c0b52bb7e1c9468176789a9f03819c7a8f3b5b063703bf709886f55bbee0820",
+      "src/core/image-filter.mts": "6d5ba956fbe55d5bdb5ffec9e39a91d0ae5a0869dfe3b332940a6eafe3ce5bfa",
+      "src/core/algebra.mts": "874628ff7827485361acd690ac3faa529d76d307e23b248bfb9787bf74989e26",
+      "package.json": "7b009e7fecd8e7dbba264387ff6f811f63bedf4f16df5d726555c98ba7203dac"
+    }
+  },
+  "finiteZoneSupport": [
+    {
+      "marks": 4,
+      "activeZones": 4,
+      "options": {
+        "width": 32,
+        "height": 32,
+        "samples": 1
+      },
+      "allImageComponentsExact": true,
+      "imagesSHA256": "ac97a48aac6f2dc5d3ad3e140bfa1fe1c0c9101d8ab051bc3aea82a82f6a067b",
+      "baseline": {
+        "dabs": 4,
+        "tiles": 4,
+        "tileReferences": 16,
+        "dabTests": 4096,
+        "samples": 1024
+      },
+      "current": {
+        "dabs": 4,
+        "tiles": 4,
+        "tileReferences": 4,
+        "dabTests": 1024,
+        "zoneSamples": 400,
+        "samples": 1024
+      },
+      "timing": {
+        "unit": "milliseconds",
+        "baselineMedian": 6.636838000000012,
+        "currentMedian": 2.8682019999999966,
+        "samples": {
+          "baseline": [
+            5.073294999999973,
+            6.636838000000012,
+            6.373280999999963,
+            6.913214000000039,
+            7.392834999999991,
+            5.532855999999981,
+            7.600729000000001
+          ],
+          "current": [
+            3.029268000000002,
+            1.7070390000000089,
+            2.8995740000000296,
+            2.4889160000000174,
+            2.76734399999998,
+            2.8682019999999966,
+            3.1900509999999827
+          ]
+        }
+      }
+    },
+    {
+      "marks": 16,
+      "activeZones": 16,
+      "options": {
+        "width": 64,
+        "height": 64,
+        "samples": 1
+      },
+      "allImageComponentsExact": true,
+      "imagesSHA256": "03e9cdd4806af8866ed59d4f6a82842fbd4b76d4fe22b8bb0e5ff4aa13c83dc8",
+      "baseline": {
+        "dabs": 16,
+        "tiles": 16,
+        "tileReferences": 256,
+        "dabTests": 65536,
+        "samples": 4096
+      },
+      "current": {
+        "dabs": 16,
+        "tiles": 16,
+        "tileReferences": 16,
+        "dabTests": 4096,
+        "zoneSamples": 1600,
+        "samples": 4096
+      },
+      "timing": {
+        "unit": "milliseconds",
+        "baselineMedian": 39.09583699999996,
+        "currentMedian": 4.975828999999976,
+        "samples": {
+          "baseline": [
+            40.03303699999998,
+            38.664987999999994,
+            36.083124,
+            54.67376100000001,
+            34.27512200000001,
+            56.27573199999995,
+            39.09583699999996
+          ],
+          "current": [
+            5.033395000000041,
+            4.975828999999976,
+            8.179750000000013,
+            17.836231999999995,
+            4.671711000000073,
+            4.846292999999946,
+            4.449325999999928
+          ]
+        }
+      }
+    },
+    {
+      "marks": 36,
+      "activeZones": 36,
+      "options": {
+        "width": 96,
+        "height": 96,
+        "samples": 1
+      },
+      "allImageComponentsExact": true,
+      "imagesSHA256": "c2a75118b47358be4639756a2a62c9a52f64b99da0dab9f7a5f31f65b9f31129",
+      "baseline": {
+        "dabs": 36,
+        "tiles": 36,
+        "tileReferences": 1296,
+        "dabTests": 331776,
+        "samples": 9216
+      },
+      "current": {
+        "dabs": 36,
+        "tiles": 36,
+        "tileReferences": 36,
+        "dabTests": 9216,
+        "zoneSamples": 3600,
+        "samples": 9216
+      },
+      "timing": {
+        "unit": "milliseconds",
+        "baselineMedian": 180.713663,
+        "currentMedian": 10.950031000000308,
+        "samples": {
+          "baseline": [
+            258.97867799999995,
+            161.02641599999993,
+            160.00344900000005,
+            198.09909700000026,
+            158.23820099999966,
+            195.30666199999996,
+            180.713663
+          ],
+          "current": [
+            11.468519999999899,
+            19.215138000000024,
+            10.050228000000061,
+            10.262336999999889,
+            10.103507999999692,
+            10.950031000000308,
+            12.483955000000151
+          ]
+        }
+      }
+    },
+    {
+      "marks": 64,
+      "activeZones": 64,
+      "options": {
+        "width": 128,
+        "height": 128,
+        "samples": 1
+      },
+      "allImageComponentsExact": true,
+      "imagesSHA256": "831e762ea2c0f86d8e2797115f33231a282739e392ceb21d60fa5018b8be6b18",
+      "baseline": {
+        "dabs": 64,
+        "tiles": 64,
+        "tileReferences": 4096,
+        "dabTests": 1048576,
+        "samples": 16384
+      },
+      "current": {
+        "dabs": 64,
+        "tiles": 64,
+        "tileReferences": 64,
+        "dabTests": 16384,
+        "zoneSamples": 6400,
+        "samples": 16384
+      },
+      "timing": {
+        "unit": "milliseconds",
+        "baselineMedian": 570.1300700000002,
+        "currentMedian": 19.954609000000346,
+        "samples": {
+          "baseline": [
+            556.9519700000005,
+            550.5941840000005,
+            573.6313389999996,
+            510.4208289999997,
+            570.1300700000002,
+            612.4291329999996,
+            649.4516240000003
+          ],
+          "current": [
+            19.954609000000346,
+            19.246584999999868,
+            20.978046999999606,
+            19.466395999999804,
+            25.265998999999283,
+            19.040095000000292,
+            20.43135500000062
+          ]
+        }
+      }
+    }
+  ],
+  "sparseZoneReset": [
+    {
+      "marks": 16,
+      "activeZones": 16,
+      "options": {
+        "width": 128,
+        "height": 128,
+        "samples": 1
+      },
+      "allImageComponentsExact": true,
+      "imagesSHA256": "58083f8d769d69a7b099e1ba81746713d8153c249ce299e01d0a266a16731dfe",
+      "baseline": {
+        "dabs": 16,
+        "tiles": 64,
+        "tileReferences": 64,
+        "dabTests": 16384,
+        "samples": 16384
+      },
+      "current": {
+        "dabs": 16,
+        "tiles": 64,
+        "tileReferences": 64,
+        "dabTests": 16384,
+        "zoneSamples": 6400,
+        "samples": 16384
+      },
+      "timing": {
+        "unit": "milliseconds",
+        "baselineMedian": 31.821357999999236,
+        "currentMedian": 19.133506000000125,
+        "samples": {
+          "baseline": [
+            35.79152199999953,
+            31.821357999999236,
+            24.01937700000053,
+            29.826138999998875,
+            40.009979000000385,
+            26.103477000000566,
+            42.493140000000494
+          ],
+          "current": [
+            19.133506000000125,
+            19.91127400000005,
+            20.849362999999357,
+            18.986484999999448,
+            18.216237999999066,
+            18.068694999999934,
+            19.24776699999893
+          ]
+        }
+      }
+    },
+    {
+      "marks": 64,
+      "activeZones": 64,
+      "options": {
+        "width": 128,
+        "height": 128,
+        "samples": 1
+      },
+      "allImageComponentsExact": true,
+      "imagesSHA256": "831e762ea2c0f86d8e2797115f33231a282739e392ceb21d60fa5018b8be6b18",
+      "baseline": {
+        "dabs": 64,
+        "tiles": 64,
+        "tileReferences": 64,
+        "dabTests": 16384,
+        "samples": 16384
+      },
+      "current": {
+        "dabs": 64,
+        "tiles": 64,
+        "tileReferences": 64,
+        "dabTests": 16384,
+        "zoneSamples": 6400,
+        "samples": 16384
+      },
+      "timing": {
+        "unit": "milliseconds",
+        "baselineMedian": 33.79871900000035,
+        "currentMedian": 20.037654000001567,
+        "samples": {
+          "baseline": [
+            20.941461999998864,
+            33.79871900000035,
+            39.96029500000077,
+            27.90000599999985,
+            36.073286000000735,
+            31.994568000000072,
+            41.56509600000027
+          ],
+          "current": [
+            17.716958000000886,
+            19.142680000000837,
+            19.822861000000557,
+            20.037654000001567,
+            23.05681999999979,
+            24.786298999999417,
+            20.14198000000033
+          ]
+        }
+      }
+    },
+    {
+      "marks": 256,
+      "activeZones": 256,
+      "options": {
+        "width": 128,
+        "height": 128,
+        "samples": 1
+      },
+      "allImageComponentsExact": true,
+      "imagesSHA256": "a2573eb5a615b6eb37ac80f2b12f3ccdefbfc0418f32baeb50476ff91943ef9c",
+      "baseline": {
+        "dabs": 256,
+        "tiles": 64,
+        "tileReferences": 256,
+        "dabTests": 65536,
+        "samples": 16384
+      },
+      "current": {
+        "dabs": 256,
+        "tiles": 64,
+        "tileReferences": 256,
+        "dabTests": 65536,
+        "zoneSamples": 4096,
+        "samples": 16384
+      },
+      "timing": {
+        "unit": "milliseconds",
+        "baselineMedian": 43.62635699999919,
+        "currentMedian": 22.744042000000263,
+        "samples": {
+          "baseline": [
+            27.348728000000847,
+            51.65863399999944,
+            30.966663999999582,
+            40.89013300000079,
+            45.085462999999436,
+            57.18954300000041,
+            43.62635699999919
+          ],
+          "current": [
+            23.056509000000005,
+            23.203279999999722,
+            22.744042000000263,
+            31.73167999999896,
+            20.57976200000121,
+            20.774172000001272,
+            20.163392000000385
+          ]
+        }
+      }
+    },
+    {
+      "marks": 1024,
+      "activeZones": 1024,
+      "options": {
+        "width": 128,
+        "height": 128,
+        "samples": 1
+      },
+      "allImageComponentsExact": true,
+      "imagesSHA256": "964cc9a0d4a770672a0400fdbb8e0e66005c3172f7de094fc45866eeffe253f2",
+      "baseline": {
+        "dabs": 1024,
+        "tiles": 64,
+        "tileReferences": 1024,
+        "dabTests": 262144,
+        "samples": 16384
+      },
+      "current": {
+        "dabs": 1024,
+        "tiles": 64,
+        "tileReferences": 1024,
+        "dabTests": 262144,
+        "zoneSamples": 4096,
+        "samples": 16384
+      },
+      "timing": {
+        "unit": "milliseconds",
+        "baselineMedian": 46.75826000000052,
+        "currentMedian": 24.932949000000008,
+        "samples": {
+          "baseline": [
+            36.33100999999988,
+            62.941258000000744,
+            50.59678900000108,
+            45.7503459999989,
+            46.75826000000052,
+            50.80654299999878,
+            40.72894300000007
+          ],
+          "current": [
+            30.32550699999956,
+            24.932949000000008,
+            31.064080000000104,
+            21.7653420000006,
+            35.130623000000924,
+            24.003952999999456,
+            23.307584000000134
+          ]
+        }
+      }
+    }
+  ],
+  "control": {
+    "marks": 1,
+    "activeZones": 0,
+    "options": {
+      "width": 128,
+      "height": 128,
+      "samples": 1
+    },
+    "allImageComponentsExact": true,
+    "imagesSHA256": "1bb310fac26df0b889b436e5e1fc526914b70037f87b4c53308931842f02632d",
+    "baseline": {
+      "dabs": 1,
+      "tiles": 64,
+      "tileReferences": 64,
+      "dabTests": 16384,
+      "samples": 16384
+    },
+    "current": {
+      "dabs": 1,
+      "tiles": 64,
+      "tileReferences": 64,
+      "dabTests": 16384,
+      "zoneSamples": 0,
+      "samples": 16384
+    },
+    "timing": {
+      "unit": "milliseconds",
+      "baselineMedian": 33.03384900000128,
+      "currentMedian": 29.759221000000252,
+      "samples": {
+        "baseline": [
+          21.538784000000305,
+          27.98790800000097,
+          36.12668499999927,
+          26.093471000000136,
+          33.03384900000128,
+          39.06542100000115,
+          37.68841500000053
+        ],
+        "current": [
+          29.759221000000252,
+          37.80796399999963,
+          20.542946999999913,
+          19.775251999999455,
+          41.23429699999906,
+          26.442783000000418,
+          39.14343700000063
+        ]
+      }
+    }
+  }
+}

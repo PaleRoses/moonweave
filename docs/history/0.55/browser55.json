@@ -1,0 +1,59 @@
+{
+  "version": "0.55.0",
+  "method": "Cloud browser UI interactions and visible DOM; native screenshots are explicitly labeled reference renders.",
+  "checks": [
+    {
+      "check": "Cobalt example persists with one shared image",
+      "passed": true
+    },
+    {
+      "check": "Resource dimensions update through JSON",
+      "passed": true
+    },
+    {
+      "check": "Undo restores embedded resource",
+      "passed": true
+    },
+    {
+      "check": "Spectral palette and brush embedded once",
+      "passed": true
+    },
+    {
+      "check": "Invalid resource reader rejected with precise error",
+      "passed": true
+    },
+    {
+      "check": "Rejected edit leaves accepted graph intact",
+      "passed": true
+    },
+    {
+      "check": "Original user graph restored exactly",
+      "passed": true
+    },
+    {
+      "check": "Application guide displays both native reference images",
+      "passed": true
+    }
+  ],
+  "graphics": {
+    "moonweave": "0.55.0",
+    "three": "187",
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "webgl2API": true,
+    "profile": "standard",
+    "creationMessage": "Could not create a WebGL context, VENDOR = 0xffff, DEVICE = 0xffff, GL_VENDOR = Disabled, GL_RENDERER = Disabled, Sandboxed = yes, Optimus = no, AMD switchable = no, Reset notification strategy = 0x0000, ErrorMessage = BindToCurrentSequence failed: .",
+    "status": "unavailable",
+    "phase": "context",
+    "error": {
+      "name": "Error",
+      "message": "The browser did not provide a WebGL2 context."
+    },
+    "context": null,
+    "preview": {
+      "width": 934,
+      "height": 656,
+      "pixelRatio": null,
+      "renders": 0
+    }
+  }
+}

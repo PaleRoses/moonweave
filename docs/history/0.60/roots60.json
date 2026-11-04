@@ -1,0 +1,323 @@
+{
+  "version": "0.59.0",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "method": {
+    "runs": 7,
+    "preparationIterations": 100,
+    "samplingIterations": 2000,
+    "warmupOperations": 100,
+    "order": "Alternating baseline/current batches.",
+    "explicitGC": true
+  },
+  "scope": "CPU only. Preparation includes importing the same v1 JSON and preparing the requested roots. Baseline prepares each root separately; current incrementally prepares the union. Sampling uses public APIs: baseline evaluates each selected root separately; current requests one output record with one shared sample memo. Single-root control uses createFieldSampler(graph) in both implementations. Exact values and differentials checked in 45 contexts. Excludes GPU, browser, shader compilation and rendering.",
+  "baseline": {
+    "version": "0.59.0",
+    "sourceSHA256": {
+      "src/color/pigment.mjs": "4ad8fd9e0cf20218dc5ed0fce4db26a32b3abe58b7c8099ecfd6bb4a347e994f",
+      "src/color/spectral-data.mjs": "6463d3bffe988e4d848a750413c1efc41df73072f1845b53381ada2ae7b7e819",
+      "src/core.mjs": "94fe07ba3311ff191c503f8c1a4fc017ef4ccd8648220d82a02dea0d95af077f",
+      "src/core/algebra.mts": "f1d5363ff5f9f6077de9f1ae04fca971944811eb270c3f0b0d68a55bfa926fb0",
+      "src/core/analyze.mts": "66e54ef7109058068df474d87f8c5f8fd532f866e3dfddbd3fb9b82d93b50c54",
+      "src/core/color-sample.mts": "5600169f8c79831e383d80861a648bf8b21708ed642034558557af32f42e9b40",
+      "src/core/color.mts": "d62ea0f0c5558859fddf0df6a28a43c01c734d70f17c74a64f11753cb4e04a9b",
+      "src/core/compile.mts": "78a3f1023cba87001aeb1c929590a75fa4a41c2f02e5a86825959471a1202b39",
+      "src/core/coverage.mjs": "ad9e1c2bcda317ea16bc9249fbf5f307b0845d1d7650a8ee08f52aef414693b9",
+      "src/core/effects.mts": "75bc242610738433883ec4235e308b22197d498d6e4021ecc0e99d6c5190d751",
+      "src/core/evaluate.mts": "59363fa086b3102e81a0ff580f9e4d424b71b03e0e08faa4ffdec2d304c5fd2e",
+      "src/core/field-evaluate.mts": "bf9f865c2cc40fbaba0210a7ef1de07f7da53359468cf0bd3644bd4717b969d7",
+      "src/core/graph.mts": "c88d8fcd49bc909ca6c7d9784efe4780249d30774bf9cb0dc90bfd37d1e67a49",
+      "src/core/image-filter.mjs": "917474648ee723cb3283537eb4206a452e205ad6627469ccc376e310ed1e689f",
+      "src/core/inspect.mts": "a6818e830829b6426e242bb8c37b784c48910fe3964e1c08aae9e80b11fc469a",
+      "src/core/intern.mts": "21117817eba4d2b4539eb542ff04d6dd0ee1955b73bc902c78c71edd604a64d2",
+      "src/core/masks.mjs": "93662e8980ab6e95606c1e7c0b3374ae43bbeffc52527321d4e19c204b637899",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/optimize.mts": "801248283a1160e3048d639151f157d1a0dbc96e51dba6c1d498cc3b54bcc8ee",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/core/resources.mjs": "1a842822dfb1212ddf9e1ec8d63e849920f54e08fcdfd0fecacff0ecbcfbfe1f",
+      "src/core/zones.mjs": "0bdc6ee605832882babc3816fac0ed814b1d14b49a6b3eba8d53aed5a79d1a2a",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/optimize.mjs": "9804886ed8dc8259d3ab8f7fc2e049155faeb410272183b2c8f2db13fc4267e1",
+      "src/paint/data.mjs": "1297681698323a82d8e665d5d70bdd6f5a024000b7041a15584c8355f1386cb4",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "a9503a3d2b76cdd8796918d8675a9284c3b056a4f5f77339b82742c709736bcf",
+      "src/three/adapter.mjs": "2495842aa36a28dfc2e6e4c6d9f3f5aa22740aab040ce5a5ba022f0435d555fc",
+      "src/three/color.mjs": "a0ae02c1e77667ada48dc07643a068ba3132467e6bd228036a456cefdebbe5f7",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "fb32394b602c6ce10cebc4700f09ed9bc73af83512042a855cacb07a699e2eea",
+      "src/three/images.mjs": "d82bb3d9d981e09a918939094dea4a1b269b58dece408b6ce9ac4f447b43b869",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "36bbecaca3d37d6739636fafd7435fbbd27ba5bfbd0ac90856443f20191d91c5",
+      "src/three/textures.mjs": "07a46fdb58ba0ebd9e2e9955a525c782870a9bd238d23c59fc78ee65c6c08f1b",
+      "src/three/uniforms.mjs": "d3bb8316807c5edce83f318d5caf1d66785ad98a77b5d2bd041be706adb3c6cd"
+    }
+  },
+  "current": {
+    "version": "0.59.0",
+    "sourceSHA256": {
+      "src/color/management.mts": "8189ed8750240b78e7e535b70c7e1c190bd9024f98e5c5851ecdb0df21833895",
+      "src/color/pigment.mts": "0eab21783cd719dae9169fa2b3de89ef05d6eb766940905f0d58621539b3989f",
+      "src/color/spectral-data.mjs": "6463d3bffe988e4d848a750413c1efc41df73072f1845b53381ada2ae7b7e819",
+      "src/core.mjs": "7e97d9a901194bc65cd712add8c867c3bb0ad53cf8006b8e935ffe95a6c50634",
+      "src/core/algebra.mts": "2b8716e0127fc407bd7282ea45943495345b5bfc77dd294ccafb363164610ac6",
+      "src/core/analyze.mts": "409eca8ba5becd22849246d9756069bfccb8ea52d8eddbb87e8bdc8d02307d37",
+      "src/core/color-sample.mts": "5600169f8c79831e383d80861a648bf8b21708ed642034558557af32f42e9b40",
+      "src/core/color.mts": "588c37140374d21bda48b4dbf6873aa23b7e257118636a3194f858eb72dfaedf",
+      "src/core/compile.mts": "7b835c8cdc6c83957b8b80496a1b66c0c89a83332a19153c8499171323259fb5",
+      "src/core/coverage.mts": "b73cd7211974aed639dc4b5300ac9665118a94e37512f7d941f77e2c24edc555",
+      "src/core/effects.mts": "75bc242610738433883ec4235e308b22197d498d6e4021ecc0e99d6c5190d751",
+      "src/core/evaluate.mts": "cb69cf73b8646abcabe389e20cb6012c9eea57a1bb5589869f04d95d009dfc34",
+      "src/core/field-evaluate.mts": "6ad2e7801419bf187074af0acdd4bc4df6e9114aec483a9636a317e6bd3c741e",
+      "src/core/graph.mts": "0696e78316d3305e335b3d2f57ab4120b5e707cb7d6561275200a17395f77634",
+      "src/core/image-filter.mts": "a5885843a3d2f0011fe1f21459e412fef45ad24614bfff8cba2423996033d8f8",
+      "src/core/inspect.mts": "3411fdf870ab55eb55d568e963850ae82196e0e9e7322eb0dfdd688b9169f6bc",
+      "src/core/intern.mts": "21117817eba4d2b4539eb542ff04d6dd0ee1955b73bc902c78c71edd604a64d2",
+      "src/core/masks.mts": "3d65e8751d1a9d97850513b02a3f11315178a4646b81055ffb0e162ccde47053",
+      "src/core/migrate.mts": "d41799edf3e2b9af8d8b74ad19d42c0dbff03a22fb6c136a9e972df725913f65",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/optimization-types.mts": "2c8adf68bb55631def1a9ecfc06af82835a6698e7c67fad4d0914b97c56f545d",
+      "src/core/optimize.mts": "7efed0d2021d7962ed46f13947aa56e4aab4ece365b7780c4f4eec256f5e3977",
+      "src/core/ownership.mts": "c7f99434dfd95a29b749ad36c3e080fdd4f4936b1ddd9954042a837b25c6ded3",
+      "src/core/public-types.mts": "defd3bd4fb4f6c4eb548d08f2c5a174a93259b218500c42e0b96b100565305bd",
+      "src/core/recipe.mts": "162031eec330a6cedc01e45693b75096ff37f996adaef5122de5a50ad085878f",
+      "src/core/resources.mts": "43607892f6af13f78b8f6555943ef0326823b1500743e95273c4e0f7296e821d",
+      "src/core/types.mts": "0b548a4cf7420b3a8c9fed0eb59e9c02da858699b1fc5578c64fc919481bdf3a",
+      "src/core/zones.mts": "7d6d73544b80aa5e010e5155fb1d4d0256d307118db60218e7e25a8f83d1d60f",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/optimize.mjs": "becfee2963646f2a9e67ecf8af41dae7880141018a90bad00a3c5e63ada1bbfe",
+      "src/paint/data.mts": "b6dc611def6ede5d25935cd84628cdd2cc0b80373c31765f479825bef9a6dbd5",
+      "src/paint/marks.mts": "2ba787e3eb891b17293687df7ce32afb5e962a2e6e0ce52880c8dbe303537e63",
+      "src/paint/random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint/shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint/structure.mjs": "509f9a8c11970cf16bc66180d7e97ce90dd0dd0803108f4d4fc3b93392a4003c",
+      "src/three.mjs": "08f7f54aee0ae26a086c2bb512585570f1d6614c3de729c151fa3ecefb92e74b",
+      "src/three/adapter.mts": "9b755a2abd149975bb1cff10e7961d357ebd65393904606eb10dba23df6a22f4",
+      "src/three/color.mjs": "a0ae02c1e77667ada48dc07643a068ba3132467e6bd228036a456cefdebbe5f7",
+      "src/three/coordinates.mts": "c8b2bef631c160874c434200014a681e0ad6f6164863d53560075dd1c77471d6",
+      "src/three/engine.mts": "7a1d89043a5d70ceec7e421ef5a74daabfd31ab18276c9d85ae58fd649798df1",
+      "src/three/facets.mjs": "1eceff2a0addc621ab99a73ebc7dbfbc9c225da1ab38403d5f8ec7cd591a8e14",
+      "src/three/fields.mjs": "4815def2dc6803355b5a9f2af114c1cab5b5eea3d73ce37923c286f37aa70e65",
+      "src/three/images.mts": "62d1af40e8ead3df18b1fcb3dbcc65f9bcd09b6ec5d6cc920995d6897d930800",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/public-types.mts": "c1d0de726348ab641ee243f44137fde591dfaf15f7d988cf44044c46592af349",
+      "src/three/shader.mjs": "f76d0eef01ee36f69a414403b3fb932859ceee7fc3bbbb1040baef47fa47a796",
+      "src/three/textures.mts": "1efb24a3fd8265620d47af4bd571521b59598dea274a5e22dfa1249c3d6ec766",
+      "src/three/uniforms.mts": "4ca6c92f981e598d4af4d3f69d64515361857d9ba743d3498d43d8688b6c1597"
+    }
+  },
+  "cases": {
+    "overlapping41": {
+      "description": "Forty-one named prefixes of one editable noise field: 81 authored nodes, sampled together.",
+      "graphSHA256": "0ddb5d93645a15c8119635c5e5b32c86cf9b3802d7ec43c8411d375091ccc681",
+      "authoredNodes": 81,
+      "outputs": 41,
+      "baseline": {
+        "sourceNodeVisits": 1681,
+        "preparedNodes": 1681,
+        "structuralDuplicates": 0,
+        "memoEntriesPerOutputSet": 861
+      },
+      "current": {
+        "sourceNodeVisits": 81,
+        "preparedNodes": 81,
+        "structuralDuplicates": 0,
+        "memoEntriesPerOutputSet": 41
+      },
+      "exactSampleContexts": 45,
+      "importAndPrepare": {
+        "baselineMicroseconds": 1262.5541700000008,
+        "currentMicroseconds": 279.6183600000006,
+        "speedup": 4.5152763573894,
+        "samplesMicroseconds": {
+          "baseline": [
+            1282.4739100000004,
+            1300.8985200000006,
+            1139.6652099999994,
+            1348.8804299999993,
+            1235.366160000001,
+            1262.5541700000008,
+            1224.9978499999997
+          ],
+          "current": [
+            279.6183600000006,
+            235.1716799999997,
+            370.0692300000003,
+            368.59286,
+            254.04510000000076,
+            229.07482999999957,
+            469.7046299999988
+          ]
+        }
+      },
+      "samplePrepared": {
+        "baselineMicroseconds": 270.8800664999999,
+        "currentMicroseconds": 20.477129999999992,
+        "speedup": 13.228419534378109,
+        "samplesMicroseconds": {
+          "baseline": [
+            308.9356705,
+            271.0039529999999,
+            258.45605,
+            254.68272249999995,
+            257.56338200000005,
+            270.8800664999999,
+            289.46911100000034
+          ],
+          "current": [
+            24.632723499999884,
+            23.340005999999903,
+            19.990657999999936,
+            20.477129999999992,
+            20.379213000000163,
+            20.364640500000405,
+            23.065262500000244
+          ]
+        }
+      }
+    },
+    "singleRoot81": {
+      "description": "The same 81-node graph sampled through the original single-root API; control for ordinary sampling overhead.",
+      "graphSHA256": "0ddb5d93645a15c8119635c5e5b32c86cf9b3802d7ec43c8411d375091ccc681",
+      "authoredNodes": 81,
+      "outputs": 1,
+      "baseline": {
+        "sourceNodeVisits": 81,
+        "preparedNodes": 81,
+        "structuralDuplicates": 0,
+        "memoEntriesPerOutputSet": 41
+      },
+      "current": {
+        "sourceNodeVisits": 81,
+        "preparedNodes": 81,
+        "structuralDuplicates": 0,
+        "memoEntriesPerOutputSet": 41
+      },
+      "exactSampleContexts": 45,
+      "importAndPrepare": {
+        "baselineMicroseconds": 253.06491000000278,
+        "currentMicroseconds": 235.0637800000004,
+        "speedup": 1.0765797691162897,
+        "samplesMicroseconds": {
+          "baseline": [
+            345.27524000000085,
+            253.06491000000278,
+            320.6298400000014,
+            249.14451999999983,
+            244.9369100000058,
+            261.67163000000073,
+            210.4636599999958
+          ],
+          "current": [
+            349.1027800000029,
+            354.9257300000045,
+            235.0637800000004,
+            319.2963300000065,
+            184.96368000000075,
+            215.26385999999547,
+            231.04765000000043
+          ]
+        }
+      },
+      "samplePrepared": {
+        "baselineMicroseconds": 8.477887500000179,
+        "currentMicroseconds": 7.932709000000159,
+        "speedup": 1.0687253875063372,
+        "samplesMicroseconds": {
+          "baseline": [
+            8.77183849999983,
+            7.835607999999866,
+            8.477887500000179,
+            8.79386650000015,
+            11.14545649999991,
+            7.499152999999751,
+            6.97306350000008
+          ],
+          "current": [
+            7.973685499999647,
+            7.415351999999984,
+            7.932709000000159,
+            7.756809500000145,
+            10.168385500000113,
+            10.440408500000103,
+            6.925441500000034
+          ]
+        }
+      }
+    },
+    "mixedImageOutputs": {
+      "description": "RGB scalar projections, color and domain outputs share one anisotropic image reconstruction.",
+      "graphSHA256": "536bfcdf82b4aab300ccca2398a2349df638bf0903ee86547a8e3aae5de1823e",
+      "authoredNodes": 9,
+      "outputs": 5,
+      "baseline": {
+        "sourceNodeVisits": 13,
+        "preparedNodes": 13,
+        "structuralDuplicates": 0,
+        "memoEntriesPerOutputSet": 13
+      },
+      "current": {
+        "sourceNodeVisits": 6,
+        "preparedNodes": 6,
+        "structuralDuplicates": 0,
+        "memoEntriesPerOutputSet": 6
+      },
+      "exactSampleContexts": 45,
+      "importAndPrepare": {
+        "baselineMicroseconds": 121.62328999999772,
+        "currentMicroseconds": 112.63218000000052,
+        "speedup": 1.079827186155832,
+        "samplesMicroseconds": {
+          "baseline": [
+            160.84130999999616,
+            153.39499000000615,
+            146.882599999999,
+            116.35417999999845,
+            121.62328999999772,
+            113.87103999999454,
+            105.19242000000304
+          ],
+          "current": [
+            141.22440999999526,
+            156.00108999999975,
+            105.44579999999769,
+            125.6097200000022,
+            111.01054999999178,
+            105.30399000000216,
+            112.63218000000052
+          ]
+        }
+      },
+      "samplePrepared": {
+        "baselineMicroseconds": 46.20638700000018,
+        "currentMicroseconds": 14.427984999999808,
+        "speedup": 3.202553024556152,
+        "samplesMicroseconds": {
+          "baseline": [
+            62.6524915,
+            46.20638700000018,
+            46.931179500000326,
+            51.047229000000236,
+            42.723948500000006,
+            42.68424399999959,
+            39.83925799999997
+          ],
+          "current": [
+            17.43513400000029,
+            18.0232345000004,
+            14.427984999999808,
+            13.459270500000002,
+            13.75026250000019,
+            14.873078000000078,
+            13.083582000000206
+          ]
+        }
+      }
+    }
+  }
+}

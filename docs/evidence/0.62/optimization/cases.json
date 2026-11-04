@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "independent",
+      "label": "An independent anisotropic finish overridden across coat and bump",
+      "before": "independent-before.json",
+      "after": "independent-after.json",
+      "patches": "independent-patches.json"
+    },
+    {
+      "id": "shared-image",
+      "label": "The same atlas remains live for pigment and height",
+      "before": "shared-image-before.json",
+      "after": "shared-image-after.json",
+      "patches": "shared-image-patches.json"
+    },
+    {
+      "id": "shared-branch",
+      "label": "A mixed branch still consumes the shared module finish",
+      "before": "shared-branch-before.json",
+      "after": "shared-branch-after.json",
+      "patches": "shared-branch-patches.json"
+    },
+    {
+      "id": "mixed-overwrite",
+      "label": "Nested mix with an overwritten finish",
+      "before": "mixed-overwrite-before.json",
+      "after": "mixed-overwrite-after.json",
+      "patches": "mixed-overwrite-patches.json"
+    },
+    {
+      "id": "mixed-shared-consumer",
+      "label": "Nested mix with a live shared finish",
+      "before": "mixed-shared-consumer-before.json",
+      "after": "mixed-shared-consumer-after.json",
+      "patches": "mixed-shared-consumer-patches.json"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": "0.50.0",
+  "files": 20,
+  "installedTarball": "/workspace/sites/moonweave/dist/downloads/moonweave-surfaces-0.50.0.tgz",
+  "sourceFreeDeclarations": true,
+  "coreWithoutPeers": true,
+  "sharedModuleIdentity": true,
+  "threeAdapter": true,
+  "strictNodeNext": true,
+  "copiedHostPackages": 8,
+  "baseline": {
+    "version": "0.49.0",
+    "files": 64,
+    "archiveBytes": 708160,
+    "unpackedBytes": 1166072,
+    "sha256": "6cd9510bab1daca3f18265df7a31f25e57d902705538b2a654c584045053979a"
+  },
+  "current": {
+    "version": "0.50.0",
+    "files": 20,
+    "archiveBytes": 50816,
+    "unpackedBytes": 181004,
+    "sha256": "0faa73e2f0877b97ea6a2f494707d680d3292200ac374faf1a0b950d8027cd5d"
+  }
+}

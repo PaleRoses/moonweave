@@ -1,0 +1,588 @@
+{
+  "environment": {
+    "node": "v24.22.1",
+    "three": "187",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "method": "7 runs of 500 operations after 100 warm-up operations per metric; medians in microseconds per operation. Explicit GC before each batch.",
+  "scope": "CPU operations only. Excludes DOM, texture generation/upload, driver compilation and rendering. Separate baseline/current implementations run in the same process with the same inputs and Three revision.",
+  "baseline": {
+    "version": "0.44.0",
+    "sourceSHA256": {
+      "src/surface-graph-data.mjs": "1bd0b414032d41a93d3d81332a1b191264578c6d291ed3853e37eb346c825373",
+      "src/surface-graph-plan.mjs": "d9c98e91fc4ff99c76c06b5b04280b6e73babf485a7bb6e76e006901e1bdaf50",
+      "src/texturing-adapter.mjs": "77feb3cadb7691da8b9bf1f3a0bda4b6d037876cf2d21c7d86714d0c9278fe0d",
+      "src/graph-uniforms.mjs": "e49be7dcbe86c649be4ced7f5f7a283065e2868873bcfd1b016fe93a69a42ea4"
+    },
+    "scenarios": {
+      "2Paints": {
+        "nodeCount": 5,
+        "metrics": {
+          "importJSON": {
+            "medianMicroseconds": 37.042778,
+            "samplesMicroseconds": [
+              64.15140199999996,
+              50.483788,
+              30.991390000000024,
+              34.17317200000002,
+              37.042778,
+              40.186444000000165,
+              30.593529999999877
+            ]
+          },
+          "reuseValidatedGraph": {
+            "medianMicroseconds": 22.56187399999999,
+            "samplesMicroseconds": [
+              21.83724200000006,
+              22.56187399999999,
+              23.509364000000005,
+              26.46806800000013,
+              20.957615999999913,
+              21.064296000000013,
+              28.222735999999937
+            ]
+          },
+          "reuseConstructedExpression": {
+            "medianMicroseconds": 29.148713999999927,
+            "samplesMicroseconds": [
+              27.065988000000065,
+              24.88181400000008,
+              30.93134199999986,
+              27.231857999999878,
+              29.148713999999927,
+              29.791439999999966,
+              29.828436000000007
+            ]
+          },
+          "compileFreshDocument": {
+            "medianMicroseconds": 56.971864000000096,
+            "samplesMicroseconds": [
+              47.314752,
+              43.369625999999926,
+              70.0948800000001,
+              78.547286,
+              76.61893999999984,
+              56.971864000000096,
+              41.81351600000016
+            ]
+          },
+          "reuseCompiledGraph": {
+            "medianMicroseconds": 39.30629199999975,
+            "samplesMicroseconds": [
+              34.93331600000011,
+              38.77038799999991,
+              42.6998120000003,
+              41.34727400000019,
+              39.30629199999975,
+              37.272526000000205,
+              39.79853600000024
+            ]
+          },
+          "evaluateScalar": {
+            "medianMicroseconds": 25.127383999999893,
+            "samplesMicroseconds": [
+              37.40366600000016,
+              24.221717999999782,
+              25.080453999999918,
+              26.357621999999992,
+              25.127383999999893,
+              25.539785999999822,
+              24.780299999999897
+            ]
+          },
+          "setIdenticalGraph": {
+            "medianMicroseconds": 48.21357000000034,
+            "samplesMicroseconds": [
+              64.31291400000009,
+              46.9523879999997,
+              45.16637399999991,
+              48.21357000000034,
+              52.52636799999982,
+              48.691392000000185,
+              46.852237999999936
+            ]
+          },
+          "editParameter": {
+            "medianMicroseconds": 87.36407000000008,
+            "samplesMicroseconds": [
+              98.03981399999975,
+              95.16874199999984,
+              83.056372,
+              87.36407000000008,
+              83.59931000000006,
+              95.64604199999985,
+              84.67540400000007
+            ]
+          },
+          "editPaint": {
+            "medianMicroseconds": 72.5824899999998,
+            "samplesMicroseconds": [
+              67.58186799999976,
+              72.06461000000037,
+              67.03938999999991,
+              76.06353200000012,
+              72.5824899999998,
+              111.69814799999949,
+              102.33703600000081
+            ]
+          }
+        },
+        "stableMaterialProgramAndUniformObjects": true,
+        "sharedCompiledStructure": false
+      },
+      "16Paints": {
+        "nodeCount": 47,
+        "metrics": {
+          "importJSON": {
+            "medianMicroseconds": 195.12251400000062,
+            "samplesMicroseconds": [
+              176.84775400000038,
+              188.46945799999958,
+              195.12251400000062,
+              352.45660399999997,
+              178.70274599999993,
+              238.55230800000024,
+              235.43870199999947
+            ]
+          },
+          "reuseValidatedGraph": {
+            "medianMicroseconds": 167.0044280000002,
+            "samplesMicroseconds": [
+              153.72968200000014,
+              165.52923199999987,
+              117.77418200000012,
+              171.44005800000014,
+              174.90045999999984,
+              167.0044280000002,
+              168.74092800000017
+            ]
+          },
+          "reuseConstructedExpression": {
+            "medianMicroseconds": 215.82038599999942,
+            "samplesMicroseconds": [
+              165.8570179999997,
+              177.59353999999988,
+              215.82038599999942,
+              219.62404599999897,
+              219.34141799999998,
+              251.46285600000007,
+              208.26288799999926
+            ]
+          },
+          "compileFreshDocument": {
+            "medianMicroseconds": 336.070271999999,
+            "samplesMicroseconds": [
+              383.2462500000001,
+              304.4234239999987,
+              398.21625199999835,
+              265.5166759999993,
+              359.1225680000007,
+              288.3554060000006,
+              336.070271999999
+            ]
+          },
+          "reuseCompiledGraph": {
+            "medianMicroseconds": 324.0868899999987,
+            "samplesMicroseconds": [
+              308.9725880000006,
+              322.067986,
+              361.51895400000103,
+              332.1936759999989,
+              324.0868899999987,
+              343.1102340000016,
+              253.3869960000011
+            ]
+          },
+          "evaluateScalar": {
+            "medianMicroseconds": 175.16365599999878,
+            "samplesMicroseconds": [
+              124.50223400000141,
+              182.33805000000027,
+              215.32379800000126,
+              175.16365599999878,
+              170.06951200000006,
+              175.30480999999966,
+              150.7580479999997
+            ]
+          },
+          "setIdenticalGraph": {
+            "medianMicroseconds": 390.15437199999906,
+            "samplesMicroseconds": [
+              390.15437199999906,
+              366.2451280000005,
+              428.8121500000015,
+              385.5431400000016,
+              393.85564199999857,
+              381.7531499999968,
+              399.4703439999976
+            ]
+          },
+          "editParameter": {
+            "medianMicroseconds": 550.1360939999977,
+            "samplesMicroseconds": [
+              526.8705659999978,
+              536.7941819999978,
+              553.1317820000004,
+              550.1360939999977,
+              578.3169899999992,
+              539.3882819999999,
+              616.8539739999978
+            ]
+          },
+          "editPaint": {
+            "medianMicroseconds": 523.9535299999989,
+            "samplesMicroseconds": [
+              541.2575600000018,
+              523.9535299999989,
+              496.0623080000005,
+              478.3219239999999,
+              492.1808679999994,
+              537.2541500000005,
+              530.6333940000004
+            ]
+          }
+        },
+        "stableMaterialProgramAndUniformObjects": true,
+        "sharedCompiledStructure": false
+      }
+    }
+  },
+  "current": {
+    "version": "0.45.0",
+    "sourceSHA256": {
+      "src/surface-graph-data.mjs": "9386e20deb015d7c4e4c4a0365ba642456ac892e69e89b6b4befca64a7f6e88d",
+      "src/surface-graph-plan.mjs": "7b6dbc746803e620ffb4191e65557b0229bffd4b0583647a8521cdf1d222b6ec",
+      "src/texturing-adapter.mjs": "888b74de7de4c5334f5b72d5f60e9851f4ae04ec126906d01eb770c676948fc1",
+      "src/graph-uniforms.mjs": "d587ad6a4a193ab9d3d4cc215732db0c9725230f5881e58531f7dd471ae141a4"
+    },
+    "scenarios": {
+      "2Paints": {
+        "nodeCount": 5,
+        "metrics": {
+          "importJSON": {
+            "medianMicroseconds": 29.490256000000954,
+            "samplesMicroseconds": [
+              33.890951999997924,
+              29.966231999998854,
+              30.48245400000087,
+              29.490256000000954,
+              26.679172000000108,
+              21.460006000001158,
+              28.145966000000044
+            ]
+          },
+          "reuseValidatedGraph": {
+            "medianMicroseconds": 0.0605699999978242,
+            "samplesMicroseconds": [
+              0.0639160000027914,
+              0.05247800000142888,
+              0.059750000000349246,
+              0.11763600000267616,
+              0.0605699999978242,
+              0.055963999999221414,
+              0.1275519999981043
+            ]
+          },
+          "reuseConstructedExpression": {
+            "medianMicroseconds": 0.17590199999904144,
+            "samplesMicroseconds": [
+              0.17139600000155042,
+              0.18671999999787658,
+              0.17590199999904144,
+              0.17696600000272156,
+              0.17424000000028173,
+              0.18309399999998277,
+              0.0950620000003255
+            ]
+          },
+          "compileFreshDocument": {
+            "medianMicroseconds": 59.33072000000175,
+            "samplesMicroseconds": [
+              59.10313999999926,
+              60.592366000000766,
+              59.33072000000175,
+              55.83210400000098,
+              60.64612599999964,
+              55.482702000001154,
+              60.04138400000011
+            ]
+          },
+          "reuseCompiledGraph": {
+            "medianMicroseconds": 0.11929800000143587,
+            "samplesMicroseconds": [
+              0.11929800000143587,
+              0.11719599999923958,
+              0.16608799999812618,
+              0.11777799999981653,
+              0.22034999999959837,
+              0.11489200000141864,
+              0.17926799999986542
+            ]
+          },
+          "evaluateScalar": {
+            "medianMicroseconds": 3.031016000000818,
+            "samplesMicroseconds": [
+              3.916560000001482,
+              3.6159699999989243,
+              2.860899999999674,
+              2.860899999999674,
+              3.0612599999985832,
+              2.7159039999969536,
+              3.031016000000818
+            ]
+          },
+          "setIdenticalGraph": {
+            "medianMicroseconds": 0.2069100000007893,
+            "samplesMicroseconds": [
+              0.43641399999978603,
+              0.2016220000004978,
+              0.18984399999681045,
+              0.42509599999903,
+              0.16076000000248314,
+              0.2069100000007893,
+              0.23575200000050245
+            ]
+          },
+          "editParameter": {
+            "medianMicroseconds": 11.146654000000126,
+            "samplesMicroseconds": [
+              16.77795999999944,
+              11.999891999999818,
+              8.439806000002136,
+              10.313970000002882,
+              11.285703999998077,
+              11.146654000000126,
+              10.421542000000045
+            ]
+          },
+          "editPaint": {
+            "medianMicroseconds": 17.04249400000117,
+            "samplesMicroseconds": [
+              27.155704000000696,
+              17.083956000002217,
+              16.530429999998887,
+              17.04249400000117,
+              22.098799999999756,
+              15.089873999997508,
+              14.369880000002013
+            ]
+          }
+        },
+        "stableMaterialProgramAndUniformObjects": true,
+        "sharedCompiledStructure": true
+      },
+      "16Paints": {
+        "nodeCount": 47,
+        "metrics": {
+          "importJSON": {
+            "medianMicroseconds": 177.81226999999853,
+            "samplesMicroseconds": [
+              164.39492400000017,
+              201.51226399999723,
+              155.67138400000113,
+              177.81226999999853,
+              139.846035999999,
+              199.71696599999996,
+              199.49173800000062
+            ]
+          },
+          "reuseValidatedGraph": {
+            "medianMicroseconds": 0.03865800000130548,
+            "samplesMicroseconds": [
+              0.03783800000019255,
+              0.04074200000104611,
+              0.03865800000130548,
+              0.03723600000012084,
+              0.039619999999558786,
+              0.03805799999827286,
+              0.1480440000013914
+            ]
+          },
+          "reuseConstructedExpression": {
+            "medianMicroseconds": 0.06784200000038254,
+            "samplesMicroseconds": [
+              0.0794400000013411,
+              0.07429200000115088,
+              0.11509400000068126,
+              0.0672420000009879,
+              0.06748199999856297,
+              0.06750199999805773,
+              0.06784200000038254
+            ]
+          },
+          "compileFreshDocument": {
+            "medianMicroseconds": 422.7823900000003,
+            "samplesMicroseconds": [
+              422.7823900000003,
+              454.8956180000023,
+              376.57679199999984,
+              437.39119399999976,
+              379.93821999999994,
+              358.48138800000015,
+              430.33314399999654
+            ]
+          },
+          "reuseCompiledGraph": {
+            "medianMicroseconds": 0.06287200000224402,
+            "samplesMicroseconds": [
+              0.06405600000289269,
+              0.035052000006544404,
+              0.06329399999958696,
+              0.06323199999314966,
+              0.06287200000224402,
+              0.06084999999438878,
+              0.03645400000095833
+            ]
+          },
+          "evaluateScalar": {
+            "medianMicroseconds": 2.235203999996884,
+            "samplesMicroseconds": [
+              1.652803999997559,
+              2.391616000000795,
+              1.9785640000045532,
+              2.5308420000001206,
+              1.6448119999986375,
+              2.235203999996884,
+              2.9619800000000396
+            ]
+          },
+          "setIdenticalGraph": {
+            "medianMicroseconds": 0.20480200000019977,
+            "samplesMicroseconds": [
+              0.2154179999997723,
+              0.42336600000271574,
+              0.07665399999677902,
+              0.07593199999973876,
+              0.20736599999509053,
+              0.133295999999973,
+              0.20480200000019977
+            ]
+          },
+          "editParameter": {
+            "medianMicroseconds": 35.18882599999779,
+            "samplesMicroseconds": [
+              36.64902599999914,
+              34.98654800000077,
+              35.996801999994204,
+              35.18882599999779,
+              42.076630000003206,
+              27.2575399999987,
+              28.143309999999474
+            ]
+          },
+          "editPaint": {
+            "medianMicroseconds": 38.52187400000548,
+            "samplesMicroseconds": [
+              40.800483999999415,
+              38.79741999999533,
+              37.5231780000031,
+              34.16439199999877,
+              53.523253999999724,
+              38.52187400000548,
+              36.09258200000477
+            ]
+          }
+        },
+        "stableMaterialProgramAndUniformObjects": true,
+        "sharedCompiledStructure": true
+      }
+    }
+  },
+  "comparison": {
+    "2Paints": {
+      "importJSON": {
+        "baselineMicroseconds": 37.042778,
+        "currentMicroseconds": 29.490256000000954,
+        "speedup": 1.2561022868027596
+      },
+      "reuseValidatedGraph": {
+        "baselineMicroseconds": 22.56187399999999,
+        "currentMicroseconds": 0.0605699999978242,
+        "speedup": 372.49255408305197
+      },
+      "reuseConstructedExpression": {
+        "baselineMicroseconds": 29.148713999999927,
+        "currentMicroseconds": 0.17590199999904144,
+        "speedup": 165.70996350330736
+      },
+      "compileFreshDocument": {
+        "baselineMicroseconds": 56.971864000000096,
+        "currentMicroseconds": 59.33072000000175,
+        "speedup": 0.9602422488720584
+      },
+      "reuseCompiledGraph": {
+        "baselineMicroseconds": 39.30629199999975,
+        "currentMicroseconds": 0.11929800000143587,
+        "speedup": 329.4798906899249
+      },
+      "evaluateScalar": {
+        "baselineMicroseconds": 25.127383999999893,
+        "currentMicroseconds": 3.031016000000818,
+        "speedup": 8.290086228509882
+      },
+      "setIdenticalGraph": {
+        "baselineMicroseconds": 48.21357000000034,
+        "currentMicroseconds": 0.2069100000007893,
+        "speedup": 233.01710888703502
+      },
+      "editParameter": {
+        "baselineMicroseconds": 87.36407000000008,
+        "currentMicroseconds": 11.146654000000126,
+        "speedup": 7.837694612212696
+      },
+      "editPaint": {
+        "baselineMicroseconds": 72.5824899999998,
+        "currentMicroseconds": 17.04249400000117,
+        "speedup": 4.258912457296145
+      }
+    },
+    "16Paints": {
+      "importJSON": {
+        "baselineMicroseconds": 195.12251400000062,
+        "currentMicroseconds": 177.81226999999853,
+        "speedup": 1.097351234535177
+      },
+      "reuseValidatedGraph": {
+        "baselineMicroseconds": 167.0044280000002,
+        "currentMicroseconds": 0.03865800000130548,
+        "speedup": 4320.048321029552
+      },
+      "reuseConstructedExpression": {
+        "baselineMicroseconds": 215.82038599999942,
+        "currentMicroseconds": 0.06784200000038254,
+        "speedup": 3181.2208661121795
+      },
+      "compileFreshDocument": {
+        "baselineMicroseconds": 336.070271999999,
+        "currentMicroseconds": 422.7823900000003,
+        "speedup": 0.7949013013526859
+      },
+      "reuseCompiledGraph": {
+        "baselineMicroseconds": 324.0868899999987,
+        "currentMicroseconds": 0.06287200000224402,
+        "speedup": 5154.709409410093
+      },
+      "evaluateScalar": {
+        "baselineMicroseconds": 175.16365599999878,
+        "currentMicroseconds": 2.235203999996884,
+        "speedup": 78.36584759164845
+      },
+      "setIdenticalGraph": {
+        "baselineMicroseconds": 390.15437199999906,
+        "currentMicroseconds": 0.20480200000019977,
+        "speedup": 1905.0320407008646
+      },
+      "editParameter": {
+        "baselineMicroseconds": 550.1360939999977,
+        "currentMicroseconds": 35.18882599999779,
+        "speedup": 15.633829159291425
+      },
+      "editPaint": {
+        "baselineMicroseconds": 523.9535299999989,
+        "currentMicroseconds": 38.52187400000548,
+        "speedup": 13.601454851337822
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": "0.52.0",
+  "files": 25,
+  "installedTarball": "/workspace/sites/moonweave/dist/downloads/moonweave-surfaces-0.52.0.tgz",
+  "sourceFreeDeclarations": true,
+  "coreWithoutPeers": true,
+  "sharedModuleIdentity": true,
+  "threeAdapter": true,
+  "strictNodeNext": true,
+  "copiedHostPackages": 8
+}

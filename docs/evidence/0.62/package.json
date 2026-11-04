@@ -1,0 +1,22 @@
+{
+  "version": "0.62.0",
+  "runtimeFiles": 75,
+  "runtimeTarball": "moonweave-surfaces-0.62.0.tgz",
+  "runtimeTarballSHA256": "281cc85e0fad0750a9dd4a80a2ce94d50009bf51f1495be16dce823423171a20",
+  "portableZipMatchesNpmPayload": true,
+  "sourceArchive": "moonweave-0.62.0-source.zip",
+  "sourceFiles": 412,
+  "sourcePolicy": {
+    "exactMaintainedSourceMembership": true,
+    "sourceBytesMatchCheckout": true,
+    "githubWorkflowIncluded": true,
+    "siteConfigurationExcluded": true,
+    "dependenciesAndGeneratedOutputsExcluded": true,
+    "symlinksExcluded": true
+  },
+  "sourceRebuild": {
+    "method": "Extract complete source ZIP into an isolated directory, use the pinned installed dependency tree, run tools/build.mjs, compare every dist output including all three archives byte-for-byte.",
+    "expectedOutputs": 233,
+    "allOutputsByteIdentical": true
+  }
+}

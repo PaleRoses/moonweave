@@ -1,0 +1,702 @@
+{
+  "version": "0.53.0",
+  "baselineVersion": "0.52.0",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "method": "Load baseline and current public cores, example constructors and shader generators independently. Compare identical standalone scalar fields with the baseline material/channels wrapper, then all baseline examples before and after a value edit. Compiled-plan JSON counts nodes, output, bindings, cost, ranges and opacityRange; program keys are counted separately. Generated GLSL includes declarations and evaluation. Noise counts are emitted call sites in evaluation code, not a GPU timing result. No CPU or GPU speed claim.",
+  "standaloneField": {
+    "baselineWrapper": {
+      "nodes": 8,
+      "serializedJSONBytes": 1099
+    },
+    "currentField": {
+      "nodes": 5,
+      "serializedJSONBytes": 731
+    },
+    "contexts": 24,
+    "comparedComponents": 72,
+    "maxValueError": 0,
+    "maxDifferentialError": 0,
+    "preparedSamplerReused": true,
+    "expressionAndGraphShareSampler": true,
+    "editedGraphHasIndependentSampler": true,
+    "previousSamplerUnaffected": true
+  },
+  "legacyExamples": {
+    "belly": {
+      "initial": {
+        "baseline": {
+          "authoredNodes": 9,
+          "liveNodes": 9,
+          "uniformScalars": 54,
+          "compiledPlanJSONBytes": 1471,
+          "programKeyBytes": 414,
+          "generatedGLSLBytes": 6995,
+          "generatedGLSLSHA256": "ea4e4065f6dbb48f999285de16c92ef90e975326e32ed6c1a557a11a5ceff0f2"
+        },
+        "current": {
+          "authoredNodes": 9,
+          "liveNodes": 9,
+          "uniformScalars": 54,
+          "compiledPlanJSONBytes": 1471,
+          "programKeyBytes": 414,
+          "generatedGLSLBytes": 6995,
+          "generatedGLSLSHA256": "ea4e4065f6dbb48f999285de16c92ef90e975326e32ed6c1a557a11a5ceff0f2"
+        },
+        "equality": {
+          "authoredGraph": true,
+          "compiledPlan": true,
+          "programKey": true,
+          "shaderDeclarations": true,
+          "shaderEvaluation": true,
+          "completeShader": true,
+          "completeShaderNonblankLines": true
+        },
+        "generatedGLSLByteChange": 0
+      },
+      "valueEdit": {
+        "patch": {
+          "amount": {
+            "value": 0.688
+          }
+        },
+        "preservesProgramInBothVersions": true,
+        "comparison": {
+          "baseline": {
+            "authoredNodes": 9,
+            "liveNodes": 9,
+            "uniformScalars": 54,
+            "compiledPlanJSONBytes": 1475,
+            "programKeyBytes": 414,
+            "generatedGLSLBytes": 6995,
+            "generatedGLSLSHA256": "ea4e4065f6dbb48f999285de16c92ef90e975326e32ed6c1a557a11a5ceff0f2"
+          },
+          "current": {
+            "authoredNodes": 9,
+            "liveNodes": 9,
+            "uniformScalars": 54,
+            "compiledPlanJSONBytes": 1475,
+            "programKeyBytes": 414,
+            "generatedGLSLBytes": 6995,
+            "generatedGLSLSHA256": "ea4e4065f6dbb48f999285de16c92ef90e975326e32ed6c1a557a11a5ceff0f2"
+          },
+          "equality": {
+            "authoredGraph": true,
+            "compiledPlan": true,
+            "programKey": true,
+            "shaderDeclarations": true,
+            "shaderEvaluation": true,
+            "completeShader": true,
+            "completeShaderNonblankLines": true
+          },
+          "generatedGLSLByteChange": 0
+        }
+      }
+    },
+    "tips": {
+      "initial": {
+        "baseline": {
+          "authoredNodes": 9,
+          "liveNodes": 9,
+          "uniformScalars": 60,
+          "compiledPlanJSONBytes": 1491,
+          "programKeyBytes": 389,
+          "generatedGLSLBytes": 7200,
+          "generatedGLSLSHA256": "cb1c39029a0055452d7ff0b2ff900aea8befb4f9dc48df4dca155c4ac8e04875"
+        },
+        "current": {
+          "authoredNodes": 9,
+          "liveNodes": 9,
+          "uniformScalars": 60,
+          "compiledPlanJSONBytes": 1491,
+          "programKeyBytes": 389,
+          "generatedGLSLBytes": 7200,
+          "generatedGLSLSHA256": "cb1c39029a0055452d7ff0b2ff900aea8befb4f9dc48df4dca155c4ac8e04875"
+        },
+        "equality": {
+          "authoredGraph": true,
+          "compiledPlan": true,
+          "programKey": true,
+          "shaderDeclarations": true,
+          "shaderEvaluation": true,
+          "completeShader": true,
+          "completeShaderNonblankLines": true
+        },
+        "generatedGLSLByteChange": 0
+      },
+      "valueEdit": {
+        "patch": {
+          "amount": {
+            "value": 0.688
+          }
+        },
+        "preservesProgramInBothVersions": true,
+        "comparison": {
+          "baseline": {
+            "authoredNodes": 9,
+            "liveNodes": 9,
+            "uniformScalars": 60,
+            "compiledPlanJSONBytes": 1495,
+            "programKeyBytes": 389,
+            "generatedGLSLBytes": 7200,
+            "generatedGLSLSHA256": "cb1c39029a0055452d7ff0b2ff900aea8befb4f9dc48df4dca155c4ac8e04875"
+          },
+          "current": {
+            "authoredNodes": 9,
+            "liveNodes": 9,
+            "uniformScalars": 60,
+            "compiledPlanJSONBytes": 1495,
+            "programKeyBytes": 389,
+            "generatedGLSLBytes": 7200,
+            "generatedGLSLSHA256": "cb1c39029a0055452d7ff0b2ff900aea8befb4f9dc48df4dca155c4ac8e04875"
+          },
+          "equality": {
+            "authoredGraph": true,
+            "compiledPlan": true,
+            "programKey": true,
+            "shaderDeclarations": true,
+            "shaderEvaluation": true,
+            "completeShader": true,
+            "completeShaderNonblankLines": true
+          },
+          "generatedGLSLByteChange": 0
+        }
+      }
+    },
+    "patina": {
+      "initial": {
+        "baseline": {
+          "authoredNodes": 5,
+          "liveNodes": 5,
+          "uniformScalars": 49,
+          "compiledPlanJSONBytes": 1090,
+          "programKeyBytes": 237,
+          "generatedGLSLBytes": 6732,
+          "generatedGLSLSHA256": "b86724bc83b53ac751bc2981f49a090918b5a78424b825eeef79211299daaccc"
+        },
+        "current": {
+          "authoredNodes": 5,
+          "liveNodes": 5,
+          "uniformScalars": 49,
+          "compiledPlanJSONBytes": 1090,
+          "programKeyBytes": 237,
+          "generatedGLSLBytes": 6732,
+          "generatedGLSLSHA256": "b86724bc83b53ac751bc2981f49a090918b5a78424b825eeef79211299daaccc"
+        },
+        "equality": {
+          "authoredGraph": true,
+          "compiledPlan": true,
+          "programKey": true,
+          "shaderDeclarations": true,
+          "shaderEvaluation": true,
+          "completeShader": true,
+          "completeShaderNonblankLines": true
+        },
+        "generatedGLSLByteChange": 0
+      },
+      "valueEdit": {
+        "patch": {
+          "amount": {
+            "value": 0.345
+          }
+        },
+        "preservesProgramInBothVersions": true,
+        "comparison": {
+          "baseline": {
+            "authoredNodes": 5,
+            "liveNodes": 5,
+            "uniformScalars": 49,
+            "compiledPlanJSONBytes": 1093,
+            "programKeyBytes": 237,
+            "generatedGLSLBytes": 6732,
+            "generatedGLSLSHA256": "b86724bc83b53ac751bc2981f49a090918b5a78424b825eeef79211299daaccc"
+          },
+          "current": {
+            "authoredNodes": 5,
+            "liveNodes": 5,
+            "uniformScalars": 49,
+            "compiledPlanJSONBytes": 1093,
+            "programKeyBytes": 237,
+            "generatedGLSLBytes": 6732,
+            "generatedGLSLSHA256": "b86724bc83b53ac751bc2981f49a090918b5a78424b825eeef79211299daaccc"
+          },
+          "equality": {
+            "authoredGraph": true,
+            "compiledPlan": true,
+            "programKey": true,
+            "shaderDeclarations": true,
+            "shaderEvaluation": true,
+            "completeShader": true,
+            "completeShaderNonblankLines": true
+          },
+          "generatedGLSLByteChange": 0
+        }
+      }
+    },
+    "finish": {
+      "initial": {
+        "baseline": {
+          "authoredNodes": 8,
+          "liveNodes": 8,
+          "uniformScalars": 36,
+          "compiledPlanJSONBytes": 1226,
+          "programKeyBytes": 399,
+          "generatedGLSLBytes": 6769,
+          "generatedGLSLSHA256": "97f24f9da2e8e9bc15fd917912b75cfea9d2ec69a83092fce5e81942e0ff37e3"
+        },
+        "current": {
+          "authoredNodes": 8,
+          "liveNodes": 8,
+          "uniformScalars": 36,
+          "compiledPlanJSONBytes": 1226,
+          "programKeyBytes": 399,
+          "generatedGLSLBytes": 6769,
+          "generatedGLSLSHA256": "97f24f9da2e8e9bc15fd917912b75cfea9d2ec69a83092fce5e81942e0ff37e3"
+        },
+        "equality": {
+          "authoredGraph": true,
+          "compiledPlan": true,
+          "programKey": true,
+          "shaderDeclarations": true,
+          "shaderEvaluation": true,
+          "completeShader": true,
+          "completeShaderNonblankLines": true
+        },
+        "generatedGLSLByteChange": 0
+      },
+      "valueEdit": {
+        "patch": {
+          "reliefGain": {
+            "value": 0.5199999999999999
+          }
+        },
+        "preservesProgramInBothVersions": true,
+        "comparison": {
+          "baseline": {
+            "authoredNodes": 8,
+            "liveNodes": 8,
+            "uniformScalars": 36,
+            "compiledPlanJSONBytes": 1271,
+            "programKeyBytes": 399,
+            "generatedGLSLBytes": 6769,
+            "generatedGLSLSHA256": "97f24f9da2e8e9bc15fd917912b75cfea9d2ec69a83092fce5e81942e0ff37e3"
+          },
+          "current": {
+            "authoredNodes": 8,
+            "liveNodes": 8,
+            "uniformScalars": 36,
+            "compiledPlanJSONBytes": 1271,
+            "programKeyBytes": 399,
+            "generatedGLSLBytes": 6769,
+            "generatedGLSLSHA256": "97f24f9da2e8e9bc15fd917912b75cfea9d2ec69a83092fce5e81942e0ff37e3"
+          },
+          "equality": {
+            "authoredGraph": true,
+            "compiledPlan": true,
+            "programKey": true,
+            "shaderDeclarations": true,
+            "shaderEvaluation": true,
+            "completeShader": true,
+            "completeShaderNonblankLines": true
+          },
+          "generatedGLSLByteChange": 0
+        }
+      }
+    },
+    "stone": {
+      "initial": {
+        "baseline": {
+          "authoredNodes": 12,
+          "liveNodes": 12,
+          "uniformScalars": 36,
+          "compiledPlanJSONBytes": 1344,
+          "programKeyBytes": 539,
+          "generatedGLSLBytes": 4501,
+          "generatedGLSLSHA256": "5d6a41f170708b653e50f902406649f80f6f50c1b5b1f346ade6148a111e5d85"
+        },
+        "current": {
+          "authoredNodes": 12,
+          "liveNodes": 12,
+          "uniformScalars": 36,
+          "compiledPlanJSONBytes": 1344,
+          "programKeyBytes": 539,
+          "generatedGLSLBytes": 4503,
+          "generatedGLSLSHA256": "0956c3f7ec0d8d67a84e9850a9f68769614f3887b3114b00b2a0928dc3759866"
+        },
+        "equality": {
+          "authoredGraph": true,
+          "compiledPlan": true,
+          "programKey": true,
+          "shaderDeclarations": false,
+          "shaderEvaluation": true,
+          "completeShader": false,
+          "completeShaderNonblankLines": true
+        },
+        "generatedGLSLByteChange": 2
+      },
+      "valueEdit": {
+        "patch": {
+          "stonePolish": {
+            "value": 0.254
+          }
+        },
+        "preservesProgramInBothVersions": true,
+        "comparison": {
+          "baseline": {
+            "authoredNodes": 12,
+            "liveNodes": 12,
+            "uniformScalars": 36,
+            "compiledPlanJSONBytes": 1362,
+            "programKeyBytes": 539,
+            "generatedGLSLBytes": 4501,
+            "generatedGLSLSHA256": "5d6a41f170708b653e50f902406649f80f6f50c1b5b1f346ade6148a111e5d85"
+          },
+          "current": {
+            "authoredNodes": 12,
+            "liveNodes": 12,
+            "uniformScalars": 36,
+            "compiledPlanJSONBytes": 1362,
+            "programKeyBytes": 539,
+            "generatedGLSLBytes": 4503,
+            "generatedGLSLSHA256": "0956c3f7ec0d8d67a84e9850a9f68769614f3887b3114b00b2a0928dc3759866"
+          },
+          "equality": {
+            "authoredGraph": true,
+            "compiledPlan": true,
+            "programKey": true,
+            "shaderDeclarations": false,
+            "shaderEvaluation": true,
+            "completeShader": false,
+            "completeShaderNonblankLines": true
+          },
+          "generatedGLSLByteChange": 2
+        }
+      }
+    },
+    "lichen": {
+      "initial": {
+        "baseline": {
+          "authoredNodes": 12,
+          "liveNodes": 12,
+          "uniformScalars": 64,
+          "compiledPlanJSONBytes": 1624,
+          "programKeyBytes": 540,
+          "generatedGLSLBytes": 8547,
+          "generatedGLSLSHA256": "dbae28e89d5130f08f2498306af9308217484327e0850cf3daf4aaec7df82285"
+        },
+        "current": {
+          "authoredNodes": 12,
+          "liveNodes": 12,
+          "uniformScalars": 64,
+          "compiledPlanJSONBytes": 1624,
+          "programKeyBytes": 540,
+          "generatedGLSLBytes": 8549,
+          "generatedGLSLSHA256": "7b8ab2570c012c9c3431da6b7689b6c2f960d32b9d4e1c14815887f707d8adc0"
+        },
+        "equality": {
+          "authoredGraph": true,
+          "compiledPlan": true,
+          "programKey": true,
+          "shaderDeclarations": false,
+          "shaderEvaluation": true,
+          "completeShader": false,
+          "completeShaderNonblankLines": true
+        },
+        "generatedGLSLByteChange": 2
+      },
+      "valueEdit": {
+        "patch": {
+          "lichenRoughness": {
+            "value": 0.653
+          }
+        },
+        "preservesProgramInBothVersions": true,
+        "comparison": {
+          "baseline": {
+            "authoredNodes": 12,
+            "liveNodes": 12,
+            "uniformScalars": 64,
+            "compiledPlanJSONBytes": 1627,
+            "programKeyBytes": 540,
+            "generatedGLSLBytes": 8547,
+            "generatedGLSLSHA256": "dbae28e89d5130f08f2498306af9308217484327e0850cf3daf4aaec7df82285"
+          },
+          "current": {
+            "authoredNodes": 12,
+            "liveNodes": 12,
+            "uniformScalars": 64,
+            "compiledPlanJSONBytes": 1627,
+            "programKeyBytes": 540,
+            "generatedGLSLBytes": 8549,
+            "generatedGLSLSHA256": "7b8ab2570c012c9c3431da6b7689b6c2f960d32b9d4e1c14815887f707d8adc0"
+          },
+          "equality": {
+            "authoredGraph": true,
+            "compiledPlan": true,
+            "programKey": true,
+            "shaderDeclarations": false,
+            "shaderEvaluation": true,
+            "completeShader": false,
+            "completeShaderNonblankLines": true
+          },
+          "generatedGLSLByteChange": 2
+        }
+      }
+    },
+    "spectrum": {
+      "initial": {
+        "baseline": {
+          "authoredNodes": 10,
+          "liveNodes": 10,
+          "uniformScalars": 41,
+          "compiledPlanJSONBytes": 1301,
+          "programKeyBytes": 510,
+          "generatedGLSLBytes": 4665,
+          "generatedGLSLSHA256": "eda4be1a87a3a9325b75f60925a5af4d4633f72d9039b37918b7d74ab8132767"
+        },
+        "current": {
+          "authoredNodes": 10,
+          "liveNodes": 10,
+          "uniformScalars": 41,
+          "compiledPlanJSONBytes": 1301,
+          "programKeyBytes": 510,
+          "generatedGLSLBytes": 4665,
+          "generatedGLSLSHA256": "eda4be1a87a3a9325b75f60925a5af4d4633f72d9039b37918b7d74ab8132767"
+        },
+        "equality": {
+          "authoredGraph": true,
+          "compiledPlan": true,
+          "programKey": true,
+          "shaderDeclarations": true,
+          "shaderEvaluation": true,
+          "completeShader": true,
+          "completeShaderNonblankLines": true
+        },
+        "generatedGLSLByteChange": 0
+      },
+      "valueEdit": {
+        "patch": {
+          "deepIndigo": {
+            "value": [
+              0.23,
+              0.35,
+              0.41
+            ]
+          }
+        },
+        "preservesProgramInBothVersions": true,
+        "comparison": {
+          "baseline": {
+            "authoredNodes": 10,
+            "liveNodes": 10,
+            "uniformScalars": 41,
+            "compiledPlanJSONBytes": 1255,
+            "programKeyBytes": 510,
+            "generatedGLSLBytes": 4665,
+            "generatedGLSLSHA256": "eda4be1a87a3a9325b75f60925a5af4d4633f72d9039b37918b7d74ab8132767"
+          },
+          "current": {
+            "authoredNodes": 10,
+            "liveNodes": 10,
+            "uniformScalars": 41,
+            "compiledPlanJSONBytes": 1255,
+            "programKeyBytes": 510,
+            "generatedGLSLBytes": 4665,
+            "generatedGLSLSHA256": "eda4be1a87a3a9325b75f60925a5af4d4633f72d9039b37918b7d74ab8132767"
+          },
+          "equality": {
+            "authoredGraph": true,
+            "compiledPlan": true,
+            "programKey": true,
+            "shaderDeclarations": true,
+            "shaderEvaluation": true,
+            "completeShader": true,
+            "completeShaderNonblankLines": true
+          },
+          "generatedGLSLByteChange": 0
+        }
+      }
+    },
+    "prismatic": {
+      "initial": {
+        "baseline": {
+          "authoredNodes": 22,
+          "liveNodes": 21,
+          "uniformScalars": 70,
+          "compiledPlanJSONBytes": 2686,
+          "programKeyBytes": 1034,
+          "generatedGLSLBytes": 10558,
+          "generatedGLSLSHA256": "2716d505174499fde6b3919488e513e8d9deb313dbac7e10c41f14db192ba9f7"
+        },
+        "current": {
+          "authoredNodes": 22,
+          "liveNodes": 21,
+          "uniformScalars": 70,
+          "compiledPlanJSONBytes": 2686,
+          "programKeyBytes": 1034,
+          "generatedGLSLBytes": 10560,
+          "generatedGLSLSHA256": "5f16f3bac6638ab8eefd1772bfd2803f89f379d9ddb9d697c5dfc1c614ee3187"
+        },
+        "equality": {
+          "authoredGraph": true,
+          "compiledPlan": true,
+          "programKey": true,
+          "shaderDeclarations": false,
+          "shaderEvaluation": true,
+          "completeShader": false,
+          "completeShaderNonblankLines": true
+        },
+        "generatedGLSLByteChange": 2
+      },
+      "valueEdit": {
+        "patch": {
+          "pigmentNoise": {
+            "seed": 12
+          }
+        },
+        "preservesProgramInBothVersions": true,
+        "comparison": {
+          "baseline": {
+            "authoredNodes": 22,
+            "liveNodes": 21,
+            "uniformScalars": 70,
+            "compiledPlanJSONBytes": 2686,
+            "programKeyBytes": 1034,
+            "generatedGLSLBytes": 10558,
+            "generatedGLSLSHA256": "2716d505174499fde6b3919488e513e8d9deb313dbac7e10c41f14db192ba9f7"
+          },
+          "current": {
+            "authoredNodes": 22,
+            "liveNodes": 21,
+            "uniformScalars": 70,
+            "compiledPlanJSONBytes": 2686,
+            "programKeyBytes": 1034,
+            "generatedGLSLBytes": 10560,
+            "generatedGLSLSHA256": "5f16f3bac6638ab8eefd1772bfd2803f89f379d9ddb9d697c5dfc1c614ee3187"
+          },
+          "equality": {
+            "authoredGraph": true,
+            "compiledPlan": true,
+            "programKey": true,
+            "shaderDeclarations": false,
+            "shaderEvaluation": true,
+            "completeShader": false,
+            "completeShaderNonblankLines": true
+          },
+          "generatedGLSLByteChange": 2
+        }
+      }
+    }
+  },
+  "uniformHeightElimination": {
+    "inputLiveNodes": 2,
+    "cases": {
+      "literal": {
+        "authoredNodes": 4,
+        "liveNodes": 2,
+        "sameInputProgram": true,
+        "sameInputShader": true,
+        "sameInputBindings": true
+      },
+      "parameter": {
+        "authoredNodes": 4,
+        "liveNodes": 2,
+        "sameInputProgram": true,
+        "sameInputShader": true,
+        "sameInputBindings": true
+      },
+      "composition": {
+        "authoredNodes": 9,
+        "liveNodes": 2,
+        "sameInputProgram": true,
+        "sameInputShader": true,
+        "sameInputBindings": true
+      }
+    }
+  },
+  "sharedHeightAndRoughness": {
+    "liveNoiseNodes": 1,
+    "generatedDifferentialNoiseCalls": 1,
+    "generatedValueOnlyNoiseCalls": 0,
+    "paintSamples": 0,
+    "textureReads": 0,
+    "generatedSamplerDeclarations": 0,
+    "generatedTextureCalls": 0,
+    "valueOnlyShaderOmitsNoiseDifferentialHelper": true,
+    "valueOnlyGLSLBytes": 3855,
+    "heightGLSLBytes": 4580,
+    "zeroParameterRetainsVaryingHeight": true,
+    "signedEdits": [
+      {
+        "value": -0.04,
+        "sameProgram": true,
+        "sameStructure": true,
+        "sameShader": true
+      },
+      {
+        "value": 0,
+        "sameProgram": true,
+        "sameStructure": true,
+        "sameShader": true
+      },
+      {
+        "value": 0.05,
+        "sameProgram": true,
+        "sameStructure": true,
+        "sameShader": true
+      }
+    ]
+  },
+  "sourceSHA256": {
+    "baseline": {
+      "lab/composition.mts": "ff9d01c0f52830ee565ffbf9c7fec4a90f96903d76316f127d64cc907dc6f3a3",
+      "src/core.mjs": "2f4cbe41a56c6a11f1a863da04b470158e5e5b029c4be202399239d1cc1e4d57",
+      "src/core/algebra.mts": "53876cc6dc5edd3355dbf6225ebb5ba5b54bdd680b2c4ea0f586b208cd264ffc",
+      "src/core/color-sample.mts": "3dca31ed04348d5f04fa4d52df98d09a6b3cca8c269b5379356c8365a03288d2",
+      "src/core/color.mjs": "0588db42cf62cd73bbf113322ac9c7a792965b0ff37e4b40fb63f4689c6012d9",
+      "src/core/compile.mjs": "1bc4e1f76239d45cc0dda934918248b93a0920fa568e3013100fac7b12e5eff7",
+      "src/core/evaluate.mjs": "785a4c913cd34b6a34432f94c38ebbec52306eb12bd0eeb6178389c899661c96",
+      "src/core/field-evaluate.mts": "26ac2c4dcf814efdb53314793bb573bb7e6324925bdd8c4432402ad11f9ab515",
+      "src/core/graph.mjs": "4ca6cea2ca4cdb1c69000af9f707fadae41b33849e6a11b7733d92751f1a414a",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/recipe.d.mts": "a821cff91814712abb518627e50fb0e96a77765ff93272c3ec95eacc7c691fd7",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/three/adapter.mjs": "c72e3f2ebad72d5f8f45f74462a68e8ae31ccd74e20e3b2579789277298223ef",
+      "src/three/color.mjs": "8869ae5585ca4ad6ac073adb870ee88fabf5fd1db766d2e37f5258b362dae83f",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/noise.mjs": "986d2b06c48b888ea6efe45293608b67ddc78e6c603ca6a9fc1b30ecff4c3e4c",
+      "src/three/shader.mjs": "f00bfd1fd3e9af6ea712bec033fe92bdb3312a3eb59938ce59a7da15fa894b4f",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "b317cf4f99557336f210ed3e91722dd9a168e536ee2b4c290a06f63d46f267e4"
+    },
+    "current": {
+      "lab/composition.mts": "23022b01004a45f37b5c7bb6a8d508171a9d68a372fdbf63447c5d90af2ec5b1",
+      "lab/surface-examples.mts": "4fb4f1defd4faff4656341ef0401624deb9d24f720eb4d7311752990d13c3ea7",
+      "src/core.mjs": "e7e0db2d760fe0e7f87ed91d6493efec10d18569128bc7f6f2fddec32c60b576",
+      "src/core/algebra.mts": "1e90567aa0ccd73f4f1feda31bd822dda4f3c6399ba5983e3f6fc831b2b81e83",
+      "src/core/color-sample.mts": "3dca31ed04348d5f04fa4d52df98d09a6b3cca8c269b5379356c8365a03288d2",
+      "src/core/color.mjs": "0588db42cf62cd73bbf113322ac9c7a792965b0ff37e4b40fb63f4689c6012d9",
+      "src/core/compile.mjs": "c24e7dc1d52882dcf042656ca2b24d95d9d6dc0057bddf56d4808045e651566d",
+      "src/core/evaluate.mjs": "8a46d703f0d8755a4a06fe778e7957b5d44bc588beca76606b70749e0ae493ba",
+      "src/core/field-evaluate.mts": "7860ee8d0439a9ae6f315b0e942e7d126679d6637e9ce8e3bf5c87e027220515",
+      "src/core/graph.mjs": "b3f1c11fe458ea6a0f13e3b3c994a091f32d051915180c75ebab123b7ec5161e",
+      "src/core/noise.mts": "a438e01651bf643c13c54dff1afd4a61e4ab8828ccccfbc11c4baff540575583",
+      "src/core/recipe.d.mts": "a821cff91814712abb518627e50fb0e96a77765ff93272c3ec95eacc7c691fd7",
+      "src/core/recipe.mjs": "373c3f4ba25ff72605146676d29f22f7aec97f5e0ec632a1e526a397f66bb99e",
+      "src/three/adapter.mjs": "c72e3f2ebad72d5f8f45f74462a68e8ae31ccd74e20e3b2579789277298223ef",
+      "src/three/color.mjs": "8869ae5585ca4ad6ac073adb870ee88fabf5fd1db766d2e37f5258b362dae83f",
+      "src/three/coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/three/facets.mjs": "120f5cfa57a0d8f2d356c90355b9f5e674f1ce61de9b735be3a5f844773a581f",
+      "src/three/fields.mjs": "c1fa86d227df5884309684b7fafb604398d88a8dd8aa07c78e1a08915c62609e",
+      "src/three/noise.mjs": "50aa20c4293d85bb7ab2ce19d3ee86fbbc0d889284c40c763c0180022088deff",
+      "src/three/shader.mjs": "dc2ec4057131bfb67d967eba64d1ae288271be160e8534b2b9c71778733b814c",
+      "src/three/textures.mjs": "9b1a0fba88aec92191819e803b396879d3fa3d539e701baaf2583a96e3c174e9",
+      "src/three/uniforms.mjs": "b317cf4f99557336f210ed3e91722dd9a168e536ee2b4c290a06f63d46f267e4",
+      "tools/measure-fields.mjs": "8514d81bb7f04cbed62da3df84f66cd4551bc4417f4a344969da99a619e3f0d7"
+    }
+  }
+}

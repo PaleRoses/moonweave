@@ -1,0 +1,137 @@
+{
+  "baselineCommit": "ffd7785e34df90bca00c831139f94166654caaa7",
+  "manifestBytes": 7094,
+  "manifestSHA256": "f11782c05bf855717100a1bee4101bbdd290b7f2739d2cdc48181713b9a668a4",
+  "equations": 24,
+  "gallery": [
+    {
+      "name": "belly",
+      "jobBytes": 7082,
+      "jobSHA256": "34bc1c8e02a38666fccf623c21a7605c075bea9e9ef1eddc26c8f531fddf0ee6",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "tips",
+      "jobBytes": 7082,
+      "jobSHA256": "34bc1c8e02a38666fccf623c21a7605c075bea9e9ef1eddc26c8f531fddf0ee6",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "patina",
+      "jobBytes": 7084,
+      "jobSHA256": "27bde5d43973f9cad326fb68b470d7ac969674c03334ac3b3f6c30584b8ac56d",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "finish",
+      "jobBytes": 7238,
+      "jobSHA256": "940d6f4b607912b4a8cc37183ef4a6edcc35c792b6e70930db73708e03bca8f1",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "stone",
+      "jobBytes": 7031,
+      "jobSHA256": "2a52f2806839e5b38ae3cddbd4d2cb81f3b63a6b979eea2b536118c735c2d1b8",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "lichen",
+      "jobBytes": 7201,
+      "jobSHA256": "acac5255e9f39da2da5576b324e94b9e8cbbbde81f141220d19b1ef34624030e",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "spectrum",
+      "jobBytes": 7020,
+      "jobSHA256": "3eb13bee4e0f5f2dc63f31e8ac586b63a84633c371fce9fb6492c950a2a0e2e3",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "prismatic",
+      "jobBytes": 6940,
+      "jobSHA256": "bcf4a82774e142883230e8deacd7dd475e2b1c608169aa7b8734c1703e165ba5",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "porcelain",
+      "jobBytes": 7122,
+      "jobSHA256": "30788ecb4060ef6c6572acb43096ef9888e119c41000abbfd2962cbb9f87d8f4",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "weathered",
+      "jobBytes": 7117,
+      "jobSHA256": "7b478ba61340ed75b7ce6c01d89a82a30f8ee686b9149f6c1144af1a6ccfdae1",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "ivory",
+      "jobBytes": 6938,
+      "jobSHA256": "72b717072d7982092281362c28a08ec5893a804b28138240589425d4daa33545",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "brass",
+      "jobBytes": 6938,
+      "jobSHA256": "5eeae724a7115dec80bc917fb67af078aa018c5f08d7767e6734f52e9efbd3db",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "zones",
+      "jobBytes": 8314,
+      "jobSHA256": "8e5fd2d78017763a483cc95261b5864a764e18a081895c854aa062731493b7f3",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "pigments",
+      "jobBytes": 8320,
+      "jobSHA256": "9e03233f14847dac6f3e1ad2d06ac328b9e1ba201e09476a31e8d542d1f60023",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    },
+    {
+      "name": "inscription",
+      "jobBytes": 7545,
+      "jobSHA256": "2cf846060144a4eae0da625c1f950a7947375ff94ba865e62aedb218fc594987",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    }
+  ],
+  "fixtures": [
+    {
+      "name": "independent",
+      "jobBytes": 7478,
+      "jobSHA256": "bb844602efea86a5834d6bdfc6bb816f6c4d85ed2e694d2e9a8bd69f330d0bcd",
+      "reason": "improved",
+      "exactV57Match": true
+    },
+    {
+      "name": "shared-image",
+      "jobBytes": 7478,
+      "jobSHA256": "bb844602efea86a5834d6bdfc6bb816f6c4d85ed2e694d2e9a8bd69f330d0bcd",
+      "reason": "improved",
+      "exactV57Match": true
+    },
+    {
+      "name": "shared-branch",
+      "jobBytes": 7735,
+      "jobSHA256": "33aeb222cb8c87c31085ce8eca847bd8d99b7a751290d3040639d2f1ce9dc8c8",
+      "reason": "no-improvement",
+      "exactV57Match": true
+    }
+  ],
+  "exactV57Match": true
+}

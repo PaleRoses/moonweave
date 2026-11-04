@@ -1,0 +1,529 @@
+{
+  "engine": "egglog",
+  "version": "14.0.0",
+  "results": [
+    {
+      "id": "independent",
+      "accepted": true,
+      "reason": "improved",
+      "retainedSourceNodes": 23,
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "before": {
+        "paintSamples": 1,
+        "proceduralSamples": 1,
+        "textureReads": 68,
+        "uniformScalars": 66,
+        "liveNodes": 23
+      },
+      "after": {
+        "paintSamples": 1,
+        "proceduralSamples": 1,
+        "textureReads": 4,
+        "uniformScalars": 37,
+        "liveNodes": 15
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 1,
+        "samples": 225,
+        "components": 2025,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "engine": {
+        "cost": 10,
+        "engine": "egglog",
+        "extractor": "greedy-dag",
+        "initialCost": 12,
+        "jobSha256": "89aa09bcdcdd67cb1ffb68720708de1a1a29cb38d4ac67594b1e0ce919765644",
+        "limits": {
+          "iterations": 12,
+          "rows": 50000
+        },
+        "matches": {
+          "coat-bump-commute": 1,
+          "demand-Bump": 1,
+          "demand-Clearcoat-keep": 1,
+          "demand-Coat": 1,
+          "demand-Roughness-drop": 1,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "programSha256": "bca6a75181b4524257e6d62b5f0610ac8dfda5ac8c500a21e1c42b10b9432dc6",
+        "projection": {
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "contextLimit": 96,
+          "contexts": 6,
+          "matches": {
+            "demand-Bump": 1,
+            "demand-Clearcoat-keep": 1,
+            "demand-Coat": 1,
+            "demand-Roughness-drop": 1,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 7,
+          "rounds": 7,
+          "rows": 23,
+          "sourceTerms": 6,
+          "stopReason": "saturated"
+        },
+        "rounds": 9,
+        "rows": 25,
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "search": {
+          "matches": {
+            "coat-bump-commute": 1
+          },
+          "roundLimit": 12,
+          "rounds": 2,
+          "rows": 25,
+          "stopReason": "saturated"
+        },
+        "stopReason": "saturated",
+        "threads": 1,
+        "version": "14.0.0"
+      }
+    },
+    {
+      "id": "shared-image",
+      "accepted": true,
+      "reason": "improved",
+      "retainedSourceNodes": 23,
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "before": {
+        "paintSamples": 1,
+        "proceduralSamples": 0,
+        "textureReads": 68,
+        "uniformScalars": 62,
+        "liveNodes": 23
+      },
+      "after": {
+        "paintSamples": 1,
+        "proceduralSamples": 0,
+        "textureReads": 68,
+        "uniformScalars": 60,
+        "liveNodes": 17
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 1,
+        "samples": 225,
+        "components": 2025,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "engine": {
+        "cost": 10,
+        "engine": "egglog",
+        "extractor": "greedy-dag",
+        "initialCost": 12,
+        "jobSha256": "89aa09bcdcdd67cb1ffb68720708de1a1a29cb38d4ac67594b1e0ce919765644",
+        "limits": {
+          "iterations": 12,
+          "rows": 50000
+        },
+        "matches": {
+          "coat-bump-commute": 1,
+          "demand-Bump": 1,
+          "demand-Clearcoat-keep": 1,
+          "demand-Coat": 1,
+          "demand-Roughness-drop": 1,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "programSha256": "bca6a75181b4524257e6d62b5f0610ac8dfda5ac8c500a21e1c42b10b9432dc6",
+        "projection": {
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "contextLimit": 96,
+          "contexts": 6,
+          "matches": {
+            "demand-Bump": 1,
+            "demand-Clearcoat-keep": 1,
+            "demand-Coat": 1,
+            "demand-Roughness-drop": 1,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 7,
+          "rounds": 7,
+          "rows": 23,
+          "sourceTerms": 6,
+          "stopReason": "saturated"
+        },
+        "rounds": 9,
+        "rows": 25,
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "search": {
+          "matches": {
+            "coat-bump-commute": 1
+          },
+          "roundLimit": 12,
+          "rounds": 2,
+          "rows": 25,
+          "stopReason": "saturated"
+        },
+        "stopReason": "saturated",
+        "threads": 1,
+        "version": "14.0.0"
+      }
+    },
+    {
+      "id": "shared-branch",
+      "accepted": false,
+      "reason": "no-improvement",
+      "retainedSourceNodes": 28,
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "before": {
+        "paintSamples": 1,
+        "proceduralSamples": 1,
+        "textureReads": 68,
+        "uniformScalars": 71,
+        "liveNodes": 28
+      },
+      "after": {
+        "paintSamples": 1,
+        "proceduralSamples": 1,
+        "textureReads": 68,
+        "uniformScalars": 71,
+        "liveNodes": 28
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 1,
+        "samples": 225,
+        "components": 2025,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "engine": {
+        "cost": 17,
+        "engine": "egglog",
+        "extractor": "greedy-dag",
+        "initialCost": 17,
+        "jobSha256": "24f8c1826537463e0c032cfe3ee0e1234ae9fe9800cd935dde4a1d3407f58713",
+        "limits": {
+          "iterations": 12,
+          "rows": 50000
+        },
+        "matches": {
+          "channel-roughness-coat-commute": 1,
+          "coat-bump-commute": 1,
+          "demand-Bump": 1,
+          "demand-Clearcoat-keep": 1,
+          "demand-Coat": 2,
+          "demand-Mix": 1,
+          "demand-Roughness-drop": 2,
+          "demand-Roughness-keep": 2,
+          "demand-SurfaceAtom": 3
+        },
+        "programSha256": "3980d81d8b799712f8f564c2020311db02dd50a3c716ad30a84d0a19c0859047",
+        "projection": {
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "contextLimit": 128,
+          "contexts": 10,
+          "matches": {
+            "demand-Bump": 1,
+            "demand-Clearcoat-keep": 1,
+            "demand-Coat": 2,
+            "demand-Mix": 1,
+            "demand-Roughness-drop": 2,
+            "demand-Roughness-keep": 2,
+            "demand-SurfaceAtom": 3
+          },
+          "roundLimit": 8,
+          "rounds": 8,
+          "rows": 35,
+          "sourceTerms": 8,
+          "stopReason": "saturated"
+        },
+        "rounds": 10,
+        "rows": 39,
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "search": {
+          "matches": {
+            "channel-roughness-coat-commute": 1,
+            "coat-bump-commute": 1
+          },
+          "roundLimit": 12,
+          "rounds": 2,
+          "rows": 39,
+          "stopReason": "saturated"
+        },
+        "stopReason": "saturated",
+        "threads": 1,
+        "version": "14.0.0"
+      }
+    },
+    {
+      "id": "mixed-overwrite",
+      "accepted": true,
+      "reason": "improved",
+      "retainedSourceNodes": 17,
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "before": {
+        "paintSamples": 0,
+        "proceduralSamples": 1,
+        "textureReads": 64,
+        "uniformScalars": 13,
+        "liveNodes": 17
+      },
+      "after": {
+        "paintSamples": 0,
+        "proceduralSamples": 1,
+        "textureReads": 0,
+        "uniformScalars": 11,
+        "liveNodes": 14
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 3,
+        "contexts": 45,
+        "observations": 1,
+        "samples": 135,
+        "components": 1215,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "engine": {
+        "cost": 11,
+        "engine": "egglog",
+        "extractor": "greedy-dag",
+        "initialCost": 13,
+        "jobSha256": "9fc967b1d077e5b038806e99d3e6f83076a4bba51c0ca7b7b9827500745f6094",
+        "limits": {
+          "iterations": 12,
+          "rows": 50000
+        },
+        "matches": {
+          "demand-Bump": 1,
+          "demand-Coat": 1,
+          "demand-Mix": 2,
+          "demand-Roughness-drop": 1,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "programSha256": "81a6028810dda6bfafd839db185966e95bc1b4d851c03dd9b5523fc741119116",
+        "projection": {
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "contextLimit": 112,
+          "contexts": 7,
+          "matches": {
+            "demand-Bump": 1,
+            "demand-Coat": 1,
+            "demand-Mix": 2,
+            "demand-Roughness-drop": 1,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 7,
+          "rounds": 6,
+          "rows": 26,
+          "sourceTerms": 7,
+          "stopReason": "saturated"
+        },
+        "rounds": 7,
+        "rows": 26,
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "search": {
+          "matches": {},
+          "roundLimit": 12,
+          "rounds": 1,
+          "rows": 26,
+          "stopReason": "saturated"
+        },
+        "stopReason": "saturated",
+        "threads": 1,
+        "version": "14.0.0"
+      }
+    },
+    {
+      "id": "mixed-shared-consumer",
+      "accepted": false,
+      "reason": "no-improvement",
+      "retainedSourceNodes": 18,
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "before": {
+        "paintSamples": 0,
+        "proceduralSamples": 1,
+        "textureReads": 64,
+        "uniformScalars": 13,
+        "liveNodes": 18
+      },
+      "after": {
+        "paintSamples": 0,
+        "proceduralSamples": 1,
+        "textureReads": 64,
+        "uniformScalars": 13,
+        "liveNodes": 18
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 3,
+        "contexts": 45,
+        "observations": 1,
+        "samples": 135,
+        "components": 1215,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "engine": {
+        "cost": 14,
+        "engine": "egglog",
+        "extractor": "greedy-dag",
+        "initialCost": 14,
+        "jobSha256": "c7f26a70a35b36158d42b3fd9b9b4d5f56d4cb0c9298d3ad5194032bea4f1c49",
+        "limits": {
+          "iterations": 12,
+          "rows": 50000
+        },
+        "matches": {
+          "demand-Bump": 1,
+          "demand-Coat": 1,
+          "demand-Mix": 3,
+          "demand-Roughness-drop": 2,
+          "demand-Roughness-keep": 2,
+          "demand-SurfaceAtom": 1
+        },
+        "programSha256": "33d47baf6362bea46745fa1fd2c1eec711a680f2a2a0065e5767c091b4d538c0",
+        "projection": {
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "contextLimit": 128,
+          "contexts": 9,
+          "matches": {
+            "demand-Bump": 1,
+            "demand-Coat": 1,
+            "demand-Mix": 3,
+            "demand-Roughness-drop": 2,
+            "demand-Roughness-keep": 2,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 8,
+          "rounds": 6,
+          "rows": 31,
+          "sourceTerms": 8,
+          "stopReason": "saturated"
+        },
+        "rounds": 7,
+        "rows": 31,
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "search": {
+          "matches": {},
+          "roundLimit": 12,
+          "rounds": 1,
+          "rows": 31,
+          "stopReason": "saturated"
+        },
+        "stopReason": "saturated",
+        "threads": 1,
+        "version": "14.0.0"
+      }
+    }
+  ]
+}

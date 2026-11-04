@@ -1,0 +1,486 @@
+{
+  "version": "0.53.0",
+  "baselineVersion": "0.52.0",
+  "baselineCommit": "c7bed021eff2737ecfb461e023e004e7c9d55a9c",
+  "method": "Compare final revision 53 native 512x512 RGBA images with revision 52 outputs for every previously recorded case, both sphere and articulated shell, near and far. Require pixel and PNG-byte equality. This establishes tested image preservation on Mesa EGL/GLES3, not cross-driver or browser equivalence.",
+  "images": 76,
+  "pixels": 19922944,
+  "allPixelIdentical": true,
+  "allPNGByteIdentical": true,
+  "specimens": [
+    {
+      "specimen": "sphere",
+      "images": 38,
+      "pixels": 9961472,
+      "allPixelIdentical": true,
+      "allPNGByteIdentical": true,
+      "cases": [
+        {
+          "case": "carapace-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "carapace-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channel-flat-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channel-flat-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channel-nested-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channel-nested-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channels-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channels-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "finish-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "finish-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "frame-reference-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "frame-reference-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "framed-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "framed-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "independent-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "independent-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "lichen-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "lichen-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "membrane-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "membrane-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "moonstone-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "moonstone-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "palette-clipped-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "palette-clipped-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "palette-reference-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "palette-reference-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "patched-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "patched-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "prismatic-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "prismatic-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "reference-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "reference-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "shared-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "shared-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "spectrum-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "spectrum-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "stone-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "stone-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        }
+      ]
+    },
+    {
+      "specimen": "shell",
+      "images": 38,
+      "pixels": 9961472,
+      "allPixelIdentical": true,
+      "allPNGByteIdentical": true,
+      "cases": [
+        {
+          "case": "carapace-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "carapace-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channel-flat-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channel-flat-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channel-nested-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channel-nested-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channels-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "channels-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "finish-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "finish-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "frame-reference-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "frame-reference-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "framed-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "framed-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "independent-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "independent-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "lichen-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "lichen-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "membrane-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "membrane-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "moonstone-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "moonstone-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "palette-clipped-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "palette-clipped-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "palette-reference-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "palette-reference-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "patched-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "patched-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "prismatic-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "prismatic-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "reference-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "reference-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "shared-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "shared-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "spectrum-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "spectrum-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "stone-far",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        },
+        {
+          "case": "stone-near",
+          "pixels": 262144,
+          "pixelIdentical": true,
+          "pngByteIdentical": true
+        }
+      ]
+    }
+  ]
+}

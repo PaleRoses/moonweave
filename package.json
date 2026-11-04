@@ -1,0 +1,71 @@
+{
+  "name": "@moonweave/surfaces",
+  "version": "0.62.0",
+  "private": true,
+  "type": "module",
+  "description": "Composable typed field graphs, analytic surface detail, painted materials, and an isolated Three.js adapter.",
+  "exports": {
+    ".": {
+      "types": "./src/index.mjs",
+      "import": "./src/index.mjs"
+    },
+    "./core": {
+      "types": "./src/core.mjs",
+      "import": "./src/core.mjs"
+    },
+    "./three": {
+      "types": "./src/three.mjs",
+      "import": "./src/three.mjs"
+    },
+    "./optimize": {
+      "types": "./src/optimize.mjs",
+      "import": "./src/optimize.mjs"
+    }
+  },
+  "files": [
+    "src",
+    "docs/TEXTURING.md",
+    "docs/ARCHITECTURE.md",
+    "docs/PACKAGING.md",
+    "README.md",
+    "THREE-LICENSE.txt"
+  ],
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --conditions=browser --test --test-reporter=tap tests/*.test.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "test:types": "tsc -p tsconfig.public.json",
+    "benchmark": "node tools/benchmark.mjs",
+    "benchmark:edits": "node --expose-gc tools/benchmark-edits.mjs",
+    "check:package": "node tools/check-package.mjs",
+    "optimize": "node tools/optimize-graph.mjs"
+  },
+  "peerDependencies": {
+    "three": ">=0.140.0 <0.188.0"
+  },
+  "devDependencies": {
+    "three": "0.187.0",
+    "@types/three": "0.187.0",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "three-legacy": "npm:three@0.140.0",
+    "solid-js": "1.9.18",
+    "effect": "4.1.2",
+    "babel-preset-solid": "1.9.16",
+    "@babel/core": "7.29.7",
+    "@babel/preset-typescript": "7.29.7"
+  },
+  "peerDependenciesMeta": {
+    "three": {
+      "optional": true
+    }
+  },
+  "sideEffects": [
+    "./lab/index.tsx",
+    "**/*.css"
+  ],
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24"
+  }
+}

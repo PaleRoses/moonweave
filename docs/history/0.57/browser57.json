@@ -1,0 +1,34 @@
+{
+  "version": "0.57.0",
+  "preview": "http://terminal.local:4173/",
+  "checks": [
+    {
+      "name": "Optimization guide",
+      "result": "Edition 057, two actual 512 px before/after render images loaded and displayed, setup/evidence/graph links present."
+    },
+    {
+      "name": "Optimized graph import",
+      "result": "Normal file chooser import succeeded; graph output opt3, 23 authored nodes,12 compiled nodes,4 read ceiling,37 uniform components."
+    },
+    {
+      "name": "Editable source identity",
+      "result": "creatureRoughness edited from 0.5 to 0.82 through its ordinary numeric control. Named resource roughAtlas retained; plan remained12nodes/4 reads."
+    },
+    {
+      "name": "Undo restores original graph",
+      "result": "Both temporary edits undone; original eight-node Directional finish graph restored with exact original definitions and values."
+    }
+  ],
+  "graphics": {
+    "status": "unavailable",
+    "phase": "context",
+    "liveWebGLFrames": 0,
+    "visibleMessage": "This page could not obtain WebGL2.",
+    "referenceImageExplicitlyLabeled": true
+  },
+  "transportLimitations": {
+    "download": "The app initiated Export graph and displayed its exported status; the cloud browser download handler reported failure. File delivery not verified through this browser.",
+    "clipboard": "Clipboard API was unavailable; the app selected source and displayed the manual-copy fallback. Automatic clipboard delivery not verified."
+  },
+  "screenshot": "evidence/optimization57/guide.jpg"
+}

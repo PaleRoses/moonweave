@@ -1,0 +1,635 @@
+{
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "method": {
+    "rounds": 7,
+    "iterationsPerRound": 5000,
+    "warmupPerOperation": 1000,
+    "order": [
+      [
+        "baseline",
+        "current"
+      ],
+      [
+        "current",
+        "baseline"
+      ],
+      [
+        "baseline",
+        "current"
+      ],
+      [
+        "current",
+        "baseline"
+      ],
+      [
+        "baseline",
+        "current"
+      ],
+      [
+        "current",
+        "baseline"
+      ],
+      [
+        "baseline",
+        "current"
+      ]
+    ],
+    "explicitGCBeforeBatch": true,
+    "timing": "Uninstrumented implementations in one process; alternating baseline/current order in each paired round. Patches branch from the same immutable base.",
+    "workCounts": "Separate subprocesses instrument decoder checks and constructor snapshots in memory. Counts exclude import and fixture setup; one operation per scenario. Source anchors fail closed if implementation layout changes.",
+    "identity": "Distinct retained object identities across 1000 examples; not a heap-byte estimate.",
+    "scope": "Synchronous CPU authoring only. No Three.js, atlas generation, rendering, DOM work or GPU/transfer-time claim."
+  },
+  "benchmarkSHA256": "f6864d6a305276ab7da4994a8046d1a5175a1037985e56202ecd1b4f1dddc768",
+  "baseline": {
+    "version": "0.48.0",
+    "sourceSHA256": {
+      "src/algebra-evaluate.mts": "6b55eed4efc29c318a02ee4caa1c282f6809d61af7fb5f2354b07737b1224243",
+      "src/algebra.mts": "1b34bea6833f420ca4ee6b61ad43c033a2e46021b9337ef2c05990b3ea65a4aa",
+      "src/core.mjs": "2023e0ba48fa76ea4dd628b6c29f164824abf2b9758ed2e610b02b93fb73f550",
+      "src/graph-uniforms.mjs": "fe7fb9651c0a31dc79992d4c65ba6ce88604298a7798901c0e87b830177f8f01",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/paint-data.mjs": "2ec951c20b9d862a3cc7cf6ab08964d41d6803e32756ed0511f769282f822b39",
+      "src/paint-random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint-shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint-structure.mjs": "092893c05ead682fcbd6a65a935102e4f5301e69c50143e19260f3b6ce2f8b23",
+      "src/paint-textures.mjs": "bd855a70fdee8a57b1913111b34fee28736ebbbd1cce3f26763292758b5cd264",
+      "src/surface-coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/surface-graph-data.mjs": "572bee5caa5a117aff8743c5abffbdb254a840cf9c9196876e4586900623fda4",
+      "src/surface-graph-evaluate.mjs": "c2031d874ca1f89d91000f3a22d67371475b58df79303597208a6bc476550aa6",
+      "src/surface-graph-plan.mjs": "d1f02855d3e73cf1c933c8ae10d2d86fc722b769f7a6b57ed6f99e2ffbbc7e23",
+      "src/surface-graph.mjs": "6aa16e143abe2e53936e0c309f6523a2209dcfa88d011e3d827745eff59ef42d",
+      "src/texturing-adapter.mjs": "ddc64e8997abe97960dd33400a6c95421c7ccc241173047c88256dfd46efab30",
+      "src/texturing-recipe.mjs": "b378a82b4c13de724e196252909f1ae2cd91c75e1772f984ae7187b1ea978418",
+      "src/texturing-shader.mjs": "de16b1a605268cfcb95e119d39f3bce35f9353fec391589001c4f7c5e861e05b",
+      "src/texturing.mjs": "9b52f9f023cb1f25df30eb1255aa54a3ae7eb4f770df7bf02bc81463d9467d0d",
+      "src/three.mjs": "9bb196ffb82ce7a3b687a05c246bebf6cca3730cacaef706fbb60d7f75be6765"
+    },
+    "metrics": {
+      "constructTrustedStyle": {
+        "samplesMicroseconds": [
+          3.0911969999999998,
+          2.956267399999979,
+          2.8168966000000184,
+          8.249800199999937,
+          2.511374000000069,
+          2.326873799999885,
+          2.9119480000001206
+        ],
+        "medianMicroseconds": 2.9119480000001206
+      },
+      "constructAndNormalizeTrustedStyle": {
+        "samplesMicroseconds": [
+          30.87320900000001,
+          15.18695499999999,
+          17.838382999999975,
+          18.95369620000001,
+          13.999360800000067,
+          17.296740800000045,
+          17.233812800000123
+        ],
+        "medianMicroseconds": 17.296740800000045
+      },
+      "constructAndNormalizeRawStyle": {
+        "samplesMicroseconds": [
+          30.6134282,
+          19.200504000000002,
+          26.307697000000008,
+          26.59230119999993,
+          14.950454799999896,
+          18.357679199999986,
+          19.743011599999953
+        ],
+        "medianMicroseconds": 19.743011599999953
+      },
+      "constructAndNormalizePreset": {
+        "samplesMicroseconds": [
+          25.505063799999995,
+          27.06319059999996,
+          33.498260200000004,
+          20.1846207999999,
+          19.622422000000007,
+          23.16023819999991,
+          18.84457040000016
+        ],
+        "medianMicroseconds": 23.16023819999991
+      },
+      "roughnessPatch": {
+        "samplesMicroseconds": [
+          7.090295799999966,
+          9.915341799999988,
+          6.175144199999977,
+          5.938709199999903,
+          5.032771200000025,
+          7.814280399999916,
+          5.095515800000067
+        ],
+        "medianMicroseconds": 6.175144199999977
+      },
+      "oneColorPatch": {
+        "samplesMicroseconds": [
+          6.665859799999998,
+          7.228674599999977,
+          6.384641000000011,
+          6.1675878000000015,
+          4.357148600000073,
+          6.1475317999998875,
+          4.456199799999922
+        ],
+        "medianMicroseconds": 6.1675878000000015
+      },
+      "sameRoughnessPatch": {
+        "samplesMicroseconds": [
+          4.6102523999999905,
+          4.997439600000052,
+          11.141427000000022,
+          4.327595600000132,
+          4.141363199999978,
+          4.84271860000008,
+          4.160762599999908
+        ],
+        "medianMicroseconds": 4.6102523999999905
+      },
+      "emptyStylePatch": {
+        "samplesMicroseconds": [
+          4.806144799999993,
+          3.8731270000000224,
+          5.483379400000013,
+          3.8652350000000295,
+          3.921870399999898,
+          3.8702305999999225,
+          3.951070400000026
+        ],
+        "medianMicroseconds": 3.921870399999898
+      },
+      "sameNormalizedStylePatch": {
+        "samplesMicroseconds": [
+          5.114519800000016,
+          5.644209799999953,
+          5.274918399999933,
+          5.145073199999933,
+          4.793141800000012,
+          4.8258934000001315,
+          3.846596999999929
+        ],
+        "medianMicroseconds": 5.114519800000016
+      },
+      "legacyRoughnessPatch": {
+        "samplesMicroseconds": [
+          8.80956299999998,
+          7.852168999999958,
+          8.990194199999952,
+          7.178761599999961,
+          6.421739200000047,
+          7.313958199999979,
+          8.04680900000003
+        ],
+        "medianMicroseconds": 7.852168999999958
+      }
+    },
+    "identity": {
+      "retainedExamples": 1000,
+      "trustedInputStyles": 1,
+      "expressionStyles": 1000,
+      "expressionPalettes": 1000,
+      "graphStyles": 1000,
+      "graphPalettes": 1000,
+      "roughnessRevisionStyles": 1000,
+      "roughnessRevisionPalettes": 1000,
+      "expressionRetainsTrustedStyle": false,
+      "graphRetainsTrustedStyle": false,
+      "roughnessRevisionRetainsPalette": false,
+      "recipeRoughnessRetainsMapping": false,
+      "recipeRoughnessRetainsPalette": false,
+      "sameRecipePatchRetainsIdentity": false,
+      "callerDataDetachedAndMutable": true,
+      "normalizedStyleAndPaletteFrozen": true
+    },
+    "workCounts": {
+      "constructTrustedStyle": {
+        "mappingValidations": 0,
+        "styleValidations": 0,
+        "numericChecks": 0,
+        "styleNumericChecks": 0,
+        "colorChecks": 0,
+        "snapshotCopies": 3,
+        "snapshotStyleCopies": 1,
+        "snapshotPaletteCopies": 1
+      },
+      "constructAndNormalizeTrustedStyle": {
+        "mappingValidations": 1,
+        "styleValidations": 1,
+        "numericChecks": 16,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 3,
+        "snapshotStyleCopies": 1,
+        "snapshotPaletteCopies": 1
+      },
+      "constructAndNormalizeRawStyle": {
+        "mappingValidations": 1,
+        "styleValidations": 2,
+        "numericChecks": 26,
+        "styleNumericChecks": 20,
+        "colorChecks": 6,
+        "snapshotCopies": 3,
+        "snapshotStyleCopies": 1,
+        "snapshotPaletteCopies": 1
+      },
+      "constructAndNormalizePreset": {
+        "mappingValidations": 2,
+        "styleValidations": 1,
+        "numericChecks": 22,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 5,
+        "snapshotStyleCopies": 1,
+        "snapshotPaletteCopies": 1
+      },
+      "roughnessPatch": {
+        "mappingValidations": 0,
+        "styleValidations": 1,
+        "numericChecks": 10,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "oneColorPatch": {
+        "mappingValidations": 0,
+        "styleValidations": 1,
+        "numericChecks": 10,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "sameRoughnessPatch": {
+        "mappingValidations": 0,
+        "styleValidations": 1,
+        "numericChecks": 10,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "emptyStylePatch": {
+        "mappingValidations": 0,
+        "styleValidations": 1,
+        "numericChecks": 10,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "sameNormalizedStylePatch": {
+        "mappingValidations": 0,
+        "styleValidations": 1,
+        "numericChecks": 10,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "legacyRoughnessPatch": {
+        "mappingValidations": 1,
+        "styleValidations": 1,
+        "numericChecks": 16,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      }
+    }
+  },
+  "current": {
+    "version": "0.49.0",
+    "sourceSHA256": {
+      "src/algebra-evaluate.mts": "6b55eed4efc29c318a02ee4caa1c282f6809d61af7fb5f2354b07737b1224243",
+      "src/algebra.mts": "1b34bea6833f420ca4ee6b61ad43c033a2e46021b9337ef2c05990b3ea65a4aa",
+      "src/core.mjs": "2023e0ba48fa76ea4dd628b6c29f164824abf2b9758ed2e610b02b93fb73f550",
+      "src/graph-uniforms.mjs": "fe7fb9651c0a31dc79992d4c65ba6ce88604298a7798901c0e87b830177f8f01",
+      "src/index.mjs": "54abb36e0ca5192f07855308bc29988ab904ae26559ae747614e5e21d6b73dbc",
+      "src/paint-data.mjs": "2ec951c20b9d862a3cc7cf6ab08964d41d6803e32756ed0511f769282f822b39",
+      "src/paint-random.mjs": "50e6f352fe09175575d9c95f45627739ed2e91102c60862011efa46ef8777d2f",
+      "src/paint-shapes.mjs": "8d575f5c5df8466875e1eeafc55f715c9bd1786b401f1bf6974a9da042afbc67",
+      "src/paint-structure.mjs": "092893c05ead682fcbd6a65a935102e4f5301e69c50143e19260f3b6ce2f8b23",
+      "src/paint-textures.mjs": "bd855a70fdee8a57b1913111b34fee28736ebbbd1cce3f26763292758b5cd264",
+      "src/surface-coordinates.mjs": "084b09c8ffd26196c0a3aa774e8cc5ca589b189f5fc29e205aed5b42b577def6",
+      "src/surface-graph-data.mjs": "34a03ca3856a266217111f5e759e04193bb9141a44c23cc32383fc1fff68aac1",
+      "src/surface-graph-evaluate.mjs": "c2031d874ca1f89d91000f3a22d67371475b58df79303597208a6bc476550aa6",
+      "src/surface-graph-plan.mjs": "d1f02855d3e73cf1c933c8ae10d2d86fc722b769f7a6b57ed6f99e2ffbbc7e23",
+      "src/surface-graph.mjs": "d6f5066c03b4e2eecf5d272aa97504c65b8558a20d03780418eabdc1f5de1a7b",
+      "src/texturing-adapter.mjs": "ddc64e8997abe97960dd33400a6c95421c7ccc241173047c88256dfd46efab30",
+      "src/texturing-recipe.mjs": "85f147366bd65b34b48e12dbf3e4a57bb952b77aa1339260d70ee91dc59c2b61",
+      "src/texturing-shader.mjs": "de16b1a605268cfcb95e119d39f3bce35f9353fec391589001c4f7c5e861e05b",
+      "src/texturing.mjs": "9b52f9f023cb1f25df30eb1255aa54a3ae7eb4f770df7bf02bc81463d9467d0d",
+      "src/three.mjs": "9bb196ffb82ce7a3b687a05c246bebf6cca3730cacaef706fbb60d7f75be6765"
+    },
+    "metrics": {
+      "constructTrustedStyle": {
+        "samplesMicroseconds": [
+          1.506269199999997,
+          1.3073010000000067,
+          1.3782697999999982,
+          1.9298563999999714,
+          1.0320200000000113,
+          1.562393399999928,
+          1.3697690000000875
+        ],
+        "medianMicroseconds": 1.3782697999999982
+      },
+      "constructAndNormalizeTrustedStyle": {
+        "samplesMicroseconds": [
+          14.455594399999995,
+          14.48956579999999,
+          13.872983600000042,
+          11.501341599999979,
+          9.748025600000073,
+          13.189965800000028,
+          12.288849200000005
+        ],
+        "medianMicroseconds": 13.189965800000028
+      },
+      "constructAndNormalizeRawStyle": {
+        "samplesMicroseconds": [
+          23.628143799999997,
+          14.745455000000039,
+          15.500435800000012,
+          14.921663400000034,
+          10.843071599999893,
+          12.386933200000021,
+          13.276695199999994
+        ],
+        "medianMicroseconds": 14.745455000000039
+      },
+      "constructAndNormalizePreset": {
+        "samplesMicroseconds": [
+          21.2770438,
+          23.348702000000003,
+          19.001005199999963,
+          23.971136999999906,
+          15.942153599999985,
+          16.830126399999973,
+          15.818453000000044
+        ],
+        "medianMicroseconds": 19.001005199999963
+      },
+      "roughnessPatch": {
+        "samplesMicroseconds": [
+          5.452166800000032,
+          6.3891247999999905,
+          4.992640200000006,
+          5.135719199999949,
+          3.807123599999977,
+          4.8186044000000035,
+          4.139145999999892
+        ],
+        "medianMicroseconds": 4.992640200000006
+      },
+      "oneColorPatch": {
+        "samplesMicroseconds": [
+          5.505342800000017,
+          4.767654599999969,
+          5.925772799999959,
+          5.2509711999999125,
+          3.2099671999998463,
+          5.172615000000041,
+          3.5895873999999823
+        ],
+        "medianMicroseconds": 5.172615000000041
+      },
+      "sameRoughnessPatch": {
+        "samplesMicroseconds": [
+          2.690202199999976,
+          2.612367400000039,
+          2.290317800000048,
+          2.5258474000000204,
+          2.3194805999999515,
+          2.9395895999999992,
+          1.839054600000054
+        ],
+        "medianMicroseconds": 2.5258474000000204
+      },
+      "emptyStylePatch": {
+        "samplesMicroseconds": [
+          2.1517983999999615,
+          2.018834000000061,
+          1.4302021999999852,
+          1.3890282000000298,
+          1.5686107999999876,
+          1.9558745999998792,
+          1.3919805999999881
+        ],
+        "medianMicroseconds": 1.5686107999999876
+      },
+      "sameNormalizedStylePatch": {
+        "samplesMicroseconds": [
+          1.8053139999999985,
+          1.7485421999999744,
+          1.8933195999999952,
+          2.3507965999999216,
+          1.6944464000000152,
+          1.6358781999999337,
+          2.3219814000000043
+        ],
+        "medianMicroseconds": 1.8053139999999985
+      },
+      "legacyRoughnessPatch": {
+        "samplesMicroseconds": [
+          1.7471144000000094,
+          1.637166999999954,
+          2.175841800000035,
+          1.864256000000023,
+          1.5556231999999,
+          1.4685079999999289,
+          1.8511347999999999
+        ],
+        "medianMicroseconds": 1.7471144000000094
+      }
+    },
+    "identity": {
+      "retainedExamples": 1000,
+      "trustedInputStyles": 1,
+      "expressionStyles": 1,
+      "expressionPalettes": 1,
+      "graphStyles": 1,
+      "graphPalettes": 1,
+      "roughnessRevisionStyles": 1000,
+      "roughnessRevisionPalettes": 1,
+      "expressionRetainsTrustedStyle": true,
+      "graphRetainsTrustedStyle": true,
+      "roughnessRevisionRetainsPalette": true,
+      "recipeRoughnessRetainsMapping": true,
+      "recipeRoughnessRetainsPalette": true,
+      "sameRecipePatchRetainsIdentity": true,
+      "callerDataDetachedAndMutable": true,
+      "normalizedStyleAndPaletteFrozen": true
+    },
+    "workCounts": {
+      "constructTrustedStyle": {
+        "mappingValidations": 0,
+        "styleValidations": 0,
+        "numericChecks": 0,
+        "styleNumericChecks": 0,
+        "colorChecks": 0,
+        "snapshotCopies": 1,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "constructAndNormalizeTrustedStyle": {
+        "mappingValidations": 1,
+        "styleValidations": 0,
+        "numericChecks": 6,
+        "styleNumericChecks": 0,
+        "colorChecks": 0,
+        "snapshotCopies": 1,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "constructAndNormalizeRawStyle": {
+        "mappingValidations": 1,
+        "styleValidations": 1,
+        "numericChecks": 16,
+        "styleNumericChecks": 10,
+        "colorChecks": 3,
+        "snapshotCopies": 1,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "constructAndNormalizePreset": {
+        "mappingValidations": 2,
+        "styleValidations": 0,
+        "numericChecks": 12,
+        "styleNumericChecks": 0,
+        "colorChecks": 0,
+        "snapshotCopies": 3,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "roughnessPatch": {
+        "mappingValidations": 0,
+        "styleValidations": 0,
+        "numericChecks": 1,
+        "styleNumericChecks": 1,
+        "colorChecks": 0,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "oneColorPatch": {
+        "mappingValidations": 0,
+        "styleValidations": 0,
+        "numericChecks": 0,
+        "styleNumericChecks": 0,
+        "colorChecks": 1,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "sameRoughnessPatch": {
+        "mappingValidations": 0,
+        "styleValidations": 0,
+        "numericChecks": 1,
+        "styleNumericChecks": 1,
+        "colorChecks": 0,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "emptyStylePatch": {
+        "mappingValidations": 0,
+        "styleValidations": 0,
+        "numericChecks": 0,
+        "styleNumericChecks": 0,
+        "colorChecks": 0,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "sameNormalizedStylePatch": {
+        "mappingValidations": 0,
+        "styleValidations": 0,
+        "numericChecks": 0,
+        "styleNumericChecks": 0,
+        "colorChecks": 0,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      },
+      "legacyRoughnessPatch": {
+        "mappingValidations": 0,
+        "styleValidations": 0,
+        "numericChecks": 1,
+        "styleNumericChecks": 1,
+        "colorChecks": 0,
+        "snapshotCopies": 0,
+        "snapshotStyleCopies": 0,
+        "snapshotPaletteCopies": 0
+      }
+    }
+  },
+  "comparison": {
+    "constructTrustedStyle": {
+      "baselineMicroseconds": 2.9119480000001206,
+      "currentMicroseconds": 1.3782697999999982,
+      "speedup": 2.1127561526778895
+    },
+    "constructAndNormalizeTrustedStyle": {
+      "baselineMicroseconds": 17.296740800000045,
+      "currentMicroseconds": 13.189965800000028,
+      "speedup": 1.311356000634968
+    },
+    "constructAndNormalizeRawStyle": {
+      "baselineMicroseconds": 19.743011599999953,
+      "currentMicroseconds": 14.745455000000039,
+      "speedup": 1.338921830489456
+    },
+    "constructAndNormalizePreset": {
+      "baselineMicroseconds": 23.16023819999991,
+      "currentMicroseconds": 19.001005199999963,
+      "speedup": 1.2188954192802366
+    },
+    "roughnessPatch": {
+      "baselineMicroseconds": 6.175144199999977,
+      "currentMicroseconds": 4.992640200000006,
+      "speedup": 1.2368494328912325
+    },
+    "oneColorPatch": {
+      "baselineMicroseconds": 6.1675878000000015,
+      "currentMicroseconds": 5.172615000000041,
+      "speedup": 1.1923539254322915
+    },
+    "sameRoughnessPatch": {
+      "baselineMicroseconds": 4.6102523999999905,
+      "currentMicroseconds": 2.5258474000000204,
+      "speedup": 1.8252299802434435
+    },
+    "emptyStylePatch": {
+      "baselineMicroseconds": 3.921870399999898,
+      "currentMicroseconds": 1.5686107999999876,
+      "speedup": 2.5002189198237885
+    },
+    "sameNormalizedStylePatch": {
+      "baselineMicroseconds": 5.114519800000016,
+      "currentMicroseconds": 1.8053139999999985,
+      "speedup": 2.8330361366499237
+    },
+    "legacyRoughnessPatch": {
+      "baselineMicroseconds": 7.852168999999958,
+      "currentMicroseconds": 1.7471144000000094,
+      "speedup": 4.494364536174572
+    }
+  }
+}

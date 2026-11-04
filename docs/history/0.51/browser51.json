@@ -1,0 +1,21 @@
+{
+  "version": "0.51.0",
+  "browser": "Managed Chrome 155",
+  "contextStatus": "unavailable",
+  "reason": "GL_VENDOR = Disabled; GL_RENDERER = Disabled; BindToCurrentSequence failed",
+  "renderedBrowserFrames": 0,
+  "checks": {
+    "proceduralExampleWithoutPaint": true,
+    "uint32SeedEditPreserved4294967295": true,
+    "linearColorEdit": true,
+    "affineScaleEditAndUndo": true,
+    "paintPanelEmptyState": true,
+    "addPaintAndUndo": true,
+    "hybridExample": true,
+    "maskReplacementRetainsSharedNoise": true,
+    "colorOnlyGraphImport": true,
+    "originalCompositionRestored": true
+  },
+  "evidence": "evidence/atelier51.jpg",
+  "limitations": "UI behavior verified. This browser cannot create a WebGL2 context; native GLES3 results are separate. The connected local Chrome could not resolve the internal preview URL."
+}

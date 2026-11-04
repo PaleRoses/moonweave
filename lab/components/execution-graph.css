@@ -1,0 +1,31 @@
+.execution-graph{border-top:1px solid var(--line);padding:25px;min-width:0}
+.execution-heading{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.execution-heading h3{font:24px/1.35 var(--serif);font-weight:400;color:#d0dedb;margin-top:8px}
+.execution-heading>p{font:10px/1.6 var(--mono);color:#a5c4bc;text-align:right;white-space:nowrap}
+.execution-copy{font:11px/1.8 var(--sans);color:var(--muted);margin:12px 0;overflow-wrap:anywhere}
+.execution-canvas{border:1px solid #2c4148;border-radius:5px;background:#080f14;overflow:auto;max-height:380px;margin-top:18px;scrollbar-width:thin;scrollbar-color:#48625c transparent}
+.execution-canvas>svg{display:block;max-width:none}
+.execution-canvas:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.execution-edge{fill:none;stroke:#345257;stroke-width:1.3;transition:stroke .12s}
+.execution-edge.active{stroke:#b8cfaa;stroke-width:1.8}
+.execution-node{cursor:pointer;outline:none}
+.execution-node rect{fill:#101d23;stroke:#354b50;stroke-width:1}
+.execution-node text{font:11px var(--mono);fill:#b2c5c6;pointer-events:none}
+.execution-node .execution-id{fill:#7d9697;font-size:9px}
+.execution-node .execution-sort{fill:#809da1;font:9px var(--mono)}
+.execution-node.connected rect{stroke:#688a83;fill:#16292c}
+.execution-node.output rect{stroke:#7b8e9e}
+.execution-node.selected rect,.execution-node:focus-visible rect{stroke:#c1d5ae;stroke-width:1.8;fill:#223a3a}
+.execution-node.selected text{fill:#dfebd7}
+.execution-details{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:22px;border-bottom:1px solid var(--line);padding:18px 0}
+.execution-details h4{font:10px var(--mono);font-weight:400;color:#c4d6cd;margin-bottom:7px}
+.execution-details p{font:10px/1.7 var(--mono);color:var(--muted);overflow-wrap:anywhere}
+@media(max-width:780px){
+  .execution-graph{padding:21px}
+  .execution-heading{display:block}
+  .execution-heading h3{font-size:21px}
+  .execution-heading>p{text-align:left;margin-top:10px}
+  .execution-copy{font-size:12px}
+  .execution-details{grid-template-columns:1fr;gap:14px}
+  .execution-details p{font-size:11px}
+}

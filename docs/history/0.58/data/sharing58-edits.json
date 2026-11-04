@@ -1,0 +1,254 @@
+{
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "metric": "CPU material value edits in microseconds; includes validation, plan binding/analysis and uniform object writes; excludes rendering/GPU upload.",
+  "iterations": 700,
+  "rounds": 7,
+  "order": "Alternating baseline/current order each round after 150 warm-up edits.",
+  "baseline": {
+    "version": "0.57.0",
+    "sourceSHA256": {
+      "src/core/compile.mjs": "43d70f0b10603673897c8eca2ea2fdac6670ab0e1b0cb657f9d0d914f03ea10f",
+      "src/three/uniforms.mjs": "e53bb209bd23f74c26260a21080aeec165a451adbbda624538c1e9f4b7c53554",
+      "src/three/adapter.mjs": "1cdcff0be21527b3cbebc9aebfd2a220f04086b6d34aca95caf1fc14123fdc5c"
+    }
+  },
+  "current": {
+    "version": "0.58.0",
+    "sourceSHA256": {
+      "src/core/compile.mts": "554537081dfa93e1aa649f2f1c6fff39f4f71a605a1473e1f5470910647c57f6",
+      "src/three/uniforms.mjs": "d3bb8316807c5edce83f318d5caf1d66785ad98a77b5d2bd041be706adb3c6cd",
+      "src/three/adapter.mjs": "1cdcff0be21527b3cbebc9aebfd2a220f04086b6d34aca95caf1fc14123fdc5c"
+    }
+  },
+  "scenarios": {
+    "0Domains": {
+      "graphNodes": 6,
+      "metrics": {
+        "roughness": {
+          "baselineMicroseconds": 12.742831428571433,
+          "currentMicroseconds": 13.597045714285676,
+          "speedup": 0.93717647909231,
+          "samplesMicroseconds": {
+            "baseline": [
+              26.867722857142798,
+              18.32223285714284,
+              23.97031714285715,
+              11.893368571428564,
+              11.883551428571357,
+              11.914527142857228,
+              12.742831428571433
+            ],
+            "current": [
+              21.502337142857105,
+              22.09999428571426,
+              13.523549999999966,
+              12.802579999999955,
+              12.669908571428516,
+              13.839154285714292,
+              13.597045714285676
+            ]
+          },
+          "work": {
+            "baseline": {
+              "roundedComponents": 0,
+              "colorDecodes": 0
+            },
+            "current": {
+              "roundedComponents": 0,
+              "colorDecodes": 0
+            }
+          }
+        },
+        "parameter": {
+          "baselineMicroseconds": 12.064660000000103,
+          "currentMicroseconds": 12.196137142857099,
+          "speedup": 0.9892197716935318,
+          "samplesMicroseconds": {
+            "baseline": [
+              17.618345714285756,
+              12.064660000000103,
+              14.346431428571448,
+              12.53152857142855,
+              8.729517142857048,
+              9.40994142857156,
+              11.004170000000093
+            ],
+            "current": [
+              12.499637142857246,
+              11.499960000000035,
+              12.196137142857099,
+              11.480372857142811,
+              10.930974285714358,
+              13.235474285714222,
+              12.638647142857085
+            ]
+          },
+          "work": {
+            "baseline": {
+              "roundedComponents": 4,
+              "colorDecodes": 0
+            },
+            "current": {
+              "roundedComponents": 4,
+              "colorDecodes": 0
+            }
+          }
+        }
+      }
+    },
+    "8Domains": {
+      "graphNodes": 14,
+      "metrics": {
+        "roughness": {
+          "baselineMicroseconds": 17.426070000000045,
+          "currentMicroseconds": 16.276825714285714,
+          "speedup": 1.0706061676820482,
+          "samplesMicroseconds": {
+            "baseline": [
+              19.606911428571397,
+              15.367741428571467,
+              14.272407142857121,
+              17.078397142857153,
+              21.31841714285721,
+              17.426070000000045,
+              19.752501428571513
+            ],
+            "current": [
+              24.032789999999977,
+              16.276825714285714,
+              18.266234285714194,
+              15.606471428571435,
+              13.506182857142903,
+              16.480417142857146,
+              15.395554285714102
+            ]
+          },
+          "work": {
+            "baseline": {
+              "roundedComponents": 0,
+              "colorDecodes": 0
+            },
+            "current": {
+              "roundedComponents": 0,
+              "colorDecodes": 0
+            }
+          }
+        },
+        "parameter": {
+          "baselineMicroseconds": 14.32349857142851,
+          "currentMicroseconds": 14.11584857142868,
+          "speedup": 1.0147104156685363,
+          "samplesMicroseconds": {
+            "baseline": [
+              18.33740571428572,
+              11.966491428571706,
+              17.94875000000015,
+              14.32349857142851,
+              11.05054142857138,
+              12.022847142857245,
+              15.442554285714323
+            ],
+            "current": [
+              17.171672857143026,
+              12.81185000000018,
+              16.14037571428558,
+              14.11584857142868,
+              11.687442857142807,
+              10.680612857142933,
+              20.532497142857146
+            ]
+          },
+          "work": {
+            "baseline": {
+              "roundedComponents": 4,
+              "colorDecodes": 0
+            },
+            "current": {
+              "roundedComponents": 4,
+              "colorDecodes": 0
+            }
+          }
+        }
+      }
+    },
+    "24Domains": {
+      "graphNodes": 30,
+      "metrics": {
+        "roughness": {
+          "baselineMicroseconds": 21.254514285714258,
+          "currentMicroseconds": 17.164761428571506,
+          "speedup": 1.238264474234706,
+          "samplesMicroseconds": {
+            "baseline": [
+              21.5362014285714,
+              16.631159999999777,
+              21.254514285714258,
+              20.503288571428584,
+              30.244901428571403,
+              21.63696857142863,
+              19.883105714285584
+            ],
+            "current": [
+              26.407795714286035,
+              17.164761428571506,
+              17.730627142857106,
+              15.043924285714313,
+              15.086532857142824,
+              23.908301428571445,
+              14.9765814285716
+            ]
+          },
+          "work": {
+            "baseline": {
+              "roundedComponents": 0,
+              "colorDecodes": 0
+            },
+            "current": {
+              "roundedComponents": 0,
+              "colorDecodes": 0
+            }
+          }
+        },
+        "parameter": {
+          "baselineMicroseconds": 21.002927142857125,
+          "currentMicroseconds": 16.813948571428746,
+          "speedup": 1.2491371109904867,
+          "samplesMicroseconds": {
+            "baseline": [
+              26.630272857142764,
+              21.065651428571396,
+              17.12246999999999,
+              31.497902857142886,
+              20.714207142856853,
+              21.002927142857125,
+              20.428911428571478
+            ],
+            "current": [
+              19.523678571428523,
+              13.61344142857141,
+              30.330402857142804,
+              27.099837142857265,
+              16.813948571428746,
+              15.847664285714538,
+              14.501867142857268
+            ]
+          },
+          "work": {
+            "baseline": {
+              "roundedComponents": 4,
+              "colorDecodes": 0
+            },
+            "current": {
+              "roundedComponents": 4,
+              "colorDecodes": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

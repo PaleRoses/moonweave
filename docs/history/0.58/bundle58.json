@@ -1,0 +1,12 @@
+{
+  "version": "0.58.0",
+  "javascriptBytes": 857846,
+  "javascriptGzip9Bytes": 240293,
+  "javascriptSHA256": "8a237f67d1e5e51dfccaa06b79a1bae56fb18b051c6b0d86389377d2bfc19425",
+  "cssBytes": 30169,
+  "baselineJavascriptBytes": 850433,
+  "baselineJavascriptGzip9Bytes": 239362,
+  "optionalOptimizerExcludedFromDefaultEntries": true,
+  "npmDependenciesChanged": false,
+  "notes": "Adds typed CPU sharing, compile provenance, and a lazy execution graph inspector. TypeScript annotations are erased. Library module membership is recorded in build-manifest.json."
+}

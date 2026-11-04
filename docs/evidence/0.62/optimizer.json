@@ -1,0 +1,934 @@
+{
+  "benchmark": "finish-demand/1",
+  "method": "Seven alternating paired batches of fresh native engines, including validation, parsing, projection, equality search, extraction and decoding. Python process startup and Node graph compilation are outside timing.",
+  "scope": "This chain family isolates shadowed finish writes. The demand phase has at most 16 contexts per source surface; this is not a complexity bound for the following general equality search.",
+  "baseline": {
+    "version": "0.61.0",
+    "headCommit": "58bcd91416ace8f7a18ce9110b54566a89503a3d",
+    "sourceSHA256": {
+      "src/core/effects.mts": "75bc242610738433883ec4235e308b22197d498d6e4021ecc0e99d6c5190d751",
+      "src/core/optimize.mts": "7efed0d2021d7962ed46f13947aa56e4aab4ece365b7780c4f4eec256f5e3977",
+      "tools/egglog/requirements.txt": "990f76a531d6ac4987f16292104ba4758f9a65274dd81e0ba3c6b8cb200077c2",
+      "tools/egglog/run.py": "fdd7e4f2bd8f86d40ce8bf6d36b29a1c092f359208adbda90b9372d1242d7734",
+      "tools/egglog/test_run.py": "355a9543ae1191c4f56ee3ca02591056152d2c7239abc86edc7ed5a85f051bdd",
+      "tools/optimize-graph.mjs": "cb371c3354c80f29e4aba0cc33f055dd415f3ade46fe091523b5cb13a2e03306"
+    }
+  },
+  "current": {
+    "version": "0.62.0",
+    "headCommit": "58bcd91416ace8f7a18ce9110b54566a89503a3d",
+    "sourceSHA256": {
+      "src/core/effects.mts": "dde1fcbd97c6488701164c0fafcaf27a0d4dbe3bb8e5dfe1ff9a5732602d8191",
+      "src/core/optimize.mts": "753ac39d39c5bb5437a04a381f2b555dc56403cc20210545ee3236e3968865d7",
+      "tools/egglog/benchmark.py": "b342f54bf3611622e9288d694bf19edfb27fc01e8b1e66fc5d460f54629ca4c7",
+      "tools/egglog/demand.py": "751b1fb8f3fd1a0d3f4aa6e46d7ea37968896c6082823bd359adb90916703006",
+      "tools/egglog/language.py": "c19a731099b77f68eb669126312f228d305bb2da703408fd9d2b283eff90064b",
+      "tools/egglog/requirements.txt": "990f76a531d6ac4987f16292104ba4758f9a65274dd81e0ba3c6b8cb200077c2",
+      "tools/egglog/run.py": "d36123c3ab7622dafe39eec79c5ed464384476233f9fc04e6beaff258209212f",
+      "tools/egglog/test_run.py": "58a30c818d3eaddcaf819df9c35a626351cff581466191e4f98fbac324fafa27",
+      "tools/optimize-graph.mjs": "cb371c3354c80f29e4aba0cc33f055dd415f3ade46fe091523b5cb13a2e03306"
+    }
+  },
+  "results": [
+    {
+      "name": "finish-coat-4",
+      "layers": 4,
+      "graphNodes": 16,
+      "inputTerms": 15,
+      "graphSHA256": "f7b95ba4d10214075de1861ac2e790af04a22441314d0a7d8bc1659922625e07",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "beforeCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 11,
+        "liveNodes": 16
+      },
+      "afterCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 8,
+        "liveNodes": 10
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 2,
+        "contexts": 2,
+        "observations": 1,
+        "samples": 4,
+        "components": 36,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "milliseconds": {
+        "baseline": {
+          "median": 3.671863,
+          "batches": [
+            3.671863,
+            3.758504,
+            3.641819,
+            5.443318,
+            5.377911,
+            3.366124,
+            3.291532
+          ]
+        },
+        "current": {
+          "median": 4.916606,
+          "batches": [
+            5.405402,
+            6.753971,
+            4.808643,
+            4.555853,
+            5.229778,
+            4.916606,
+            4.686871
+          ]
+        }
+      },
+      "baseline": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 6,
+        "rows": 51,
+        "stopReason": "saturated",
+        "initialCost": 15,
+        "cost": 9,
+        "matches": {
+          "channel-roughness-coat-commute": 20,
+          "channel-roughness-overwrite": 25
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "jobSha256": "42d034a7b58eb5258478aafe9223656a57486a87c774cb7dba012922a6e1c130",
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "programSha256": "5eab048cb0512bcf0a247b58b633af19621dac48e2404d6f1b4140ff608c9e5c"
+      },
+      "current": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 12,
+        "rows": 32,
+        "stopReason": "saturated",
+        "initialCost": 15,
+        "cost": 9,
+        "matches": {
+          "channel-roughness-coat-commute": 1,
+          "demand-Coat": 4,
+          "demand-Roughness-drop": 3,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "projection": {
+          "rounds": 10,
+          "rows": 30,
+          "stopReason": "saturated",
+          "matches": {
+            "demand-Coat": 4,
+            "demand-Roughness-drop": 3,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 10,
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "sourceTerms": 9,
+          "contexts": 9,
+          "contextLimit": 144
+        },
+        "search": {
+          "rounds": 2,
+          "rows": 32,
+          "stopReason": "saturated",
+          "matches": {
+            "channel-roughness-coat-commute": 1
+          },
+          "roundLimit": 100
+        },
+        "jobSha256": "dea3aa85805f61ead0057634045194f5a5ca8267a8cfd94b414d3c597efbbb95",
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "programSha256": "d0ddf2b0f680407e53a2d3bf8df64f815d3ff2cdba6fe71c60de5a7ab22559b0"
+      }
+    },
+    {
+      "name": "finish-coat-8",
+      "layers": 8,
+      "graphNodes": 28,
+      "inputTerms": 27,
+      "graphSHA256": "33958d442e8d4a8c7e4128e9064a555f63107d9047d3e05f7d00ac5025bb371d",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "beforeCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 15,
+        "liveNodes": 28
+      },
+      "afterCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 8,
+        "liveNodes": 14
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 2,
+        "contexts": 2,
+        "observations": 1,
+        "samples": 4,
+        "components": 36,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "milliseconds": {
+        "baseline": {
+          "median": 4.810407,
+          "batches": [
+            4.511177,
+            5.125581,
+            4.828364,
+            4.810407,
+            4.608953,
+            4.600611,
+            4.923065
+          ]
+        },
+        "current": {
+          "median": 6.221499,
+          "batches": [
+            5.316208,
+            6.221499,
+            7.874708,
+            6.60745,
+            8.867951,
+            6.057654,
+            5.626984
+          ]
+        }
+      },
+      "baseline": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 10,
+        "rows": 211,
+        "stopReason": "saturated",
+        "initialCost": 27,
+        "cost": 13,
+        "matches": {
+          "channel-roughness-coat-commute": 120,
+          "channel-roughness-overwrite": 294
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "jobSha256": "3a9eb005f3115ca01594e6d1356b754c271cf20be53672152ab7754d1eba1720",
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "programSha256": "f624a9fef58b80b06a042b37f25f6bc8627881770301e47bdbd75f6305f849a3"
+      },
+      "current": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 20,
+        "rows": 56,
+        "stopReason": "saturated",
+        "initialCost": 27,
+        "cost": 13,
+        "matches": {
+          "channel-roughness-coat-commute": 1,
+          "demand-Coat": 8,
+          "demand-Roughness-drop": 7,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "projection": {
+          "rounds": 18,
+          "rows": 54,
+          "stopReason": "saturated",
+          "matches": {
+            "demand-Coat": 8,
+            "demand-Roughness-drop": 7,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 18,
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "sourceTerms": 17,
+          "contexts": 17,
+          "contextLimit": 272
+        },
+        "search": {
+          "rounds": 2,
+          "rows": 56,
+          "stopReason": "saturated",
+          "matches": {
+            "channel-roughness-coat-commute": 1
+          },
+          "roundLimit": 100
+        },
+        "jobSha256": "2d0bfd7f8e9fb76647966ea6e08d119cd7508486e934e73952214018661faf5d",
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "programSha256": "1cd50bc9db2cda417a157c5abde93fc7eb19f6ab0688a5009fb6b91b28f3d959"
+      }
+    },
+    {
+      "name": "finish-coat-12",
+      "layers": 12,
+      "graphNodes": 40,
+      "inputTerms": 39,
+      "graphSHA256": "21233a0e2608c2ca73e34ef06c09691756ce13b3054838cbd059fadc0f2a2ed0",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "beforeCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 19,
+        "liveNodes": 40
+      },
+      "afterCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 8,
+        "liveNodes": 18
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 2,
+        "contexts": 2,
+        "observations": 1,
+        "samples": 4,
+        "components": 36,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "milliseconds": {
+        "baseline": {
+          "median": 6.529422,
+          "batches": [
+            6.219557,
+            6.588321,
+            6.529422,
+            6.658106,
+            6.268189,
+            6.447088,
+            6.95374
+          ]
+        },
+        "current": {
+          "median": 6.44063,
+          "batches": [
+            6.264144,
+            6.698096,
+            6.331475,
+            6.845908,
+            6.004052,
+            6.44063,
+            6.553218
+          ]
+        }
+      },
+      "baseline": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 14,
+        "rows": 547,
+        "stopReason": "saturated",
+        "initialCost": 39,
+        "cost": 17,
+        "matches": {
+          "channel-roughness-coat-commute": 364,
+          "channel-roughness-overwrite": 1287
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "jobSha256": "82c99791921c0580aa4b21c1344c6a0d74d9a1f64deeae374256a735f46e0714",
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "programSha256": "0d7a28eb4a7094d33d9c4a39b45f629cb9f9fcff7d7def907c79718ec16b3723"
+      },
+      "current": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 28,
+        "rows": 80,
+        "stopReason": "saturated",
+        "initialCost": 39,
+        "cost": 17,
+        "matches": {
+          "channel-roughness-coat-commute": 1,
+          "demand-Coat": 12,
+          "demand-Roughness-drop": 11,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "projection": {
+          "rounds": 26,
+          "rows": 78,
+          "stopReason": "saturated",
+          "matches": {
+            "demand-Coat": 12,
+            "demand-Roughness-drop": 11,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 26,
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "sourceTerms": 25,
+          "contexts": 25,
+          "contextLimit": 400
+        },
+        "search": {
+          "rounds": 2,
+          "rows": 80,
+          "stopReason": "saturated",
+          "matches": {
+            "channel-roughness-coat-commute": 1
+          },
+          "roundLimit": 100
+        },
+        "jobSha256": "ee59222415b9da305a32d2fea373122078c9de210e6eccf3a6f49478f3aa136d",
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "programSha256": "18a7f300d709f7f0658eb07beb077ac4418f23a7ec781d8e146730817b031759"
+      }
+    },
+    {
+      "name": "finish-coat-16",
+      "layers": 16,
+      "graphNodes": 52,
+      "inputTerms": 51,
+      "graphSHA256": "430cd6452d1fafdeb117ad7318f9f7b2c5e2d6b47f88d5f992189f4b0410c6af",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "beforeCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 23,
+        "liveNodes": 52
+      },
+      "afterCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 8,
+        "liveNodes": 22
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 2,
+        "contexts": 2,
+        "observations": 1,
+        "samples": 4,
+        "components": 36,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "milliseconds": {
+        "baseline": {
+          "median": 9.480121,
+          "batches": [
+            9.126039,
+            9.480121,
+            10.793507,
+            9.281061,
+            10.138532,
+            9.012698,
+            13.819028
+          ]
+        },
+        "current": {
+          "median": 7.463378,
+          "batches": [
+            8.032884,
+            7.475777,
+            6.86011,
+            6.546759,
+            7.463378,
+            6.788623,
+            9.144347
+          ]
+        }
+      },
+      "baseline": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 18,
+        "rows": 1123,
+        "stopReason": "saturated",
+        "initialCost": 51,
+        "cost": 21,
+        "matches": {
+          "channel-roughness-coat-commute": 816,
+          "channel-roughness-overwrite": 3740
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "jobSha256": "e19ade5e7a729d60af9fc5f4ea990d1f845d43ddcae40e677fbb1aadc5706bb3",
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "programSha256": "63952eb32357ae33bf437fcad792bd8a7c184d4c764021508c2ac5f74d927d75"
+      },
+      "current": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 36,
+        "rows": 104,
+        "stopReason": "saturated",
+        "initialCost": 51,
+        "cost": 21,
+        "matches": {
+          "channel-roughness-coat-commute": 1,
+          "demand-Coat": 16,
+          "demand-Roughness-drop": 15,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "projection": {
+          "rounds": 34,
+          "rows": 102,
+          "stopReason": "saturated",
+          "matches": {
+            "demand-Coat": 16,
+            "demand-Roughness-drop": 15,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 34,
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "sourceTerms": 33,
+          "contexts": 33,
+          "contextLimit": 528
+        },
+        "search": {
+          "rounds": 2,
+          "rows": 104,
+          "stopReason": "saturated",
+          "matches": {
+            "channel-roughness-coat-commute": 1
+          },
+          "roundLimit": 100
+        },
+        "jobSha256": "d26d89ab8add17ebb81f9509a706ec02246e7e60c4bde142135368af70b4b50f",
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "programSha256": "b5d4c6d0c9fd7e00b9ba52868051927dc6984b18ad0f4da31e6662db9656e1b5"
+      }
+    },
+    {
+      "name": "finish-coat-24",
+      "layers": 24,
+      "graphNodes": 76,
+      "inputTerms": 75,
+      "graphSHA256": "3603198943d373dd3ffd0225f6907e21579116e22fa3adb5b004fca8b8886dbd",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "beforeCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 31,
+        "liveNodes": 76
+      },
+      "afterCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 8,
+        "liveNodes": 30
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 2,
+        "contexts": 2,
+        "observations": 1,
+        "samples": 4,
+        "components": 36,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "milliseconds": {
+        "baseline": {
+          "median": 24.224651,
+          "batches": [
+            24.495179,
+            23.250888,
+            24.480278,
+            24.224651,
+            24.391183,
+            22.373327,
+            22.918667
+          ]
+        },
+        "current": {
+          "median": 10.577292,
+          "batches": [
+            10.577292,
+            10.050479,
+            16.528474,
+            11.002472,
+            10.804414,
+            9.089174,
+            8.911466
+          ]
+        }
+      },
+      "baseline": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 26,
+        "rows": 3251,
+        "stopReason": "saturated",
+        "initialCost": 75,
+        "cost": 29,
+        "matches": {
+          "channel-roughness-coat-commute": 2600,
+          "channel-roughness-overwrite": 17250
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "jobSha256": "9a879a8e8a3ea889c1421c0b1c01ae6b6f1085b0bf7d44dd8a8d22e4fea00178",
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "programSha256": "a59c49fb407e944a510066ec02387bfcffa20d7ec3ad54f89b658ac03349c16a"
+      },
+      "current": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 52,
+        "rows": 152,
+        "stopReason": "saturated",
+        "initialCost": 75,
+        "cost": 29,
+        "matches": {
+          "channel-roughness-coat-commute": 1,
+          "demand-Coat": 24,
+          "demand-Roughness-drop": 23,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "projection": {
+          "rounds": 50,
+          "rows": 150,
+          "stopReason": "saturated",
+          "matches": {
+            "demand-Coat": 24,
+            "demand-Roughness-drop": 23,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 50,
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "sourceTerms": 49,
+          "contexts": 49,
+          "contextLimit": 784
+        },
+        "search": {
+          "rounds": 2,
+          "rows": 152,
+          "stopReason": "saturated",
+          "matches": {
+            "channel-roughness-coat-commute": 1
+          },
+          "roundLimit": 100
+        },
+        "jobSha256": "7c75cb79d9625b64d78dc2a47b41d54a79544254936ad70c8d1cecc936c5a0ab",
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "programSha256": "f75fe88341b565f73bb133af5be376166fd0417af0e96eca4c9ad614ebc0af6a"
+      }
+    },
+    {
+      "name": "finish-coat-30",
+      "layers": 30,
+      "graphNodes": 94,
+      "inputTerms": 93,
+      "graphSHA256": "53cbb33e654d4eb62fb09f3ad419dfd5833cb22f178773ce89c4fb7b00537745",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "beforeCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 37,
+        "liveNodes": 94
+      },
+      "afterCost": {
+        "paintSamples": 0,
+        "proceduralSamples": 0,
+        "textureReads": 0,
+        "uniformScalars": 8,
+        "liveNodes": 36
+      },
+      "observations": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 2,
+        "contexts": 2,
+        "observations": 1,
+        "samples": 4,
+        "components": 36,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "milliseconds": {
+        "baseline": {
+          "median": 41.89843,
+          "batches": [
+            39.347382,
+            41.803692,
+            49.286139,
+            41.89843,
+            42.756301,
+            41.816747,
+            44.600054
+          ]
+        },
+        "current": {
+          "median": 12.607767,
+          "batches": [
+            12.607767,
+            11.734542,
+            15.740088,
+            13.540431,
+            11.591468,
+            12.88288,
+            10.640207
+          ]
+        }
+      },
+      "baseline": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 32,
+        "rows": 5953,
+        "stopReason": "saturated",
+        "initialCost": 93,
+        "cost": 35,
+        "matches": {
+          "channel-roughness-coat-commute": 4960,
+          "channel-roughness-overwrite": 40455
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "jobSha256": "e14c3fd8478380c79553abac6fbca2717e9c4567c8abe2a112686f5bcfec12bb",
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "programSha256": "1ea20ded26dfe046ebc5447a4957112fd4d18d0fa5669813016b2b7434db3734"
+      },
+      "current": {
+        "engine": "egglog",
+        "version": "14.0.0",
+        "extractor": "greedy-dag",
+        "rounds": 64,
+        "rows": 188,
+        "stopReason": "saturated",
+        "initialCost": 93,
+        "cost": 35,
+        "matches": {
+          "channel-roughness-coat-commute": 1,
+          "demand-Coat": 30,
+          "demand-Roughness-drop": 29,
+          "demand-Roughness-keep": 1,
+          "demand-SurfaceAtom": 1
+        },
+        "limits": {
+          "iterations": 100,
+          "rows": 50000
+        },
+        "threads": 1,
+        "projection": {
+          "rounds": 62,
+          "rows": 186,
+          "stopReason": "saturated",
+          "matches": {
+            "demand-Coat": 30,
+            "demand-Roughness-drop": 29,
+            "demand-Roughness-keep": 1,
+            "demand-SurfaceAtom": 1
+          },
+          "roundLimit": 62,
+          "components": [
+            "clearcoat",
+            "metalness",
+            "opacity",
+            "roughness"
+          ],
+          "sourceTerms": 61,
+          "contexts": 61,
+          "contextLimit": 976
+        },
+        "search": {
+          "rounds": 2,
+          "rows": 188,
+          "stopReason": "saturated",
+          "matches": {
+            "channel-roughness-coat-commute": 1
+          },
+          "roundLimit": 100
+        },
+        "jobSha256": "211860fe651b60befd22188800759865295b6c044295d6f9ab5be84f1cf9055e",
+        "rulesSha256": "34fbaccf0d3aac8542b00ea114e5a11f27d888a23726cb429a91f247a5d8d4ac",
+        "programSha256": "e533b98f9768319d9516581a58086256790ec7c3f0bcaf7e8d411269ba1518d5"
+      }
+    }
+  ]
+}

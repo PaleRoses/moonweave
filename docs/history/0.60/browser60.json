@@ -1,0 +1,52 @@
+{
+  "version": "0.60.0",
+  "date": "2026-11-04",
+  "environment": "Managed preview through the cloud Chrome browser",
+  "edition": "060",
+  "galleryExamples": 16,
+  "paintedCarapace": {
+    "version": 2,
+    "nodes": 22,
+    "images": 5,
+    "sourceCharacters": 1418363,
+    "sourceLines": 3539,
+    "openedWithSourcePanelExpanded": true,
+    "reselectedWithSourcePanelExpanded": true,
+    "sourceRecreatedExactly": true
+  },
+  "checks": {
+    "literalColorEditTargetsColorNode": true,
+    "styleHasNoPalette": true,
+    "colorEditUndoExact": true,
+    "independentColorCreatedNewId": true,
+    "independentUndoExact": true,
+    "presetPreservedFiveImagesAndDeposit": true,
+    "presetUndoExact": true,
+    "v1SwatchImportCreatesV2ColorNodes": true,
+    "importUndoExact": true,
+    "guideMarkImagesLoaded": true,
+    "guideMarkImagesWidth": 512,
+    "localAssetReferencesChecked": 67,
+    "missingLocalAssets": 0
+  },
+  "graphics": {
+    "webgl2Available": false,
+    "message": "This page could not obtain WebGL2.",
+    "editorAvailable": true,
+    "nativeShaderVerification": "native60.json and native60-shell.json"
+  },
+  "observations": [
+    "The first large-source check stalled with 213,236 pretty-printed lines. Bounded numeric rows fixed the reproduction; final expanded-source editing, independent colors, preset replacement, legacy import and exact undo passed.",
+    "Some Playwright read-only evaluation calls timed out while native accessibility and screenshots remained responsive; the completed checks used the documented accessibility controls.",
+    "Returned console logs contained browser-extension metadata errors. No Moonweave application error appeared in those returned logs."
+  ],
+  "notExercised": [
+    "Live browser GPU rendering",
+    "Clipboard delivery",
+    "Browser file chooser/download delivery"
+  ],
+  "screenshots": [
+    "evidence/marks60-graph.jpg",
+    "evidence/marks60-guide.jpg"
+  ]
+}

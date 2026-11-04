@@ -1,0 +1,62 @@
+{
+  "version": "0.51.0",
+  "method": "Compile public expressions, generate the actual shader and construct real Three material handles. Count atlas objects/builds. Storage includes the declared mip levels; no GPU upload or frame-time measurement.",
+  "examples": {
+    "color": {
+      "authoredNodes": 2,
+      "liveNodes": 2,
+      "paintSamples": 0,
+      "proceduralSamples": 0,
+      "textureReads": 0,
+      "uniformScalars": 3,
+      "atlasTextureObjects": 0,
+      "atlasBuilds": 0,
+      "atlasStorageBytesIncludingMipmaps": 0,
+      "generatedGLSLBytes": 2127,
+      "emitsFacetKernel": false,
+      "emitsNoiseKernel": false
+    },
+    "stone": {
+      "authoredNodes": 12,
+      "liveNodes": 12,
+      "paintSamples": 0,
+      "proceduralSamples": 1,
+      "textureReads": 0,
+      "uniformScalars": 36,
+      "atlasTextureObjects": 0,
+      "atlasBuilds": 0,
+      "atlasStorageBytesIncludingMipmaps": 0,
+      "generatedGLSLBytes": 4341,
+      "emitsFacetKernel": false,
+      "emitsNoiseKernel": true
+    },
+    "lichen": {
+      "authoredNodes": 12,
+      "liveNodes": 12,
+      "paintSamples": 1,
+      "proceduralSamples": 1,
+      "textureReads": 4,
+      "uniformScalars": 64,
+      "atlasTextureObjects": 2,
+      "atlasBuilds": 1,
+      "atlasStorageBytesIncludingMipmaps": 2796200,
+      "generatedGLSLBytes": 8387,
+      "emitsFacetKernel": true,
+      "emitsNoiseKernel": true
+    },
+    "carapace": {
+      "authoredNodes": 2,
+      "liveNodes": 2,
+      "paintSamples": 1,
+      "proceduralSamples": 0,
+      "textureReads": 4,
+      "uniformScalars": 29,
+      "atlasTextureObjects": 2,
+      "atlasBuilds": 1,
+      "atlasStorageBytesIncludingMipmaps": 2796200,
+      "generatedGLSLBytes": 6099,
+      "emitsFacetKernel": true,
+      "emitsNoiseKernel": false
+    }
+  }
+}

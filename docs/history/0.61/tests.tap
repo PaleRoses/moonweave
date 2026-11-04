@@ -1,0 +1,3042 @@
+TAP version 13
+# Subtest: recipe literal palette edits keep live topology while patching canonical color nodes
+ok 1 - recipe literal palette edits keep live topology while patching canonical color nodes
+  ---
+  duration_ms: 9.298644
+  type: 'test'
+  ...
+# Subtest: structural palette updates preserve field and paint names and keep color sharing explicit
+ok 2 - structural palette updates preserve field and paint names and keep color sharing explicit
+  ---
+  duration_ms: 3.542001
+  type: 'test'
+  ...
+# Subtest: changing one role of a shared literal palette does not recolor its siblings
+ok 3 - changing one role of a shared literal palette does not recolor its siblings
+  ---
+  duration_ms: 1.79368
+  type: 'test'
+  ...
+# Subtest: equal-valued palette replacements retain author identity for later shared composition
+ok 4 - equal-valued palette replacements retain author identity for later shared composition
+  ---
+  duration_ms: 3.393726
+  type: 'test'
+  ...
+# Subtest: reference mapping obeys identity and composition while leaving payloads untouched
+ok 5 - reference mapping obeys identity and composition while leaving payloads untouched
+  ---
+  duration_ms: 13.796507
+  type: 'test'
+  ...
+# Subtest: a fold interprets each reachable shared node once and preserves interpreted sharing
+ok 6 - a fold interprets each reachable shared node once and preserves interpreted sharing
+  ---
+  duration_ms: 1.692977
+  type: 'test'
+  ...
+# Subtest: one retained fold memo extends across roots without rereading shared descendants
+ok 7 - one retained fold memo extends across roots without rereading shared descendants
+  ---
+  duration_ms: 0.311721
+  type: 'test'
+  ...
+# Subtest: an independent numeric interpretation agrees with scalar sampling
+ok 8 - an independent numeric interpretation agrees with scalar sampling
+  ---
+  duration_ms: 13.5859
+  type: 'test'
+  ...
+# Subtest: compiled point functions share one computed value per sample, without sharing sample state
+ok 9 - compiled point functions share one computed value per sample, without sharing sample state
+  ---
+  duration_ms: 0.776724
+  type: 'test'
+  ...
+# Subtest: cached point functions isolate roots, edited values and fresh mutable sample contexts
+ok 10 - cached point functions isolate roots, edited values and fresh mutable sample contexts
+  ---
+  duration_ms: 1.539956
+  type: 'test'
+  ...
+# Subtest: the expression-building interpretation round-trips graph structure and sharing
+ok 11 - the expression-building interpretation round-trips graph structure and sharing
+  ---
+  duration_ms: 15.59892
+  type: 'test'
+  ...
+# Subtest: domain binding has a true no-op identity and leaves coordinate-free values shared
+ok 12 - domain binding has a true no-op identity and leaves coordinate-free values shared
+  ---
+  duration_ms: 0.564633
+  type: 'test'
+  ...
+# Subtest: domain binding moves a complete paint and mask together without duplicating fields
+ok 13 - domain binding moves a complete paint and mask together without duplicating fields
+  ---
+  duration_ms: 100.928621
+  type: 'test'
+  ...
+# Subtest: domain substitution composes in order without fusing floating-point matrix operations
+ok 14 - domain substitution composes in order without fusing floating-point matrix operations
+  ---
+  duration_ms: 35.885721
+  type: 'test'
+  ...
+# Subtest: domain binding snapshots raw inputs without freezing or mutating authors data
+ok 15 - domain binding snapshots raw inputs without freezing or mutating authors data
+  ---
+  duration_ms: 1.870885
+  type: 'test'
+  ...
+# Subtest: arithmetic keeps its authored grouping; floating-point numbers are not a ring
+ok 16 - arithmetic keeps its authored grouping; floating-point numbers are not a ring
+  ---
+  duration_ms: 2.408567
+  type: 'test'
+  ...
+# Subtest: height demand derives shared noise once and adds no atlas dependency
+ok 17 - height demand derives shared noise once and adds no atlas dependency
+  ---
+  duration_ms: 9.380128
+  type: 'test'
+  ...
+# Subtest: analytic differential code follows only height ancestors
+ok 18 - analytic differential code follows only height ancestors
+  ---
+  duration_ms: 1.451732
+  type: 'test'
+  ...
+# Subtest: uniform height expressions disappear while uniform factors keep value bindings
+ok 19 - uniform height expressions disappear while uniform factors keep value bindings
+  ---
+  duration_ms: 1.549721
+  type: 'test'
+  ...
+# Subtest: normal-dependent heights apply the normalized inverse-transpose differential chain
+ok 20 - normal-dependent heights apply the normalized inverse-transpose differential chain
+  ---
+  duration_ms: 1.225601
+  type: 'test'
+  ...
+# Subtest: r140: signed live height edits retain shader, slots and zero-atlas ownership
+ok 21 - r140: signed live height edits retain shader, slots and zero-atlas ownership
+  ---
+  duration_ms: 50.79526
+  type: 'test'
+  ...
+# Subtest: r187: signed live height edits retain shader, slots and zero-atlas ownership
+ok 22 - r187: signed live height edits retain shader, slots and zero-atlas ownership
+  ---
+  duration_ms: 2.887912
+  type: 'test'
+  ...
+# Subtest: constant-color samples cannot mutate default contexts in another sampler
+ok 23 - constant-color samples cannot mutate default contexts in another sampler
+  ---
+  duration_ms: 9.154147
+  type: 'test'
+  ...
+# Subtest: literal annihilation agrees with the compiler without sampling an overflowing branch
+ok 24 - literal annihilation agrees with the compiler without sampling an overflowing branch
+  ---
+  duration_ms: 6.763395
+  type: 'test'
+  ...
+# Subtest: current zero parameters and zero-valued varying fields retain their demand and tangents
+ok 25 - current zero parameters and zero-valued varying fields retain their demand and tangents
+  ---
+  duration_ms: 0.749272
+  type: 'test'
+  ...
+# Subtest: a varying height mask contributes its full product derivative
+ok 26 - a varying height mask contributes its full product derivative
+  ---
+  duration_ms: 0.616761
+  type: 'test'
+  ...
+# Subtest: composed height tangents agree with finite differences of transformed fields
+ok 27 - composed height tangents agree with finite differences of transformed fields
+  ---
+  duration_ms: 2.853965
+  type: 'test'
+  ...
+# Subtest: height addition and constant offsets obey differential linearity
+ok 28 - height addition and constant offsets obey differential linearity
+  ---
+  duration_ms: 1.179842
+  type: 'test'
+  ...
+# Subtest: bump is a typed surface operation with a scalar height and unchanged graph-v1 round trips
+ok 29 - bump is a typed surface operation with a scalar height and unchanged graph-v1 round trips
+  ---
+  duration_ms: 3.800951
+  type: 'test'
+  ...
+# Subtest: spatially uniform heights disappear independently of editable values
+ok 30 - spatially uniform heights disappear independently of editable values
+  ---
+  duration_ms: 11.709365
+  type: 'test'
+  ...
+# Subtest: varying heights stay live at zero amplitude and preserve shared field work
+ok 31 - varying heights stay live at zero amplitude and preserve shared field work
+  ---
+  duration_ms: 1.732326
+  type: 'test'
+  ...
+# Subtest: a separate interpretation can read height and base surface through typed bump ports
+ok 32 - a separate interpretation can read height and base surface through typed bump ports
+  ---
+  duration_ms: 0.416499
+  type: 'test'
+  ...
+# Subtest: adding an adjustment wraps every connected use and retains distinct live neutral parameters
+ok 33 - adding an adjustment wraps every connected use and retains distinct live neutral parameters
+  ---
+  duration_ms: 18.398959
+  type: 'test'
+  ...
+# Subtest: stacked adjustments keep their own sources, offer acyclic sources and reject invalid connections
+ok 34 - stacked adjustments keep their own sources, offer acyclic sources and reject invalid connections
+  ---
+  duration_ms: 3.209458
+  type: 'test'
+  ...
+# Subtest: independent adjustment values preserve uniform values without editing other ports or shared uses
+ok 35 - independent adjustment values preserve uniform values without editing other ports or shared uses
+  ---
+  duration_ms: 0.928402
+  type: 'test'
+  ...
+# Subtest: removing an adjustment restores its source and prunes its controls while keeping imported unused work
+ok 36 - removing an adjustment restores its source and prunes its controls while keeping imported unused work
+  ---
+  duration_ms: 1.681499
+  type: 'test'
+  ...
+# Subtest: inline adjustment values remain independently discoverable when also used for surface finish
+ok 37 - inline adjustment values remain independently discoverable when also used for surface finish
+  ---
+  duration_ms: 0.731334
+  type: 'test'
+  ...
+# Subtest: editor adjustments preserve drafts, live program identity and exact undo across connection edits
+ok 38 - editor adjustments preserve drafts, live program identity and exact undo across connection edits
+  ---
+  duration_ms: 22.339126
+  type: 'test'
+  ...
+# Subtest: invalid source connections and renderer rejection leave accepted adjustment state and history intact
+ok 39 - invalid source connections and renderer rejection leave accepted adjustment state and history intact
+  ---
+  duration_ms: 3.722863
+  type: 'test'
+  ...
+# Subtest: Oklab and OKLCH authoring lower once to the existing editable Color literal
+ok 40 - Oklab and OKLCH authoring lower once to the existing editable Color literal
+  ---
+  duration_ms: 9.192063
+  type: 'test'
+  ...
+# Subtest: adjustment defaults are explicit typed scalar ports and options are snapshotted
+ok 41 - adjustment defaults are explicit typed scalar ports and options are snapshotted
+  ---
+  duration_ms: 8.897237
+  type: 'test'
+  ...
+# Subtest: Cartesian color adjustments translate lightness and rotate/scale chroma without clipping
+ok 42 - Cartesian color adjustments translate lightness and rotate/scale chroma without clipping
+  ---
+  duration_ms: 6.002936
+  type: 'test'
+  ...
+# Subtest: hue degrees are periodic in both authored literals and spatial adjustments
+ok 43 - hue degrees are periodic in both authored literals and spatial adjustments
+  ---
+  duration_ms: 6.443573
+  type: 'test'
+  ...
+# Subtest: literal identity folds exactly while editable controls at identity retain bindings
+ok 44 - literal identity folds exactly while editable controls at identity retain bindings
+  ---
+  duration_ms: 8.97807
+  type: 'test'
+  ...
+# Subtest: nonidentity nested adjustments keep their authored order and graph structure
+ok 45 - nonidentity nested adjustments keep their authored order and graph structure
+  ---
+  duration_ms: 6.878068
+  type: 'test'
+  ...
+# Subtest: adjustment control fields retain DAG sharing, domain binding and scoped parameters
+ok 46 - adjustment control fields retain DAG sharing, domain binding and scoped parameters
+  ---
+  duration_ms: 2.232522
+  type: 'test'
+  ...
+# Subtest: color adjustment tangents include every varying input at hue 27°
+ok 47 - color adjustment tangents include every varying input at hue 27°
+  ---
+  duration_ms: 1.848813
+  type: 'test'
+  ...
+# Subtest: color adjustment tangents include every varying input at hue 180°
+ok 48 - color adjustment tangents include every varying input at hue 180°
+  ---
+  duration_ms: 0.976615
+  type: 'test'
+  ...
+# Subtest: color adjustment tangents include every varying input at hue -180°
+ok 49 - color adjustment tangents include every varying input at hue -180°
+  ---
+  duration_ms: 3.299794
+  type: 'test'
+  ...
+# Subtest: color adjustment tangents include every varying input at hue 540°
+ok 50 - color adjustment tangents include every varying input at hue 540°
+  ---
+  duration_ms: 0.685366
+  type: 'test'
+  ...
+# Subtest: adjustments retain the existing Oklab zero-LMS tangent convention
+ok 51 - adjustments retain the existing Oklab zero-LMS tangent convention
+  ---
+  duration_ms: 0.323528
+  type: 'test'
+  ...
+# Subtest: color evaluation interpolates decoded linear RGB and snapshots edits
+ok 52 - color evaluation interpolates decoded linear RGB and snapshots edits
+  ---
+  duration_ms: 17.715967
+  type: 'test'
+  ...
+# Subtest: color mix applies the product rule to both variable colors and its mask
+ok 53 - color mix applies the product rule to both variable colors and its mask
+  ---
+  duration_ms: 13.512419
+  type: 'test'
+  ...
+# Subtest: color mix clamps masks and chooses zero mask derivative at either endpoint
+ok 54 - color mix clamps masks and chooses zero mask derivative at either endpoint
+  ---
+  duration_ms: 10.899322
+  type: 'test'
+  ...
+# Subtest: Color remains extended linear RGB until a material boundary
+ok 55 - Color remains extended linear RGB until a material boundary
+  ---
+  duration_ms: 8.407959
+  type: 'test'
+  ...
+# Subtest: canonical palette and mix defaults preserve their serialized representation
+ok 56 - canonical palette and mix defaults preserve their serialized representation
+  ---
+  duration_ms: 4.388288
+  type: 'test'
+  ...
+# Subtest: color ramps own stop data while sharing expression inputs and serializing explicit defaults
+ok 57 - color ramps own stop data while sharing expression inputs and serializing explicit defaults
+  ---
+  duration_ms: 8.524595
+  type: 'test'
+  ...
+# Subtest: ramps validate arity, stop order, float32 separation and typed list references
+ok 58 - ramps validate arity, stop order, float32 separation and typed list references
+  ---
+  duration_ms: 2.564474
+  type: 'test'
+  ...
+# Subtest: stop edits preserve structure and untouched nodes, while invalid edits remain atomic
+ok 59 - stop edits preserve structure and untouched nodes, while invalid edits remain atomic
+  ---
+  duration_ms: 13.539681
+  type: 'test'
+  ...
+# Subtest: the same-reference ramp law preserves the retained color binding rather than the ramp binding
+ok 60 - the same-reference ramp law preserves the retained color binding rather than the ramp binding
+  ---
+  duration_ms: 0.953971
+  type: 'test'
+  ...
+# Subtest: editable stop positions prevent a literal ramp input from specializing its current endpoint
+ok 61 - editable stop positions prevent a literal ramp input from specializing its current endpoint
+  ---
+  duration_ms: 0.454948
+  type: 'test'
+  ...
+# Subtest: typed paint palettes connect color fields to the original sampled facets
+ok 62 - typed paint palettes connect color fields to the original sampled facets
+  ---
+  duration_ms: 1.21173
+  type: 'test'
+  ...
+# Subtest: list and record ports obey reference laws and whole-expression domain binding
+ok 63 - list and record ports obey reference laws and whole-expression domain binding
+  ---
+  duration_ms: 9.9377
+  type: 'test'
+  ...
+# Subtest: tagged primaries use one extended linear Rec709 representation
+ok 64 - tagged primaries use one extended linear Rec709 representation
+  ---
+  duration_ms: 6.180515
+  type: 'test'
+  ...
+# Subtest: ordinary conversions preserve extended values and both halves of the transfer curve
+ok 65 - ordinary conversions preserve extended values and both halves of the transfer curve
+  ---
+  duration_ms: 1.805447
+  type: 'test'
+  ...
+# Subtest: the explicit display boundary uses local MINDE and preserves in-gamut coordinates
+ok 66 - the explicit display boundary uses local MINDE and preserves in-gamut coordinates
+  ---
+  duration_ms: 5.361929
+  type: 'test'
+  ...
+# Subtest: RGB images decode before filtering and encode only at export
+ok 67 - RGB images decode before filtering and encode only at export
+  ---
+  duration_ms: 1.140843
+  type: 'test'
+  ...
+# Subtest: color management rejects ambiguous or nonfinite authored coordinates
+ok 68 - color management rejects ambiguous or nonfinite authored coordinates
+  ---
+  duration_ms: 0.45653
+  type: 'test'
+  ...
+# Subtest: paint palettes use only color graph bindings and share procedural work
+ok 69 - paint palettes use only color graph bindings and share procedural work
+  ---
+  duration_ms: 22.695769
+  type: 'test'
+  ...
+# Subtest: color conversion shader is included only when the live plan uses Oklab
+ok 70 - color conversion shader is included only when the live plan uses Oklab
+  ---
+  duration_ms: 8.851159
+  type: 'test'
+  ...
+# Subtest: r140: color ramp positions, colors and paint palette edits keep stable bindings
+ok 71 - r140: color ramp positions, colors and paint palette edits keep stable bindings
+  ---
+  duration_ms: 18.924673
+  type: 'test'
+  ...
+# Subtest: r187: color ramp positions, colors and paint palette edits keep stable bindings
+ok 72 - r187: color ramp positions, colors and paint palette edits keep stable bindings
+  ---
+  duration_ms: 7.286876
+  type: 'test'
+  ...
+# Subtest: sample vectors reject sparse components at the shared evaluation boundary
+ok 73 - sample vectors reject sparse components at the shared evaluation boundary
+  ---
+  duration_ms: 4.218411
+  type: 'test'
+  ...
+# Subtest: extended color values survive expression composition and CPU sampling
+ok 74 - extended color values survive expression composition and CPU sampling
+  ---
+  duration_ms: 12.299917
+  type: 'test'
+  ...
+# Subtest: mix and ramp sampling skip unused color branches, including exact knots
+ok 75 - mix and ramp sampling skip unused color branches, including exact knots
+  ---
+  duration_ms: 2.844577
+  type: 'test'
+  ...
+# Subtest: same-reference mix and ramp identities do not sample their unused scalar input
+ok 76 - same-reference mix and ramp identities do not sample their unused scalar input
+  ---
+  duration_ms: 5.640731
+  type: 'test'
+  ...
+# Subtest: ramps interpolate in their authored coordinate interval and clamp to exact stops
+ok 77 - ramps interpolate in their authored coordinate interval and clamp to exact stops
+  ---
+  duration_ms: 1.0986
+  type: 'test'
+  ...
+# Subtest: exact ramp stops preserve their own spatial differentials
+ok 78 - exact ramp stops preserve their own spatial differentials
+  ---
+  duration_ms: 0.386804
+  type: 'test'
+  ...
+# Subtest: constant ramps choose the left interval and the authored color at a knot
+ok 79 - constant ramps choose the left interval and the authored color at a knot
+  ---
+  duration_ms: 0.494117
+  type: 'test'
+  ...
+# Subtest: linear-rgb/linear: graph ramp derivatives include both moving colors and interval weight
+ok 80 - linear-rgb/linear: graph ramp derivatives include both moving colors and interval weight
+  ---
+  duration_ms: 11.418777
+  type: 'test'
+  ...
+# Subtest: linear-rgb/smoothstep: graph ramp derivatives include both moving colors and interval weight
+ok 81 - linear-rgb/smoothstep: graph ramp derivatives include both moving colors and interval weight
+  ---
+  duration_ms: 13.886048
+  type: 'test'
+  ...
+# Subtest: oklab/linear: graph ramp derivatives include both moving colors and interval weight
+ok 82 - oklab/linear: graph ramp derivatives include both moving colors and interval weight
+  ---
+  duration_ms: 1.788352
+  type: 'test'
+  ...
+# Subtest: oklab/smoothstep: graph ramp derivatives include both moving colors and interval weight
+ok 83 - oklab/smoothstep: graph ramp derivatives include both moving colors and interval weight
+  ---
+  duration_ms: 1.024998
+  type: 'test'
+  ...
+# Subtest: Oklab ramp black stops remain finite and parameter edits change samples
+ok 84 - Oklab ramp black stops remain finite and parameter edits change samples
+  ---
+  duration_ms: 5.109747
+  type: 'test'
+  ...
+# Subtest: compact smoothstep ramps equal expanded mixtures of varying color fields and their full differentials
+ok 85 - compact smoothstep ramps equal expanded mixtures of varying color fields and their full differentials
+  ---
+  duration_ms: 19.304477
+  type: 'test'
+  ...
+# Subtest: Oklab conversion matches published XYZ reference pairs and preserves extended-range round trips
+ok 86 - Oklab conversion matches published XYZ reference pairs and preserves extended-range round trips
+  ---
+  duration_ms: 1.557752
+  type: 'test'
+  ...
+# Subtest: Oklab mixing has perceptual progression while preserving out-of-gamut intermediates
+ok 87 - Oklab mixing has perceptual progression while preserving out-of-gamut intermediates
+  ---
+  duration_ms: 14.305727
+  type: 'test'
+  ...
+# Subtest: Oklab color differential applies both coordinate Jacobians and the mask product rule
+ok 88 - Oklab color differential applies both coordinate Jacobians and the mask product rule
+  ---
+  duration_ms: 0.643612
+  type: 'test'
+  ...
+# Subtest: color interpolation preserves exact endpoint samples and reports singular Oklab tangents
+ok 89 - color interpolation preserves exact endpoint samples and reports singular Oklab tangents
+  ---
+  duration_ms: 2.226854
+  type: 'test'
+  ...
+# Subtest: color ramp selects exact knots and clamped ends without interpolating them
+ok 90 - color ramp selects exact knots and clamped ends without interpolating them
+  ---
+  duration_ms: 2.687299
+  type: 'test'
+  ...
+# Subtest: color ramp weights and tangents use the selected interval width
+ok 91 - color ramp weights and tangents use the selected interval width
+  ---
+  duration_ms: 0.300364
+  type: 'test'
+  ...
+# Subtest: atelier single paint: template and JSON round-trip exactly
+ok 92 - atelier single paint: template and JSON round-trip exactly
+  ---
+  duration_ms: 10.493009
+  type: 'test'
+  ...
+# Subtest: atelier belly: template and JSON round-trip exactly
+ok 93 - atelier belly: template and JSON round-trip exactly
+  ---
+  duration_ms: 1.58911
+  type: 'test'
+  ...
+# Subtest: atelier tips: template and JSON round-trip exactly
+ok 94 - atelier tips: template and JSON round-trip exactly
+  ---
+  duration_ms: 9.751769
+  type: 'test'
+  ...
+# Subtest: atelier patina: template and JSON round-trip exactly
+ok 95 - atelier patina: template and JSON round-trip exactly
+  ---
+  duration_ms: 0.936034
+  type: 'test'
+  ...
+# Subtest: atelier finish: template and JSON round-trip exactly
+ok 96 - atelier finish: template and JSON round-trip exactly
+  ---
+  duration_ms: 1.855532
+  type: 'test'
+  ...
+# Subtest: atelier stone: template and JSON round-trip exactly
+ok 97 - atelier stone: template and JSON round-trip exactly
+  ---
+  duration_ms: 1.09236
+  type: 'test'
+  ...
+# Subtest: atelier lichen: template and JSON round-trip exactly
+ok 98 - atelier lichen: template and JSON round-trip exactly
+  ---
+  duration_ms: 2.561749
+  type: 'test'
+  ...
+# Subtest: atelier spectrum: template and JSON round-trip exactly
+ok 99 - atelier spectrum: template and JSON round-trip exactly
+  ---
+  duration_ms: 13.243483
+  type: 'test'
+  ...
+# Subtest: atelier prismatic: template and JSON round-trip exactly
+ok 100 - atelier prismatic: template and JSON round-trip exactly
+  ---
+  duration_ms: 5.483902
+  type: 'test'
+  ...
+# Subtest: atelier porcelain: template and JSON round-trip exactly
+ok 101 - atelier porcelain: template and JSON round-trip exactly
+  ---
+  duration_ms: 1.37737
+  type: 'test'
+  ...
+# Subtest: atelier weathered: template and JSON round-trip exactly
+ok 102 - atelier weathered: template and JSON round-trip exactly
+  ---
+  duration_ms: 4.83958
+  type: 'test'
+  ...
+# Subtest: atelier ivory: template and JSON round-trip exactly
+ok 103 - atelier ivory: template and JSON round-trip exactly
+  ---
+  duration_ms: 7.529533
+  type: 'test'
+  ...
+# Subtest: atelier brass: template and JSON round-trip exactly
+ok 104 - atelier brass: template and JSON round-trip exactly
+  ---
+  duration_ms: 2.560256
+  type: 'test'
+  ...
+# Subtest: atelier zones: template and JSON round-trip exactly
+ok 105 - atelier zones: template and JSON round-trip exactly
+  ---
+  duration_ms: 12.977492
+  type: 'test'
+  ...
+# Subtest: atelier pigments: template and JSON round-trip exactly
+ok 106 - atelier pigments: template and JSON round-trip exactly
+  ---
+  duration_ms: 7.039231
+  type: 'test'
+  ...
+# Subtest: atelier inscription: template and JSON round-trip exactly
+ok 107 - atelier inscription: template and JSON round-trip exactly
+  ---
+  duration_ms: 57.485205
+  type: 'test'
+  ...
+# Subtest: atelier marks: template and JSON round-trip exactly
+ok 108 - atelier marks: template and JSON round-trip exactly
+  ---
+  duration_ms: 974.524224
+  type: 'test'
+  ...
+# Subtest: an arbitrary imported composition survives editing one paint with its IDs and references intact
+ok 109 - an arbitrary imported composition survives editing one paint with its IDs and references intact
+  ---
+  duration_ms: 4.466135
+  type: 'test'
+  ...
+# Subtest: shared mapping edits retain one sample; making a mapping independent changes only its reference
+ok 110 - shared mapping edits retain one sample; making a mapping independent changes only its reference
+  ---
+  duration_ms: 6.363252
+  type: 'test'
+  ...
+# Subtest: mask inspection and paint edits never convert a literal into a parameter
+ok 111 - mask inspection and paint edits never convert a literal into a parameter
+  ---
+  duration_ms: 1.076586
+  type: 'test'
+  ...
+# Subtest: independent parameters in a product stay independent and keep their program structure
+ok 112 - independent parameters in a product stay independent and keep their program structure
+  ---
+  duration_ms: 9.698366
+  type: 'test'
+  ...
+# Subtest: a mix of the same paint remains a valid single paint definition
+ok 113 - a mix of the same paint remains a valid single paint definition
+  ---
+  duration_ms: 0.541388
+  type: 'test'
+  ...
+# Subtest: three and four paints append without rewriting prior compositions
+ok 114 - three and four paints append without rewriting prior compositions
+  ---
+  duration_ms: 4.128628
+  type: 'test'
+  ...
+# Subtest: removing a middle blend bypasses its first input and prunes only newly orphaned live work
+ok 115 - removing a middle blend bypasses its first input and prunes only newly orphaned live work
+  ---
+  duration_ms: 3.303465
+  type: 'test'
+  ...
+# Subtest: editing one selected region preserves other blends and shared mask values
+ok 116 - editing one selected region preserves other blends and shared mask values
+  ---
+  duration_ms: 3.576738
+  type: 'test'
+  ...
+# Subtest: changing a reversed region preserves its strength, boundary and both complement positions
+ok 117 - changing a reversed region preserves its strength, boundary and both complement positions
+  ---
+  duration_ms: 6.024819
+  type: 'test'
+  ...
+# Subtest: region replacement preserves literal IDs, local frames, product order and nested reversals
+ok 118 - region replacement preserves literal IDs, local frames, product order and nested reversals
+  ---
+  duration_ms: 1.497899
+  type: 'test'
+  ...
+# Subtest: changing one region copies its shared mask path without rewriting another blend
+ok 119 - changing one region copies its shared mask path without rewriting another blend
+  ---
+  duration_ms: 1.573772
+  type: 'test'
+  ...
+# Subtest: uniform transitions retain full-mask reversal and remove only the regional part
+ok 120 - uniform transitions retain full-mask reversal and remove only the regional part
+  ---
+  duration_ms: 3.181946
+  type: 'test'
+  ...
+# Subtest: imported regions without a strength keep their unit amplitude
+ok 121 - imported regions without a strength keep their unit amplitude
+  ---
+  duration_ms: 0.786378
+  type: 'test'
+  ...
+# Subtest: wrapped independent parameters remain a custom expression without an inferred strength
+ok 122 - wrapped independent parameters remain a custom expression without an inferred strength
+  ---
+  duration_ms: 0.608041
+  type: 'test'
+  ...
+# Subtest: frame batching coalesces independent edits, uses last values, and flushes before consumption
+ok 123 - frame batching coalesces independent edits, uses last values, and flushes before consumption
+  ---
+  duration_ms: 0.645209
+  type: 'test'
+  ...
+# Subtest: patch composition retains unchanged values and preserves opaque IDs and invalid keys for validation
+ok 124 - patch composition retains unchanged values and preserves opaque IDs and invalid keys for validation
+  ---
+  duration_ms: 0.424718
+  type: 'test'
+  ...
+# Subtest: pending control values support authored IDs that also name Object prototype properties
+ok 125 - pending control values support authored IDs that also name Object prototype properties
+  ---
+  duration_ms: 0.411998
+  type: 'test'
+  ...
+# Subtest: generic scalar controls exclude unused nodes and every kind already available in a blend mask
+ok 126 - generic scalar controls exclude unused nodes and every kind already available in a blend mask
+  ---
+  duration_ms: 0.716579
+  type: 'test'
+  ...
+# Subtest: value revisions reuse structural inspection without retaining a previous graph
+ok 127 - value revisions reuse structural inspection without retaining a previous graph
+  ---
+  duration_ms: 0.726345
+  type: 'test'
+  ...
+# Subtest: shared mapping gestures do not reclassify unchanged paint styles
+ok 128 - shared mapping gestures do not reclassify unchanged paint styles
+  ---
+  duration_ms: 8.569448
+  type: 'test'
+  ...
+# Subtest: version43 recipes migrate and invalid imports or edits leave the accepted graph intact
+ok 129 - version43 recipes migrate and invalid imports or edits leave the accepted graph intact
+  ---
+  duration_ms: 7.464107
+  type: 'test'
+  ...
+# Subtest: procedural source inspection exposes editable color and field values without a paint prerequisite
+ok 130 - procedural source inspection exposes editable color and field values without a paint prerequisite
+  ---
+  duration_ms: 0.747177
+  type: 'test'
+  ...
+# Subtest: replacing a procedural blend mask retains the field still used by color
+ok 131 - replacing a procedural blend mask retains the field still used by color
+  ---
+  duration_ms: 0.874013
+  type: 'test'
+  ...
+# Subtest: associated deposition is one typed operation with complete independent channel pairs
+ok 132 - associated deposition is one typed operation with complete independent channel pairs
+  ---
+  duration_ms: 21.494234
+  type: 'test'
+  ...
+# Subtest: opacity analysis preserves guaranteed opaque deposits and updates live coverage
+ok 133 - opacity analysis preserves guaranteed opaque deposits and updates live coverage
+  ---
+  duration_ms: 2.282327
+  type: 'test'
+  ...
+# Subtest: opacity intervals include the interior coverage maximum
+ok 134 - opacity intervals include the interior coverage maximum
+  ---
+  duration_ms: 13.899443
+  type: 'test'
+  ...
+# Subtest: surface imports enforce the byte limit before reading and preserve read failures
+ok 135 - surface imports enforce the byte limit before reading and preserve read failures
+  ---
+  duration_ms: 16.107669
+  type: 'test'
+  ...
+# Subtest: a cancelled download releases its URL exactly once
+ok 136 - a cancelled download releases its URL exactly once
+  ---
+  duration_ms: 10.89169
+  type: 'test'
+  ...
+# Subtest: a failed download click closes its scope
+ok 137 - a failed download click closes its scope
+  ---
+  duration_ms: 0.786098
+  type: 'test'
+  ...
+# Subtest: height detail edits keep one field shared, preserve drafts and restore exact graph history
+ok 138 - height detail edits keep one field shared, preserve drafts and restore exact graph history
+  ---
+  duration_ms: 91.991803
+  type: 'test'
+  ...
+# Subtest: height and finish connections reject invalid graphs without changing the accepted document
+ok 139 - height and finish connections reject invalid graphs without changing the accepted document
+  ---
+  duration_ms: 20.252449
+  type: 'test'
+  ...
+# Subtest: finish connections under height compose through the existing undo and parameter-edit paths
+ok 140 - finish connections under height compose through the existing undo and parameter-edit paths
+  ---
+  duration_ms: 20.573903
+  type: 'test'
+  ...
+# Subtest: procedural pigments edit through the paint and color controls with reversible connections
+ok 141 - procedural pigments edit through the paint and color controls with reversible connections
+  ---
+  duration_ms: 19.753175
+  type: 'test'
+  ...
+# Subtest: paint numeric colors retain extended values and shared uses until explicitly made independent
+ok 142 - paint numeric colors retain extended values and shared uses until explicitly made independent
+  ---
+  duration_ms: 29.197459
+  type: 'test'
+  ...
+# Subtest: choosing a paint preset removes procedural pigment overrides and remains undoable
+ok 143 - choosing a paint preset removes procedural pigment overrides and remains undoable
+  ---
+  duration_ms: 11.613981
+  type: 'test'
+  ...
+# Subtest: color-ramp stop edits preserve programs, reject crossing stops atomically and retain source drafts
+ok 144 - color-ramp stop edits preserve programs, reject crossing stops atomically and retain source drafts
+  ---
+  duration_ms: 11.193377
+  type: 'test'
+  ...
+# Subtest: color connections offer acyclic fields and invalid cyclic rewiring preserves the accepted graph
+ok 145 - color connections offer acyclic fields and invalid cyclic rewiring preserves the accepted graph
+  ---
+  duration_ms: 13.554031
+  type: 'test'
+  ...
+# Subtest: adding a stop takes the current Oklab midpoint and keeps varying endpoints as fields
+ok 146 - adding a stop takes the current Oklab midpoint and keeps varying endpoints as fields
+  ---
+  duration_ms: 3.106893
+  type: 'test'
+  ...
+# Subtest: a ramp with no valid space for another stop disables insertion without changing its graph
+ok 147 - a ramp with no valid space for another stop disables insertion without changing its graph
+  ---
+  duration_ms: 0.650372
+  type: 'test'
+  ...
+# Subtest: Solid editor batches independent value edits and leaves source serialization lazy
+ok 148 - Solid editor batches independent value edits and leaves source serialization lazy
+  ---
+  duration_ms: 12.123962
+  type: 'test'
+  ...
+# Subtest: unapplied source survives accepted live edits and only an explicit refresh replaces it
+ok 149 - unapplied source survives accepted live edits and only an explicit refresh replaces it
+  ---
+  duration_ms: 1.80746
+  type: 'test'
+  ...
+# Subtest: region changes after reversal preserve the pending strength, source draft and undo history
+ok 150 - region changes after reversal preserve the pending strength, source draft and undo history
+  ---
+  duration_ms: 18.00873
+  type: 'test'
+  ...
+# Subtest: a failed renderer commit preserves graph, plan and selection atomically
+ok 151 - a failed renderer commit preserves graph, plan and selection atomically
+  ---
+  duration_ms: 2.098139
+  type: 'test'
+  ...
+# Subtest: source errors keep the accepted graph and valid drafts become the new baseline
+ok 152 - source errors keep the accepted graph and valid drafts become the new baseline
+  ---
+  duration_ms: 14.618931
+  type: 'test'
+  ...
+# Subtest: real Solid derivations retain independent layers and selected blend identity
+ok 153 - real Solid derivations retain independent layers and selected blend identity
+  ---
+  duration_ms: 12.569734
+  type: 'test'
+  ...
+# Subtest: many preview frames form one completed gesture and one undo step
+ok 154 - many preview frames form one completed gesture and one undo step
+  ---
+  duration_ms: 1.071619
+  type: 'test'
+  ...
+# Subtest: selection, identical values and rejected edits preserve redo; accepted new edits replace it
+ok 155 - selection, identical values and rejected edits preserve redo; accepted new edits replace it
+  ---
+  duration_ms: 1.375648
+  type: 'test'
+  ...
+# Subtest: structural undo restores pruned definitions and the selected blend without touching a source draft
+ok 156 - structural undo restores pruned definitions and the selected blend without touching a source draft
+  ---
+  duration_ms: 20.805715
+  type: 'test'
+  ...
+# Subtest: renderer rejection leaves the proposed undo and its selection available
+ok 157 - renderer rejection leaves the proposed undo and its selection available
+  ---
+  duration_ms: 1.333074
+  type: 'test'
+  ...
+# Subtest: reset and example history restore the matching baseline and preserve unapplied source
+ok 158 - reset and example history restore the matching baseline and preserve unapplied source
+  ---
+  duration_ms: 13.636716
+  type: 'test'
+  ...
+# Subtest: hydration restores document and draft before history begins without a renderer commit
+ok 159 - hydration restores document and draft before history begins without a renderer commit
+  ---
+  duration_ms: 0.858712
+  type: 'test'
+  ...
+# Subtest: a migrated version-one session keeps its reset baseline and source draft through new edits and undo
+ok 160 - a migrated version-one session keeps its reset baseline and source draft through new edits and undo
+  ---
+  duration_ms: 12.256356
+  type: 'test'
+  ...
+# Subtest: a discrete paint command closes earlier previews as a separate undo entry
+ok 161 - a discrete paint command closes earlier previews as a separate undo entry
+  ---
+  duration_ms: 0.946426
+  type: 'test'
+  ...
+# Subtest: channel and relief parameters are exposed once and retain independent graph references
+ok 162 - channel and relief parameters are exposed once and retain independent graph references
+  ---
+  duration_ms: 9.460187
+  type: 'test'
+  ...
+# Subtest: a multi-frame gesture returning to its start preserves document identity, redo and source draft
+ok 163 - a multi-frame gesture returning to its start preserves document identity, redo and source draft
+  ---
+  duration_ms: 1.400609
+  type: 'test'
+  ...
+# Subtest: invalid and renderer-rejected previews never enter the accepted cumulative patch
+ok 164 - invalid and renderer-rejected previews never enter the accepted cumulative patch
+  ---
+  duration_ms: 18.241875
+  type: 'test'
+  ...
+# Subtest: paint controls address canonical style and shared mapping independently
+ok 165 - paint controls address canonical style and shared mapping independently
+  ---
+  duration_ms: 1.795991
+  type: 'test'
+  ...
+# Subtest: generic surface controls edit literals, transitions and directions without rewriting their expressions
+ok 166 - generic surface controls edit literals, transitions and directions without rewriting their expressions
+  ---
+  duration_ms: 10.202216
+  type: 'test'
+  ...
+# Subtest: Directional finish starts as a named editable composition with no blend prerequisite
+ok 167 - Directional finish starts as a named editable composition with no blend prerequisite
+  ---
+  duration_ms: 1.166916
+  type: 'test'
+  ...
+# Subtest: a procedural surface can import, add and remove paint, and traverse history with no selected paint
+ok 168 - a procedural surface can import, add and remove paint, and traverse history with no selected paint
+  ---
+  duration_ms: 18.801632
+  type: 'test'
+  ...
+# Subtest: procedural color, noise and matrix edits compose in a frame and retain one reversible value gesture
+ok 169 - procedural color, noise and matrix edits compose in a frame and retain one reversible value gesture
+  ---
+  duration_ms: 2.04131
+  type: 'test'
+  ...
+# Subtest: blend input labels describe wrapped color materials and keep blend labels compact
+ok 170 - blend input labels describe wrapped color materials and keep blend labels compact
+  ---
+  duration_ms: 9.521913
+  type: 'test'
+  ...
+# Subtest: effect operators derive graph sorts and ports, and every equation is closed and typed
+ok 171 - effect operators derive graph sorts and ports, and every equation is closed and typed
+  ---
+  duration_ms: 2.807801
+  type: 'test'
+  ...
+# Subtest: all declared laws have identical six-component symbolic observations
+ok 172 - all declared laws have identical six-component symbolic observations
+  ---
+  duration_ms: 14.50666
+  type: 'test'
+  ...
+# Subtest: effect laws preserve every f32 component across clamp boundaries and seeded finite contexts
+ok 173 - effect laws preserve every f32 component across clamp boundaries and seeded finite contexts
+  ---
+  duration_ms: 130.629329
+  type: 'test'
+  ...
+# Subtest: the projector rejects ordering changes within a color or slope component
+ok 174 - the projector rejects ordering changes within a color or slope component
+  ---
+  duration_ms: 0.797244
+  type: 'test'
+  ...
+# Subtest: shadowed writes disappear only from their consumer; shared branches and source identities survive
+ok 175 - shadowed writes disappear only from their consumer; shared branches and source identities survive
+  ---
+  duration_ms: 4.792468
+  type: 'test'
+  ...
+# Subtest: projection requires known topological terms and a surface result
+ok 176 - projection requires known topological terms and a surface result
+  ---
+  duration_ms: 0.663142
+  type: 'test'
+  ...
+# Subtest: all five expression sorts are graph roots, while material boundaries remain strict
+ok 177 - all five expression sorts are graph roots, while material boundaries remain strict
+  ---
+  duration_ms: 16.587884
+  type: 'test'
+  ...
+# Subtest: generic documents keep the same complete validation and JSON boundary
+ok 178 - generic documents keep the same complete validation and JSON boundary
+  ---
+  duration_ms: 47.161763
+  type: 'test'
+  ...
+# Subtest: generic patches and folds retain a field root, sharing and atomic updates
+ok 179 - generic patches and folds retain a field root, sharing and atomic updates
+  ---
+  duration_ms: 9.484955
+  type: 'test'
+  ...
+# Subtest: recomposed documents borrow validated nodes, including value patches, without trusting frozen authors
+ok 180 - recomposed documents borrow validated nodes, including value patches, without trusting frozen authors
+  ---
+  duration_ms: 1.378682
+  type: 'test'
+  ...
+# Subtest: borrowing normalized nodes still validates graph references, sorts, cycles and depth
+ok 181 - borrowing normalized nodes still validates graph references, sorts, cycles and depth
+  ---
+  duration_ms: 1.591795
+  type: 'test'
+  ...
+# Subtest: prepared scalar, color and domain roots sample directly and retain their differentials
+ok 182 - prepared scalar, color and domain roots sample directly and retain their differentials
+  ---
+  duration_ms: 16.711121
+  type: 'test'
+  ...
+# Subtest: prepared samplers own one immutable graph revision and never retain sample contexts
+ok 183 - prepared samplers own one immutable graph revision and never retain sample contexts
+  ---
+  duration_ms: 0.902684
+  type: 'test'
+  ...
+# Subtest: scoped instances have independent local values and explicit shared inputs
+ok 184 - scoped instances have independent local values and explicit shared inputs
+  ---
+  duration_ms: 1.303218
+  type: 'test'
+  ...
+# Subtest: unnamed instance values are independent and local DAG sharing is retained
+ok 185 - unnamed instance values are independent and local DAG sharing is retained
+  ---
+  duration_ms: 0.538753
+  type: 'test'
+  ...
+# Subtest: an explicitly shared subgraph protects its descendants used elsewhere
+ok 186 - an explicitly shared subgraph protects its descendants used elsewhere
+  ---
+  duration_ms: 0.465894
+  type: 'test'
+  ...
+# Subtest: instancing snapshots raw local inputs once without mutating or freezing caller data
+ok 187 - instancing snapshots raw local inputs once without mutating or freezing caller data
+  ---
+  duration_ms: 0.750103
+  type: 'test'
+  ...
+# Subtest: shared roots require immutable constructor ownership before template composition
+ok 188 - shared roots require immutable constructor ownership before template composition
+  ---
+  duration_ms: 0.768541
+  type: 'test'
+  ...
+# Subtest: borrowing an owned root preserves its snapshotted descendants and cross references
+ok 189 - borrowing an owned root preserves its snapshotted descendants and cross references
+  ---
+  duration_ms: 0.499634
+  type: 'test'
+  ...
+# Subtest: instancing traverses palette records and stop lists and composes with domain binding
+ok 190 - instancing traverses palette records and stop lists and composes with domain binding
+  ---
+  duration_ms: 1.759738
+  type: 'test'
+  ...
+# Subtest: invalid scopes, full IDs, duplicate names and cycles are rejected without truncation
+ok 191 - invalid scopes, full IDs, duplicate names and cycles are rejected without truncation
+  ---
+  duration_ms: 4.960062
+  type: 'test'
+  ...
+# Subtest: 81 source nodes prepare once across 41 overlapping roots, in either request order
+ok 192 - 81 source nodes prepare once across 41 overlapping roots, in either request order
+  ---
+  duration_ms: 118.405427
+  type: 'test'
+  ...
+# Subtest: scalar structural sharing extends across separately requested roots
+ok 193 - scalar structural sharing extends across separately requested roots
+  ---
+  duration_ms: 7.075397
+  type: 'test'
+  ...
+# Subtest: mixed-sort outputs normalize context once, share results, and isolate every call and graph revision
+ok 194 - mixed-sort outputs normalize context once, share results, and isolate every call and graph revision
+  ---
+  duration_ms: 3.529441
+  type: 'test'
+  ...
+# Subtest: multi-output preparation preserves color identity, low bits and hidden lazy failures
+ok 195 - multi-output preparation preserves color identity, low bits and hidden lazy failures
+  ---
+  duration_ms: 2.232772
+  type: 'test'
+  ...
+# Subtest: output selectors check shape and sorts and preserve arbitrary own output names
+ok 196 - output selectors check shape and sorts and preserve arbitrary own output names
+  ---
+  duration_ms: 0.520546
+  type: 'test'
+  ...
+# Subtest: distinct pure scalar branches prepare and compute one shared result without editing the authored graph
+ok 197 - distinct pure scalar branches prepare and compute one shared result without editing the authored graph
+  ---
+  duration_ms: 5.473205
+  type: 'test'
+  ...
+# Subtest: equal editable leaves stay independent while their structural coordinate read shares
+ok 198 - equal editable leaves stay independent while their structural coordinate read shares
+  ---
+  duration_ms: 1.305211
+  type: 'test'
+  ...
+# Subtest: image-reader CSE retains channel, filtering, address, frame and resource identities
+ok 199 - image-reader CSE retains channel, filtering, address, frame and resource identities
+  ---
+  duration_ms: 8.638455
+  type: 'test'
+  ...
+# Subtest: named field roots prepare only reachable inputs and cache separately from material output
+ok 200 - named field roots prepare only reachable inputs and cache separately from material output
+  ---
+  duration_ms: 2.083226
+  type: 'test'
+  ...
+# Subtest: color identity keeps the authored Oklab conversion and its exact numeric result
+ok 201 - color identity keeps the authored Oklab conversion and its exact numeric result
+  ---
+  duration_ms: 1.978754
+  type: 'test'
+  ...
+# Subtest: scalar sharing preserves lazy color masks and original shared-color identities
+ok 202 - scalar sharing preserves lazy color masks and original shared-color identities
+  ---
+  duration_ms: 2.136047
+  type: 'test'
+  ...
+# Subtest: scalar CSE preserves arithmetic grouping and cancellation behavior
+ok 203 - scalar CSE preserves arithmetic grouping and cancellation behavior
+  ---
+  duration_ms: 0.476328
+  type: 'test'
+  ...
+# Subtest: structural keys ignore node names, retain literal semantics and reject value-based sharing
+ok 204 - structural keys ignore node names, retain literal semantics and reject value-based sharing
+  ---
+  duration_ms: 0.36212
+  type: 'test'
+  ...
+# Subtest: structural key reference mapping matches canonical port rewriting without copying a node
+ok 205 - structural key reference mapping matches canonical port rewriting without copying a node
+  ---
+  duration_ms: 0.766787
+  type: 'test'
+  ...
+# Subtest: the packed application serializes one atlas and shares each placed channel reconstruction
+ok 206 - the packed application serializes one atlas and shares each placed channel reconstruction
+  ---
+  duration_ms: 231.853198
+  type: 'test'
+  ...
+# Subtest: a restored application keeps its shared resource across independent creature frames and local edits
+ok 207 - a restored application keeps its shared resource across independent creature frames and local edits
+  ---
+  duration_ms: 117.462064
+  type: 'test'
+  ...
+# Subtest: domain binding transports the pixel footprint separately from calculus directions
+ok 208 - domain binding transports the pixel footprint separately from calculus directions
+  ---
+  duration_ms: 3.958549
+  type: 'test'
+  ...
+# Subtest: one filtered value supports independent derivative directions and an omitted footprint remains a point query
+ok 209 - one filtered value supports independent derivative directions and an omitted footprint remains a point query
+  ---
+  duration_ms: 3.900519
+  type: 'test'
+  ...
+# Subtest: baking covered deposition before filtering retains its correlation
+ok 210 - baking covered deposition before filtering retains its correlation
+  ---
+  duration_ms: 1.090849
+  type: 'test'
+  ...
+# Subtest: filter changes are structural and editor undo restores their resource and cost semantics
+ok 211 - filter changes are structural and editor undo restores their resource and cost semantics
+  ---
+  duration_ms: 131.22654
+  type: 'test'
+  ...
+# Subtest: explicit linear is the canonical legacy reader, with no document or program change
+ok 212 - explicit linear is the canonical legacy reader, with no document or program change
+  ---
+  duration_ms: 17.111485
+  type: 'test'
+  ...
+# Subtest: filter declarations are checked at graph construction and import and survive JSON roundtrips
+ok 213 - filter declarations are checked at graph construction and import and survive JSON roundtrips
+  ---
+  duration_ms: 18.160228
+  type: 'test'
+  ...
+# Subtest: sampling policy is structure while dimensions and mip-producing pixels remain editable data
+ok 214 - sampling policy is structure while dimensions and mip-producing pixels remain editable data
+  ---
+  duration_ms: 1.128197
+  type: 'test'
+  ...
+# Subtest: costs share channels of one filter policy and separate differing policies
+ok 215 - costs share channels of one filter policy and separate differing policies
+  ---
+  duration_ms: 1.21432
+  type: 'test'
+  ...
+# Subtest: zero extension expands range analysis to zero, including signed height resources
+ok 216 - zero extension expands range analysis to zero, including signed height resources
+  ---
+  duration_ms: 38.267477
+  type: 'test'
+  ...
+# Subtest: every graph sort reifies to an owned expression with its exact reachable document
+ok 217 - every graph sort reifies to an owned expression with its exact reachable document
+  ---
+  duration_ms: 13.323018
+  type: 'test'
+  ...
+# Subtest: reification preserves sharing through single, record and list ports across extracted roots
+ok 218 - reification preserves sharing through single, record and list ports across extracted roots
+  ---
+  duration_ms: 17.841334
+  type: 'test'
+  ...
+# Subtest: overlapping extracted roots share their complete prefixes in every request order
+ok 219 - overlapping extracted roots share their complete prefixes in every request order
+  ---
+  duration_ms: 38.036623
+  type: 'test'
+  ...
+# Subtest: reification selects reachable definitions but still validates the complete import
+ok 220 - reification selects reachable definitions but still validates the complete import
+  ---
+  duration_ms: 6.472962
+  type: 'test'
+  ...
+# Subtest: reification caches only immutable revisions and isolates patched and raw input values
+ok 221 - reification caches only immutable revisions and isolates patched and raw input values
+  ---
+  duration_ms: 15.536526
+  type: 'test'
+  ...
+# Subtest: persisted scalar, color and domain roots compose into independently scoped materials
+ok 222 - persisted scalar, color and domain roots compose into independently scoped materials
+  ---
+  duration_ms: 4.366041
+  type: 'test'
+  ...
+# Subtest: inspection exposes actual shared compiled representatives and ordered typed ports
+ok 223 - inspection exposes actual shared compiled representatives and ordered typed ports
+  ---
+  duration_ms: 6.922689
+  type: 'test'
+  ...
+# Subtest: folded children have no false live alias and unreachable authored values remain addressable
+ok 224 - folded children have no false live alias and unreachable authored values remain addressable
+  ---
+  duration_ms: 2.898227
+  type: 'test'
+  ...
+# Subtest: inspection shares immutable topology across value edits while equal named controls remain distinct
+ok 225 - inspection shares immutable topology across value edits while equal named controls remain distinct
+  ---
+  duration_ms: 0.925973
+  type: 'test'
+  ...
+# Subtest: graph JSON keeps vectors inline and structural objects readable without changing data
+ok 226 - graph JSON keeps vectors inline and structural objects readable without changing data
+  ---
+  duration_ms: 7.185696
+  type: 'test'
+  ...
+# Subtest: large embedded image JSON has bounded rows and lossless canonical round trips
+ok 227 - large embedded image JSON has bounded rows and lossless canonical round trips
+  ---
+  duration_ms: 467.626999
+  type: 'test'
+  ...
+# Subtest: simulation compares value and differential components and retains a replayable counterexample
+ok 228 - simulation compares value and differential components and retains a replayable counterexample
+  ---
+  duration_ms: 4.993982
+  type: 'test'
+  ...
+# Subtest: simulation observes domain normals and explicit footprints independently of calculus directions
+ok 229 - simulation observes domain normals and explicit footprints independently of calculus directions
+  ---
+  duration_ms: 1.685259
+  type: 'test'
+  ...
+# Subtest: simulation does not accept reassociation or cancelling nested floating complements
+ok 230 - simulation does not accept reassociation or cancelling nested floating complements
+  ---
+  duration_ms: 1.719322
+  type: 'test'
+  ...
+# Subtest: simulation rejects filtering a correlated product after independently filtering its factors
+ok 231 - simulation rejects filtering a correlated product after independently filtering its factors
+  ---
+  duration_ms: 2.690135
+  type: 'test'
+  ...
+# Subtest: independent value edits refute merging currently equal editable leaves
+ok 232 - independent value edits refute merging currently equal editable leaves
+  ---
+  duration_ms: 1.011937
+  type: 'test'
+  ...
+# Subtest: surface output observations see finish, pigment and differential wiring across filtered edits
+ok 233 - surface output observations see finish, pigment and differential wiring across filtered edits
+  ---
+  duration_ms: 15.506849
+  type: 'test'
+  ...
+# Subtest: surface simulation requires explicit opaque paint values and does not invent a renderer
+ok 234 - surface simulation requires explicit opaque paint values and does not invent a renderer
+  ---
+  duration_ms: 4.519637
+  type: 'test'
+  ...
+# Subtest: observations can retain an independently named shared branch and reveal an overridden edit
+ok 235 - observations can retain an independently named shared branch and reveal an overridden edit
+  ---
+  duration_ms: 3.238334
+  type: 'test'
+  ...
+# Subtest: empty suites, incompatible observations and evaluation failures cannot report equivalence
+ok 236 - empty suites, incompatible observations and evaluation failures cannot report equivalence
+  ---
+  duration_ms: 0.831488
+  type: 'test'
+  ...
+# Subtest: an enclosing Effect scope owns the renderer, prepared resources, and context listeners
+ok 237 - an enclosing Effect scope owns the renderer, prepared resources, and context listeners
+  ---
+  duration_ms: 4.775243
+  type: 'test'
+  ...
+# Subtest: failed preparation releases each successful acquisition immediately in reverse order
+ok 238 - failed preparation releases each successful acquisition immediately in reverse order
+  ---
+  duration_ms: 11.591593
+  type: 'test'
+  ...
+# Subtest: one failing finalizer does not skip other resources or leave the session usable
+ok 239 - one failing finalizer does not skip other resources or leave the session usable
+  ---
+  duration_ms: 10.945898
+  type: 'test'
+  ...
+# Subtest: interrupting an application fiber closes its scoped renderer
+ok 240 - interrupting an application fiber closes its scoped renderer
+  ---
+  duration_ms: 1.394519
+  type: 'test'
+  ...
+# Subtest: loss cancels a pending capture and ignores its eventual browser callback
+ok 241 - loss cancels a pending capture and ignores its eventual browser callback
+  ---
+  duration_ms: 7.526613
+  type: 'test'
+  ...
+# Subtest: retry cancels a pending capture and ignores its eventual browser callback
+ok 242 - retry cancels a pending capture and ignores its eventual browser callback
+  ---
+  duration_ms: 10.268409
+  type: 'test'
+  ...
+# Subtest: dispose cancels a pending capture and ignores its eventual browser callback
+ok 243 - dispose cancels a pending capture and ignores its eventual browser callback
+  ---
+  duration_ms: 0.605146
+  type: 'test'
+  ...
+# Subtest: caller cancellation releases capture work while leaving the preview ready
+ok 244 - caller cancellation releases capture work while leaving the preview ready
+  ---
+  duration_ms: 1.129219
+  type: 'test'
+  ...
+# Subtest: capture errors keep their typed error while successful captures preserve their result
+ok 245 - capture errors keep their typed error while successful captures preserve their result
+  ---
+  duration_ms: 0.619048
+  type: 'test'
+  ...
+# Subtest: work cannot start offline and a synchronous loss cannot deliver a stale result
+ok 246 - work cannot start offline and a synchronous loss cannot deliver a stale result
+  ---
+  duration_ms: 0.623295
+  type: 'test'
+  ...
+# Subtest: a denied WebGL2 context records the browser reason and does not construct a renderer
+ok 247 - a denied WebGL2 context records the browser reason and does not construct a renderer
+  ---
+  duration_ms: 5.162993
+  type: 'test'
+  ...
+# Subtest: availability starts after a successful first frame and repeated renders reuse the renderer
+ok 248 - availability starts after a successful first frame and repeated renders reuse the renderer
+  ---
+  duration_ms: 4.351407
+  type: 'test'
+  ...
+# Subtest: context initialization failure retains its actual failure boundary
+ok 249 - context initialization failure retains its actual failure boundary
+  ---
+  duration_ms: 3.058846
+  type: 'test'
+  ...
+# Subtest: renderer initialization failure retains its actual failure boundary
+ok 250 - renderer initialization failure retains its actual failure boundary
+  ---
+  duration_ms: 0.521107
+  type: 'test'
+  ...
+# Subtest: prepare initialization failure retains its actual failure boundary
+ok 251 - prepare initialization failure retains its actual failure boundary
+  ---
+  duration_ms: 0.710851
+  type: 'test'
+  ...
+# Subtest: shader diagnostics during prepare are reported as shader failures
+ok 252 - shader diagnostics during prepare are reported as shader failures
+  ---
+  duration_ms: 0.810075
+  type: 'test'
+  ...
+# Subtest: shader diagnostics during render are reported as shader failures
+ok 253 - shader diagnostics during render are reported as shader failures
+  ---
+  duration_ms: 1.013459
+  type: 'test'
+  ...
+# Subtest: a render exception closes the render/capture gate until an explicit retry
+ok 254 - a render exception closes the render/capture gate until an explicit retry
+  ---
+  duration_ms: 2.638996
+  type: 'test'
+  ...
+# Subtest: loss blocks rendering and restoration rebuilds after all event listeners while retaining scene data
+ok 255 - loss blocks rendering and restoration rebuilds after all event listeners while retaining scene data
+  ---
+  duration_ms: 1.219278
+  type: 'test'
+  ...
+# Subtest: a context lost during a render is not accepted as a successful frame
+ok 256 - a context lost during a render is not accepted as a successful frame
+  ---
+  duration_ms: 0.61386
+  type: 'test'
+  ...
+# Subtest: disposal invalidates a queued restoration and removes the context listeners
+ok 257 - disposal invalidates a queued restoration and removes the context listeners
+  ---
+  duration_ms: 0.567208
+  type: 'test'
+  ...
+# Subtest: explicit profile retries release previous resources and the selected profile remains the default
+ok 258 - explicit profile retries release previous resources and the selected profile remains the default
+  ---
+  duration_ms: 0.685812
+  type: 'test'
+  ...
+# Subtest: retry cleanup failures dispose the renderer and are not labeled as unavailable WebGL
+ok 259 - retry cleanup failures dispose the renderer and are not labeled as unavailable WebGL
+  ---
+  duration_ms: 1.904178
+  type: 'test'
+  ...
+# Subtest: a disposal error still leaves the session terminal and cannot revive released resources
+ok 260 - a disposal error still leaves the session terminal and cannot revive released resources
+  ---
+  duration_ms: 0.92362
+  type: 'test'
+  ...
+# Subtest: coverage helpers preserve a repeated raw named operand as one editable value
+ok 261 - coverage helpers preserve a repeated raw named operand as one editable value
+  ---
+  duration_ms: 9.665265
+  type: 'test'
+  ...
+# Subtest: coverage helpers preserve raw descendants shared by distinct operands
+ok 262 - coverage helpers preserve raw descendants shared by distinct operands
+  ---
+  duration_ms: 1.480061
+  type: 'test'
+  ...
+# Subtest: coverage composition preserves existing owned and literal graph ordering
+ok 263 - coverage composition preserves existing owned and literal graph ordering
+  ---
+  duration_ms: 1.292811
+  type: 'test'
+  ...
+# Subtest: owned expression descendants remain shared when extracted, named or recomposed
+ok 264 - owned expression descendants remain shared when extracted, named or recomposed
+  ---
+  duration_ms: 1.118682
+  type: 'test'
+  ...
+# Subtest: snapshot ownership still isolates frozen caller inputs and rejects cyclic graphs
+ok 265 - snapshot ownership still isolates frozen caller inputs and rejects cyclic graphs
+  ---
+  duration_ms: 0.799488
+  type: 'test'
+  ...
+# Subtest: snapshots preserve sparse array lengths so construction cannot heal invalid author data
+ok 266 - snapshots preserve sparse array lengths so construction cannot heal invalid author data
+  ---
+  duration_ms: 1.67278
+  type: 'test'
+  ...
+# Subtest: interval edges share one raw named field and follow its edits together
+ok 267 - interval edges share one raw named field and follow its edits together
+  ---
+  duration_ms: 1.825366
+  type: 'test'
+  ...
+# Subtest: chisel axes share one raw named domain without freezing caller data
+ok 268 - chisel axes share one raw named domain without freezing caller data
+  ---
+  duration_ms: 3.160063
+  type: 'test'
+  ...
+# Subtest: bounded history keeps the latest hundred immutable documents and redoes them in order
+ok 269 - bounded history keeps the latest hundred immutable documents and redoes them in order
+  ---
+  duration_ms: 9.619855
+  type: 'test'
+  ...
+# Subtest: both supported Three engines share one complete explicit pyramid across sampling policies
+ok 270 - both supported Three engines share one complete explicit pyramid across sampling policies
+  ---
+  duration_ms: 53.837878
+  type: 'test'
+  ...
+# Subtest: resource dimension edits replace the pyramid while retaining shader and binding identity
+ok 271 - resource dimension edits replace the pyramid while retaining shader and binding identity
+  ---
+  duration_ms: 24.071149
+  type: 'test'
+  ...
+# Subtest: filtered RGB, finish and height readers share one bounded reconstruction
+ok 272 - filtered RGB, finish and height readers share one bounded reconstruction
+  ---
+  duration_ms: 22.25572
+  type: 'test'
+  ...
+# Subtest: filter identity and addressing prevent inappropriate sample fusion
+ok 273 - filter identity and addressing prevent inappropriate sample fusion
+  ---
+  duration_ms: 7.493532
+  type: 'test'
+  ...
+# Subtest: color-only filters demand affine footprint tangents without adding height fields
+ok 274 - color-only filters demand affine footprint tangents without adding height fields
+  ---
+  duration_ms: 1.442093
+  type: 'test'
+  ...
+# Subtest: base-level zero extension requires no screen footprint or mip choice
+ok 275 - base-level zero extension requires no screen footprint or mip choice
+  ---
+  duration_ms: 0.5946
+  type: 'test'
+  ...
+# Subtest: mip pyramids own and share derived levels while retaining odd edge texels
+ok 276 - mip pyramids own and share derived levels while retaining odd edge texels
+  ---
+  duration_ms: 2.289484
+  type: 'test'
+  ...
+# Subtest: area reduction preserves bounded masks, means and constant extended colors
+ok 277 - area reduction preserves bounded masks, means and constant extended colors
+  ---
+  duration_ms: 0.740567
+  type: 'test'
+  ...
+# Subtest: zero addressing has finite tent support and the defined one-sided boundary derivatives
+ok 278 - zero addressing has finite tent support and the defined one-sided boundary derivatives
+  ---
+  duration_ms: 0.459882
+  type: 'test'
+  ...
+# Subtest: zero and omitted footprints preserve the original point reconstruction exactly
+ok 279 - zero and omitted footprints preserve the original point reconstruction exactly
+  ---
+  duration_ms: 3.880228
+  type: 'test'
+  ...
+# Subtest: trilinear filtering removes a subpixel checker and blends values with their partials
+ok 280 - trilinear filtering removes a subpixel checker and blends values with their partials
+  ---
+  duration_ms: 24.246611
+  type: 'test'
+  ...
+# Subtest: anisotropic filtering retains detail along the minor axis at a bounded tap count
+ok 281 - anisotropic filtering retains detail along the minor axis at a bounded tap count
+  ---
+  duration_ms: 3.540152
+  type: 'test'
+  ...
+# Subtest: footprint covariance is invariant to rotating the screen basis, including numerical isotropy
+ok 282 - footprint covariance is invariant to rotating the screen basis, including numerical isotropy
+  ---
+  duration_ms: 1.683537
+  type: 'test'
+  ...
+# Subtest: tap quantization has an explicit narrow convention around integer ratios
+ok 283 - tap quantization has an explicit narrow convention around integer ratios
+  ---
+  duration_ms: 3.114101
+  type: 'test'
+  ...
+# Subtest: periodic filtered samples use a local representative before anisotropic tap offsets
+ok 284 - periodic filtered samples use a local representative before anisotropic tap offsets
+  ---
+  duration_ms: 0.653151
+  type: 'test'
+  ...
+# Subtest: filtered UV partials match finite differences with the footprint held fixed
+ok 285 - filtered UV partials match finite differences with the footprint held fixed
+  ---
+  duration_ms: 9.39763
+  type: 'test'
+  ...
+# Subtest: fractional LOD values and partials are continuous across stored and virtual level boundaries
+ok 286 - fractional LOD values and partials are continuous across stored and virtual level boundaries
+  ---
+  duration_ms: 0.43293
+  type: 'test'
+  ...
+# Subtest: singleton palette axes do not blur color, while zero-extended axes keep their finite bounds
+ok 287 - singleton palette axes do not blur color, while zero-extended axes keep their finite bounds
+  ---
+  duration_ms: 0.392949
+  type: 'test'
+  ...
+# Subtest: virtual zero levels keep shrinking a subpixel stamp and preserve its integrated mass
+ok 288 - virtual zero levels keep shrinking a subpixel stamp and preserve its integrated mass
+  ---
+  duration_ms: 37.542288
+  type: 'test'
+  ...
+# Subtest: huge finite footprints and far zero-address coordinates remain finite
+ok 289 - huge finite footprints and far zero-address coordinates remain finite
+  ---
+  duration_ms: 12.649264
+  type: 'test'
+  ...
+# Subtest: CPU footprints are owned and transported independently of derivative directions
+ok 290 - CPU footprints are owned and transported independently of derivative directions
+  ---
+  duration_ms: 2.193065
+  type: 'test'
+  ...
+# Subtest: filtered coverage retains the complete masked-height product rule
+ok 291 - filtered coverage retains the complete masked-height product rule
+  ---
+  duration_ms: 1.295286
+  type: 'test'
+  ...
+# Subtest: sample boundaries reject incoherent footprints without retaining caller data
+ok 292 - sample boundaries reject incoherent footprints without retaining caller data
+  ---
+  duration_ms: 1.043676
+  type: 'test'
+  ...
+# Subtest: image resources are shared DAG data through serialization, reification and instancing
+ok 293 - image resources are shared DAG data through serialization, reification and instancing
+  ---
+  duration_ms: 8.509506
+  type: 'test'
+  ...
+# Subtest: image fields carry affine chain derivatives and immutable sampler revisions
+ok 294 - image fields carry affine chain derivatives and immutable sampler revisions
+  ---
+  duration_ms: 4.504915
+  type: 'test'
+  ...
+# Subtest: image sorts and structural sampling options reject incoherent graph connections
+ok 295 - image sorts and structural sampling options reject incoherent graph connections
+  ---
+  duration_ms: 0.922879
+  type: 'test'
+  ...
+# Subtest: the graph image budget applies to import and persistent image edits
+ok 296 - the graph image budget applies to import and persistent image edits
+  ---
+  duration_ms: 224.18769
+  type: 'test'
+  ...
+# Subtest: resource pixel edits keep shader identity and update range analysis
+ok 297 - resource pixel edits keep shader identity and update range analysis
+  ---
+  duration_ms: 4.381383
+  type: 'test'
+  ...
+# Subtest: Three shares resource textures, atomically revises them and releases the final reference
+ok 298 - Three shares resource textures, atomically revises them and releases the final reference
+  ---
+  duration_ms: 6.989662
+  type: 'test'
+  ...
+# Subtest: disposing a material clears its cached texture slots while preserving other borrowers
+ok 299 - disposing a material clears its cached texture slots while preserving other borrowers
+  ---
+  duration_ms: 434.087666
+  type: 'test'
+  ...
+# Subtest: pigment-only coating preserves the original surface and literal absence specializes away
+ok 300 - pigment-only coating preserves the original surface and literal absence specializes away
+  ---
+  duration_ms: 7.749279
+  type: 'test'
+  ...
+# Subtest: throwing image disposal listeners do not abandon later resources or leave a stale live plan
+ok 301 - throwing image disposal listeners do not abandon later resources or leave a stale live plan
+  ---
+  duration_ms: 8.609381
+  type: 'test'
+  ...
+# Subtest: RGB and all scalar channels share four texel reads while keeping independent typed expressions
+ok 302 - RGB and all scalar channels share four texel reads while keeping independent typed expressions
+  ---
+  duration_ms: 22.707002
+  type: 'test'
+  ...
+# Subtest: reconstruction sharing also works when a height reader is emitted before its color reader
+ok 303 - reconstruction sharing also works when a height reader is emitted before its color reader
+  ---
+  duration_ms: 1.276386
+  type: 'test'
+  ...
+# Subtest: distinct image identities, coordinate frames and addressing modes retain their own reads
+ok 304 - distinct image identities, coordinate frames and addressing modes retain their own reads
+  ---
+  duration_ms: 1.490818
+  type: 'test'
+  ...
+# Subtest: live frame, pixel and zero-amplitude edits preserve sample identity and demanded derivatives
+ok 305 - live frame, pixel and zero-amplitude edits preserve sample identity and demanded derivatives
+  ---
+  duration_ms: 8.856493
+  type: 'test'
+  ...
+# Subtest: literal zero removes only dead image paths and leaves surviving color reconstruction intact
+ok 306 - literal zero removes only dead image paths and leaves surviving color reconstruction intact
+  ---
+  duration_ms: 3.153403
+  type: 'test'
+  ...
+# Subtest: CPU typed readers reconstruct once per sample and never reuse a previous context value
+ok 307 - CPU typed readers reconstruct once per sample and never reuse a previous context value
+  ---
+  duration_ms: 0.854974
+  type: 'test'
+  ...
+# Subtest: CPU sharing respects address and prepared-frame identity
+ok 308 - CPU sharing respects address and prepared-frame identity
+  ---
+  duration_ms: 0.3548
+  type: 'test'
+  ...
+# Subtest: shared CPU reconstruction validates only the channels a typed reader requests
+ok 309 - shared CPU reconstruction validates only the channels a typed reader requests
+  ---
+  duration_ms: 0.782522
+  type: 'test'
+  ...
+# Subtest: program ownership preserves shared raw masks, snapshots paths, and roundtrips JSON
+ok 310 - program ownership preserves shared raw masks, snapshots paths, and roundtrips JSON
+  ---
+  duration_ms: 3.754283
+  type: 'test'
+  ...
+# Subtest: frozen caller programs still normalize once instead of borrowing an unproved shape
+ok 311 - frozen caller programs still normalize once instead of borrowing an unproved shape
+  ---
+  duration_ms: 0.652661
+  type: 'test'
+  ...
+# Subtest: ordered deposition integrates associated pigment, independent finishes, and covered height
+ok 312 - ordered deposition integrates associated pigment, independent finishes, and covered height
+  ---
+  duration_ms: 3.43001
+  type: 'test'
+  ...
+# Subtest: zone coverage participates before ordered accumulation and height integration
+ok 313 - zone coverage participates before ordered accumulation and height integration
+  ---
+  duration_ms: 0.977463
+  type: 'test'
+  ...
+# Subtest: unemitted marks do not retain finish readers, height, or unused zone placements
+ok 314 - unemitted marks do not retain finish readers, height, or unused zone placements
+  ---
+  duration_ms: 20.328705
+  type: 'test'
+  ...
+# Subtest: active zone references preserve identity and order after pruning unused placements
+ok 315 - active zone references preserve identity and order after pruning unused placements
+  ---
+  duration_ms: 2.993385
+  type: 'test'
+  ...
+# Subtest: all authored affine inverses are validated before unused placements are pruned
+ok 316 - all authored affine inverses are validated before unused placements are pruned
+  ---
+  duration_ms: 12.860092
+  type: 'test'
+  ...
+# Subtest: stroke spacing follows path distance and pressure; equivalent collinear paths agree
+ok 317 - stroke spacing follows path distance and pressure; equivalent collinear paths agree
+  ---
+  duration_ms: 117.453835
+  type: 'test'
+  ...
+# Subtest: floating-point subdivision cannot add a nearly coincident endpoint dab
+ok 318 - floating-point subdivision cannot add a nearly coincident endpoint dab
+  ---
+  duration_ms: 90.499888
+  type: 'test'
+  ...
+# Subtest: affine, subpixel and anisotropic brush bounds preserve the existing filtered sampling contract
+ok 319 - affine, subpixel and anisotropic brush bounds preserve the existing filtered sampling contract
+  ---
+  duration_ms: 488.553116
+  type: 'test'
+  ...
+# Subtest: fixed-footprint preparation preserves filtered values and partials exactly
+ok 320 - fixed-footprint preparation preserves filtered values and partials exactly
+  ---
+  duration_ms: 4.035338
+  type: 'test'
+  ...
+# Subtest: tile bins reduce candidate work without changing deterministic authored order
+ok 321 - tile bins reduce candidate work without changing deterministic authored order
+  ---
+  duration_ms: 203.959313
+  type: 'test'
+  ...
+# Subtest: a bake lowers to shared image nodes, associated deposition and the complete height field
+ok 322 - a bake lowers to shared image nodes, associated deposition and the complete height field
+  ---
+  duration_ms: 10.784843
+  type: 'test'
+  ...
+# Subtest: application owns raw base and placement as one graph and snapshots raw bake resources
+ok 323 - application owns raw base and placement as one graph and snapshots raw bake resources
+  ---
+  duration_ms: 2.34398
+  type: 'test'
+  ...
+# Subtest: program and bake limits reject ambiguous inputs before expansion
+ok 324 - program and bake limits reject ambiguous inputs before expansion
+  ---
+  duration_ms: 0.726255
+  type: 'test'
+  ...
+# Subtest: sparse author arrays are rejected at the mark boundary before compilation
+ok 325 - sparse author arrays are rejected at the mark boundary before compilation
+  ---
+  duration_ms: 1.014761
+  type: 'test'
+  ...
+# Subtest: interval masks have finite support, an exact plateau and inward C1 edges
+ok 326 - interval masks have finite support, an exact plateau and inward C1 edges
+  ---
+  duration_ms: 4.628116
+  type: 'test'
+  ...
+# Subtest: interval defaults feather one tenth of the input range and accepts scalar literals
+ok 327 - interval defaults feather one tenth of the input range and accepts scalar literals
+  ---
+  duration_ms: 2.458667
+  type: 'test'
+  ...
+# Subtest: chisel masks preserve independent side softness and remain bounded at huge coordinates
+ok 328 - chisel masks preserve independent side softness and remain bounded at huge coordinates
+  ---
+  duration_ms: 0.969862
+  type: 'test'
+  ...
+# Subtest: a transformed chisel carries the full product derivative
+ok 329 - a transformed chisel carries the full product derivative
+  ---
+  duration_ms: 3.759541
+  type: 'test'
+  ...
+# Subtest: masks stay ordinary scalar graphs across serialization and domain binding
+ok 330 - masks stay ordinary scalar graphs across serialization and domain binding
+  ---
+  duration_ms: 8.379855
+  type: 'test'
+  ...
+# Subtest: mask authoring rejects invalid support, softness and unrepresentable ramp edges
+ok 331 - mask authoring rejects invalid support, softness and unrepresentable ramp edges
+  ---
+  duration_ms: 0.778997
+  type: 'test'
+  ...
+# Subtest: named authoring uses canonical graph IDs for every independently editable value
+ok 332 - named authoring uses canonical graph IDs for every independently editable value
+  ---
+  duration_ms: 20.054255
+  type: 'test'
+  ...
+# Subtest: author names do not change canonical shader work or scalar semantics
+ok 333 - author names do not change canonical shader work or scalar semantics
+  ---
+  duration_ms: 2.051917
+  type: 'test'
+  ...
+# Subtest: unnamed expressions assign deterministic postorder IDs to canonical palette nodes
+ok 334 - unnamed expressions assign deterministic postorder IDs to canonical palette nodes
+  ---
+  duration_ms: 0.627212
+  type: 'test'
+  ...
+# Subtest: generated IDs reserve explicit IDs encountered later in the composition
+ok 335 - generated IDs reserve explicit IDs encountered later in the composition
+  ---
+  duration_ms: 0.533085
+  type: 'test'
+  ...
+# Subtest: sharing a named expression is explicit; independent duplicate IDs are rejected
+ok 336 - sharing a named expression is explicit; independent duplicate IDs are rejected
+  ---
+  duration_ms: 1.050186
+  type: 'test'
+  ...
+# Subtest: naming and renaming are pure, with an owned same-name identity
+ok 337 - naming and renaming are pure, with an owned same-name identity
+  ---
+  duration_ms: 0.347928
+  type: 'test'
+  ...
+# Subtest: domain binding preserves author names, while independent named instances need distinct IDs
+ok 338 - domain binding preserves author names, while independent named instances need distinct IDs
+  ---
+  duration_ms: 2.770059
+  type: 'test'
+  ...
+# Subtest: naming does not turn a literal into an editable parameter
+ok 339 - naming does not turn a literal into an editable parameter
+  ---
+  duration_ms: 0.740366
+  type: 'test'
+  ...
+# Subtest: Three r140 works with only the declared engine capabilities
+ok 340 - Three r140 works with only the declared engine capabilities
+  ---
+  duration_ms: 13.031847
+  type: 'test'
+  ...
+# Subtest: Three r187 works with only the declared engine capabilities
+ok 341 - Three r187 works with only the declared engine capabilities
+  ---
+  duration_ms: 7.770962
+  type: 'test'
+  ...
+# Subtest: value-noise samples retain the documented deterministic field
+ok 342 - value-noise samples retain the documented deterministic field
+  ---
+  duration_ms: 3.855439
+  type: 'test'
+  ...
+# Subtest: noise is periodic per axis, including negative coordinates and the wrap seam
+ok 343 - noise is periodic per axis, including negative coordinates and the wrap seam
+  ---
+  duration_ms: 0.756822
+  type: 'test'
+  ...
+# Subtest: analytic noise gradients agree with central finite differences
+ok 344 - analytic noise gradients agree with central finite differences
+  ---
+  duration_ms: 8.342556
+  type: 'test'
+  ...
+# Subtest: noise wraps large finite coordinates before any integer hash conversion
+ok 345 - noise wraps large finite coordinates before any integer hash conversion
+  ---
+  duration_ms: 0.417677
+  type: 'test'
+  ...
+# Subtest: noise seed is an editable uint32 with a stable program and isolated CPU revisions
+ok 346 - noise seed is an editable uint32 with a stable program and isolated CPU revisions
+  ---
+  duration_ms: 9.45507
+  type: 'test'
+  ...
+# Subtest: noise point sampling preserves values when screen differentials change
+ok 347 - noise point sampling preserves values when screen differentials change
+  ---
+  duration_ms: 0.732154
+  type: 'test'
+  ...
+# Subtest: noise differentials follow transformed domains and whole-expression binding
+ok 348 - noise differentials follow transformed domains and whole-expression binding
+  ---
+  duration_ms: 4.411992
+  type: 'test'
+  ...
+# Subtest: CLI artifact paths cannot overwrite either authored or optimized graph files
+ok 349 - CLI artifact paths cannot overwrite either authored or optimized graph files
+  ---
+  duration_ms: 567.235506
+  type: 'test'
+  ...
+# Subtest: effect export is compact, typed, immutable and contains no image payloads or editable values
+ok 350 - effect export is compact, typed, immutable and contains no image payloads or editable values
+  ---
+  duration_ms: 15.337637
+  type: 'test'
+  ...
+# Subtest: exact finish elimination removes runtime sampling while preserving all authored IDs
+ok 351 - exact finish elimination removes runtime sampling while preserving all authored IDs
+  ---
+  duration_ms: 10.559309
+  type: 'test'
+  ...
+# Subtest: an independently shared branch prevents global elimination of its old finish
+ok 352 - an independently shared branch prevents global elimination of its old finish
+  ---
+  duration_ms: 7.85376
+  type: 'test'
+  ...
+# Subtest: atom identity and per-component ordering are part of equivalence
+ok 353 - atom identity and per-component ordering are part of equivalence
+  ---
+  duration_ms: 3.866701
+  type: 'test'
+  ...
+# Subtest: candidate decoding rejects invented sources, wrong sorts, duplicate IDs and forward references
+ok 354 - candidate decoding rejects invented sources, wrong sorts, duplicate IDs and forward references
+  ---
+  duration_ms: 3.400686
+  type: 'test'
+  ...
+# Subtest: source document limits keep the authored graph and report a rejected extraction
+ok 355 - source document limits keep the authored graph and report a rejected extraction
+  ---
+  duration_ms: 3.871815
+  type: 'test'
+  ...
+# Subtest: an equivalent extraction that duplicates a shared coat is rejected by compiled DAG cost
+ok 356 - an equivalent extraction that duplicates a shared coat is rejected by compiled DAG cost
+  ---
+  duration_ms: 1.49247
+  type: 'test'
+  ...
+# Subtest: all gallery graphs retain their exact original object when no compiled cost improves
+ok 357 - all gallery graphs retain their exact original object when no compiled cost improves
+  ---
+  duration_ms: 542.417631
+  type: 'test'
+  ...
+# (node:363) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: texture pair is lazy, stable, mipfiltered and explicitly scalar data
+ok 358 - texture pair is lazy, stable, mipfiltered and explicitly scalar data
+  ---
+  duration_ms: 2.140054
+  type: 'test'
+  ...
+# Subtest: default textures retain the independently recorded revision-42 atlas bytes
+ok 359 - default textures retain the independently recorded revision-42 atlas bytes
+  ---
+  duration_ms: 385.445332
+  type: 'test'
+  ...
+# Subtest: options are captured and independent seeded owners do not share GPU lifetimes
+ok 360 - options are captured and independent seeded owners do not share GPU lifetimes
+  ---
+  duration_ms: 317.656839
+  type: 'test'
+  ...
+# Subtest: both supplied maps validate before any texture allocation
+ok 361 - both supplied maps validate before any texture allocation
+  ---
+  duration_ms: 2.335136
+  type: 'test'
+  ...
+# Subtest: a second texture failure rolls back the first and permits a clean retry
+ok 362 - a second texture failure rolls back the first and permits a clean retry
+  ---
+  duration_ms: 0.995722
+  type: 'test'
+  ...
+# Subtest: modern Three data textures use NoColorSpace without legacy encoding writes
+ok 363 - modern Three data textures use NoColorSpace without legacy encoding writes
+  ---
+  duration_ms: 0.674153
+  type: 'test'
+  ...
+# Subtest: only owner disposal releases the two textures, exactly once
+ok 364 - only owner disposal releases the two textures, exactly once
+  ---
+  duration_ms: 0.430316
+  type: 'test'
+  ...
+# Subtest: one failing disposal listener cannot prevent cleanup of the second texture
+ok 365 - one failing disposal listener cannot prevent cleanup of the second texture
+  ---
+  duration_ms: 0.472171
+  type: 'test'
+  ...
+# Subtest: invalid configuration fails before field generation
+ok 366 - invalid configuration fails before field generation
+  ---
+  duration_ms: 0.452992
+  type: 'test'
+  ...
+# Subtest: surface-only texture owner has no engine, terrain, road or editor dependencies
+ok 367 - surface-only texture owner has no engine, terrain, road or editor dependencies
+  ---
+  duration_ms: 3.215278
+  type: 'test'
+  ...
+# Subtest: v1 import replaces every style swatch with a required canonical color input
+ok 368 - v1 import replaces every style swatch with a required canonical color input
+  ---
+  duration_ms: 7.083198
+  type: 'test'
+  ...
+# Subtest: legacy explicit field connections survive migration and generated IDs cannot collide
+ok 369 - legacy explicit field connections survive migration and generated IDs cannot collide
+  ---
+  duration_ms: 0.470268
+  type: 'test'
+  ...
+# Subtest: v2 has no missing-role or style-palette rendering path
+ok 370 - v2 has no missing-role or style-palette rendering path
+  ---
+  duration_ms: 1.228262
+  type: 'test'
+  ...
+# Subtest: legacy flat recipes have one explicit migration boundary
+ok 371 - legacy flat recipes have one explicit migration boundary
+  ---
+  duration_ms: 0.457549
+  type: 'test'
+  ...
+# Subtest: equal legacy swatches remain independently editable source nodes
+ok 372 - equal legacy swatches remain independently editable source nodes
+  ---
+  duration_ms: 0.487154
+  type: 'test'
+  ...
+# Subtest: v1 scalar and color documents import without adding material structure
+ok 373 - v1 scalar and color documents import without adding material structure
+  ---
+  duration_ms: 0.531923
+  type: 'test'
+  ...
+# Subtest: spectral lifting and mixing match 70 independently executed upstream cases
+ok 374 - spectral lifting and mixing match 70 independently executed upstream cases
+  ---
+  duration_ms: 25.133294
+  type: 'test'
+  ...
+# Subtest: add and scale obey additive spectral quantity laws before projection
+ok 375 - add and scale obey additive spectral quantity laws before projection
+  ---
+  duration_ms: 1.031617
+  type: 'test'
+  ...
+# Subtest: mixtures retain their quantities through grouping and differ from RGB reprojection
+ok 376 - mixtures retain their quantities through grouping and differ from RGB reprojection
+  ---
+  duration_ms: 0.505903
+  type: 'test'
+  ...
+# Subtest: quadratic blend is symmetric with a complemented parameter but not associative
+ok 377 - quadratic blend is symmetric with a complemented parameter but not associative
+  ---
+  duration_ms: 0.578746
+  type: 'test'
+  ...
+# Subtest: stable K/S inversion retains dark reflectance instead of cancellation to zero
+ok 378 - stable K/S inversion retains dark reflectance instead of cancellation to zero
+  ---
+  duration_ms: 1.943279
+  type: 'test'
+  ...
+# Subtest: measured spectra are snapshotted and projected without gamut clipping
+ok 379 - measured spectra are snapshotted and projected without gamut clipping
+  ---
+  duration_ms: 1.575059
+  type: 'test'
+  ...
+# Subtest: pigment color projects once into the existing serializable Color expression
+ok 380 - pigment color projects once into the existing serializable Color expression
+  ---
+  duration_ms: 3.466597
+  type: 'test'
+  ...
+# Subtest: empty pigment is an additive identity and has no implicit color
+ok 381 - empty pigment is an additive identity and has no implicit color
+  ---
+  duration_ms: 0.363592
+  type: 'test'
+  ...
+# Subtest: authoring rejects invalid spectra, weights and forged mutable quantities at the boundary
+ok 382 - authoring rejects invalid spectra, weights and forged mutable quantities at the boundary
+  ---
+  duration_ms: 2.955987
+  type: 'test'
+  ...
+# Subtest: procedural work is shared across color and finish, with no atlas dependency
+ok 383 - procedural work is shared across color and finish, with no atlas dependency
+  ---
+  duration_ms: 6.992607
+  type: 'test'
+  ...
+# Subtest: color identities remove unused procedural work without freezing live masks
+ok 384 - color identities remove unused procedural work without freezing live masks
+  ---
+  duration_ms: 1.096788
+  type: 'test'
+  ...
+# Subtest: procedural shader budget applies after dead work is removed
+ok 385 - procedural shader budget applies after dead work is removed
+  ---
+  duration_ms: 8.72559
+  type: 'test'
+  ...
+# Subtest: r140: zero-facet materials allocate no atlas; entering paint acquires it once
+ok 386 - r140: zero-facet materials allocate no atlas; entering paint acquires it once
+  ---
+  duration_ms: 4.17829
+  type: 'test'
+  ...
+# Subtest: r140: seed and color patches keep programs and uniform slots stable
+ok 387 - r140: seed and color patches keep programs and uniform slots stable
+  ---
+  duration_ms: 1.09827
+  type: 'test'
+  ...
+# Subtest: r140: failed texture acquisition and invalid opacity leave a procedural material intact
+ok 388 - r140: failed texture acquisition and invalid opacity leave a procedural material intact
+  ---
+  duration_ms: 1.276787
+  type: 'test'
+  ...
+# Subtest: r187: zero-facet materials allocate no atlas; entering paint acquires it once
+ok 389 - r187: zero-facet materials allocate no atlas; entering paint acquires it once
+  ---
+  duration_ms: 3.973672
+  type: 'test'
+  ...
+# Subtest: r187: seed and color patches keep programs and uniform slots stable
+ok 390 - r187: seed and color patches keep programs and uniform slots stable
+  ---
+  duration_ms: 0.823755
+  type: 'test'
+  ...
+# Subtest: r187: failed texture acquisition and invalid opacity leave a procedural material intact
+ok 391 - r187: failed texture acquisition and invalid opacity leave a procedural material intact
+  ---
+  duration_ms: 1.080262
+  type: 'test'
+  ...
+# Subtest: the procedural grammar shares a scalar across color and finish without requiring facets
+ok 392 - the procedural grammar shares a scalar across color and finish without requiring facets
+  ---
+  duration_ms: 5.171176
+  type: 'test'
+  ...
+# Subtest: linear color owns a snapshot and sRGB decoding has one explicit boundary
+ok 393 - linear color owns a snapshot and sRGB decoding has one explicit boundary
+  ---
+  duration_ms: 2.966553
+  type: 'test'
+  ...
+# Subtest: new sorts reject implicit conversions, callbacks and invalid data throughout imports
+ok 394 - new sorts reject implicit conversions, callbacks and invalid data throughout imports
+  ---
+  duration_ms: 7.20809
+  type: 'test'
+  ...
+# Subtest: color and seed patches are atomic and preserve no-op and untouched identities
+ok 395 - color and seed patches are atomic and preserve no-op and untouched identities
+  ---
+  duration_ms: 1.189642
+  type: 'test'
+  ...
+# Subtest: domain substitution reaches procedural color and finish while preserving coordinate-free sharing
+ok 396 - domain substitution reaches procedural color and finish while preserving coordinate-free sharing
+  ---
+  duration_ms: 0.988801
+  type: 'test'
+  ...
+# Subtest: folds receive interpreted colors and visit shared procedural inputs once
+ok 397 - folds receive interpreted colors and visit shared procedural inputs once
+  ---
+  duration_ms: 1.912301
+  type: 'test'
+  ...
+# Subtest: numeric images own float32 snapshots without freezing caller data
+ok 398 - numeric images own float32 snapshots without freezing caller data
+  ---
+  duration_ms: 2.509785
+  type: 'test'
+  ...
+# Subtest: procedural generation evaluates texel centers once in lower-left row order
+ok 399 - procedural generation evaluates texel centers once in lower-left row order
+  ---
+  duration_ms: 0.336371
+  type: 'test'
+  ...
+# Subtest: bilinear reconstruction is exact for affine data and returns UV partials
+ok 400 - bilinear reconstruction is exact for affine data and returns UV partials
+  ---
+  duration_ms: 0.470128
+  type: 'test'
+  ...
+# Subtest: bilinear partials agree with independent centered differences within cells
+ok 401 - bilinear partials agree with independent centered differences within cells
+  ---
+  duration_ms: 0.54246
+  type: 'test'
+  ...
+# Subtest: clamp addressing extends edge texels with zero derivatives in the clamped direction
+ok 402 - clamp addressing extends edge texels with zero derivatives in the clamped direction
+  ---
+  duration_ms: 0.733015
+  type: 'test'
+  ...
+# Subtest: repeat addressing interpolates across seams and is periodic in value and derivatives
+ok 403 - repeat addressing interpolates across seams and is periodic in value and derivatives
+  ---
+  duration_ms: 0.292924
+  type: 'test'
+  ...
+# Subtest: texel-center knots choose the right/upper derivative, including clamp endpoints
+ok 404 - texel-center knots choose the right/upper derivative, including clamp endpoints
+  ---
+  duration_ms: 0.195062
+  type: 'test'
+  ...
+# Subtest: one-texel axes stay constant under either address mode
+ok 405 - one-texel axes stay constant under either address mode
+  ---
+  duration_ms: 0.319965
+  type: 'test'
+  ...
+# Subtest: the resource boundary rejects invalid shape, components and procedural outputs
+ok 406 - the resource boundary rejects invalid shape, components and procedural outputs
+  ---
+  duration_ms: 1.498481
+  type: 'test'
+  ...
+# Subtest: saved sessions retain the accepted document, reset baseline and unapplied source separately
+ok 407 - saved sessions retain the accepted document, reset baseline and unapplied source separately
+  ---
+  duration_ms: 5.430208
+  type: 'test'
+  ...
+# Subtest: saved mark edits store shared images once and restore their identity across the reset baseline
+ok 408 - saved mark edits store shared images once and restore their identity across the reset baseline
+  ---
+  duration_ms: 537.119481
+  type: 'test'
+  ...
+# Subtest: saved current graphs retain explicit node order, added definitions and changed values with existing IDs
+ok 409 - saved current graphs retain explicit node order, added definitions and changed values with existing IDs
+  ---
+  duration_ms: 1.383322
+  type: 'test'
+  ...
+# Subtest: version-one sessions remain readable and upgrade on the next save
+ok 410 - version-one sessions remain readable and upgrade on the next save
+  ---
+  duration_ms: 4.163797
+  type: 'test'
+  ...
+# Subtest: edited version-one mark sessions migrate to one shared baseline without losing paint values or drafts
+ok 411 - edited version-one mark sessions migrate to one shared baseline without losing paint values or drafts
+  ---
+  duration_ms: 413.672306
+  type: 'test'
+  ...
+# Subtest: legacy sharing is restricted to same-ID records and does not intern separately authored version-two nodes
+ok 412 - legacy sharing is restricted to same-ID records and does not intern separately authored version-two nodes
+  ---
+  duration_ms: 2.808539
+  type: 'test'
+  ...
+# Subtest: session references reject unknown IDs, duplicate nodes and invalid graphs before acceptance
+ok 413 - session references reject unknown IDs, duplicate nodes and invalid graphs before acceptance
+  ---
+  duration_ms: 3.176137
+  type: 'test'
+  ...
+# Subtest: autosave coalesces edits without touching storage until the save boundary
+ok 414 - autosave coalesces edits without touching storage until the save boundary
+  ---
+  duration_ms: 1.429513
+  type: 'test'
+  ...
+# Subtest: storage failures keep the pending session retryable without losing the in-memory document
+ok 415 - storage failures keep the pending session retryable without losing the in-memory document
+  ---
+  duration_ms: 0.592137
+  type: 'test'
+  ...
+# Subtest: invalid or incompatible stored documents do not overwrite storage on load
+ok 416 - invalid or incompatible stored documents do not overwrite storage on load
+  ---
+  duration_ms: 0.327317
+  type: 'test'
+  ...
+# Subtest: restoration checks both graph and reset baseline against the host renderer budget
+ok 417 - restoration checks both graph and reset baseline against the host renderer budget
+  ---
+  duration_ms: 3.926344
+  type: 'test'
+  ...
+# Subtest: disposing flushes one pending save, cancels its timer and ignores future schedules
+ok 418 - disposing flushes one pending save, cancels its timer and ignores future schedules
+  ---
+  duration_ms: 0.286003
+  type: 'test'
+  ...
+# Subtest: a color-only surface persists a null paint selection without inventing a paint
+ok 419 - a color-only surface persists a null paint selection without inventing a paint
+  ---
+  duration_ms: 1.371924
+  type: 'test'
+  ...
+# Subtest: blocked WebGL builds no geometry or material atlas, including offline selection changes
+ok 420 - blocked WebGL builds no geometry or material atlas, including offline selection changes
+  ---
+  duration_ms: 13.275685
+  type: 'test'
+  ...
+# Subtest: a successful retry builds the latest selection once and keeps scene geometry across renderer retries
+ok 421 - a successful retry builds the latest selection once and keeps scene geometry across renderer retries
+  ---
+  duration_ms: 29.480495
+  type: 'test'
+  ...
+# Subtest: only owned normalized values are borrowed; caller style and palette data stay detached and mutable
+ok 422 - only owned normalized values are borrowed; caller style and palette data stay detached and mutable
+  ---
+  duration_ms: 2.440118
+  type: 'test'
+  ...
+# Subtest: trusted style identity survives paint construction, graph normalization and domain binding
+ok 423 - trusted style identity survives paint construction, graph normalization and domain binding
+  ---
+  duration_ms: 6.96907
+  type: 'test'
+  ...
+# Subtest: numeric style edits preserve canonical palette identity and do not mutate the previous value
+ok 424 - numeric style edits preserve canonical palette identity and do not mutate the previous value
+  ---
+  duration_ms: 0.54893
+  type: 'test'
+  ...
+# Subtest: palette edits snapshot changed raw colors, borrow owned roots and preserve unchanged recipe parts
+ok 425 - palette edits snapshot changed raw colors, borrow owned roots and preserve unchanged recipe parts
+  ---
+  duration_ms: 0.416575
+  type: 'test'
+  ...
+# Subtest: empty, identical and normalized no-op style edits preserve style, graph and plan identity
+ok 426 - empty, identical and normalized no-op style edits preserve style, graph and plan identity
+  ---
+  duration_ms: 0.8334
+  type: 'test'
+  ...
+# Subtest: invalid style patches fail atomically even after another valid node edit
+ok 427 - invalid style patches fail atomically even after another valid node edit
+  ---
+  duration_ms: 0.927716
+  type: 'test'
+  ...
+# Subtest: paint nodes sharing a style retain independently editable shader bindings
+ok 428 - paint nodes sharing a style retain independently editable shader bindings
+  ---
+  duration_ms: 0.767639
+  type: 'test'
+  ...
+# Subtest: canonical recipe edits share untouched parts and normalized no-ops preserve recipe identity
+ok 429 - canonical recipe edits share untouched parts and normalized no-ops preserve recipe identity
+  ---
+  duration_ms: 0.968309
+  type: 'test'
+  ...
+# Subtest: value-only graph edits preserve list ports and still validate values against their arity
+ok 430 - value-only graph edits preserve list ports and still validate values against their arity
+  ---
+  duration_ms: 0.809102
+  type: 'test'
+  ...
+# Subtest: ownership helpers remain internal
+ok 431 - ownership helpers remain internal
+  ---
+  duration_ms: 0.364705
+  type: 'test'
+  ...
+# Subtest: height applications share existing fields and retain independent signed amplitude bindings
+ok 432 - height applications share existing fields and retain independent signed amplitude bindings
+  ---
+  duration_ms: 6.398086
+  type: 'test'
+  ...
+# Subtest: replacing a complete height removes its abandoned scale but keeps other field users
+ok 433 - replacing a complete height removes its abandoned scale but keeps other field users
+  ---
+  duration_ms: 1.716908
+  type: 'test'
+  ...
+# Subtest: removing a middle height application preserves shared grain and pre-existing unused definitions
+ok 434 - removing a middle height application preserves shared grain and pre-existing unused definitions
+  ---
+  duration_ms: 0.719604
+  type: 'test'
+  ...
+# Subtest: finish field overrides are independent of height and reveal the original finish when removed
+ok 435 - finish field overrides are independent of height and reveal the original finish when removed
+  ---
+  duration_ms: 1.917018
+  type: 'test'
+  ...
+# Subtest: exposed finish values preserve literals and can become independent from a shared parameter
+ok 436 - exposed finish values preserve literals and can become independent from a shared parameter
+  ---
+  duration_ms: 0.654613
+  type: 'test'
+  ...
+# Subtest: typed source selection excludes dependent expressions and structural edits reject wrong sorts
+ok 437 - typed source selection excludes dependent expressions and structural edits reject wrong sorts
+  ---
+  duration_ms: 1.20161
+  type: 'test'
+  ...
+# Subtest: reconnecting a painted field prunes its newly orphaned mapping and retains unused imports
+ok 438 - reconnecting a painted field prunes its newly orphaned mapping and retains unused imports
+  ---
+  duration_ms: 2.24766
+  type: 'test'
+  ...
+# Subtest: trusted immutable graphs and compiled plans preserve identity at repeated boundaries
+ok 439 - trusted immutable graphs and compiled plans preserve identity at repeated boundaries
+  ---
+  duration_ms: 10.829558
+  type: 'test'
+  ...
+# Subtest: mapping and paint style normalize independently without rebuilding a recipe
+ok 440 - mapping and paint style normalize independently without rebuilding a recipe
+  ---
+  duration_ms: 0.40045
+  type: 'test'
+  ...
+# Subtest: persistent value patches share nodes and compiled structure and merge only requested style values
+ok 441 - persistent value patches share nodes and compiled structure and merge only requested style values
+  ---
+  duration_ms: 3.533291
+  type: 'test'
+  ...
+# Subtest: no-op patches preserve graph and plan identity; structural edits use a new graph
+ok 442 - no-op patches preserve graph and plan identity; structural edits use a new graph
+  ---
+  duration_ms: 1.353386
+  type: 'test'
+  ...
+# Subtest: patch validation is atomic and preserves numerical and schema bounds
+ok 443 - patch validation is atomic and preserves numerical and schema bounds
+  ---
+  duration_ms: 4.427074
+  type: 'test'
+  ...
+# Subtest: value revisions update opacity analysis while dead edits reuse every live binding
+ok 444 - value revisions update opacity analysis while dead edits reuse every live binding
+  ---
+  duration_ms: 2.148026
+  type: 'test'
+  ...
+# Subtest: reused structures still check arithmetic and composed domain bounds after value edits
+ok 445 - reused structures still check arithmetic and composed domain bounds after value edits
+  ---
+  duration_ms: 2.790751
+  type: 'test'
+  ...
+# Subtest: appearance edits preserve analyzed intervals and do not recheck unchanged coordinate domains
+ok 446 - appearance edits preserve analyzed intervals and do not recheck unchanged coordinate domains
+  ---
+  duration_ms: 4.819562
+  type: 'test'
+  ...
+# Subtest: changed ancestors invalidate unchanged descendants and failed analysis cannot poison another branch
+ok 447 - changed ancestors invalidate unchanged descendants and failed analysis cannot poison another branch
+  ---
+  duration_ms: 1.518371
+  type: 'test'
+  ...
+# Subtest: scalar evaluation reuses immutable domains without retaining stale values or sample state
+ok 448 - scalar evaluation reuses immutable domains without retaining stale values or sample state
+  ---
+  duration_ms: 5.69094
+  type: 'test'
+  ...
+# Subtest: expression constructors separate sampling from style and preserve intentional sharing
+ok 449 - expression constructors separate sampling from style and preserve intentional sharing
+  ---
+  duration_ms: 0.945754
+  type: 'test'
+  ...
+# Subtest: recipes lower coordinates into facets, numeric controls into style and colors into palette inputs
+ok 450 - recipes lower coordinates into facets, numeric controls into style and colors into palette inputs
+  ---
+  duration_ms: 0.288687
+  type: 'test'
+  ...
+# Subtest: normalized documents and canonical serialization round-trip without mutating inputs
+ok 451 - normalized documents and canonical serialization round-trip without mutating inputs
+  ---
+  duration_ms: 1.620179
+  type: 'test'
+  ...
+# Subtest: uniform edits preserve the full structural program key; literal choices specialize
+ok 452 - uniform edits preserve the full structural program key; literal choices specialize
+  ---
+  duration_ms: 2.877225
+  type: 'test'
+  ...
+# Subtest: literal scalar algebra folds and removes dead work but editable zero does not
+ok 453 - literal scalar algebra folds and removes dead work but editable zero does not
+  ---
+  duration_ms: 1.283347
+  type: 'test'
+  ...
+# Subtest: CSE reuses equivalent referenced arithmetic but keeps independent parameters separate
+ok 454 - CSE reuses equivalent referenced arithmetic but keeps independent parameters separate
+  ---
+  duration_ms: 1.270337
+  type: 'test'
+  ...
+# Subtest: optimization preserves observable cancellation instead of applying a real-number identity
+ok 455 - optimization preserves observable cancellation instead of applying a real-number identity
+  ---
+  duration_ms: 1.396933
+  type: 'test'
+  ...
+# Subtest: surface identities eliminate whole unused samples and retain accurate live costs
+ok 456 - surface identities eliminate whole unused samples and retain accurate live costs
+  ---
+  duration_ms: 4.481418
+  type: 'test'
+  ...
+# Subtest: channel overrides compose right-biased maps in one canonical channel order
+ok 457 - channel overrides compose right-biased maps in one canonical channel order
+  ---
+  duration_ms: 143.97231
+  type: 'test'
+  ...
+# Subtest: nested channel overrides remove shadowed work while keeping the authored graph and live bindings
+ok 458 - nested channel overrides remove shadowed work while keeping the authored graph and live bindings
+  ---
+  duration_ms: 1.598344
+  type: 'test'
+  ...
+# Subtest: channel compaction preserves shared inner surfaces and independently editable equal values
+ok 459 - channel compaction preserves shared inner surfaces and independently editable equal values
+  ---
+  duration_ms: 0.946475
+  type: 'test'
+  ...
+# Subtest: all imported nodes validate, even when unreachable
+ok 460 - all imported nodes validate, even when unreachable
+  ---
+  duration_ms: 5.466113
+  type: 'test'
+  ...
+# Subtest: cycles, graph size, depth, malformed domains and collapsed float32 ramps are rejected
+ok 461 - cycles, graph size, depth, malformed domains and collapsed float32 ramps are rejected
+  ---
+  duration_ms: 18.863246
+  type: 'test'
+  ...
+# Subtest: constructors snapshot raw author data without freezing or mutating it
+ok 462 - constructors snapshot raw author data without freezing or mutating it
+  ---
+  duration_ms: 0.701567
+  type: 'test'
+  ...
+# Subtest: safe computed float32 magnitudes remain valid across lowering and domain composition
+ok 463 - safe computed float32 magnitudes remain valid across lowering and domain composition
+  ---
+  duration_ms: 0.887174
+  type: 'test'
+  ...
+# Subtest: scalar algebra laws agree before and after optimization across deterministic samples
+ok 464 - scalar algebra laws agree before and after optimization across deterministic samples
+  ---
+  duration_ms: 149.871349
+  type: 'test'
+  ...
+# Subtest: analytic scalar first differentials match finite differences through products and ramps
+ok 465 - analytic scalar first differentials match finite differences through products and ramps
+  ---
+  duration_ms: 0.761529
+  type: 'test'
+  ...
+# Subtest: affine domain composition obeys matrix order and transforms first differentials
+ok 466 - affine domain composition obeys matrix order and transforms first differentials
+  ---
+  duration_ms: 0.644948
+  type: 'test'
+  ...
+# Subtest: facing carries normal differentials through inverse-transpose normalization
+ok 467 - facing carries normal differentials through inverse-transpose normalization
+  ---
+  duration_ms: 0.422905
+  type: 'test'
+  ...
+# Subtest: opacity bounds are conservative and update without changing the program
+ok 468 - opacity bounds are conservative and update without changing the program
+  ---
+  duration_ms: 1.091971
+  type: 'test'
+  ...
+# Subtest: r140: value patches leave unrelated uniform groups and derived work untouched
+ok 469 - r140: value patches leave unrelated uniform groups and derived work untouched
+  ---
+  duration_ms: 13.767916
+  type: 'test'
+  ...
+# Subtest: r140: value patches reject invalid opacity and topology without changing live state
+ok 470 - r140: value patches reject invalid opacity and topology without changing live state
+  ---
+  duration_ms: 3.025614
+  type: 'test'
+  ...
+# Subtest: r140: editing an unreachable value updates the document without touching uniforms
+ok 471 - r140: editing an unreachable value updates the document without touching uniforms
+  ---
+  duration_ms: 1.132143
+  type: 'test'
+  ...
+# Subtest: r140: shadowed channel values perform no uniform writes and surviving values remain editable
+ok 472 - r140: shadowed channel values perform no uniform writes and surviving values remain editable
+  ---
+  duration_ms: 1.807028
+  type: 'test'
+  ...
+# Subtest: r140: explicit shared sampling compiles once and uniform edits preserve live objects
+ok 473 - r140: explicit shared sampling compiles once and uniform edits preserve live objects
+  ---
+  duration_ms: 4.616488
+  type: 'test'
+  ...
+# Subtest: r140: topology changes and cached A→B→A returns use current uniform bindings
+ok 474 - r140: topology changes and cached A→B→A returns use current uniform bindings
+  ---
+  duration_ms: 4.098066
+  type: 'test'
+  ...
+# Subtest: r140: canonical recipes lower to graphs and presets remain numeric edits
+ok 475 - r140: canonical recipes lower to graphs and presets remain numeric edits
+  ---
+  duration_ms: 3.00939
+  type: 'test'
+  ...
+# Subtest: r140: invalid graphs and opacity changes cannot partially mutate a live material
+ok 476 - r140: invalid graphs and opacity changes cannot partially mutate a live material
+  ---
+  duration_ms: 6.558144
+  type: 'test'
+  ...
+# Subtest: r140: different uniform types at the same canonical node stay isolated in both topology orders
+ok 477 - r140: different uniform types at the same canonical node stay isolated in both topology orders
+  ---
+  duration_ms: 1.865849
+  type: 'test'
+  ...
+# Subtest: r140: shader anchors support both coordinate frames and fail atomically
+ok 478 - r140: shader anchors support both coordinate frames and fail atomically
+  ---
+  duration_ms: 2.237849
+  type: 'test'
+  ...
+# Subtest: r140: affine domain uniforms use the inverse transpose
+ok 479 - r140: affine domain uniforms use the inverse transpose
+  ---
+  duration_ms: 0.643547
+  type: 'test'
+  ...
+# Subtest: r140: rest-coordinate binding preserves sources and commits only validated attributes
+ok 480 - r140: rest-coordinate binding preserves sources and commits only validated attributes
+  ---
+  duration_ms: 0.81362
+  type: 'test'
+  ...
+# Subtest: r187: value patches leave unrelated uniform groups and derived work untouched
+ok 481 - r187: value patches leave unrelated uniform groups and derived work untouched
+  ---
+  duration_ms: 4.394323
+  type: 'test'
+  ...
+# Subtest: r187: value patches reject invalid opacity and topology without changing live state
+ok 482 - r187: value patches reject invalid opacity and topology without changing live state
+  ---
+  duration_ms: 2.688152
+  type: 'test'
+  ...
+# Subtest: r187: editing an unreachable value updates the document without touching uniforms
+ok 483 - r187: editing an unreachable value updates the document without touching uniforms
+  ---
+  duration_ms: 1.011256
+  type: 'test'
+  ...
+# Subtest: r187: shadowed channel values perform no uniform writes and surviving values remain editable
+ok 484 - r187: shadowed channel values perform no uniform writes and surviving values remain editable
+  ---
+  duration_ms: 1.028442
+  type: 'test'
+  ...
+# Subtest: r187: explicit shared sampling compiles once and uniform edits preserve live objects
+ok 485 - r187: explicit shared sampling compiles once and uniform edits preserve live objects
+  ---
+  duration_ms: 4.020044
+  type: 'test'
+  ...
+# Subtest: r187: topology changes and cached A→B→A returns use current uniform bindings
+ok 486 - r187: topology changes and cached A→B→A returns use current uniform bindings
+  ---
+  duration_ms: 3.168927
+  type: 'test'
+  ...
+# Subtest: r187: canonical recipes lower to graphs and presets remain numeric edits
+ok 487 - r187: canonical recipes lower to graphs and presets remain numeric edits
+  ---
+  duration_ms: 1.946444
+  type: 'test'
+  ...
+# Subtest: r187: invalid graphs and opacity changes cannot partially mutate a live material
+ok 488 - r187: invalid graphs and opacity changes cannot partially mutate a live material
+  ---
+  duration_ms: 4.542754
+  type: 'test'
+  ...
+# Subtest: r187: different uniform types at the same canonical node stay isolated in both topology orders
+ok 489 - r187: different uniform types at the same canonical node stay isolated in both topology orders
+  ---
+  duration_ms: 1.977702
+  type: 'test'
+  ...
+# Subtest: r187: shader anchors support both coordinate frames and fail atomically
+ok 490 - r187: shader anchors support both coordinate frames and fail atomically
+  ---
+  duration_ms: 1.700182
+  type: 'test'
+  ...
+# Subtest: r187: affine domain uniforms use the inverse transpose
+ok 491 - r187: affine domain uniforms use the inverse transpose
+  ---
+  duration_ms: 0.537412
+  type: 'test'
+  ...
+# Subtest: r187: rest-coordinate binding preserves sources and commits only validated attributes
+ok 492 - r187: rest-coordinate binding preserves sources and commits only validated attributes
+  ---
+  duration_ms: 0.733445
+  type: 'test'
+  ...
+# Subtest: graph validation and explicit shader budgets run before any texture or material allocation
+ok 493 - graph validation and explicit shader budgets run before any texture or material allocation
+  ---
+  duration_ms: 3.557077
+  type: 'test'
+  ...
+# Subtest: resource ownership survives listener errors, borrowers and repeated handle disposal
+ok 494 - resource ownership survives listener errors, borrowers and repeated handle disposal
+  ---
+  duration_ms: 254.412407
+  type: 'test'
+  ...
+# Subtest: pure core never imports the mutable engine adapter or shader injector
+ok 495 - pure core never imports the mutable engine adapter or shader injector
+  ---
+  duration_ms: 1.819127
+  type: 'test'
+  ...
+# Subtest: bounded coverages obey soft intersection, union and subtraction rather than Boolean idempotence
+ok 496 - bounded coverages obey soft intersection, union and subtraction rather than Boolean idempotence
+  ---
+  duration_ms: 63.23656
+  type: 'test'
+  ...
+# Subtest: coverage composition carries every input differential and has no hidden remapping
+ok 497 - coverage composition carries every input differential and has no hidden remapping
+  ---
+  duration_ms: 1.68604
+  type: 'test'
+  ...
+# Subtest: zone application has an exact empty identity and ordered concatenation
+ok 498 - zone application has an exact empty identity and ordered concatenation
+  ---
+  duration_ms: 5.813571
+  type: 'test'
+  ...
+# Subtest: zone height includes the boundary product term even when the deposited height is uniform
+ok 499 - zone height includes the boundary product term even when the deposited height is uniform
+  ---
+  duration_ms: 2.04065
+  type: 'test'
+  ...
+# Subtest: application labels preserve explicit graph names and one shared mask through instancing
+ok 500 - application labels preserve explicit graph names and one shared mask through instancing
+  ---
+  duration_ms: 3.98513
+  type: 'test'
+  ...
+# Subtest: one zone snapshot preserves raw roots and descendants across every effect
+ok 501 - one zone snapshot preserves raw roots and descendants across every effect
+  ---
+  duration_ms: 0.765655
+  type: 'test'
+  ...
+# Subtest: unnamed raw editable roots remain one control wherever the zone uses them
+ok 502 - unnamed raw editable roots remain one control wherever the zone uses them
+  ---
+  duration_ms: 0.404636
+  type: 'test'
+  ...
+# Subtest: zone ownership snapshots author data while borrowing already-owned graph expressions
+ok 503 - zone ownership snapshots author data while borrowing already-owned graph expressions
+  ---
+  duration_ms: 1.262535
+  type: 'test'
+  ...
+# Subtest: literal absent zones specialize away while editable zero coverage remains live
+ok 504 - literal absent zones specialize away while editable zero coverage remains live
+  ---
+  duration_ms: 2.959562
+  type: 'test'
+  ...
+# Subtest: zone boundaries reject misspelled effect channels and malformed application lists
+ok 505 - zone boundaries reject misspelled effect channels and malformed application lists
+  ---
+  duration_ms: 1.468864
+  type: 'test'
+  ...
+1..505
+# tests 505
+# suites 0
+# pass 505
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5421.484857

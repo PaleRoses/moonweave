@@ -1,0 +1,791 @@
+{
+  "baseline": "0.55.0",
+  "current": "0.56.0",
+  "provenance": "Native Mesa surfaceless EGL / GLES3 rendering; no browser WebGL or frame-rate claim.",
+  "images": 108,
+  "pixels": 28311552,
+  "allPixelIdentical": true,
+  "allPNGByteIdentical": true,
+  "specimens": {
+    "sphere": {
+      "compiledPrograms": 133,
+      "renderCases": 58,
+      "resourceSamples": 647,
+      "resourceComponents": 1941,
+      "resourceMaxAbsoluteError": 7.683398703939304e-07,
+      "sourceFingerprints": 43,
+      "staleSourceFingerprints": [],
+      "nonFiniteShaderPixels": 0,
+      "glErrors": 0
+    },
+    "shell": {
+      "compiledPrograms": 133,
+      "renderCases": 58,
+      "resourceSamples": 647,
+      "resourceComponents": 1941,
+      "resourceMaxAbsoluteError": 7.683398703939304e-07,
+      "sourceFingerprints": 43,
+      "staleSourceFingerprints": [],
+      "nonFiniteShaderPixels": 0,
+      "glErrors": 0
+    }
+  },
+  "comparisons": [
+    {
+      "specimen": "sphere",
+      "file": "brass-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "brass-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "carapace-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "carapace-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "channel-flat-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "channel-flat-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "channel-nested-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "channel-nested-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "channels-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "channels-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "finish-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "finish-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "frame-reference-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "frame-reference-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "framed-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "framed-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "independent-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "independent-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "ivory-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "ivory-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "lichen-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "lichen-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "membrane-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "membrane-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "moonstone-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "moonstone-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "palette-clipped-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "palette-clipped-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "palette-reference-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "palette-reference-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "patched-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "patched-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "pigments-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "pigments-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "porcelain-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "porcelain-flat-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "porcelain-flat-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "porcelain-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "prismatic-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "prismatic-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "reference-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "reference-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "shared-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "shared-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "spectrum-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "spectrum-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "stone-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "stone-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "weathered-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "weathered-flat-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "weathered-flat-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "weathered-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "zones-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "sphere",
+      "file": "zones-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "brass-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "brass-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "carapace-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "carapace-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "channel-flat-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "channel-flat-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "channel-nested-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "channel-nested-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "channels-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "channels-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "finish-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "finish-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "frame-reference-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "frame-reference-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "framed-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "framed-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "independent-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "independent-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "ivory-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "ivory-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "lichen-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "lichen-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "membrane-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "membrane-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "moonstone-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "moonstone-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "palette-clipped-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "palette-clipped-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "palette-reference-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "palette-reference-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "patched-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "patched-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "pigments-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "pigments-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "porcelain-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "porcelain-flat-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "porcelain-flat-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "porcelain-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "prismatic-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "prismatic-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "reference-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "reference-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "shared-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "shared-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "spectrum-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "spectrum-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "stone-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "stone-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "weathered-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "weathered-flat-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "weathered-flat-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "weathered-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "zones-far.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    },
+    {
+      "specimen": "shell",
+      "file": "zones-near.png",
+      "pixels": 262144,
+      "samePixels": true,
+      "samePNGBytes": true
+    }
+  ]
+}

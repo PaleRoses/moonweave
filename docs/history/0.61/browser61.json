@@ -1,0 +1,54 @@
+{
+  "version": "0.61.0",
+  "date": "2026-11-04",
+  "environment": "Managed preview through the cloud Chrome browser",
+  "edition": "061",
+  "paintedCarapace": {
+    "version": 2,
+    "nodes": 22,
+    "images": 5,
+    "sourceCharactersWithoutFinalNewline": 1418362
+  },
+  "checks": {
+    "existingSaveOpened": true,
+    "literalLinearControlsHaveRoleSpecificLabels": true,
+    "extendedLinearRedEdit": 1.25,
+    "colorEditTargetsCanonicalColorNode": true,
+    "editPreservesNodeAndImageCounts": true,
+    "undoSourceExact": true,
+    "redoSourceExact": true,
+    "autosaveReloadSourceExact": true,
+    "resetSourceExact": true
+  },
+  "graphics": {
+    "webgl2Available": false,
+    "editorAvailable": true,
+    "referenceImageExplicitlyStatic": true,
+    "nativeShaderVerification": [
+      "native61.json",
+      "native61-shell.json"
+    ]
+  },
+  "download": {
+    "controlInvoked": true,
+    "applicationReportedExport": true,
+    "browserReportedDownloadFailure": true,
+    "deliveryVerified": false,
+    "causeEstablished": false,
+    "finalNotice": "Graph download requested.",
+    "noticeChange": "Source-only wording correction after the failed delivery check; completion is no longer asserted."
+  },
+  "observations": [
+    "The shared preview service temporarily served a separate project during the first reload. Restoring Moonweave and reloading recovered the exact edited graph.",
+    "The graph export triggered a browser download event, but the browser reported that the download failed. No downloaded file was available for validation.",
+    "Browser policy blocked access to its internal downloads page. No alternate route or policy workaround was attempted.",
+    "Returned console errors concerned the temporary separate project and browser-extension metadata. No additional Moonweave application error appeared in those returned entries."
+  ],
+  "notVerified": [
+    "Live browser GPU rendering",
+    "Browser download delivery"
+  ],
+  "screenshots": [
+    "evidence/palette61.jpg"
+  ]
+}

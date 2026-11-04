@@ -1,0 +1,1617 @@
+{
+  "version": "0.62.0",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "architecture": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "method": {
+    "rounds": 7,
+    "iterationsPerRound": 8,
+    "warmupPerCase": 4,
+    "explicitGC": true,
+    "timing": "Alternating paired batches. Validated graphs, raw image copying, patches and warm prerequisites are prepared outside compile timing. Each timed graph is compiled once. Raw-normalization controls include image copying/validation. Raw-construction controls include image copying, graph construction/validation and compilation, with only raw pixel generation outside timing.",
+    "modes": {
+      "cold": "Fresh topology and fresh immutable image.",
+      "replacement": "Previously compiled topology with one newly normalized image replacement.",
+      "borrowedResource": "Fresh topology borrowing an immutable image already analyzed by another graph."
+    },
+    "counts": "Separate subprocesses instrument the range-scan loop in memory. One texel visit reads one requested component; counts exclude normalization, graph preparation and warm prerequisites. Timed implementations are not instrumented.",
+    "scope": "CPU graph compilation and image-range analysis only; no rendering or GPU timing."
+  },
+  "complexity": {
+    "baseline": "O(R × P) range visits for R image readers and P texels.",
+    "current": "O(C × P + R) for C distinct requested stored channels (C ≤ 3), independent of mappings and filters. Reusing an analyzed immutable resource needs no further pixel scan."
+  },
+  "benchmarkSHA256": "c8c4c04f4fca60ee5d5174a00d0e56696049b7d8889d9a838cf9507cf5ce21ef",
+  "baseline": {
+    "version": "0.61.0",
+    "sourceSHA256": {
+      "src/core/resources.mts": "43607892f6af13f78b8f6555943ef0326823b1500743e95273c4e0f7296e821d",
+      "src/core/analyze.mts": "ac0b3f6a403f8f7247aa94b8effd0712be41ded2ed18f277164f605b991adf50",
+      "src/core/compile.mts": "6dee56921d37b6ba1a3597ef4f0628059614d870dc172ffaf746a130f4ad3b74",
+      "src/core/graph.mts": "d08a8a2c1747330a5279618ac75e9f3dcd386478a9145624256adf369c22b04f",
+      "src/core/algebra.mts": "874628ff7827485361acd690ac3faa529d76d307e23b248bfb9787bf74989e26",
+      "src/core/ownership.mts": "4c0b52bb7e1c9468176789a9f03819c7a8f3b5b063703bf709886f55bbee0820",
+      "src/core/intern.mts": "21117817eba4d2b4539eb542ff04d6dd0ee1955b73bc902c78c71edd604a64d2"
+    },
+    "workCounts": {
+      "32x32_1Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "borrowedResource": {
+          "scans": 1,
+          "texelVisits": 1024
+        }
+      },
+      "32x32_4Readers_1Channels": {
+        "cold": {
+          "scans": 4,
+          "texelVisits": 4096
+        },
+        "replacement": {
+          "scans": 4,
+          "texelVisits": 4096
+        },
+        "borrowedResource": {
+          "scans": 4,
+          "texelVisits": 4096
+        }
+      },
+      "32x32_16Readers_1Channels": {
+        "cold": {
+          "scans": 16,
+          "texelVisits": 16384
+        },
+        "replacement": {
+          "scans": 16,
+          "texelVisits": 16384
+        },
+        "borrowedResource": {
+          "scans": 16,
+          "texelVisits": 16384
+        }
+      },
+      "32x32_64Readers_1Channels": {
+        "cold": {
+          "scans": 64,
+          "texelVisits": 65536
+        },
+        "replacement": {
+          "scans": 64,
+          "texelVisits": 65536
+        },
+        "borrowedResource": {
+          "scans": 64,
+          "texelVisits": 65536
+        }
+      },
+      "128x128_1Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "borrowedResource": {
+          "scans": 1,
+          "texelVisits": 16384
+        }
+      },
+      "128x128_4Readers_1Channels": {
+        "cold": {
+          "scans": 4,
+          "texelVisits": 65536
+        },
+        "replacement": {
+          "scans": 4,
+          "texelVisits": 65536
+        },
+        "borrowedResource": {
+          "scans": 4,
+          "texelVisits": 65536
+        }
+      },
+      "128x128_16Readers_1Channels": {
+        "cold": {
+          "scans": 16,
+          "texelVisits": 262144
+        },
+        "replacement": {
+          "scans": 16,
+          "texelVisits": 262144
+        },
+        "borrowedResource": {
+          "scans": 16,
+          "texelVisits": 262144
+        }
+      },
+      "128x128_64Readers_1Channels": {
+        "cold": {
+          "scans": 64,
+          "texelVisits": 1048576
+        },
+        "replacement": {
+          "scans": 64,
+          "texelVisits": 1048576
+        },
+        "borrowedResource": {
+          "scans": 64,
+          "texelVisits": 1048576
+        }
+      },
+      "512x512_1Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "borrowedResource": {
+          "scans": 1,
+          "texelVisits": 262144
+        }
+      },
+      "512x512_4Readers_1Channels": {
+        "cold": {
+          "scans": 4,
+          "texelVisits": 1048576
+        },
+        "replacement": {
+          "scans": 4,
+          "texelVisits": 1048576
+        },
+        "borrowedResource": {
+          "scans": 4,
+          "texelVisits": 1048576
+        }
+      },
+      "512x512_16Readers_1Channels": {
+        "cold": {
+          "scans": 16,
+          "texelVisits": 4194304
+        },
+        "replacement": {
+          "scans": 16,
+          "texelVisits": 4194304
+        },
+        "borrowedResource": {
+          "scans": 16,
+          "texelVisits": 4194304
+        }
+      },
+      "512x512_64Readers_1Channels": {
+        "cold": {
+          "scans": 64,
+          "texelVisits": 16777216
+        },
+        "replacement": {
+          "scans": 64,
+          "texelVisits": 16777216
+        },
+        "borrowedResource": {
+          "scans": 64,
+          "texelVisits": 16777216
+        }
+      },
+      "128x128_63Readers_3Channels": {
+        "cold": {
+          "scans": 63,
+          "texelVisits": 1032192
+        },
+        "replacement": {
+          "scans": 63,
+          "texelVisits": 1032192
+        },
+        "borrowedResource": {
+          "scans": 63,
+          "texelVisits": 1032192
+        }
+      }
+    }
+  },
+  "current": {
+    "version": "0.62.0",
+    "sourceSHA256": {
+      "src/core/resources.mts": "5b568103da23c68060c5172cf16e4bf3664c3d25569ddecf9a8b1f84ad4c509a",
+      "src/core/analyze.mts": "7eb3315e23b63981ef6cdd1534760d2e02ceadc993d81aca92f3a5bf7b818d92",
+      "src/core/compile.mts": "6dee56921d37b6ba1a3597ef4f0628059614d870dc172ffaf746a130f4ad3b74",
+      "src/core/graph.mts": "d08a8a2c1747330a5279618ac75e9f3dcd386478a9145624256adf369c22b04f",
+      "src/core/algebra.mts": "874628ff7827485361acd690ac3faa529d76d307e23b248bfb9787bf74989e26",
+      "src/core/ownership.mts": "4c0b52bb7e1c9468176789a9f03819c7a8f3b5b063703bf709886f55bbee0820",
+      "src/core/intern.mts": "21117817eba4d2b4539eb542ff04d6dd0ee1955b73bc902c78c71edd604a64d2"
+    },
+    "workCounts": {
+      "32x32_1Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "32x32_4Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "32x32_16Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "32x32_64Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 1024
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "128x128_1Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "128x128_4Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "128x128_16Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "128x128_64Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 16384
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "512x512_1Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "512x512_4Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "512x512_16Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "512x512_64Readers_1Channels": {
+        "cold": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "replacement": {
+          "scans": 1,
+          "texelVisits": 262144
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      },
+      "128x128_63Readers_3Channels": {
+        "cold": {
+          "scans": 3,
+          "texelVisits": 49152
+        },
+        "replacement": {
+          "scans": 3,
+          "texelVisits": 49152
+        },
+        "borrowedResource": {
+          "scans": 0,
+          "texelVisits": 0
+        }
+      }
+    }
+  },
+  "results": {
+    "32x32_1Readers_1Channels": {
+      "size": 32,
+      "readers": 1,
+      "channels": 1,
+      "authoredNodes": 6,
+      "texels": 1024,
+      "components": 1024,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 101.39250000000288,
+          "currentMicroseconds": 104.64612500000214,
+          "speedup": 0.9689083088360969,
+          "samplesMicroseconds": {
+            "baseline": [
+              134.3407499999998,
+              101.39250000000288,
+              104.31562499999814,
+              72.84950000000379,
+              90.07537500000495,
+              115.5462500000013,
+              79.52212499999689
+            ],
+            "current": [
+              117.92362499999953,
+              108.42187500000122,
+              78.73337499999877,
+              63.58937499999939,
+              137.61075000000034,
+              104.64612500000214,
+              76.1018749999991
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 55.75762499999826,
+          "currentMicroseconds": 29.66837499999997,
+          "speedup": 1.8793622839133695,
+          "samplesMicroseconds": {
+            "baseline": [
+              48.0221249999957,
+              66.045625000001,
+              55.75762499999826,
+              60.40587500000072,
+              55.882875000001775,
+              32.252249999999094,
+              31.16175000000254
+            ],
+            "current": [
+              31.587500000000546,
+              38.81712500000134,
+              28.22612500000332,
+              27.568999999999733,
+              29.66837499999997,
+              20.652249999997707,
+              30.006374999999252
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 97.78200000000226,
+          "currentMicroseconds": 72.66312499999827,
+          "speedup": 1.3456894401390607,
+          "samplesMicroseconds": {
+            "baseline": [
+              102.4515000000008,
+              88.31912499999817,
+              97.78200000000226,
+              125.91812499999833,
+              71.13187499999896,
+              73.86237499999027,
+              103.34912500000826
+            ],
+            "current": [
+              96.05449999999394,
+              59.36562499999809,
+              78.79725000000093,
+              95.66137499999883,
+              61.6777500000012,
+              72.66312499999827,
+              61.51000000001261
+            ]
+          }
+        }
+      }
+    },
+    "32x32_4Readers_1Channels": {
+      "size": 32,
+      "readers": 4,
+      "channels": 1,
+      "authoredNodes": 15,
+      "texels": 1024,
+      "components": 1024,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 214.63150000001008,
+          "currentMicroseconds": 140.22587499999872,
+          "speedup": 1.5306126633191772,
+          "samplesMicroseconds": {
+            "baseline": [
+              261.9026249999905,
+              199.5012499999973,
+              205.0121249999961,
+              214.63150000001008,
+              267.1304999999933,
+              197.70737499999314,
+              221.01362499999766
+            ],
+            "current": [
+              173.5961250000031,
+              184.90562499999896,
+              117.8672499999891,
+              140.22587499999872,
+              152.5481250000098,
+              128.44325000000367,
+              135.7955000000004
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 119.85400000000368,
+          "currentMicroseconds": 47.059625000002825,
+          "speedup": 2.5468541238906277,
+          "samplesMicroseconds": {
+            "baseline": [
+              158.8488750000039,
+              119.85400000000368,
+              180.43624999999963,
+              189.66762499999845,
+              94.05512499999702,
+              72.26624999999842,
+              101.11949999999581
+            ],
+            "current": [
+              47.059625000002825,
+              28.40637499998877,
+              50.63237499999218,
+              44.826249999999845,
+              51.39237500000604,
+              35.0276249999979,
+              51.23325000000989
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 161.31274999999334,
+          "currentMicroseconds": 101.51012499999013,
+          "speedup": 1.5891296557856571,
+          "samplesMicroseconds": {
+            "baseline": [
+              162.60325000000364,
+              144.17562500000258,
+              144.1354999999902,
+              173.0376249999921,
+              219.88699999999994,
+              143.0063749999988,
+              161.31274999999334
+            ],
+            "current": [
+              101.51012499999013,
+              93.72224999999901,
+              126.20725000000732,
+              98.2677500000051,
+              124.81900000000223,
+              93.50062500000433,
+              106.30499999999188
+            ]
+          }
+        }
+      }
+    },
+    "32x32_16Readers_1Channels": {
+      "size": 32,
+      "readers": 16,
+      "channels": 1,
+      "authoredNodes": 51,
+      "texels": 1024,
+      "components": 1024,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 527.0256249999932,
+          "currentMicroseconds": 302.403874999996,
+          "speedup": 1.7427872741379393,
+          "samplesMicroseconds": {
+            "baseline": [
+              532.2822500000086,
+              490.2977500000105,
+              503.50025000000187,
+              509.00224999999466,
+              553.4852499999943,
+              855.4460000000006,
+              527.0256249999932
+            ],
+            "current": [
+              360.06187499999953,
+              302.403874999996,
+              414.8792499999985,
+              285.00137500000733,
+              330.10037500000067,
+              295.5497499999922,
+              300.5435000000034
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 271.29825000000096,
+          "currentMicroseconds": 69.8037500000055,
+          "speedup": 3.88658560607388,
+          "samplesMicroseconds": {
+            "baseline": [
+              293.35012500001767,
+              285.574749999995,
+              271.29825000000096,
+              314.7948749999898,
+              258.5216250000144,
+              270.08774999998764,
+              258.16599999998857
+            ],
+            "current": [
+              87.43774999999232,
+              63.331624999989344,
+              73.41037499998038,
+              82.30762499999855,
+              69.8037500000055,
+              63.94124999999917,
+              66.86812500001338
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 493.67787500000304,
+          "currentMicroseconds": 280.84762500000693,
+          "speedup": 1.757813956945482,
+          "samplesMicroseconds": {
+            "baseline": [
+              499.0208750000136,
+              491.94274999999266,
+              493.67787500000304,
+              516.1228749999793,
+              484.95850000000473,
+              480.50175000000195,
+              539.4454999999994
+            ],
+            "current": [
+              272.77412499998377,
+              661.3013749999936,
+              272.33975000001465,
+              361.1847500000067,
+              280.84762500000693,
+              290.6373750000171,
+              250.64850000001115
+            ]
+          }
+        }
+      }
+    },
+    "32x32_64Readers_1Channels": {
+      "size": 32,
+      "readers": 64,
+      "channels": 1,
+      "authoredNodes": 195,
+      "texels": 1024,
+      "components": 1024,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 2045.7619999999963,
+          "currentMicroseconds": 1053.4614999999974,
+          "speedup": 1.9419428237292027,
+          "samplesMicroseconds": {
+            "baseline": [
+              1730.8883750000064,
+              2220.0793750000116,
+              2191.098374999996,
+              2231.461500000023,
+              2045.7619999999963,
+              1918.1626249999795,
+              1864.4704999999817
+            ],
+            "current": [
+              925.9821249999902,
+              1016.7887499999892,
+              1065.4607499999997,
+              1132.670625000003,
+              1049.8936249999815,
+              1063.1522500000017,
+              1053.4614999999974
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 946.4628750000088,
+          "currentMicroseconds": 164.00687499998412,
+          "speedup": 5.770873172238057,
+          "samplesMicroseconds": {
+            "baseline": [
+              1353.6545000000046,
+              946.4628750000088,
+              967.1378749999917,
+              931.2976250000133,
+              1000.2726250000364,
+              942.7961249999726,
+              892.5280000000271
+            ],
+            "current": [
+              333.048749999989,
+              167.95150000001513,
+              169.85549999998284,
+              148.09787500001903,
+              157.74987499997906,
+              164.00687499998412,
+              148.52724999997235
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 2191.1660000000097,
+          "currentMicroseconds": 1070.6161249999582,
+          "speedup": 2.046640199819609,
+          "samplesMicroseconds": {
+            "baseline": [
+              2191.1660000000097,
+              1780.5930000000103,
+              2251.8385000000194,
+              2232.6558749999776,
+              2632.939374999978,
+              1988.5872500000232,
+              1833.8682499999663
+            ],
+            "current": [
+              1070.6161249999582,
+              1307.5287500000172,
+              1079.8586249999858,
+              1005.6457499999851,
+              1014.099750000014,
+              1234.9394999999959,
+              1006.8888750000156
+            ]
+          }
+        }
+      }
+    },
+    "128x128_1Readers_1Channels": {
+      "size": 128,
+      "readers": 1,
+      "channels": 1,
+      "authoredNodes": 6,
+      "texels": 16384,
+      "components": 16384,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 572.0933750000086,
+          "currentMicroseconds": 217.86787500002447,
+          "speedup": 2.62587302051734,
+          "samplesMicroseconds": {
+            "baseline": [
+              940.0357499999927,
+              724.4162499999902,
+              529.4578749999914,
+              574.2978750000134,
+              340.57362499999044,
+              289.02625000000626,
+              572.0933750000086
+            ],
+            "current": [
+              184.03812500002914,
+              175.0721249999856,
+              271.3935000000447,
+              235.46312500002387,
+              194.03949999997394,
+              217.86787500002447,
+              241.71987500000114
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 247.3346250000077,
+          "currentMicroseconds": 148.20674999998573,
+          "speedup": 1.668848584831875,
+          "samplesMicroseconds": {
+            "baseline": [
+              245.2152500000011,
+              247.3346250000077,
+              251.4421250000396,
+              264.9274999999989,
+              239.00962499999423,
+              238.742875000014,
+              368.1965000000105
+            ],
+            "current": [
+              126.33887499998764,
+              262.1469999999704,
+              157.65974999999344,
+              148.20674999998573,
+              148.89287500000137,
+              127.67587500002264,
+              141.28499999998212
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 291.9505000000413,
+          "currentMicroseconds": 65.52487499999415,
+          "speedup": 4.455567446714967,
+          "samplesMicroseconds": {
+            "baseline": [
+              291.9505000000413,
+              292.95462499999303,
+              275.89887499999577,
+              296.56375000001844,
+              283.34262499998886,
+              296.3909999999714,
+              291.7852500000322
+            ],
+            "current": [
+              46.78787500000681,
+              67.75825000005398,
+              57.42012499996463,
+              73.3842500000037,
+              77.16612499996245,
+              65.52487499999415,
+              62.63300000000527
+            ]
+          }
+        }
+      }
+    },
+    "128x128_4Readers_1Channels": {
+      "size": 128,
+      "readers": 4,
+      "channels": 1,
+      "authoredNodes": 15,
+      "texels": 16384,
+      "components": 16384,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 994.3887499999846,
+          "currentMicroseconds": 241.9040000000905,
+          "speedup": 4.110675102518407,
+          "samplesMicroseconds": {
+            "baseline": [
+              1259.8745000000235,
+              952.2066250000307,
+              978.0553750000536,
+              999.5178750000377,
+              991.038875000072,
+              994.3887499999846,
+              998.9657500000249
+            ],
+            "current": [
+              244.00587499997073,
+              261.1254999999346,
+              205.41787499996644,
+              241.9040000000905,
+              243.39500000007774,
+              230.04612500005805,
+              236.18787499992777
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 863.5493749999341,
+          "currentMicroseconds": 154.3584999999439,
+          "speedup": 5.5944400535134,
+          "samplesMicroseconds": {
+            "baseline": [
+              863.5493749999341,
+              820.1391249999688,
+              824.3979999999738,
+              959.7466249999798,
+              944.9280000000044,
+              847.1322500000724,
+              897.7683749999414
+            ],
+            "current": [
+              146.18499999994583,
+              182.9689999999573,
+              150.02949999995963,
+              149.8167500000136,
+              208.8179999999511,
+              156.42412499994407,
+              154.3584999999439
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 974.7180000000526,
+          "currentMicroseconds": 116.57912500004386,
+          "speedup": 8.36099944994171,
+          "samplesMicroseconds": {
+            "baseline": [
+              974.7180000000526,
+              987.4771249999412,
+              938.7362500000336,
+              1034.395375000031,
+              967.2892500000216,
+              939.4298749999734,
+              988.9994999999772
+            ],
+            "current": [
+              146.1436249999224,
+              104.61612500000683,
+              98.44437499998548,
+              122.21399999998539,
+              116.57912500004386,
+              108.83387500007302,
+              153.30825000000914
+            ]
+          }
+        }
+      }
+    },
+    "128x128_16Readers_1Channels": {
+      "size": 128,
+      "readers": 16,
+      "channels": 1,
+      "authoredNodes": 51,
+      "texels": 16384,
+      "components": 16384,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 4061.485375000075,
+          "currentMicroseconds": 509.72200000001067,
+          "speedup": 7.968040176802237,
+          "samplesMicroseconds": {
+            "baseline": [
+              3796.069624999973,
+              4737.106374999939,
+              4061.485375000075,
+              4145.111125000085,
+              4738.638000000037,
+              3878.3322499999713,
+              3783.7986250000313
+            ],
+            "current": [
+              524.4879999999057,
+              509.72200000001067,
+              576.845500000104,
+              468.98075000001427,
+              566.7891249999002,
+              452.8602499999579,
+              403.6098750000292
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 3734.8424999998997,
+          "currentMicroseconds": 225.27274999993097,
+          "speedup": 16.579202322522562,
+          "samplesMicroseconds": {
+            "baseline": [
+              3744.558374999997,
+              3492.499124999995,
+              3756.478750000042,
+              3276.4477499999884,
+              3500.002875000064,
+              5131.196250000016,
+              3734.8424999998997
+            ],
+            "current": [
+              225.27274999993097,
+              247.3547499999995,
+              231.91524999992907,
+              185.26500000007218,
+              161.13987500000349,
+              212.4634999998989,
+              266.90912499998376
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 4205.67850000009,
+          "currentMicroseconds": 342.5542500001484,
+          "speedup": 12.277408614834783,
+          "samplesMicroseconds": {
+            "baseline": [
+              4009.2667500000516,
+              4187.116875000015,
+              4454.123625000079,
+              4205.67850000009,
+              3965.2503749999823,
+              4409.758000000011,
+              4379.494999999906
+            ],
+            "current": [
+              401.2525000000551,
+              290.0588749999997,
+              359.06662499996855,
+              331.1771249999538,
+              315.1806250000391,
+              593.5593750000407,
+              342.5542500001484
+            ]
+          }
+        }
+      }
+    },
+    "128x128_64Readers_1Channels": {
+      "size": 128,
+      "readers": 64,
+      "channels": 1,
+      "authoredNodes": 195,
+      "texels": 16384,
+      "components": 16384,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 15448.779624999815,
+          "currentMicroseconds": 1247.8213750000577,
+          "speedup": 12.380601850965329,
+          "samplesMicroseconds": {
+            "baseline": [
+              14644.065124999997,
+              15093.036250000068,
+              15559.880874999862,
+              16843.129999999976,
+              17703.917374999946,
+              15119.754000000057,
+              15448.779624999815
+            ],
+            "current": [
+              1247.8213750000577,
+              1234.5026250000046,
+              1207.4435000001813,
+              1245.9833749999234,
+              1393.891000000167,
+              1322.2682499999792,
+              1343.2552500000838
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 14944.232750000083,
+          "currentMicroseconds": 289.1599999998107,
+          "speedup": 51.681535309205515,
+          "samplesMicroseconds": {
+            "baseline": [
+              13079.250000000002,
+              17026.00725000002,
+              14741.844749999927,
+              15457.627750000029,
+              16167.238624999982,
+              13800.711500000034,
+              14944.232750000083
+            ],
+            "current": [
+              473.5467499999686,
+              280.7497500000409,
+              376.0747500000434,
+              268.2268749999821,
+              283.0081249999239,
+              298.2601250000698,
+              289.1599999998107
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 16791.05212500008,
+          "currentMicroseconds": 1192.4289999999473,
+          "speedup": 14.081385243902002,
+          "samplesMicroseconds": {
+            "baseline": [
+              19220.095249999984,
+              16791.05212500008,
+              18036.359875000016,
+              16934.242750000067,
+              15080.369999999903,
+              14537.08762500014,
+              15681.194000000005
+            ],
+            "current": [
+              2724.167250000164,
+              1112.2446250001303,
+              1311.7047499999899,
+              1192.4289999999473,
+              1252.4667499999396,
+              1043.9906250001059,
+              901.6891250000754
+            ]
+          }
+        }
+      }
+    },
+    "512x512_1Readers_1Channels": {
+      "size": 512,
+      "readers": 1,
+      "channels": 1,
+      "authoredNodes": 6,
+      "texels": 262144,
+      "components": 262144,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 3822.9667499999778,
+          "currentMicroseconds": 2268.5837499998343,
+          "speedup": 1.6851777017270166,
+          "samplesMicroseconds": {
+            "baseline": [
+              5219.703750000008,
+              3897.378749999916,
+              4336.957624999741,
+              3570.8042500000374,
+              3822.9667499999778,
+              3762.2660000001815,
+              3719.80399999984
+            ],
+            "current": [
+              2093.949124999881,
+              2516.018000000031,
+              2083.859874999689,
+              2237.2325000001183,
+              2268.5837499998343,
+              2275.8512499999597,
+              2702.8049999998984
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 3712.967750000189,
+          "currentMicroseconds": 2202.963374999854,
+          "speedup": 1.6854423419547024,
+          "samplesMicroseconds": {
+            "baseline": [
+              3417.9536250003366,
+              3669.095499999912,
+              4447.271499999715,
+              3864.941875000113,
+              3587.9131249998863,
+              3712.967750000189,
+              3752.0303750002313
+            ],
+            "current": [
+              2075.3819999999905,
+              2202.963374999854,
+              2605.242999999973,
+              2490.407624999989,
+              2173.916624999947,
+              2150.4610000001776,
+              2474.2163749997417
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 3569.5288750002874,
+          "currentMicroseconds": 81.19375000023865,
+          "speedup": 43.96309906846027,
+          "samplesMicroseconds": {
+            "baseline": [
+              5730.937625000024,
+              4429.726249999931,
+              3569.5288750002874,
+              3750.604625000051,
+              3418.907875000059,
+              3467.7226250005333,
+              3553.364249999504
+            ],
+            "current": [
+              82.9337499999383,
+              76.96487500015792,
+              81.19375000023865,
+              83.53224999973463,
+              55.40112499966199,
+              59.3946250000954,
+              84.06674999969255
+            ]
+          }
+        }
+      }
+    },
+    "512x512_4Readers_1Channels": {
+      "size": 512,
+      "readers": 4,
+      "channels": 1,
+      "authoredNodes": 15,
+      "texels": 262144,
+      "components": 262144,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 14796.986249999463,
+          "currentMicroseconds": 2189.884874999734,
+          "speedup": 6.756969929755444,
+          "samplesMicroseconds": {
+            "baseline": [
+              15278.523375000077,
+              16132.802625000295,
+              14796.986249999463,
+              13772.474375000456,
+              13976.91662500074,
+              14293.16375000053,
+              14963.835499999732
+            ],
+            "current": [
+              2273.4458750001068,
+              1890.157625000029,
+              2230.036625000139,
+              2147.947875000682,
+              2189.884874999734,
+              2218.428000000131,
+              2065.50737499947
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 14884.610125000108,
+          "currentMicroseconds": 2452.3102500006644,
+          "speedup": 6.069627660283227,
+          "samplesMicroseconds": {
+            "baseline": [
+              15066.07350000013,
+              13915.298124999936,
+              17208.635375000085,
+              13919.70987500008,
+              14608.884625000428,
+              14884.610125000108,
+              20178.211999999803
+            ],
+            "current": [
+              2277.854375000061,
+              2452.3102500006644,
+              2345.069500000136,
+              6883.201874999941,
+              2134.3728749998263,
+              3084.3599999998332,
+              3205.3454999995665
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 16079.8826249993,
+          "currentMicroseconds": 150.82025000083377,
+          "speedup": 106.61620455416568,
+          "samplesMicroseconds": {
+            "baseline": [
+              15823.937500000284,
+              15772.93174999977,
+              16079.8826249993,
+              16260.977375000039,
+              16533.871125000587,
+              15737.965124999391,
+              16937.159500000234
+            ],
+            "current": [
+              166.76175000065996,
+              154.9088749998191,
+              150.82025000083377,
+              115.3941250004209,
+              211.65824999934557,
+              146.6390000005049,
+              143.4748749998107
+            ]
+          }
+        }
+      }
+    },
+    "512x512_16Readers_1Channels": {
+      "size": 512,
+      "readers": 16,
+      "channels": 1,
+      "authoredNodes": 51,
+      "texels": 262144,
+      "components": 262144,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 62039.36412499934,
+          "currentMicroseconds": 2645.037874999616,
+          "speedup": 23.45500028993284,
+          "samplesMicroseconds": {
+            "baseline": [
+              62546.18750000009,
+              62874.46100000034,
+              65415.42687499987,
+              54494.77074999959,
+              60681.31312500009,
+              62039.36412499934,
+              61873.23912500051
+            ],
+            "current": [
+              3003.689874999509,
+              2559.3617500007895,
+              2990.292999999838,
+              2315.170624999155,
+              2675.113749999582,
+              2516.3079999992988,
+              2645.037874999616
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 54745.96037499941,
+          "currentMicroseconds": 2593.6826250017475,
+          "speedup": 21.10742457356845,
+          "samplesMicroseconds": {
+            "baseline": [
+              58652.79299999929,
+              55890.733750000436,
+              56131.54137499987,
+              54745.96037499941,
+              52640.970250000464,
+              54119.66012499943,
+              53315.56187500064
+            ],
+            "current": [
+              2623.91050000042,
+              2593.6826250017475,
+              2438.261749999583,
+              2720.194999999876,
+              2216.900124998574,
+              3034.901875000287,
+              1929.8100000014529
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 54824.351000001116,
+          "currentMicroseconds": 434.7379999999248,
+          "speedup": 126.10894607789197,
+          "samplesMicroseconds": {
+            "baseline": [
+              57571.28237500001,
+              53126.73325000105,
+              59369.69725000017,
+              54637.90212500135,
+              57374.92462500086,
+              53858.21812500035,
+              54824.351000001116
+            ],
+            "current": [
+              433.8992499997403,
+              434.7379999999248,
+              429.43374999958905,
+              436.95525000111957,
+              446.1881249990256,
+              431.3776250000956,
+              437.70450000010896
+            ]
+          }
+        }
+      }
+    },
+    "512x512_64Readers_1Channels": {
+      "size": 512,
+      "readers": 64,
+      "channels": 1,
+      "authoredNodes": 195,
+      "texels": 262144,
+      "components": 262144,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 218603.7364999993,
+          "currentMicroseconds": 3138.3692500003235,
+          "speedup": 69.65519959130901,
+          "samplesMicroseconds": {
+            "baseline": [
+              232025.78712500143,
+              211058.2973750006,
+              220334.06075000128,
+              219434.9821249998,
+              214185.84700000065,
+              211325.13612500043,
+              218603.7364999993
+            ],
+            "current": [
+              3005.2257500010455,
+              3398.8849999986996,
+              3119.003125000745,
+              3110.7233750008163,
+              3265.7662500005245,
+              3138.3692500003235,
+              3990.8626249998633
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 205246.97025000025,
+          "currentMicroseconds": 2257.55137500164,
+          "speedup": 90.91574726615077,
+          "samplesMicroseconds": {
+            "baseline": [
+              205246.97025000025,
+              204107.02024999954,
+              213276.8395000003,
+              217389.39349999966,
+              204358.41674999756,
+              211344.96375000163,
+              198639.18387500235
+            ],
+            "current": [
+              2388.1595000002562,
+              2240.843625000707,
+              3047.747749998962,
+              1857.1219999994355,
+              1916.5177499999118,
+              2257.55137500164,
+              3826.4586249970307
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 236168.13475000163,
+          "currentMicroseconds": 1439.6602499982691,
+          "speedup": 164.04435334676052,
+          "samplesMicroseconds": {
+            "baseline": [
+              235474.94249999727,
+              236759.41812499877,
+              236168.13475000163,
+              240428.71387500054,
+              236437.842000003,
+              235650.94287500324,
+              218176.31125000116
+            ],
+            "current": [
+              1822.5629999978992,
+              1461.9234999991022,
+              1439.6602499982691,
+              1297.9798749984184,
+              1381.5522500008228,
+              1567.4632500013104,
+              1182.2186249992228
+            ]
+          }
+        }
+      }
+    },
+    "128x128_63Readers_3Channels": {
+      "size": 128,
+      "readers": 63,
+      "channels": 3,
+      "authoredNodes": 192,
+      "texels": 16384,
+      "components": 49152,
+      "exactPlans": true,
+      "modes": {
+        "cold": {
+          "baselineMicroseconds": 14452.573124999617,
+          "currentMicroseconds": 1432.5787500019942,
+          "speedup": 10.088501679212747,
+          "samplesMicroseconds": {
+            "baseline": [
+              14381.511874998978,
+              14336.173250001593,
+              14452.573124999617,
+              15136.161875001562,
+              16091.131624998525,
+              17703.140749999875,
+              14313.730500001839
+            ],
+            "current": [
+              1476.004500000272,
+              1432.5787500019942,
+              1488.828999998077,
+              1430.6896249981946,
+              1375.3673749997688,
+              1858.9893750031479,
+              1314.373749999504
+            ]
+          }
+        },
+        "replacement": {
+          "baselineMicroseconds": 13174.97262499819,
+          "currentMicroseconds": 583.9656250027474,
+          "speedup": 22.561212614075025,
+          "samplesMicroseconds": {
+            "baseline": [
+              13787.062499999593,
+              13174.97262499819,
+              15559.90224999914,
+              13468.582749999769,
+              12934.532999999647,
+              12319.615624997823,
+              12956.844000000274
+            ],
+            "current": [
+              685.7681250003225,
+              1067.7065000018047,
+              503.98924999899464,
+              583.9656250027474,
+              577.2117499982414,
+              608.3248750001076,
+              538.9591249986552
+            ]
+          }
+        },
+        "borrowedResource": {
+          "baselineMicroseconds": 15811.908499999845,
+          "currentMicroseconds": 1012.3241250003048,
+          "speedup": 15.619412902952485,
+          "samplesMicroseconds": {
+            "baseline": [
+              14650.644750003266,
+              14323.707749997993,
+              14322.879250001279,
+              15811.908499999845,
+              16439.845500000956,
+              16480.58737500105,
+              16293.344374997105
+            ],
+            "current": [
+              1012.3241250003048,
+              1007.818624999345,
+              1063.7304999982007,
+              1061.8826249992708,
+              992.9300000003423,
+              948.0923750015791,
+              1084.441125000012
+            ]
+          }
+        }
+      }
+    }
+  },
+  "normalization": {
+    "baselineMicroseconds": 13902.17924999888,
+    "currentMicroseconds": 13709.969499999715,
+    "speedup": 1.0140197066083312,
+    "samplesMicroseconds": {
+      "baseline": [
+        13773.082750001777,
+        16032.928874999925,
+        14839.484624997567,
+        13902.17924999888,
+        14390.940375000355,
+        13458.57262500067,
+        12540.709249999054
+      ],
+      "current": [
+        14455.735750001622,
+        13709.969499999715,
+        14188.393749998795,
+        13315.23400000151,
+        13874.562749999313,
+        13115.706499997032,
+        12624.42537500101
+      ]
+    }
+  },
+  "rawConstructionAndCompile": {
+    "512x512_1Readers_1Channels": {
+      "baselineMicroseconds": 19432.918000002246,
+      "currentMicroseconds": 17628.617374997702,
+      "speedup": 1.102350660101316,
+      "samplesMicroseconds": {
+        "baseline": [
+          18455.80274999884,
+          21538.371250000637,
+          18819.115999998758,
+          18407.787874999485,
+          19432.918000002246,
+          21115.065875001164,
+          20772.30249999775
+        ],
+        "current": [
+          17596.962125000573,
+          17628.617374997702,
+          17135.67612499901,
+          16358.222124999884,
+          19612.58425000051,
+          26982.994375001,
+          18780.84300000046
+        ]
+      }
+    },
+    "512x512_64Readers_1Channels": {
+      "baselineMicroseconds": 237320.53525000083,
+      "currentMicroseconds": 18858.556625000347,
+      "speedup": 12.58423642747879,
+      "samplesMicroseconds": {
+        "baseline": [
+          242339.67912499793,
+          253510.54875000045,
+          233217.61074999813,
+          228295.48774999785,
+          250694.5244999988,
+          237320.53525000083,
+          221389.31650000086
+        ],
+        "current": [
+          23339.977625000756,
+          21896.458874998643,
+          19593.49587500037,
+          18627.965249997942,
+          18858.556625000347,
+          17890.871499999776,
+          17552.95075000322
+        ]
+      }
+    }
+  }
+}

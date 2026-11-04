@@ -1,0 +1,534 @@
+{
+  "version": "0.61.0",
+  "baselineVersion": "0.60.0",
+  "baselineCommit": "04969922822a5d71875e2c7daffd4ccec7ea9bd2",
+  "method": "Verify report source fingerprints against immutable v0.60 checkout and current source, then compare decoded RGBA for every corresponding native sphere and shell render.",
+  "specimens": {
+    "sphere": {
+      "programs": 141,
+      "renders": 64,
+      "allRGBAByteIdentical": true,
+      "cases": [
+        {
+          "case": "brass-far",
+          "rgbaSHA256": "a6bc69561b1aafa4892d8c85e583e42b4f2a4a8de4c3fc0cec108f6400bfc5f1"
+        },
+        {
+          "case": "brass-near",
+          "rgbaSHA256": "58539fa18cab71c107f796a1db54f4d496b0124f0a3cb51f27b7cd3389c3b1b2"
+        },
+        {
+          "case": "carapace-far",
+          "rgbaSHA256": "d50f0f30fa1e99d33d08d8574aa231f02baf4d53b6a42778ad8ad77e6070e2f7"
+        },
+        {
+          "case": "carapace-near",
+          "rgbaSHA256": "a525b862e41c6f6f1b83bfc4bbc2ca4f55f1176c9d58a0168366aace2e4bad67"
+        },
+        {
+          "case": "channel-flat-far",
+          "rgbaSHA256": "3b3c95a577f1384220dda123b753675040f145bf041980bb61452a574da39173"
+        },
+        {
+          "case": "channel-flat-near",
+          "rgbaSHA256": "4abf9ee9433e5c238fdb48d5ccf54e9930fc392e2877d6d8963e9c4d7bb54324"
+        },
+        {
+          "case": "channel-nested-far",
+          "rgbaSHA256": "3b3c95a577f1384220dda123b753675040f145bf041980bb61452a574da39173"
+        },
+        {
+          "case": "channel-nested-near",
+          "rgbaSHA256": "4abf9ee9433e5c238fdb48d5ccf54e9930fc392e2877d6d8963e9c4d7bb54324"
+        },
+        {
+          "case": "channels-far",
+          "rgbaSHA256": "0dea94b248840626830fd8a066b95044ef0fc6e84c64ea2da8026e6c2b935383"
+        },
+        {
+          "case": "channels-near",
+          "rgbaSHA256": "3c87d259b4a42bc42a43c56e5f005c4f82256fe88cccc62ca2ab7448a787a89b"
+        },
+        {
+          "case": "deposit-pigment-far",
+          "rgbaSHA256": "9baaf2c6ab1ea1d66da9f143fd50df327de274aeaea924600754661483106817"
+        },
+        {
+          "case": "deposit-pigment-near",
+          "rgbaSHA256": "8d67a3197b9fa0df4327f7c3698016027ee1f68a32df9ecb0046b671a6d98e44"
+        },
+        {
+          "case": "deposit-reference-far",
+          "rgbaSHA256": "9baaf2c6ab1ea1d66da9f143fd50df327de274aeaea924600754661483106817"
+        },
+        {
+          "case": "deposit-reference-near",
+          "rgbaSHA256": "8d67a3197b9fa0df4327f7c3698016027ee1f68a32df9ecb0046b671a6d98e44"
+        },
+        {
+          "case": "finish-far",
+          "rgbaSHA256": "258d97b0e800e6758f43f6daf76a1c6a0b16f22db50b66ff1a8c454a29e27883"
+        },
+        {
+          "case": "finish-near",
+          "rgbaSHA256": "7a5a755fbe92242a65f6a2d77e3375df27a2508063f5ec7865ce6ddeca2ee1e4"
+        },
+        {
+          "case": "frame-reference-far",
+          "rgbaSHA256": "be8c6ddc5459b10b648b9fb1aea9e104e64a1e3640da3971532c72873bf694e5"
+        },
+        {
+          "case": "frame-reference-near",
+          "rgbaSHA256": "d493b5b5470288a0d118c58a9794822dd20a0c477931f38a4d0bb76843788172"
+        },
+        {
+          "case": "framed-far",
+          "rgbaSHA256": "be8c6ddc5459b10b648b9fb1aea9e104e64a1e3640da3971532c72873bf694e5"
+        },
+        {
+          "case": "framed-near",
+          "rgbaSHA256": "d493b5b5470288a0d118c58a9794822dd20a0c477931f38a4d0bb76843788172"
+        },
+        {
+          "case": "independent-far",
+          "rgbaSHA256": "fe987f688947a6a39c45bed6f34f769159eab2acf164348504f8be678e8d0f71"
+        },
+        {
+          "case": "independent-near",
+          "rgbaSHA256": "749f93b5269dabec2eafa6b4ae52fdc5e4008ac8c721bcff537135d8a56be991"
+        },
+        {
+          "case": "inscription-far",
+          "rgbaSHA256": "2b3e7b6071100f12288e5575076eb16150d8ca2ca57f53b26a5dd6a596146c97"
+        },
+        {
+          "case": "inscription-linear-far",
+          "rgbaSHA256": "05362bdf8f0ed4267284ca7fd62fd2bff27916bac5b27da4e03a702e91f6b519"
+        },
+        {
+          "case": "inscription-linear-near",
+          "rgbaSHA256": "4d69132cba45bcae8d5ddc954b853cef597d7bf6bc98d725341d614950d2fed7"
+        },
+        {
+          "case": "inscription-near",
+          "rgbaSHA256": "6a87af471a08bc8ed148aec55cd8787ec9dee796f3f6f4e8ad7b76e9d3c2aebb"
+        },
+        {
+          "case": "ivory-far",
+          "rgbaSHA256": "a8d88e020777753a406eb8278c54a4625a3bcc3f0060255ea3b0b482b108035f"
+        },
+        {
+          "case": "ivory-near",
+          "rgbaSHA256": "36632fc6fe6d3c9c46732f8ff17365141a4707e407593d3c7eb8a50d00ff2084"
+        },
+        {
+          "case": "lichen-far",
+          "rgbaSHA256": "c675ec2387e13fa570ea8db339ec0e3a1e759d34975215c1999e7bf36f343c01"
+        },
+        {
+          "case": "lichen-near",
+          "rgbaSHA256": "2703d8bcb04dd0bf72ffa882d5509b97e743d7a2a42eabede6ed68771f7751ca"
+        },
+        {
+          "case": "marks-far",
+          "rgbaSHA256": "f32d789dcc06e500a0603cb1757a4cc8fc36bbcf42acc14704affea6be49d35b"
+        },
+        {
+          "case": "marks-near",
+          "rgbaSHA256": "ca94a0871f47262740ee7958b688e3e012052903b70c2461a508f7ec0afc86c3"
+        },
+        {
+          "case": "membrane-far",
+          "rgbaSHA256": "17601489b2e252fe316edbed9eca550d7bf4023cc68a5b382f8e232cd3b1b00b"
+        },
+        {
+          "case": "membrane-near",
+          "rgbaSHA256": "94e04b8db01b8ad74a1fea85db1744a100cae935ee7e8c6fb7af0bc18ee4439d"
+        },
+        {
+          "case": "moonstone-far",
+          "rgbaSHA256": "d0e5204cdafc735b47e1d4ee920b0f36311f90640f1896acf3f7b4e4b66c15f6"
+        },
+        {
+          "case": "moonstone-near",
+          "rgbaSHA256": "7f2f1df932ae6ec1d6b776755b0f957652860e884ffc142eb30048eca0883400"
+        },
+        {
+          "case": "palette-clipped-far",
+          "rgbaSHA256": "89c6de910c8c6f188582ac3e5c341b4fe4a27e5cb9ff4bc00f7753d2e04b23b3"
+        },
+        {
+          "case": "palette-clipped-near",
+          "rgbaSHA256": "ed0397a3fd55d44596c5dfbac1229f45e701476266669a06daa48cdc8a628f11"
+        },
+        {
+          "case": "palette-reference-far",
+          "rgbaSHA256": "89c6de910c8c6f188582ac3e5c341b4fe4a27e5cb9ff4bc00f7753d2e04b23b3"
+        },
+        {
+          "case": "palette-reference-near",
+          "rgbaSHA256": "ed0397a3fd55d44596c5dfbac1229f45e701476266669a06daa48cdc8a628f11"
+        },
+        {
+          "case": "patched-far",
+          "rgbaSHA256": "7f5aa2032538eeb6711516204f76aabc53eff81b1a879cc063f47cb6ef85c898"
+        },
+        {
+          "case": "patched-near",
+          "rgbaSHA256": "0bcf48de076bdafda72624ad8b250a8699d8352c4f685660898399bcbb34f607"
+        },
+        {
+          "case": "pigments-far",
+          "rgbaSHA256": "8f47f3c9317352d2f76ab1d04f434b5195ac6b8c7fbfeec01be8e7ea0c40aee8"
+        },
+        {
+          "case": "pigments-near",
+          "rgbaSHA256": "e9205a5770c7a69f42486c5d67bf6a560ca945e56eb56877bdc79b3508247732"
+        },
+        {
+          "case": "porcelain-far",
+          "rgbaSHA256": "b6a45559c4beaf0739f40604a4358f09aa1f97fb4a5bf6d40c85ddd785928ac2"
+        },
+        {
+          "case": "porcelain-flat-far",
+          "rgbaSHA256": "5a194cab019ef1b52ac09e66ca02c35465987229beff693bac6fc7b8e5349af1"
+        },
+        {
+          "case": "porcelain-flat-near",
+          "rgbaSHA256": "b433e7a9ff2ed4106f22d746624f091dba012a9f86c59797abaa7453faa02cf6"
+        },
+        {
+          "case": "porcelain-near",
+          "rgbaSHA256": "70fcec621652435cebc42effa1e343b5503cd1757d1a9ef90ec8f05ce7a87de9"
+        },
+        {
+          "case": "prismatic-far",
+          "rgbaSHA256": "9c26f3592bfdd9b8075ceeeb02921750d25f5c5c6a6883933bc693dbf0cdd626"
+        },
+        {
+          "case": "prismatic-near",
+          "rgbaSHA256": "99cffdff1015882ffc22f80c3ce26d3cd92a2eec948ddf02336b4b718437b5bd"
+        },
+        {
+          "case": "reference-far",
+          "rgbaSHA256": "7f5aa2032538eeb6711516204f76aabc53eff81b1a879cc063f47cb6ef85c898"
+        },
+        {
+          "case": "reference-near",
+          "rgbaSHA256": "0bcf48de076bdafda72624ad8b250a8699d8352c4f685660898399bcbb34f607"
+        },
+        {
+          "case": "shared-far",
+          "rgbaSHA256": "cd466f8d62fd6a9bfeb18dd3961b7e2d86e4ebfdd20e5f7b1cbdb8ed05498d76"
+        },
+        {
+          "case": "shared-near",
+          "rgbaSHA256": "9d62ba9fbb6b4cd8537cfcf9e26365573168a9cd8e3fad55c1a55b2a14fff776"
+        },
+        {
+          "case": "spectrum-far",
+          "rgbaSHA256": "e66223d0ef11849b8275eec618f5d6be372352f5283a88cc524271bbf458f978"
+        },
+        {
+          "case": "spectrum-near",
+          "rgbaSHA256": "cf0c1928f7989525860793156064171acdb16a7796749636c241b96f09ab1c74"
+        },
+        {
+          "case": "stone-far",
+          "rgbaSHA256": "a2b97006db6a033d9ac8bfd7f582371e69c0b18b18787fa25322c7e3f7e4637e"
+        },
+        {
+          "case": "stone-near",
+          "rgbaSHA256": "6db3378c395d1809f1688d0233c3a86e616f175c95f4eb6e9617f7cd9c15a55d"
+        },
+        {
+          "case": "weathered-far",
+          "rgbaSHA256": "ff9b8c73975b4ec35b8515fbb71c9db46cbd6c4de864ea3a830a57f463b5b3a7"
+        },
+        {
+          "case": "weathered-flat-far",
+          "rgbaSHA256": "ca949c286510f5d60ca4aa0969dde8478b5d92f18a304d925fc546d743181243"
+        },
+        {
+          "case": "weathered-flat-near",
+          "rgbaSHA256": "20767753350dc7a91ef97471aaee5a27e5afa68f01ffcec4109c2005e6ba480f"
+        },
+        {
+          "case": "weathered-near",
+          "rgbaSHA256": "eefce02026c6c77acf59074702c2d80770e20d98560099c82fd27bd3812d1062"
+        },
+        {
+          "case": "zones-far",
+          "rgbaSHA256": "4a216475b5d5d16f09243e050bd9b73cb74efe8734b81a7e885522ad0807adb4"
+        },
+        {
+          "case": "zones-near",
+          "rgbaSHA256": "f0b4f18d2ff2ee17d3b2ebda098c24386d89a4dc27df2a8dd773f41cb5621b8e"
+        }
+      ]
+    },
+    "shell": {
+      "programs": 141,
+      "renders": 64,
+      "allRGBAByteIdentical": true,
+      "cases": [
+        {
+          "case": "brass-far",
+          "rgbaSHA256": "f605a835fffcba93b52a7c14290ca7c55c6071e31c5b99cc4fd5fbb7ea52e0de"
+        },
+        {
+          "case": "brass-near",
+          "rgbaSHA256": "761ee965606d08409946d0bee9e47cb7e646afe4f156bff1a0e07b4f32fb4067"
+        },
+        {
+          "case": "carapace-far",
+          "rgbaSHA256": "de6f403be32992c3d0c7b65d1bb1f469c28a6ac906006b0a5a262941120c7c3c"
+        },
+        {
+          "case": "carapace-near",
+          "rgbaSHA256": "6c40ac04ac2d8f3ddeff5dd5a64f21cb197ed24ee3424c9d916754869031bb08"
+        },
+        {
+          "case": "channel-flat-far",
+          "rgbaSHA256": "d99146086b766aca75c6aff538fe75c9521f586adea859ee38f1294aadf2865f"
+        },
+        {
+          "case": "channel-flat-near",
+          "rgbaSHA256": "69dc3025f34b10fb23b1e5afe8593187e31e8a907cfaa0f657c8b5e69543fb88"
+        },
+        {
+          "case": "channel-nested-far",
+          "rgbaSHA256": "d99146086b766aca75c6aff538fe75c9521f586adea859ee38f1294aadf2865f"
+        },
+        {
+          "case": "channel-nested-near",
+          "rgbaSHA256": "69dc3025f34b10fb23b1e5afe8593187e31e8a907cfaa0f657c8b5e69543fb88"
+        },
+        {
+          "case": "channels-far",
+          "rgbaSHA256": "08618de96a63166bc43e83c4248bc2bb5e1fecf576c4949eb174a4ae431d83e4"
+        },
+        {
+          "case": "channels-near",
+          "rgbaSHA256": "d1cf98e44673f8ebabc4e8bfa2a32303501fce53731328528cdea63ecfb2a49e"
+        },
+        {
+          "case": "deposit-pigment-far",
+          "rgbaSHA256": "3f764f8335b384fc6953bbf86682c847a8940828a83ab13ac9e02d085a4b5059"
+        },
+        {
+          "case": "deposit-pigment-near",
+          "rgbaSHA256": "26562c067a66d138646858fac59fa1aedbc1729680819d733ea56462e8fb802a"
+        },
+        {
+          "case": "deposit-reference-far",
+          "rgbaSHA256": "3f764f8335b384fc6953bbf86682c847a8940828a83ab13ac9e02d085a4b5059"
+        },
+        {
+          "case": "deposit-reference-near",
+          "rgbaSHA256": "26562c067a66d138646858fac59fa1aedbc1729680819d733ea56462e8fb802a"
+        },
+        {
+          "case": "finish-far",
+          "rgbaSHA256": "585524529aff0c3a6e455ad4fd8d15c89f916e1f5f7356d3862eaf29c01bce19"
+        },
+        {
+          "case": "finish-near",
+          "rgbaSHA256": "19d1848182494acb059c5aff8e3cc43a600780cda677a4bf5b4670d67665eaa9"
+        },
+        {
+          "case": "frame-reference-far",
+          "rgbaSHA256": "c1b24fffd2ba3e22a25904221b1544bd860aa7d0ef1ca3fb86da4a5a2c8bf934"
+        },
+        {
+          "case": "frame-reference-near",
+          "rgbaSHA256": "061ed2936bc6ec20ce5afd680d3fc11504a51430059c43aa04bbcd15e649306e"
+        },
+        {
+          "case": "framed-far",
+          "rgbaSHA256": "c1b24fffd2ba3e22a25904221b1544bd860aa7d0ef1ca3fb86da4a5a2c8bf934"
+        },
+        {
+          "case": "framed-near",
+          "rgbaSHA256": "061ed2936bc6ec20ce5afd680d3fc11504a51430059c43aa04bbcd15e649306e"
+        },
+        {
+          "case": "independent-far",
+          "rgbaSHA256": "35c2864ff466972f5d83dd7605646941585d51fe6dbf8895b66bf8b8f48ce13c"
+        },
+        {
+          "case": "independent-near",
+          "rgbaSHA256": "8f34ef68edd26d53be243aba3c6518a19ba37ca091743f3b7814f5647df61bb0"
+        },
+        {
+          "case": "inscription-far",
+          "rgbaSHA256": "e2ec924bb1d9e12b04262752bfeff15661d6e932e5b0218562295604525da268"
+        },
+        {
+          "case": "inscription-linear-far",
+          "rgbaSHA256": "91c656fc812b86345bf76ed96378f5c9f95e5cfce311f37333122ce4aa55a72e"
+        },
+        {
+          "case": "inscription-linear-near",
+          "rgbaSHA256": "9abb0c808536c5bddb645acbb8ddfff7f6e67b64160f5f9223a4633533a18097"
+        },
+        {
+          "case": "inscription-near",
+          "rgbaSHA256": "1f0bee6824ccc53b52ae833ade155792f32e461050a3f79257b0124bead5abdd"
+        },
+        {
+          "case": "ivory-far",
+          "rgbaSHA256": "5f0f88031524a8d1c24060055e1d5f1a99e5ff783dd2475b15e554857821af63"
+        },
+        {
+          "case": "ivory-near",
+          "rgbaSHA256": "e25b7b3ad005fe836506c4cc8fcaad50f9042e57fb84fec6d62cc2662c13981d"
+        },
+        {
+          "case": "lichen-far",
+          "rgbaSHA256": "71f835cd3f799a77bfb575284d73810fbe35548816ce755ecacf8937e7e451c3"
+        },
+        {
+          "case": "lichen-near",
+          "rgbaSHA256": "79723af7962880fa1f14ac9eba21da7601fb718ffa13ef64bdfa4e3df6d34417"
+        },
+        {
+          "case": "marks-far",
+          "rgbaSHA256": "6f373f2479ad543f952cf7d8d81483e009b2d2c90429d18a67fc74f3a7cc5bf1"
+        },
+        {
+          "case": "marks-near",
+          "rgbaSHA256": "5d9777b3580451484db58f1003f694f5d82c25aa326a6a51c298616e6760aab5"
+        },
+        {
+          "case": "membrane-far",
+          "rgbaSHA256": "3b313b71e7ae3c5671583f6b5b59a3617750a6ef1adfac096399fab7bf5e9e40"
+        },
+        {
+          "case": "membrane-near",
+          "rgbaSHA256": "3c0739ce797b35bf75686b7bcd5d639cfa9c77a9f651a6e53e45607fe236eef0"
+        },
+        {
+          "case": "moonstone-far",
+          "rgbaSHA256": "392b24cf47a59091113945d34d9146206d1ea9aba9d43d7ee6b024a85c11aa48"
+        },
+        {
+          "case": "moonstone-near",
+          "rgbaSHA256": "60702e8a875b9b0cc3333578e50aa405af539b2609309ec6e02b5a0b094498b9"
+        },
+        {
+          "case": "palette-clipped-far",
+          "rgbaSHA256": "0173bf1860cbf0d54625431b47516b588c408998ac1a9dff0e472bf70dd8c317"
+        },
+        {
+          "case": "palette-clipped-near",
+          "rgbaSHA256": "93f3879a53426ead38441cbf1bf8230394201a2c083d3f7596ea1a95b65f15fd"
+        },
+        {
+          "case": "palette-reference-far",
+          "rgbaSHA256": "0173bf1860cbf0d54625431b47516b588c408998ac1a9dff0e472bf70dd8c317"
+        },
+        {
+          "case": "palette-reference-near",
+          "rgbaSHA256": "93f3879a53426ead38441cbf1bf8230394201a2c083d3f7596ea1a95b65f15fd"
+        },
+        {
+          "case": "patched-far",
+          "rgbaSHA256": "f6ac11216ab8499c110834ff5f544c06db4de4f380a79aa0fd38e0c29f1a42f8"
+        },
+        {
+          "case": "patched-near",
+          "rgbaSHA256": "114404f3fe40cda7453b98647356cffb63290c5dc4e458935bda3f7b263aa7e9"
+        },
+        {
+          "case": "pigments-far",
+          "rgbaSHA256": "e21d9c74bd78a069cc56596b573d3fb79464a6d7c03318ca5b7a36ecda8a5f5f"
+        },
+        {
+          "case": "pigments-near",
+          "rgbaSHA256": "ffcdb2886f11c9dd49e8e7211842e16c36da4366f9e61a63eb35f51cf740a976"
+        },
+        {
+          "case": "porcelain-far",
+          "rgbaSHA256": "79b43696398e0d193b59ec4cd1a9f088cb0d20ebff1674173d213b786ffc6872"
+        },
+        {
+          "case": "porcelain-flat-far",
+          "rgbaSHA256": "4bed3b66681b9f1ed8e24bab25dce278fef59ffb5e0bf076c90298f128feba2e"
+        },
+        {
+          "case": "porcelain-flat-near",
+          "rgbaSHA256": "407179567d74070a4a03cb36c1df9353fd400f4bc1def72579b08ce644db0015"
+        },
+        {
+          "case": "porcelain-near",
+          "rgbaSHA256": "fa2c82bc858b52a734892ca78cb2555dc73c97fd35f35eab8cc0df267b04fd2a"
+        },
+        {
+          "case": "prismatic-far",
+          "rgbaSHA256": "1f17069073162048f1c9e765a837c384e7ab9414a9609cfe8dc7bd3a2d7c289b"
+        },
+        {
+          "case": "prismatic-near",
+          "rgbaSHA256": "21af5af7f17ecc092ae6b270440f9ca70b69306b9c79e9d55e1b175eca8248f4"
+        },
+        {
+          "case": "reference-far",
+          "rgbaSHA256": "f6ac11216ab8499c110834ff5f544c06db4de4f380a79aa0fd38e0c29f1a42f8"
+        },
+        {
+          "case": "reference-near",
+          "rgbaSHA256": "114404f3fe40cda7453b98647356cffb63290c5dc4e458935bda3f7b263aa7e9"
+        },
+        {
+          "case": "shared-far",
+          "rgbaSHA256": "343da27498922dbd21788748790551b270641037f3706679e212aaa970d0e1bf"
+        },
+        {
+          "case": "shared-near",
+          "rgbaSHA256": "8942ffee48fcf389c64174c499ea33921a254f9142beee267cc5821b755d7102"
+        },
+        {
+          "case": "spectrum-far",
+          "rgbaSHA256": "8e8a86a29d0d632acbcd89edf870510a034d2b7c163f50421fe9656a49173909"
+        },
+        {
+          "case": "spectrum-near",
+          "rgbaSHA256": "98232eb6c5f7370840b77ee7c67eab5ccc004b9e6091af7b6c88080c1375fc01"
+        },
+        {
+          "case": "stone-far",
+          "rgbaSHA256": "82d28c9509c273f2ff0a1edb41c9d535cff3d483ffe888f7242cc17f8afec3af"
+        },
+        {
+          "case": "stone-near",
+          "rgbaSHA256": "bf355742ab53b621f5bbd2a86335c57e80f9bdfbc7f5e46899c0010634c401ef"
+        },
+        {
+          "case": "weathered-far",
+          "rgbaSHA256": "feaa8bdff5e7cde44fc2c4c6269fcbd024548a52b7bcc24150b5c983071af52e"
+        },
+        {
+          "case": "weathered-flat-far",
+          "rgbaSHA256": "1788a86c8dc5e5bfa0f8ca99dc57357feb807120c8748f178e27df7223f64ae5"
+        },
+        {
+          "case": "weathered-flat-near",
+          "rgbaSHA256": "b9d9e2c376b54ab6df617c13fbdb76cda646c45908abd0fd2ca00b2b1e35f3a4"
+        },
+        {
+          "case": "weathered-near",
+          "rgbaSHA256": "527cd53aa2d9ad42c3f41395e7d8699d111c670df83d1b680e50eaf7eefd4d83"
+        },
+        {
+          "case": "zones-far",
+          "rgbaSHA256": "3d72c275f2d72db3d2ebfbaa42578461775b33cc698d843fce604d724ac28e73"
+        },
+        {
+          "case": "zones-near",
+          "rgbaSHA256": "fc064583d828f27da3fe07cbc693d78b657407a803f913b36af7dad675d33e19"
+        }
+      ]
+    }
+  }
+}

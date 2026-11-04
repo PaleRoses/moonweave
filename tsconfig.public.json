@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "checkJs": false
+  },
+  "files": [
+    "tests/types.test.mts",
+    "tests/algebra.types.mts",
+    "tests/named-expressions.types.mts",
+    "tests/procedural-grammar.types.mts",
+    "tests/optimization.types.mts",
+    "tests/field-roots.types.mts",
+    "tests/marks-color.types.mts"
+  ]
+}

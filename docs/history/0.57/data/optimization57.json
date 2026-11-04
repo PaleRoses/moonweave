@@ -1,0 +1,1320 @@
+{
+  "version": "0.57.0",
+  "baseline": {
+    "commit": "84fb8ca1406085fb42f6ad666e31fb91e16addf7",
+    "version": "0.56.0",
+    "source": "git archive of src, lab and package.json from the immutable v0.56 commit; imported directly without rebuilding"
+  },
+  "accounting": "Compiled DAG node counts, uniform components, static texture-read ceilings and generated source bytes. These are not GPU timings, driver allocation or JavaScript heap measurements. Egglog extraction cost is a search heuristic; acceptance uses the compiled DAG cost vector.",
+  "evidence": "Independent exact symbolic surface-product certificate plus finite CPU field and unlit record observations. Opaque paint records exercise surface laws without evaluating facets or lighting. Numerical matches are not universal equivalence proofs.",
+  "gallery": {
+    "belly": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 9,
+        "liveNodes": 9,
+        "graphJSONBytes": 1909,
+        "generatedGLSLBytes": 6995,
+        "programKeyBytes": 414,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 54
+        },
+        "graphSHA256": "bb42fd95b77ec1e533275f6ae72dc941eccbab44bc7b9bdd34de083255f81778",
+        "compiledNodesSHA256": "19b150fa394a6f0b119f098d77781ff692e7aa057095e86664f25288cae46722",
+        "programKeySHA256": "175c5ec44e88c6ddf1009c033108e419fd0cd1519eb0f3cf36ec845df4d1896d",
+        "generatedGLSLSHA256": "ea4e4065f6dbb48f999285de16c92ef90e975326e32ed6c1a557a11a5ceff0f2"
+      },
+      "current": {
+        "authoredNodes": 9,
+        "liveNodes": 9,
+        "graphJSONBytes": 1909,
+        "generatedGLSLBytes": 6995,
+        "programKeyBytes": 414,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 54
+        },
+        "graphSHA256": "bb42fd95b77ec1e533275f6ae72dc941eccbab44bc7b9bdd34de083255f81778",
+        "compiledNodesSHA256": "19b150fa394a6f0b119f098d77781ff692e7aa057095e86664f25288cae46722",
+        "programKeySHA256": "175c5ec44e88c6ddf1009c033108e419fd0cd1519eb0f3cf36ec845df4d1896d",
+        "generatedGLSLSHA256": "ea4e4065f6dbb48f999285de16c92ef90e975326e32ed6c1a557a11a5ceff0f2"
+      }
+    },
+    "tips": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 9,
+        "liveNodes": 9,
+        "graphJSONBytes": 1945,
+        "generatedGLSLBytes": 7200,
+        "programKeyBytes": 389,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 2,
+          "proceduralSamples": 0,
+          "textureReads": 8,
+          "uniformScalars": 60
+        },
+        "graphSHA256": "01845fbc48247e1ed167873c6935b6e47936b6db57d6cc1391148043ae88eeda",
+        "compiledNodesSHA256": "e38bd676c31fb98bd29c785379c86e2b9c5eaf6fb34c2f90ddc2a0dd0582003e",
+        "programKeySHA256": "f5f60fa17023c1ae64dcc31b5baa696c7afefd45149f2427a3b9e17a11cc5fdc",
+        "generatedGLSLSHA256": "cb1c39029a0055452d7ff0b2ff900aea8befb4f9dc48df4dca155c4ac8e04875"
+      },
+      "current": {
+        "authoredNodes": 9,
+        "liveNodes": 9,
+        "graphJSONBytes": 1945,
+        "generatedGLSLBytes": 7200,
+        "programKeyBytes": 389,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 2,
+          "proceduralSamples": 0,
+          "textureReads": 8,
+          "uniformScalars": 60
+        },
+        "graphSHA256": "01845fbc48247e1ed167873c6935b6e47936b6db57d6cc1391148043ae88eeda",
+        "compiledNodesSHA256": "e38bd676c31fb98bd29c785379c86e2b9c5eaf6fb34c2f90ddc2a0dd0582003e",
+        "programKeySHA256": "f5f60fa17023c1ae64dcc31b5baa696c7afefd45149f2427a3b9e17a11cc5fdc",
+        "generatedGLSLSHA256": "cb1c39029a0055452d7ff0b2ff900aea8befb4f9dc48df4dca155c4ac8e04875"
+      }
+    },
+    "patina": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 5,
+        "liveNodes": 5,
+        "graphJSONBytes": 1432,
+        "generatedGLSLBytes": 6732,
+        "programKeyBytes": 237,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 49
+        },
+        "graphSHA256": "79a967b6c2954b83822fe3a4af2cfe9d238bc9632bc07ae4011343643565ca59",
+        "compiledNodesSHA256": "482710037590893f1f79d9795b507ffa256506de4fbc5f8c756cd25478751122",
+        "programKeySHA256": "3cf7ade72032abd1e8f642a4c21250bdfb13bb3c2585d2c7405dab8f258991d2",
+        "generatedGLSLSHA256": "b86724bc83b53ac751bc2981f49a090918b5a78424b825eeef79211299daaccc"
+      },
+      "current": {
+        "authoredNodes": 5,
+        "liveNodes": 5,
+        "graphJSONBytes": 1432,
+        "generatedGLSLBytes": 6732,
+        "programKeyBytes": 237,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 49
+        },
+        "graphSHA256": "79a967b6c2954b83822fe3a4af2cfe9d238bc9632bc07ae4011343643565ca59",
+        "compiledNodesSHA256": "482710037590893f1f79d9795b507ffa256506de4fbc5f8c756cd25478751122",
+        "programKeySHA256": "3cf7ade72032abd1e8f642a4c21250bdfb13bb3c2585d2c7405dab8f258991d2",
+        "generatedGLSLSHA256": "b86724bc83b53ac751bc2981f49a090918b5a78424b825eeef79211299daaccc"
+      }
+    },
+    "finish": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 8,
+        "liveNodes": 8,
+        "graphJSONBytes": 1469,
+        "generatedGLSLBytes": 6769,
+        "programKeyBytes": 399,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 36
+        },
+        "graphSHA256": "ae1185e48f15746fd094424cdc4786251016d2f1d4497529bb267e9527e4e125",
+        "compiledNodesSHA256": "d25fb0e5bae5cab055d1447ad9fa5bba2fd79b9cb02615b3f72173cfff6af101",
+        "programKeySHA256": "c3167b7de5a8001961bd6a0e9ed83ff6a29642565d6f447c265def567b47d76a",
+        "generatedGLSLSHA256": "97f24f9da2e8e9bc15fd917912b75cfea9d2ec69a83092fce5e81942e0ff37e3"
+      },
+      "current": {
+        "authoredNodes": 8,
+        "liveNodes": 8,
+        "graphJSONBytes": 1469,
+        "generatedGLSLBytes": 6769,
+        "programKeyBytes": 399,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 36
+        },
+        "graphSHA256": "ae1185e48f15746fd094424cdc4786251016d2f1d4497529bb267e9527e4e125",
+        "compiledNodesSHA256": "d25fb0e5bae5cab055d1447ad9fa5bba2fd79b9cb02615b3f72173cfff6af101",
+        "programKeySHA256": "c3167b7de5a8001961bd6a0e9ed83ff6a29642565d6f447c265def567b47d76a",
+        "generatedGLSLSHA256": "97f24f9da2e8e9bc15fd917912b75cfea9d2ec69a83092fce5e81942e0ff37e3"
+      }
+    },
+    "stone": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 12,
+        "liveNodes": 12,
+        "graphJSONBytes": 1681,
+        "generatedGLSLBytes": 4503,
+        "programKeyBytes": 539,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 0,
+          "proceduralSamples": 1,
+          "textureReads": 0,
+          "uniformScalars": 36
+        },
+        "graphSHA256": "abdaa6259d9a19838ac9252564415e3345787e0005e3a590b374c089e640a69b",
+        "compiledNodesSHA256": "cf575f3d38c7ac6421c5cec1ae34cb71e6b13349a185c2aa0efccd5c548c7c5e",
+        "programKeySHA256": "8a9648f838f0f863e4834c3fce9db03b74d1cf363d0c51b91003982ca63a5c63",
+        "generatedGLSLSHA256": "0956c3f7ec0d8d67a84e9850a9f68769614f3887b3114b00b2a0928dc3759866"
+      },
+      "current": {
+        "authoredNodes": 12,
+        "liveNodes": 12,
+        "graphJSONBytes": 1681,
+        "generatedGLSLBytes": 4503,
+        "programKeyBytes": 539,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 0,
+          "proceduralSamples": 1,
+          "textureReads": 0,
+          "uniformScalars": 36
+        },
+        "graphSHA256": "abdaa6259d9a19838ac9252564415e3345787e0005e3a590b374c089e640a69b",
+        "compiledNodesSHA256": "cf575f3d38c7ac6421c5cec1ae34cb71e6b13349a185c2aa0efccd5c548c7c5e",
+        "programKeySHA256": "8a9648f838f0f863e4834c3fce9db03b74d1cf363d0c51b91003982ca63a5c63",
+        "generatedGLSLSHA256": "0956c3f7ec0d8d67a84e9850a9f68769614f3887b3114b00b2a0928dc3759866"
+      }
+    },
+    "lichen": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 12,
+        "liveNodes": 12,
+        "graphJSONBytes": 2197,
+        "generatedGLSLBytes": 8549,
+        "programKeyBytes": 540,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 4,
+          "uniformScalars": 64
+        },
+        "graphSHA256": "f67b607b1a2d09b7598ac4e3e87b3100b5ff28c78206dd3ad9a38f5a08e001e2",
+        "compiledNodesSHA256": "4e49f01d57b46e5a966513568362d8806ae8c41bee7ea74ba4641ba5d6b431d7",
+        "programKeySHA256": "907b2a8fed68a36bd0c7e0e9fe307bd29ff6a90cd3b9ea64290ddba6bc1934ee",
+        "generatedGLSLSHA256": "7b8ab2570c012c9c3431da6b7689b6c2f960d32b9d4e1c14815887f707d8adc0"
+      },
+      "current": {
+        "authoredNodes": 12,
+        "liveNodes": 12,
+        "graphJSONBytes": 2197,
+        "generatedGLSLBytes": 8549,
+        "programKeyBytes": 540,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 4,
+          "uniformScalars": 64
+        },
+        "graphSHA256": "f67b607b1a2d09b7598ac4e3e87b3100b5ff28c78206dd3ad9a38f5a08e001e2",
+        "compiledNodesSHA256": "4e49f01d57b46e5a966513568362d8806ae8c41bee7ea74ba4641ba5d6b431d7",
+        "programKeySHA256": "907b2a8fed68a36bd0c7e0e9fe307bd29ff6a90cd3b9ea64290ddba6bc1934ee",
+        "generatedGLSLSHA256": "7b8ab2570c012c9c3431da6b7689b6c2f960d32b9d4e1c14815887f707d8adc0"
+      }
+    },
+    "spectrum": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 10,
+        "liveNodes": 10,
+        "graphJSONBytes": 1769,
+        "generatedGLSLBytes": 4665,
+        "programKeyBytes": 510,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 0,
+          "proceduralSamples": 0,
+          "textureReads": 0,
+          "uniformScalars": 41
+        },
+        "graphSHA256": "4ca93d77da14bdfdec1f8fb3db4ad32ab9db43846c8f403b626824feebfeeb90",
+        "compiledNodesSHA256": "76e654b87f1a13e2590ba05d0f5ab633bd73ec21d5c0059111d3c0fcf5d63ff9",
+        "programKeySHA256": "f8732c8091ff1e3059ffb0e2bf2d62ad68cd3d059c1a7cadf265e85648a6d5cc",
+        "generatedGLSLSHA256": "eda4be1a87a3a9325b75f60925a5af4d4633f72d9039b37918b7d74ab8132767"
+      },
+      "current": {
+        "authoredNodes": 10,
+        "liveNodes": 10,
+        "graphJSONBytes": 1769,
+        "generatedGLSLBytes": 4665,
+        "programKeyBytes": 510,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 0,
+          "proceduralSamples": 0,
+          "textureReads": 0,
+          "uniformScalars": 41
+        },
+        "graphSHA256": "4ca93d77da14bdfdec1f8fb3db4ad32ab9db43846c8f403b626824feebfeeb90",
+        "compiledNodesSHA256": "76e654b87f1a13e2590ba05d0f5ab633bd73ec21d5c0059111d3c0fcf5d63ff9",
+        "programKeySHA256": "f8732c8091ff1e3059ffb0e2bf2d62ad68cd3d059c1a7cadf265e85648a6d5cc",
+        "generatedGLSLSHA256": "eda4be1a87a3a9325b75f60925a5af4d4633f72d9039b37918b7d74ab8132767"
+      }
+    },
+    "prismatic": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 22,
+        "liveNodes": 21,
+        "graphJSONBytes": 3716,
+        "generatedGLSLBytes": 10560,
+        "programKeyBytes": 1034,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 4,
+          "uniformScalars": 70
+        },
+        "graphSHA256": "642b82ec5213cb0a12d4522f90e32cfad68fd85a4306ee5c3bf51f62d92b0168",
+        "compiledNodesSHA256": "a1df549f143788b56f5535ffbdf2ae596166967d396d82e64f975144686ae0d7",
+        "programKeySHA256": "c02c0465aac435f517ad7fbb050afd52329464b6a6d1965eab4de13806a18c02",
+        "generatedGLSLSHA256": "5f16f3bac6638ab8eefd1772bfd2803f89f379d9ddb9d697c5dfc1c614ee3187"
+      },
+      "current": {
+        "authoredNodes": 22,
+        "liveNodes": 21,
+        "graphJSONBytes": 3716,
+        "generatedGLSLBytes": 10560,
+        "programKeyBytes": 1034,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 4,
+          "uniformScalars": 70
+        },
+        "graphSHA256": "642b82ec5213cb0a12d4522f90e32cfad68fd85a4306ee5c3bf51f62d92b0168",
+        "compiledNodesSHA256": "a1df549f143788b56f5535ffbdf2ae596166967d396d82e64f975144686ae0d7",
+        "programKeySHA256": "c02c0465aac435f517ad7fbb050afd52329464b6a6d1965eab4de13806a18c02",
+        "generatedGLSLSHA256": "5f16f3bac6638ab8eefd1772bfd2803f89f379d9ddb9d697c5dfc1c614ee3187"
+      }
+    },
+    "porcelain": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 17,
+        "liveNodes": 17,
+        "graphJSONBytes": 2641,
+        "generatedGLSLBytes": 7479,
+        "programKeyBytes": 795,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 0,
+          "proceduralSamples": 1,
+          "textureReads": 0,
+          "uniformScalars": 47
+        },
+        "graphSHA256": "b1af39988fdc401ad274f84389eceb28a4752df43d2a4c0065a0234c2d38121d",
+        "compiledNodesSHA256": "6502123e38750935c02548d0eef021065bc49484b3aa0abb3f6469ad6cc01b86",
+        "programKeySHA256": "c8e053681bcad7ad07b59e79fdbce3f67956d31b1ffb87546e3b2618a937c630",
+        "generatedGLSLSHA256": "379eabb7376b573f9ccc3fc165c8bcd6a0a2d144d7b2a38187a83c11ea1e8a33"
+      },
+      "current": {
+        "authoredNodes": 17,
+        "liveNodes": 17,
+        "graphJSONBytes": 2641,
+        "generatedGLSLBytes": 7479,
+        "programKeyBytes": 795,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 0,
+          "proceduralSamples": 1,
+          "textureReads": 0,
+          "uniformScalars": 47
+        },
+        "graphSHA256": "b1af39988fdc401ad274f84389eceb28a4752df43d2a4c0065a0234c2d38121d",
+        "compiledNodesSHA256": "6502123e38750935c02548d0eef021065bc49484b3aa0abb3f6469ad6cc01b86",
+        "programKeySHA256": "c8e053681bcad7ad07b59e79fdbce3f67956d31b1ffb87546e3b2618a937c630",
+        "generatedGLSLSHA256": "379eabb7376b573f9ccc3fc165c8bcd6a0a2d144d7b2a38187a83c11ea1e8a33"
+      }
+    },
+    "weathered": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 18,
+        "liveNodes": 18,
+        "graphJSONBytes": 3201,
+        "generatedGLSLBytes": 11479,
+        "programKeyBytes": 846,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 4,
+          "uniformScalars": 73
+        },
+        "graphSHA256": "ca9bb41eb01f2c5eb3c17788dbe31de52e8d8a6745b73fe325aa698405c39182",
+        "compiledNodesSHA256": "a099b3b492bc3be4a90b3ff0832244838a3b03e49dc9593e464ffa6154503098",
+        "programKeySHA256": "8eb81aed01d16386f4a587684ec8924d4f365fc3ab389ef09a7dc4c46a4e7d3f",
+        "generatedGLSLSHA256": "e58c83ce87cb7831328e9ad29721449a1766e5b9839cbcedc36763cbe8d17b38"
+      },
+      "current": {
+        "authoredNodes": 18,
+        "liveNodes": 18,
+        "graphJSONBytes": 3201,
+        "generatedGLSLBytes": 11479,
+        "programKeyBytes": 846,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 4,
+          "uniformScalars": 73
+        },
+        "graphSHA256": "ca9bb41eb01f2c5eb3c17788dbe31de52e8d8a6745b73fe325aa698405c39182",
+        "compiledNodesSHA256": "a099b3b492bc3be4a90b3ff0832244838a3b03e49dc9593e464ffa6154503098",
+        "programKeySHA256": "8eb81aed01d16386f4a587684ec8924d4f365fc3ab389ef09a7dc4c46a4e7d3f",
+        "generatedGLSLSHA256": "e58c83ce87cb7831328e9ad29721449a1766e5b9839cbcedc36763cbe8d17b38"
+      }
+    },
+    "ivory": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 105,
+        "liveNodes": 105,
+        "graphJSONBytes": 13035,
+        "generatedGLSLBytes": 14751,
+        "programKeyBytes": 5049,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 188
+        },
+        "graphSHA256": "257e9fd543b7047be70f5a58e0f5d905ac6ae67496fd47631cd09e7bc13d0819",
+        "compiledNodesSHA256": "308081d6168e06413ea14d967e2b520a7dfceef917213b6889a58e92016e62a4",
+        "programKeySHA256": "fc0a5bce0b78d0164846bb662e29c56e56fcb7c761a00322d09b63a91afd4f1d",
+        "generatedGLSLSHA256": "dbae6a312c7498e0a8ee0b6adc31b9e91197260092214cd2b8db9983d4f624e9"
+      },
+      "current": {
+        "authoredNodes": 105,
+        "liveNodes": 105,
+        "graphJSONBytes": 13035,
+        "generatedGLSLBytes": 14751,
+        "programKeyBytes": 5049,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 188
+        },
+        "graphSHA256": "257e9fd543b7047be70f5a58e0f5d905ac6ae67496fd47631cd09e7bc13d0819",
+        "compiledNodesSHA256": "308081d6168e06413ea14d967e2b520a7dfceef917213b6889a58e92016e62a4",
+        "programKeySHA256": "fc0a5bce0b78d0164846bb662e29c56e56fcb7c761a00322d09b63a91afd4f1d",
+        "generatedGLSLSHA256": "dbae6a312c7498e0a8ee0b6adc31b9e91197260092214cd2b8db9983d4f624e9"
+      }
+    },
+    "brass": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 105,
+        "liveNodes": 105,
+        "graphJSONBytes": 13165,
+        "generatedGLSLBytes": 14742,
+        "programKeyBytes": 5045,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 188
+        },
+        "graphSHA256": "cc79d83a63c058c8f60aec97bb1ef82879931fe60fa1f0e3ee308cfbf6a1a7df",
+        "compiledNodesSHA256": "89bbf197645b5082aa91f5265693c6f85e3601dc52e0be252db0e926a4654c5f",
+        "programKeySHA256": "6f2e503a779543da6b435e9cf2a8019c56c6e0bcc63a747d9389e9bff2fc8ecd",
+        "generatedGLSLSHA256": "b743dbe0d7ca9f805b1ec6b02dde3254487ea6840023bd7154da2d4d27ff81a8"
+      },
+      "current": {
+        "authoredNodes": 105,
+        "liveNodes": 105,
+        "graphJSONBytes": 13165,
+        "generatedGLSLBytes": 14742,
+        "programKeyBytes": 5045,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 4,
+          "uniformScalars": 188
+        },
+        "graphSHA256": "cc79d83a63c058c8f60aec97bb1ef82879931fe60fa1f0e3ee308cfbf6a1a7df",
+        "compiledNodesSHA256": "89bbf197645b5082aa91f5265693c6f85e3601dc52e0be252db0e926a4654c5f",
+        "programKeySHA256": "6f2e503a779543da6b435e9cf2a8019c56c6e0bcc63a747d9389e9bff2fc8ecd",
+        "generatedGLSLSHA256": "b743dbe0d7ca9f805b1ec6b02dde3254487ea6840023bd7154da2d4d27ff81a8"
+      }
+    },
+    "zones": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 45,
+        "liveNodes": 45,
+        "graphJSONBytes": 26954,
+        "generatedGLSLBytes": 12912,
+        "programKeyBytes": 2300,
+        "imageSources": [
+          "enamelBrush"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 12,
+          "uniformScalars": 96
+        },
+        "graphSHA256": "5eec87a02adc313a314c4b2ad0e20f59c5393316bd2830c62d17f779553e3f3c",
+        "compiledNodesSHA256": "e0066583d4c37c7c73107e45fbf1e9a14349c0997effeef78706c3c8abd90ca1",
+        "programKeySHA256": "bf1b515ac96687c99bac8d9250e8626c9789c9ed8189568e02f68d717e2e69ad",
+        "generatedGLSLSHA256": "a72548de1bcd2864c8c889df32d92b12cd323b4ed68808575da0884976e321ad"
+      },
+      "current": {
+        "authoredNodes": 45,
+        "liveNodes": 45,
+        "graphJSONBytes": 26954,
+        "generatedGLSLBytes": 12912,
+        "programKeyBytes": 2300,
+        "imageSources": [
+          "enamelBrush"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 12,
+          "uniformScalars": 96
+        },
+        "graphSHA256": "5eec87a02adc313a314c4b2ad0e20f59c5393316bd2830c62d17f779553e3f3c",
+        "compiledNodesSHA256": "e0066583d4c37c7c73107e45fbf1e9a14349c0997effeef78706c3c8abd90ca1",
+        "programKeySHA256": "bf1b515ac96687c99bac8d9250e8626c9789c9ed8189568e02f68d717e2e69ad",
+        "generatedGLSLSHA256": "a72548de1bcd2864c8c889df32d92b12cd323b4ed68808575da0884976e321ad"
+      }
+    },
+    "pigments": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 48,
+        "liveNodes": 46,
+        "graphJSONBytes": 33362,
+        "generatedGLSLBytes": 13319,
+        "programKeyBytes": 2386,
+        "imageSources": [
+          "patinaBrush",
+          "patinaPigmentTable"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 16,
+          "uniformScalars": 119
+        },
+        "graphSHA256": "3627ce1efdbb2b830ae7f7162a6cade5ff60212a4267c1828d6874b106a92881",
+        "compiledNodesSHA256": "499e61d8bfb315cf15b0f8ae79915767ab1c7cd3c53316317af8aa064b8aa308",
+        "programKeySHA256": "b003deb13f4d8bad33b8170db10c7a72b6b99abfa08ff0297c7173f4827faeea",
+        "generatedGLSLSHA256": "04ae6c97e1700f59c76bd3aebfc452caee1c1538c1fe7711fb72a49404c5b5c6"
+      },
+      "current": {
+        "authoredNodes": 48,
+        "liveNodes": 46,
+        "graphJSONBytes": 33362,
+        "generatedGLSLBytes": 13319,
+        "programKeyBytes": 2386,
+        "imageSources": [
+          "patinaBrush",
+          "patinaPigmentTable"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 16,
+          "uniformScalars": 119
+        },
+        "graphSHA256": "3627ce1efdbb2b830ae7f7162a6cade5ff60212a4267c1828d6874b106a92881",
+        "compiledNodesSHA256": "499e61d8bfb315cf15b0f8ae79915767ab1c7cd3c53316317af8aa064b8aa308",
+        "programKeySHA256": "b003deb13f4d8bad33b8170db10c7a72b6b99abfa08ff0297c7173f4827faeea",
+        "generatedGLSLSHA256": "04ae6c97e1700f59c76bd3aebfc452caee1c1538c1fe7711fb72a49404c5b5c6"
+      }
+    },
+    "inscription": {
+      "sameGraph": true,
+      "sameCompiledNodes": true,
+      "sameProgramKey": true,
+      "sameShader": true,
+      "baseline": {
+        "authoredNodes": 37,
+        "liveNodes": 37,
+        "graphJSONBytes": 537665,
+        "generatedGLSLBytes": 14453,
+        "programKeyBytes": 2144,
+        "imageSources": [
+          "inscriptionAtlas"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 132,
+          "uniformScalars": 89
+        },
+        "graphSHA256": "ebd50c7228124c95cc552c890a57614fd69ad785f2962ef6b8bfd22524d312ee",
+        "compiledNodesSHA256": "f0a12f870a15a6a76679fbf10a15218f3bf76aa5e97c056cd8e6da2532826fb7",
+        "programKeySHA256": "14d3b4f5de80dd8299ef384eb8787f15929c0fa12fb55c78ef7db4567962be1d",
+        "generatedGLSLSHA256": "957e4166ac3032b22f8e40c0cf6e27859d50e8a266f5fc56718d660a1b3f08de"
+      },
+      "current": {
+        "authoredNodes": 37,
+        "liveNodes": 37,
+        "graphJSONBytes": 537665,
+        "generatedGLSLBytes": 14453,
+        "programKeyBytes": 2144,
+        "imageSources": [
+          "inscriptionAtlas"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 132,
+          "uniformScalars": 89
+        },
+        "graphSHA256": "ebd50c7228124c95cc552c890a57614fd69ad785f2962ef6b8bfd22524d312ee",
+        "compiledNodesSHA256": "f0a12f870a15a6a76679fbf10a15218f3bf76aa5e97c056cd8e6da2532826fb7",
+        "programKeySHA256": "14d3b4f5de80dd8299ef384eb8787f15929c0fa12fb55c78ef7db4567962be1d",
+        "generatedGLSLSHA256": "957e4166ac3032b22f8e40c0cf6e27859d50e8a266f5fc56718d660a1b3f08de"
+      }
+    }
+  },
+  "workloads": {
+    "independent": {
+      "label": "An independent anisotropic finish overridden across coat and bump",
+      "accepted": true,
+      "reason": "improved",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "before": {
+        "authoredNodes": 20,
+        "liveNodes": 20,
+        "graphJSONBytes": 49593,
+        "generatedGLSLBytes": 15115,
+        "programKeyBytes": 958,
+        "imageSources": [
+          "roughAtlas"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 68,
+          "uniformScalars": 66
+        },
+        "graphSHA256": "df021e2944cea4291aab72f2414803f3d05bd4e010794b7f52b7ec167335ca95",
+        "compiledNodesSHA256": "de2502456512d2f369f23961df04b2d1f70c172fa924f5fb7b173f0d8bdd3b27",
+        "programKeySHA256": "a04a7e9845afd30eb69064db3b63473ab7f9f49d2a03fdb27f6b1d5cdd6d43f1",
+        "generatedGLSLSHA256": "894af5a1c423ea03fed29169238b8413e99e95588f8f1e4e09dec0a57b8cfbbc"
+      },
+      "after": {
+        "authoredNodes": 23,
+        "liveNodes": 12,
+        "graphJSONBytes": 50004,
+        "generatedGLSLBytes": 8979,
+        "programKeyBytes": 546,
+        "imageSources": [],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 4,
+          "uniformScalars": 37
+        },
+        "graphSHA256": "d109c43714256c05467039c44b3fe5dff6c6094798afb8d6f976a2ea5cb3b825",
+        "compiledNodesSHA256": "d5ceab144c4159e2cb88ed814e105f131ba1cb6274cfd64e0dc9919d904c12ae",
+        "programKeySHA256": "be5ffe25e45b2339382f41e6cb14a5f9f9c8627763484de96ea1d02f5835d69d",
+        "generatedGLSLSHA256": "b77fd05120f39bfcf7b33bdcd529d0d5233bb4ed6235d5a6467193c66497a1b4"
+      },
+      "sourceDefinitionsRetained": 20,
+      "compiledCost": {
+        "before": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 68,
+          "uniformScalars": 66,
+          "liveNodes": 20
+        },
+        "after": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 4,
+          "uniformScalars": 37,
+          "liveNodes": 12
+        }
+      },
+      "engine": {
+        "cost": 10,
+        "engine": "egglog",
+        "extractor": "greedy-dag",
+        "initialCost": 12,
+        "jobSha256": "433282c354a2df0625a6c01b07379c7dac9f3c8d3ab1fc646345c8b8f4d335e2",
+        "limits": {
+          "iterations": 12,
+          "rows": 50000
+        },
+        "matches": {
+          "channel-clearcoat-bump-commute": 0,
+          "channel-clearcoat-coat-commute": 0,
+          "channel-clearcoat-overwrite": 0,
+          "channel-roughness-bump-commute": 2,
+          "channel-roughness-clearcoat-commute": 0,
+          "channel-roughness-coat-commute": 2,
+          "channel-roughness-overwrite": 1,
+          "coat-bump-commute": 2
+        },
+        "programSha256": "513fd009f8df6dc95d3c1df7614e7e7719ada6392deb7a400f6b3b536957f23c",
+        "rounds": 4,
+        "rows": 22,
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "stopReason": "saturated",
+        "threads": 1,
+        "version": "14.0.0"
+      },
+      "outputComparison": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 1,
+        "samples": 225,
+        "components": 2025,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "retainedViews": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 4,
+        "samples": 900,
+        "components": 6750,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "revisions": [
+        {
+          "index": 0,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 66
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 4,
+            "uniformScalars": 37
+          }
+        },
+        {
+          "index": 1,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 66
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 4,
+            "uniformScalars": 37
+          }
+        },
+        {
+          "index": 2,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 66
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 4,
+            "uniformScalars": 37
+          }
+        },
+        {
+          "index": 3,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 66
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 4,
+            "uniformScalars": 37
+          }
+        },
+        {
+          "index": 4,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 66
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 4,
+            "uniformScalars": 37
+          }
+        }
+      ]
+    },
+    "shared-image": {
+      "label": "The same atlas remains live for pigment and height",
+      "accepted": true,
+      "reason": "improved",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "before": {
+        "authoredNodes": 20,
+        "liveNodes": 20,
+        "graphJSONBytes": 49721,
+        "generatedGLSLBytes": 13289,
+        "programKeyBytes": 1117,
+        "imageSources": [
+          "roughAtlas"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 68,
+          "uniformScalars": 62
+        },
+        "graphSHA256": "69f0b6130bb78ca72f25710739aff79249ded0d966aad166974442fbd0d58b42",
+        "compiledNodesSHA256": "a1d04b42db9686b80650a9846d3c6756d481329644f4ff0bb6092af6054fc702",
+        "programKeySHA256": "b9fbf94ef24fb901385f1c6ad887ba98a16dcd7b8ea96770e3f91455c4dabc5e",
+        "generatedGLSLSHA256": "fd298fcc69c3a1573360f3c6eb21c764e74536105067dfddbcf3c8ae72ddc7de"
+      },
+      "after": {
+        "authoredNodes": 23,
+        "liveNodes": 14,
+        "graphJSONBytes": 50132,
+        "generatedGLSLBytes": 12958,
+        "programKeyBytes": 767,
+        "imageSources": [
+          "roughAtlas"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 68,
+          "uniformScalars": 60
+        },
+        "graphSHA256": "194dd7716fb92ec81ebe0eaf6734900aef23b129d6374daaf2221e174842726b",
+        "compiledNodesSHA256": "dee22a22c623a3f607ffefc77b0de0d9503ddb18d8e820815dadb5fc79657c07",
+        "programKeySHA256": "dc632ff48a7b7de3ee5fdbbce7af6e3ba824d6c99c01fa51d64734fa450f9d57",
+        "generatedGLSLSHA256": "6b780b040847a3d587b9b6fd5948a28b7b263843b95786d5b4a73cefec849b82"
+      },
+      "sourceDefinitionsRetained": 20,
+      "compiledCost": {
+        "before": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 68,
+          "uniformScalars": 62,
+          "liveNodes": 20
+        },
+        "after": {
+          "paintSamples": 1,
+          "proceduralSamples": 0,
+          "textureReads": 68,
+          "uniformScalars": 60,
+          "liveNodes": 14
+        }
+      },
+      "engine": {
+        "cost": 10,
+        "engine": "egglog",
+        "extractor": "greedy-dag",
+        "initialCost": 12,
+        "jobSha256": "433282c354a2df0625a6c01b07379c7dac9f3c8d3ab1fc646345c8b8f4d335e2",
+        "limits": {
+          "iterations": 12,
+          "rows": 50000
+        },
+        "matches": {
+          "channel-clearcoat-bump-commute": 0,
+          "channel-clearcoat-coat-commute": 0,
+          "channel-clearcoat-overwrite": 0,
+          "channel-roughness-bump-commute": 2,
+          "channel-roughness-clearcoat-commute": 0,
+          "channel-roughness-coat-commute": 2,
+          "channel-roughness-overwrite": 1,
+          "coat-bump-commute": 2
+        },
+        "programSha256": "513fd009f8df6dc95d3c1df7614e7e7719ada6392deb7a400f6b3b536957f23c",
+        "rounds": 4,
+        "rows": 22,
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "stopReason": "saturated",
+        "threads": 1,
+        "version": "14.0.0"
+      },
+      "outputComparison": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 1,
+        "samples": 225,
+        "components": 2025,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "retainedViews": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 4,
+        "samples": 900,
+        "components": 6750,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "revisions": [
+        {
+          "index": 0,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 62
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 60
+          }
+        },
+        {
+          "index": 1,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 62
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 60
+          }
+        },
+        {
+          "index": 2,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 62
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 60
+          }
+        },
+        {
+          "index": 3,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 62
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 60
+          }
+        },
+        {
+          "index": 4,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 62
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 0,
+            "textureReads": 68,
+            "uniformScalars": 60
+          }
+        }
+      ]
+    },
+    "shared-branch": {
+      "label": "A mixed branch still consumes the shared module finish",
+      "accepted": false,
+      "reason": "no-improvement",
+      "proof": {
+        "kind": "surface-product/1",
+        "equivalent": true,
+        "components": [
+          "color",
+          "slope",
+          "roughness",
+          "metalness",
+          "clearcoat",
+          "opacity"
+        ],
+        "changed": []
+      },
+      "before": {
+        "authoredNodes": 25,
+        "liveNodes": 25,
+        "graphJSONBytes": 50182,
+        "generatedGLSLBytes": 15510,
+        "programKeyBytes": 1176,
+        "imageSources": [
+          "roughAtlas"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 68,
+          "uniformScalars": 71
+        },
+        "graphSHA256": "caa43ba962e25b2a4f45a541afbb2414816d66121080362449d057fce1e81b24",
+        "compiledNodesSHA256": "a591422bf275fa42840a8f42ede45f9e8fb2329e34cb2920d8b2a0ecff6fb79f",
+        "programKeySHA256": "42994231bee0b98643a30f5a38d48afb338c1812c43007e67c0b65ac8f9a979b",
+        "generatedGLSLSHA256": "8f1ea6b23a11a00a2dce9dfa5d696714987b72a8888f3e3704cedb85cd909c20"
+      },
+      "after": {
+        "authoredNodes": 25,
+        "liveNodes": 25,
+        "graphJSONBytes": 50182,
+        "generatedGLSLBytes": 15510,
+        "programKeyBytes": 1176,
+        "imageSources": [
+          "roughAtlas"
+        ],
+        "cost": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 68,
+          "uniformScalars": 71
+        },
+        "graphSHA256": "caa43ba962e25b2a4f45a541afbb2414816d66121080362449d057fce1e81b24",
+        "compiledNodesSHA256": "a591422bf275fa42840a8f42ede45f9e8fb2329e34cb2920d8b2a0ecff6fb79f",
+        "programKeySHA256": "42994231bee0b98643a30f5a38d48afb338c1812c43007e67c0b65ac8f9a979b",
+        "generatedGLSLSHA256": "8f1ea6b23a11a00a2dce9dfa5d696714987b72a8888f3e3704cedb85cd909c20"
+      },
+      "sourceDefinitionsRetained": 25,
+      "compiledCost": {
+        "before": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 68,
+          "uniformScalars": 71,
+          "liveNodes": 25
+        },
+        "after": {
+          "paintSamples": 1,
+          "proceduralSamples": 1,
+          "textureReads": 68,
+          "uniformScalars": 71,
+          "liveNodes": 25
+        }
+      },
+      "engine": {
+        "cost": 17,
+        "engine": "egglog",
+        "extractor": "greedy-dag",
+        "initialCost": 17,
+        "jobSha256": "3581ccf955b766ff3cb70984bcd4865576d6c67ec570f26199dc9f12aabd2c11",
+        "limits": {
+          "iterations": 12,
+          "rows": 50000
+        },
+        "matches": {
+          "channel-clearcoat-bump-commute": 0,
+          "channel-clearcoat-coat-commute": 0,
+          "channel-clearcoat-overwrite": 0,
+          "channel-roughness-bump-commute": 2,
+          "channel-roughness-clearcoat-commute": 0,
+          "channel-roughness-coat-commute": 3,
+          "channel-roughness-overwrite": 1,
+          "coat-bump-commute": 2
+        },
+        "programSha256": "d5b437b5adac5414dc9f3d6230f0233ef05956e2995095c59724222caad57779",
+        "rounds": 4,
+        "rows": 29,
+        "rulesSha256": "b9167f914b0a94af6fda9924b865b835b69bccf5e9916c6fb3843a2ff3daead7",
+        "stopReason": "saturated",
+        "threads": 1,
+        "version": "14.0.0"
+      },
+      "outputComparison": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 1,
+        "samples": 225,
+        "components": 2025,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "retainedViews": {
+        "equal": true,
+        "evidence": "finite-observations",
+        "revisions": 5,
+        "contexts": 45,
+        "observations": 5,
+        "samples": 1125,
+        "components": 8775,
+        "differences": 0,
+        "maxAbsoluteDifference": 0,
+        "counterexample": null,
+        "scope": "CPU field values/differentials and unlit surface record operations with opaque supplied paint leaves; not a universal proof, facets evaluation or GPU comparison."
+      },
+      "revisions": [
+        {
+          "index": 0,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          }
+        },
+        {
+          "index": 1,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          }
+        },
+        {
+          "index": 2,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          }
+        },
+        {
+          "index": 3,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          }
+        },
+        {
+          "index": 4,
+          "sameOriginalProgram": true,
+          "sameOptimizedProgram": true,
+          "originalCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          },
+          "optimizedCost": {
+            "paintSamples": 1,
+            "proceduralSamples": 1,
+            "textureReads": 68,
+            "uniformScalars": 71
+          }
+        }
+      ]
+    }
+  },
+  "totals": {
+    "galleryExamples": 15,
+    "workloads": 3,
+    "contextsPerRevision": 45,
+    "observedSamples": 3600,
+    "observedComponents": 28350
+  },
+  "timings": {
+    "unit": "milliseconds",
+    "scope": "Offline optimization wall time including Python startup, extraction and bridge checks; no rendering.",
+    "workloads": {
+      "independent": 295.627865,
+      "shared-image": 324.52378699999997,
+      "shared-branch": 250.27245200000016
+    }
+  }
+}
