@@ -25,3 +25,6 @@ export {toWorkingColor, convertColor, displayColor, decodeColorImage, encodeColo
 export {MARK_LIMITS, markProgram, parseMarkProgram, serializeMarkProgram} from './paint/marks.mts';
 export {compileMarkProgram, bakeMarks} from './paint/mark-raster.mts';
 export {applyMarkBake} from './paint/mark-apply.mts';
+
+/** Mesh curvature / authored fold guides become standard portable stroke marks. */
+export {bakeMeshFlow, sampleFlow, traceFlow, guidedStrokes} from './paint/flow-guides.mts';

@@ -34,3 +34,5 @@ explicitly labeled references when the browser cannot create a graphics context.
 [COLOR-STUDY.md](COLOR-STUDY.md) and [RESEARCH.md](RESEARCH.md) collect the
 rendering and authoring research. [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)
 records adapted code, data and included notices.
+
+- [Mesh-guided stroke flow](FLOW-GUIDES.md): fold-aligned UV direction maps, curved pressure paths, and form-aware AO pigment.
