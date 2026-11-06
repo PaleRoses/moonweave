@@ -36,3 +36,5 @@ export type {
 } from '../paint/marks.mts';
 export type {MarkBakeOptions, MarkBakeStats, MarkBake, CompiledMarkProgram} from '../paint/mark-raster.mts';
 export type {MarkApplicationOptions} from '../paint/mark-apply.mts';
+
+export type {FlowPoint, FlowImage, FlowMesh, MeshFlowOptions, FlowAtlas, FlowTraceOptions, FlowTracePoint, GuidedStrokeOptions} from '../paint/flow-guides.mts';
